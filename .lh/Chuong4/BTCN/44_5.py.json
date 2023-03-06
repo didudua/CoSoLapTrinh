@@ -1,0 +1,202 @@
+{
+    "sourceFile": "Chuong4/BTCN/44_5.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 46,
+            "patches": [
+                {
+                    "date": 1677804959806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677804974769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     return kq\r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n x=NhapVaDem()\r\n-while SoHople() == True:\r\n+while SoHople(x) == True:\r\n     kq=LaSoNguyenTo(x)\r\n      \r\n InKQ(kq)\r\n # dang loi khong ra duoc dap an\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677805124566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n     return kq\r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n x=NhapVaDem()\r\n-while SoHople(x) == True:\r\n-    kq=LaSoNguyenTo(x)\r\n+kq=LaSoNguyenTo(x)\r\n      \r\n InKQ(kq)\r\n # dang loi khong ra duoc dap an\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677805147565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n     if x<=1: True\r\n     else: False\r\n     return True,False\r\n def LaSoNguyenTo(x):\r\n+    kq=0\r\n     if (x%2==1 and x%5!=0) or x==2 :\r\n          kq=kq+1\r\n     return kq\r\n def InKQ(kq):\r\n"
+                },
+                {
+                    "date": 1677805173832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     else: False\r\n     return True,False\r\n def LaSoNguyenTo(x):\r\n     kq=0\r\n-    if (x%2==1 and x%5!=0) or x==2 :\r\n+    if  x==2 :\r\n          kq=kq+1\r\n     return kq\r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n"
+                },
+                {
+                    "date": 1677805217567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n     if x<=1: True\r\n     else: False\r\n     return True,False\r\n def LaSoNguyenTo(x):\r\n-    kq=0\r\n-    if  x==2 :\r\n-         kq=kq+1\r\n-    return kq\r\n+    u=0\r\n+    if (x%2==1 and x%5!=0) or x==2 :\r\n+         u=u+1\r\n+    return u\r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n x=NhapVaDem()\r\n kq=LaSoNguyenTo(x)\r\n"
+                },
+                {
+                    "date": 1677805285783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n def NhapVaDem():\r\n     while True:\r\n         x=int(input())\r\n         if x <=1 : break\r\n-    return x\r\n+        return x\r\n def SoHople(x):\r\n     if x<=1: True\r\n     else: False\r\n     return True,False\r\n"
+                },
+                {
+                    "date": 1677805317874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n def NhapVaDem():\r\n     while True:\r\n         x=int(input())\r\n         if x <=1 : break\r\n-        return x\r\n+    return x,\r\n def SoHople(x):\r\n     if x<=1: True\r\n     else: False\r\n     return True,False\r\n"
+                },
+                {
+                    "date": 1677805491501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n print('Nhap day so:')\r\n def NhapVaDem():\r\n-    while True:\r\n-        x=int(input())\r\n-        if x <=1 : break\r\n-    return x,\r\n+    x=int(input())\r\n+    return x\r\n def SoHople(x):\r\n     if x<=1: True\r\n     else: False\r\n     return True,False\r\n@@ -14,9 +12,11 @@\n          u=u+1\r\n     return u\r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n-x=NhapVaDem()\r\n-kq=LaSoNguyenTo(x)\r\n-     \r\n-InKQ(kq)\r\n-# dang loi khong ra duoc dap an\n\\ No newline at end of file\n+\r\n+# dang loi khong ra duoc dap an\r\n+while True:\r\n+    x=NhapVaDem()\r\n+    if SoHople(x)==True: break\r\n+    else: kq=LaSoNguyenTo(x)\r\n+InKQ(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677805568173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n def NhapVaDem():\r\n     x=int(input())\r\n     return x\r\n def SoHople(x):\r\n-    if x<=1: True\r\n-    else: False\r\n+    if x<=1: SoHople(x)== True\r\n+    else: SoHople(x)== False\r\n     return True,False\r\n def LaSoNguyenTo(x):\r\n     u=0\r\n     if (x%2==1 and x%5!=0) or x==2 :\r\n"
+                },
+                {
+                    "date": 1677805613824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n def NhapVaDem():\r\n     x=int(input())\r\n     return x\r\n def SoHople(x):\r\n-    if x<=1: SoHople(x)== True\r\n-    else: SoHople(x)== False\r\n+    if x<=1: x = True\r\n+    else: x = False\r\n     return True,False\r\n def LaSoNguyenTo(x):\r\n     u=0\r\n     if (x%2==1 and x%5!=0) or x==2 :\r\n"
+                },
+                {
+                    "date": 1677805634834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     return x\r\n def SoHople(x):\r\n     if x<=1: x = True\r\n     else: x = False\r\n-    return True,False\r\n+    return x\r\n def LaSoNguyenTo(x):\r\n     u=0\r\n     if (x%2==1 and x%5!=0) or x==2 :\r\n          u=u+1\r\n"
+                },
+                {
+                    "date": 1677805649797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n while True:\r\n     x=NhapVaDem()\r\n     if SoHople(x)==True: break\r\n     else: kq=LaSoNguyenTo(x)\r\n-InKQ(kq)\n\\ No newline at end of file\n+    InKQ(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677805752750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n print('Nhap day so:')\r\n def NhapVaDem():\r\n     x=int(input())\r\n+    while True:\r\n+        if x<=1:break\r\n     return x\r\n def SoHople(x):\r\n     if x<=1: x = True\r\n     else: x = False\r\n@@ -14,9 +16,8 @@\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n \r\n # dang loi khong ra duoc dap an\r\n-while True:\r\n-    x=NhapVaDem()\r\n-    if SoHople(x)==True: break\r\n-    else: kq=LaSoNguyenTo(x)\r\n-    InKQ(kq)\n\\ No newline at end of file\n+x=NhapVaDem()\r\n+if SoHople(x)==False: \r\n+    kq=LaSoNguyenTo(x)\r\n+InKQ(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677805780538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,5 @@\n # dang loi khong ra duoc dap an\r\n x=NhapVaDem()\r\n if SoHople(x)==False: \r\n     kq=LaSoNguyenTo(x)\r\n-InKQ(kq)\n\\ No newline at end of file\n+    InKQ(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677805886612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n print('Nhap day so:')\r\n def NhapVaDem():\r\n-    x=int(input())\r\n     while True:\r\n-        if x<=1:break\r\n+     x=int(input())\r\n+     if x<=1:break\r\n     return x\r\n def SoHople(x):\r\n     if x<=1: x = True\r\n     else: x = False\r\n"
+                },
+                {
+                    "date": 1677805953869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,7 @@\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n \r\n # dang loi khong ra duoc dap an\r\n-x=NhapVaDem()\r\n-if SoHople(x)==False: \r\n-    kq=LaSoNguyenTo(x)\r\n-    InKQ(kq)\n\\ No newline at end of file\n+x=NhapVaDem() \r\n+kq=LaSoNguyenTo(x)\r\n+InKQ(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677806019143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     else: x = False\r\n     return x\r\n def LaSoNguyenTo(x):\r\n     u=0\r\n-    if (x%2==1 and x%5!=0) or x==2 :\r\n+    if (x%2==1 and x%5!=0 and x!=1) or x==2 :\r\n          u=u+1\r\n     return u\r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n"
+                },
+                {
+                    "date": 1677806091037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     else: x = False\r\n     return x\r\n def LaSoNguyenTo(x):\r\n     u=0\r\n-    if (x%2==1 and x%5!=0 and x!=1) or x==2 :\r\n+    if (x%2==1 and x%5!=0) or x==2 :\r\n          u=u+1\r\n     return u\r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n"
+                },
+                {
+                    "date": 1677806448254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,26 @@\n print('Nhap day so:')\r\n def NhapVaDem():\r\n-    while True:\r\n-     x=int(input())\r\n-     if x<=1:break\r\n+ \r\n+    x=int(input())\r\n+    \r\n     return x\r\n def SoHople(x):\r\n-    if x<=1: x = True\r\n-    else: x = False\r\n-    return x\r\n+    if x<=1: True\r\n+    else: False\r\n+    return True,False\r\n def LaSoNguyenTo(x):\r\n-    u=0\r\n-    if (x%2==1 and x%5!=0) or x==2 :\r\n-         u=u+1\r\n-    return u\r\n+    if (x%2==1 and x%5!=0) or x==2 : True\r\n\\ No newline at end of file\n+    else : False\r\n+    return True,False\r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n \r\n # dang loi khong ra duoc dap an\r\n-x=NhapVaDem() \r\n-kq=LaSoNguyenTo(x)\r\n-InKQ(kq)\n+while True:\r\n+    x=NhapVaDem()\r\n+    kq=0\r\n+    if SoHople(x)==True:break\r\n+    else:\r\n+        if LaSoNguyenTo(x)==True:\r\n+            kq+=1\r\n+        InKQ(kq)\r\n"
+                },
+                {
+                    "date": 1677806516365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,15 @@\n     x=int(input())\r\n     \r\n     return x\r\n def SoHople(x):\r\n-    if x<=1: True\r\n-    else: False\r\n-    return True,False\r\n+    if x<=1: x=True\r\n+    else: x=False\r\n+    return x\r\n def LaSoNguyenTo(x):\r\n-    if (x%2==1 and x%5!=0) or x==2 : True\r\n-    else : False\r\n-    return True,False\r\n+    if (x%2==1 and x%5!=0) or x==2 : x=True\r\n+    else : x=False\r\n+    return x\r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n \r\n # dang loi khong ra duoc dap an\r\n@@ -22,5 +22,5 @@\n     if SoHople(x)==True:break\r\n     else:\r\n         if LaSoNguyenTo(x)==True:\r\n             kq+=1\r\n-        InKQ(kq)\n\\ No newline at end of file\n+        InKQ(kq)\r\n"
+                },
+                {
+                    "date": 1677806531332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,5 +22,5 @@\n     if SoHople(x)==True:break\r\n     else:\r\n         if LaSoNguyenTo(x)==True:\r\n             kq+=1\r\n-        InKQ(kq)\r\n+    InKQ(kq)\r\n"
+                },
+                {
+                    "date": 1677806545088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,5 +22,5 @@\n     if SoHople(x)==True:break\r\n     else:\r\n         if LaSoNguyenTo(x)==True:\r\n             kq+=1\r\n-    InKQ(kq)\r\n+InKQ(kq)\r\n"
+                },
+                {
+                    "date": 1677806619185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,11 +15,11 @@\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n \r\n # dang loi khong ra duoc dap an\r\n+kq=0\r\n while True:\r\n     x=NhapVaDem()\r\n-    kq=0\r\n     if SoHople(x)==True:break\r\n     else:\r\n         if LaSoNguyenTo(x)==True:\r\n             kq+=1\r\n"
+                },
+                {
+                    "date": 1677806651805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n print('Nhap day so:')\r\n def NhapVaDem():\r\n- \r\n     x=int(input())\r\n-    \r\n     return x\r\n def SoHople(x):\r\n     if x<=1: x=True\r\n     else: x=False\r\n"
+                },
+                {
+                    "date": 1677806896139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n print('Nhap day so:')\r\n def NhapVaDem():\r\n+   while True:\r\n+        \r\n     x=int(input())\r\n+    if x<=1: break\r\n     return x\r\n def SoHople(x):\r\n     if x<=1: x=True\r\n     else: x=False\r\n@@ -14,11 +17,18 @@\n     print('Co',kq,'so nguyen to') \r\n \r\n # dang loi khong ra duoc dap an\r\n kq=0\r\n+# while True:\r\n+#     x=NhapVaDem()\r\n+#     if SoHople(x)==True:break\r\n+#     else:\r\n+#         if LaSoNguyenTo(x)==True:\r\n+#             kq+=1\r\n+# InKQ(kq)\r\n+x=NhapVaDem()\r\n while True:\r\n-    x=NhapVaDem()\r\n-    if SoHople(x)==True:break\r\n+    if SoHople(x)==True: break\r\n     else:\r\n         if LaSoNguyenTo(x)==True:\r\n             kq+=1\r\n InKQ(kq)\r\n"
+                },
+                {
+                    "date": 1677807000392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,8 @@\n #         if LaSoNguyenTo(x)==True:\r\n #             kq+=1\r\n # InKQ(kq)\r\n x=NhapVaDem()\r\n-while True:\r\n-    if SoHople(x)==True: break\r\n-    else:\r\n-        if LaSoNguyenTo(x)==True:\r\n+if SoHople(x)==False:\r\n+    if LaSoNguyenTo(x)==True:\r\n             kq+=1\r\n InKQ(kq)\r\n"
+                },
+                {
+                    "date": 1677807055742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n #         if LaSoNguyenTo(x)==True:\r\n #             kq+=1\r\n # InKQ(kq)\r\n x=NhapVaDem()\r\n-if SoHople(x)==False:\r\n+for i in range(NhapVaDem()):\r\n+ if SoHople(x)==False:\r\n     if LaSoNguyenTo(x)==True:\r\n             kq+=1\r\n InKQ(kq)\r\n"
+                },
+                {
+                    "date": 1677807534234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n print('Nhap day so:')\r\n def NhapVaDem():\r\n-   while True:\r\n+#    while True:\r\n         \r\n     x=int(input())\r\n-    if x<=1: break\r\n+    # if x<=1: break\r\n     return x\r\n def SoHople(x):\r\n     if x<=1: x=True\r\n     else: x=False\r\n@@ -17,17 +17,17 @@\n     print('Co',kq,'so nguyen to') \r\n \r\n # dang loi khong ra duoc dap an\r\n kq=0\r\n-# while True:\r\n-#     x=NhapVaDem()\r\n-#     if SoHople(x)==True:break\r\n-#     else:\r\n-#         if LaSoNguyenTo(x)==True:\r\n+while True:\r\n+    x=NhapVaDem()\r\n+    if SoHople(x)==True:break\r\n+    else:\r\n+        if LaSoNguyenTo(x)==True:\r\n+            kq+=1\r\n+InKQ(kq)\r\n+# x=NhapVaDem()\r\n+# for i in range(NhapVaDem()):\r\n+#  if SoHople(x)==False:\r\n+#     if LaSoNguyenTo(x)==True:\r\n #             kq+=1\r\n # InKQ(kq)\r\n-x=NhapVaDem()\r\n-for i in range(NhapVaDem()):\r\n- if SoHople(x)==False:\r\n-    if LaSoNguyenTo(x)==True:\r\n-            kq+=1\r\n-InKQ(kq)\r\n"
+                },
+                {
+                    "date": 1677807606731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,17 +15,19 @@\n     return x\r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n \r\n-# dang loi khong ra duoc dap an\r\n+\r\n kq=0\r\n while True:\r\n     x=NhapVaDem()\r\n     if SoHople(x)==True:break\r\n     else:\r\n         if LaSoNguyenTo(x)==True:\r\n             kq+=1\r\n InKQ(kq)\r\n+\r\n+# dang loi khong ra duoc dap an\r\n # x=NhapVaDem()\r\n # for i in range(NhapVaDem()):\r\n #  if SoHople(x)==False:\r\n #     if LaSoNguyenTo(x)==True:\r\n"
+                },
+                {
+                    "date": 1677808031245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n print('Nhap day so:')\r\n def NhapVaDem():\r\n-#    while True:\r\n-        \r\n+#    while True:    \r\n     x=int(input())\r\n     # if x<=1: break\r\n     return x\r\n def SoHople(x):\r\n"
+                },
+                {
+                    "date": 1677808505942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n print('Nhap day so:')\r\n-def NhapVaDem():\r\n-#    while True:    \r\n+def NhapVaDem():   \r\n     x=int(input())\r\n-    # if x<=1: break\r\n     return x\r\n def SoHople(x):\r\n     if x<=1: x=True\r\n     else: x=False\r\n"
+                },
+                {
+                    "date": 1677808544889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,5 @@\n     if SoHople(x)==True:break\r\n     else:\r\n         if LaSoNguyenTo(x)==True:\r\n             kq+=1\r\n-InKQ(kq)\r\n-\r\n-# dang loi khong ra duoc dap an\r\n-# x=NhapVaDem()\r\n-# for i in range(NhapVaDem()):\r\n-#  if SoHople(x)==False:\r\n-#     if LaSoNguyenTo(x)==True:\r\n-#             kq+=1\r\n-# InKQ(kq)\r\n+InKQ(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677942521109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,24 +1,32 @@\n-print('Nhap day so:')\r\n-def NhapVaDem():   \r\n-    x=int(input())\r\n-    return x\r\n+\r\n+def LaSoNguyenTo(x):\r\n+    if (x%2==1 and x%5!=0) or x==2 :\r\n+        return True\r\n+    else :\r\n+        return False\r\n def SoHople(x):\r\n-    if x<=1: x=True\r\n-    else: x=False\r\n-    return x\r\n-def LaSoNguyenTo(x):\r\n-    if (x%2==1 and x%5!=0) or x==2 : x=True\r\n-    else : x=False\r\n-    return x\r\n+    if x<=1: return True\r\n+    else: return False\r\n+def NhapVaDem(): \r\n+    print('Nhap day so:')\r\n+    kq=0  \r\n+    while True:\r\n\\ No newline at end of file\n+        x=int(input())\r\n+        if SoHople(x): break\r\n+        else: \r\n+            if LaSoNguyenTo(x): kq+=1\r\n+    return kq\r\n+        \r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n \r\n \r\n-kq=0\r\n-while True:\r\n-    x=NhapVaDem()\r\n-    if SoHople(x)==True:break\r\n-    else:\r\n-        if LaSoNguyenTo(x)==True:\r\n-            kq+=1\r\n-InKQ(kq)\n+# kq=0\r\n+# while True:\r\n+#     x=NhapVaDem()\r\n+#     if SoHople(x)==True:break\r\n+#     else:\r\n+#         if LaSoNguyenTo(x)==True:\r\n+#             kq+=1\r\n+# InKQ(kq)\r\n+NhapVaDem()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677942569792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,5 +28,6 @@\n #     else:\r\n #         if LaSoNguyenTo(x)==True:\r\n #             kq+=1\r\n # InKQ(kq)\r\n-NhapVaDem()\n\\ No newline at end of file\n+kq=NhapVaDem()\r\n+InKQ(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677942674322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     if x<=1: return True\r\n     else: return False\r\n def NhapVaDem(): \r\n     print('Nhap day so:')\r\n-    kq=0  \r\n+    # kq=0  \r\n     while True:\r\n         x=int(input())\r\n         if SoHople(x): break\r\n         else: \r\n"
+                },
+                {
+                    "date": 1677942698008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     if x<=1: return True\r\n     else: return False\r\n def NhapVaDem(): \r\n     print('Nhap day so:')\r\n-    # kq=0  \r\n+    kq=0  \r\n     while True:\r\n         x=int(input())\r\n         if SoHople(x): break\r\n         else: \r\n"
+                },
+                {
+                    "date": 1677944436549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n \r\n def LaSoNguyenTo(x):\r\n-    if (x%2==1 and x%5!=0) or x==2 :\r\n-        return True\r\n-    else :\r\n-        return False\r\n+    for i in range(3,x,2):\r\n+        if x%i==0: return False\r\n+        else: return True\r\n def SoHople(x):\r\n     if x<=1: return True\r\n     else: return False\r\n def NhapVaDem(): \r\n"
+                },
+                {
+                    "date": 1677944469721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n \r\n def LaSoNguyenTo(x):\r\n+    if x==2 or x==3: return True\r\n     for i in range(3,x,2):\r\n         if x%i==0: return False\r\n         else: return True\r\n def SoHople(x):\r\n"
+                },
+                {
+                    "date": 1677945254489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n def LaSoNguyenTo(x):\r\n-    if x==2 or x==3: return True\r\n-    for i in range(3,x,2):\r\n+    if x==2 : return True\r\n+    for i in range(2,x):\r\n         if x%i==0: return False\r\n         else: return True\r\n def SoHople(x):\r\n     if x<=1: return True\r\n"
+                },
+                {
+                    "date": 1677945492847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n \r\n def LaSoNguyenTo(x):\r\n-    if x==2 : return True\r\n+    u=0\r\n+    if x==2 : u=True\r\n     for i in range(2,x):\r\n-        if x%i==0: return False\r\n-        else: return True\r\n+        if x%i==0: u=False\r\n+        else: u=True\r\n+        return u\r\n def SoHople(x):\r\n     if x<=1: return True\r\n     else: return False\r\n def NhapVaDem(): \r\n"
+                },
+                {
+                    "date": 1677945513302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n def LaSoNguyenTo(x):\r\n     u=0\r\n     if x==2 : u=True\r\n     for i in range(2,x):\r\n-        if x%i==0: u=False\r\n+        if x%i==0: \r\n+            u=False\r\n+            break\r\n         else: u=True\r\n         return u\r\n def SoHople(x):\r\n     if x<=1: return True\r\n"
+                },
+                {
+                    "date": 1677945587841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     while True:\r\n         x=int(input())\r\n         if SoHople(x): break\r\n         else: \r\n-            if LaSoNguyenTo(x): kq+=1\r\n+            if LaSoNguyenTo(x)==True: kq+=1\r\n     return kq\r\n         \r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n"
+                },
+                {
+                    "date": 1677945740921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         if x%i==0: \r\n             u=False\r\n             break\r\n         else: u=True\r\n-        return u\r\n+    return u\r\n def SoHople(x):\r\n     if x<=1: return True\r\n     else: return False\r\n def NhapVaDem(): \r\n@@ -24,14 +24,6 @@\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n \r\n \r\n-# kq=0\r\n-# while True:\r\n-#     x=NhapVaDem()\r\n-#     if SoHople(x)==True:break\r\n-#     else:\r\n-#         if LaSoNguyenTo(x)==True:\r\n-#             kq+=1\r\n-# InKQ(kq)\r\n kq=NhapVaDem()\r\n InKQ(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1677945792199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n     u=0\r\n     if x==2 : u=True\r\n     for i in range(2,x):\r\n         if x%i==0: \r\n-            u=False\r\n+            False\r\n             break\r\n-        else: u=True\r\n-    return u\r\n+        else: True\r\n+    return \r\n def SoHople(x):\r\n     if x<=1: return True\r\n     else: return False\r\n def NhapVaDem(): \r\n"
+                },
+                {
+                    "date": 1677945811974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n     u=0\r\n     if x==2 : u=True\r\n     for i in range(2,x):\r\n         if x%i==0: \r\n-            False\r\n+            u=False\r\n             break\r\n-        else: True\r\n-    return \r\n+        else: u=True\r\n+    return u\r\n def SoHople(x):\r\n     if x<=1: return True\r\n     else: return False\r\n def NhapVaDem(): \r\n"
+                },
+                {
+                    "date": 1677945941354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     while True:\r\n         x=int(input())\r\n         if SoHople(x): break\r\n         else: \r\n-            if LaSoNguyenTo(x)==True: kq+=1\r\n+            if LaSoNguyenTo(x): kq+=1\r\n     return kq\r\n         \r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n"
+                }
+            ],
+            "date": 1677804959806,
+            "name": "Commit-0",
+            "content": "print('Nhap day so:')\r\ndef NhapVaDem():\r\n    while True:\r\n        x=int(input())\r\n        if x <=1 : break\r\n    return x\r\ndef SoHople(x):\r\n    if x<=1: True\r\n    else: False\r\n    return True,False\r\ndef LaSoNguyenTo(x):\r\n    if (x%2==1 and x%5!=0) or x==2 :\r\n         kq=kq+1\r\n    return kq\r\ndef InKQ(kq):\r\n    print('Co',kq,'so nguyen to') \r\nx=NhapVaDem()\r\nwhile SoHople() == True:\r\n    kq=LaSoNguyenTo(x)\r\n     \r\nInKQ(kq)\r\n# dang loi khong ra duoc dap an"
+        }
+    ]
+}

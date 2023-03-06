@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Chuong3/BT_Slide/44_BT1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1677947786161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677947809592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,6 @@\n-numbers = [item for item in range(1,6)]\r\n-print(numbers)\r\n+n = int(input('n='))\r\n+u=1\r\n+if n >= 0 and n <= 100:\r\n+    for i in range(1,n+1):\r\n+        u = i*u\r\n+    print(n,'!=',u, sep=\"\")\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1677947786161,
+            "name": "Commit-0",
+            "content": "numbers = [item for item in range(1,6)]\r\nprint(numbers)\r\n"
+        }
+    ]
+}

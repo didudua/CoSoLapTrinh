@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Chuong3/BT_Slide/44_While.4b.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1677809882567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677809890369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n i = 1\r\n while i <= 17:\r\n-    n = 16\r\n+    n = 15\r\n     while n >= (i-1):\r\n         print(\" \", end=\"\")\r\n         n = n-2\r\n     j = 1\r\n"
+                }
+            ],
+            "date": 1677809882567,
+            "name": "Commit-0",
+            "content": "i = 1\r\nwhile i <= 17:\r\n    n = 16\r\n    while n >= (i-1):\r\n        print(\" \", end=\"\")\r\n        n = n-2\r\n    j = 1\r\n    while j <= i:\r\n        print(\"*\", end=\"\")\r\n        j = j+1\r\n    print(\"\")\r\n    i = i+2\r\n"
+        }
+    ]
+}

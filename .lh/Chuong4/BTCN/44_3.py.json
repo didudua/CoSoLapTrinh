@@ -1,0 +1,70 @@
+{
+    "sourceFile": "Chuong4/BTCN/44_3.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1677807790287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677807835669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,16 +16,16 @@\n             x1=None\r\n             x2='No'\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n-    if x1==x2==None:\r\n+    # if x1==x2==None:\r\n+    #     print('Phuong trinh vo nghiem')\r\n+    # if x1!=x2:\r\n+    #     print('Phuong trinh co hai nghiem')\r\n+    #     print('x1=',x1,sep='')\r\n+    #     print('x2=',x2,sep='')\r\n+    if x1==str():\r\n         print('Phuong trinh vo nghiem')\r\n-    if x1!=x2:\r\n-        print('Phuong trinh co hai nghiem')\r\n-        print('x1=',x1,sep='')\r\n-        print('x2=',x2,sep='')\r\n-    elif x1==str():\r\n-        print('Phuong trinh vo nghiem')\r\n     else:\r\n         print('Phuong trinh co nghiem kep')\r\n         print('x1=x2=',x1,sep='')\r\n     \r\n"
+                },
+                {
+                    "date": 1677807873637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             x2=(-b-sqrt(denta))/2*a  \r\n         elif denta==0:\r\n             x1=x2=-b/2*a\r\n         elif denta<0:\r\n-            x1=None\r\n+            x1='None'\r\n             x2='No'\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n     # if x1==x2==None:\r\n"
+                },
+                {
+                    "date": 1677807915682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,24 +12,20 @@\n             x2=(-b-sqrt(denta))/2*a  \r\n         elif denta==0:\r\n             x1=x2=-b/2*a\r\n         elif denta<0:\r\n-            x1='None'\r\n-            x2='No'\r\n+            x1=x2= None\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n-    # if x1==x2==None:\r\n-    #     print('Phuong trinh vo nghiem')\r\n-    # if x1!=x2:\r\n-    #     print('Phuong trinh co hai nghiem')\r\n-    #     print('x1=',x1,sep='')\r\n-    #     print('x2=',x2,sep='')\r\n-    if x1==str():\r\n+    if x1==x2==None:\r\n         print('Phuong trinh vo nghiem')\r\n+    if x1!=x2:\r\n+        print('Phuong trinh co hai nghiem')\r\n+        print('x1=',x1,sep='')\r\n+        print('x2=',x2,sep='')\r\n     else:\r\n         print('Phuong trinh co nghiem kep')\r\n         print('x1=x2=',x1,sep='')\r\n-    \r\n a,b,c=nhap()\r\n x1,x2=giaipt(a,b,c)\r\n inkq(x1,x2)\r\n #Chưa tìm ra cách chạy vô nghiệm\r\n"
+                },
+                {
+                    "date": 1677946458432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,12 @@\n             x1=(-b+sqrt(denta))/2*a\r\n             x2=(-b-sqrt(denta))/2*a  \r\n         elif denta==0:\r\n             x1=x2=-b/2*a\r\n-        elif denta<0:\r\n-            x1=x2= None\r\n+        elif denta<0:return True\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n-    if x1==x2==None:\r\n+    if giaipt(a,b,c):\r\n         print('Phuong trinh vo nghiem')\r\n     if x1!=x2:\r\n         print('Phuong trinh co hai nghiem')\r\n         print('x1=',x1,sep='')\r\n"
+                },
+                {
+                    "date": 1677946663210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,12 +11,13 @@\n             x1=(-b+sqrt(denta))/2*a\r\n             x2=(-b-sqrt(denta))/2*a  \r\n         elif denta==0:\r\n             x1=x2=-b/2*a\r\n-        elif denta<0:return True\r\n+        elif denta<0:\r\n+            x1=None\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n-    if giaipt(a,b,c):\r\n+    if x1==None:\r\n         print('Phuong trinh vo nghiem')\r\n     if x1!=x2:\r\n         print('Phuong trinh co hai nghiem')\r\n         print('x1=',x1,sep='')\r\n"
+                },
+                {
+                    "date": 1677946713427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             x2=(-b-sqrt(denta))/2*a  \r\n         elif denta==0:\r\n             x1=x2=-b/2*a\r\n         elif denta<0:\r\n-            x1=None\r\n+            None\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n     if x1==None:\r\n         print('Phuong trinh vo nghiem')\r\n"
+                },
+                {
+                    "date": 1677946724811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         elif denta<0:\r\n             None\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n-    if x1==None:\r\n+    if None:\r\n         print('Phuong trinh vo nghiem')\r\n     if x1!=x2:\r\n         print('Phuong trinh co hai nghiem')\r\n         print('x1=',x1,sep='')\r\n"
+                },
+                {
+                    "date": 1677946753039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,12 @@\n             x2=(-b-sqrt(denta))/2*a  \r\n         elif denta==0:\r\n             x1=x2=-b/2*a\r\n         elif denta<0:\r\n-            None\r\n+            True\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n-    if None:\r\n+    if True:\r\n         print('Phuong trinh vo nghiem')\r\n     if x1!=x2:\r\n         print('Phuong trinh co hai nghiem')\r\n         print('x1=',x1,sep='')\r\n"
+                },
+                {
+                    "date": 1677946933890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,14 +12,15 @@\n             x2=(-b-sqrt(denta))/2*a  \r\n         elif denta==0:\r\n             x1=x2=-b/2*a\r\n         elif denta<0:\r\n-            True\r\n+            x1=-1\r\n+            x2=-2\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n-    if True:\r\n+    if x1<0 and x2<0:\r\n         print('Phuong trinh vo nghiem')\r\n-    if x1!=x2:\r\n+    if x1>0 or x2>0:\r\n         print('Phuong trinh co hai nghiem')\r\n         print('x1=',x1,sep='')\r\n         print('x2=',x2,sep='')\r\n     else:\r\n"
+                },
+                {
+                    "date": 1677946945850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         return x1,x2\r\n def inkq(x1,x2):\r\n     if x1<0 and x2<0:\r\n         print('Phuong trinh vo nghiem')\r\n-    if x1>0 or x2>0:\r\n+    elif x1>0 or x2>0:\r\n         print('Phuong trinh co hai nghiem')\r\n         print('x1=',x1,sep='')\r\n         print('x2=',x2,sep='')\r\n     else:\r\n"
+                },
+                {
+                    "date": 1677946985334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,12 @@\n         elif denta==0:\r\n             x1=x2=-b/2*a\r\n         elif denta<0:\r\n             x1=-1\r\n-            x2=-2\r\n+            x2=2\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n-    if x1<0 and x2<0:\r\n+    if x1<0 and x2>0:\r\n         print('Phuong trinh vo nghiem')\r\n     elif x1>0 or x2>0:\r\n         print('Phuong trinh co hai nghiem')\r\n         print('x1=',x1,sep='')\r\n"
+                },
+                {
+                    "date": 1677947362210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,19 +12,19 @@\n             x2=(-b-sqrt(denta))/2*a  \r\n         elif denta==0:\r\n             x1=x2=-b/2*a\r\n         elif denta<0:\r\n-            x1=-1\r\n-            x2=2\r\n+            x1=True\r\n+            x2=False\r\n         return x1,x2\r\n def inkq(x1,x2):\r\n-    if x1<0 and x2>0:\r\n+    if x1==True and x2==False:\r\n         print('Phuong trinh vo nghiem')\r\n-    elif x1>0 or x2>0:\r\n+    elif x1>x2 or x1<x2:\r\n         print('Phuong trinh co hai nghiem')\r\n         print('x1=',x1,sep='')\r\n         print('x2=',x2,sep='')\r\n-    else:\r\n+    elif x1==x2:\r\n         print('Phuong trinh co nghiem kep')\r\n         print('x1=x2=',x1,sep='')\r\n a,b,c=nhap()\r\n x1,x2=giaipt(a,b,c)\r\n"
+                },
+                {
+                    "date": 1677947388578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,5 +28,4 @@\n         print('x1=x2=',x1,sep='')\r\n a,b,c=nhap()\r\n x1,x2=giaipt(a,b,c)\r\n inkq(x1,x2)\r\n-#Chưa tìm ra cách chạy vô nghiệm\r\n"
+                }
+            ],
+            "date": 1677807790287,
+            "name": "Commit-0",
+            "content": "def nhap():\r\n    print('Nhap 3 so nguyen:')\r\n    a=int(input('a='))\r\n    b=int(input('b='))\r\n    c=int(input('c='))\r\n    return a,b,c\r\ndef giaipt(a,b,c):\r\n        from math import sqrt\r\n        denta=b*b-4*a*c\r\n        if denta>0:\r\n            x1=(-b+sqrt(denta))/2*a\r\n            x2=(-b-sqrt(denta))/2*a  \r\n        elif denta==0:\r\n            x1=x2=-b/2*a\r\n        elif denta<0:\r\n            x1=None\r\n            x2='No'\r\n        return x1,x2\r\ndef inkq(x1,x2):\r\n    if x1==x2==None:\r\n        print('Phuong trinh vo nghiem')\r\n    if x1!=x2:\r\n        print('Phuong trinh co hai nghiem')\r\n        print('x1=',x1,sep='')\r\n        print('x2=',x2,sep='')\r\n    elif x1==str():\r\n        print('Phuong trinh vo nghiem')\r\n    else:\r\n        print('Phuong trinh co nghiem kep')\r\n        print('x1=x2=',x1,sep='')\r\n    \r\na,b,c=nhap()\r\nx1,x2=giaipt(a,b,c)\r\ninkq(x1,x2)\r\n#Chưa tìm ra cách chạy vô nghiệm\r\n"
+        }
+    ]
+}

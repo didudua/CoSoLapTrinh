@@ -1,0 +1,62 @@
+{
+    "sourceFile": "Chuong5/BT_Slide/VD.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1678004866845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678004887644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n spam=[1,2,3,4,5,6]\r\n-spam[3:-1]\n\\ No newline at end of file\n+a=spam[3:-1]\r\n+print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678004903793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n spam=[1,2,3,4,5,6]\r\n-a=spam[3:-1]\r\n+a=spam[3:0]\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678004912221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n spam=[1,2,3,4,5,6]\r\n-a=spam[3:0]\r\n+a=spam[0:0]\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678004925595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n spam=[1,2,3,4,5,6]\r\n-a=spam[0:0]\r\n+a=spam[3:6]\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678004939448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n spam=[1,2,3,4,5,6]\r\n-a=spam[3:6]\r\n+a=spam[2:6]\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678004947681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n spam=[1,2,3,4,5,6]\r\n-a=spam[2:6]\r\n+a=spam[2:5]\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678005004774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n spam=[1,2,3,4,5,6]\r\n-a=spam[2:5]\r\n+a=spam[0:-1]\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678005014457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n spam=[1,2,3,4,5,6]\r\n-a=spam[0:-1]\r\n+a=spam[3:-1]\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678005471890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,11 @@\n-spam=[1,2,3,4,5,6]\r\n-a=spam[3:-1]\r\n-print(a)\n\\ No newline at end of file\n+catNames = []\r\n+while True:\r\n+    print('Enter the name of cat ' + str(len(catNames) + 1)\r\n+          + ' (Or enter nothing to stop.):')\r\n+    name = input()\r\n+    if name == '':\r\n+        break\r\n+    catNames = catNames + [name]  # list concatenation\r\n+    print('The cat names are:')\r\n+    for name in catNames:\r\n+        print(' ' + name)\r\n"
+                },
+                {
+                    "date": 1678005500159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-catNames = []\r\n+catNames = [0]\r\n while True:\r\n     print('Enter the name of cat ' + str(len(catNames) + 1)\r\n           + ' (Or enter nothing to stop.):')\r\n     name = input()\r\n"
+                },
+                {
+                    "date": 1678005507390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-catNames = [0]\r\n+catNames = []\r\n while True:\r\n     print('Enter the name of cat ' + str(len(catNames) + 1)\r\n           + ' (Or enter nothing to stop.):')\r\n     name = input()\r\n"
+                }
+            ],
+            "date": 1678004866845,
+            "name": "Commit-0",
+            "content": "spam=[1,2,3,4,5,6]\r\nspam[3:-1]"
+        }
+    ]
+}

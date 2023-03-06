@@ -1,0 +1,86 @@
+{
+    "sourceFile": "Chuong3/BT_Slide/44_BT2.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1677943244709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677943397629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     if n == 2:\r\n         print(n, 'la SNT')\r\n     # elif n % 2 == 1 and n % 5 != 0:\r\n else: \r\n-    for i in range(2,n):\r\n+    for i in range(2,n,2):\r\n           if n%i==0:break\r\n           else:\r\n            print(n, 'la SNT')\r\n     else:\r\n"
+                },
+                {
+                    "date": 1677943628545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,5 @@\n-n = int(input('n='))\r\n-if n >= 2 and n <= 100:\r\n-    if n == 2:\r\n-        print(n, 'la SNT')\r\n-    # elif n % 2 == 1 and n % 5 != 0:\r\n-else: \r\n-    for i in range(2,n,2):\r\n-          if n%i==0:break\r\n-          else:\r\n-           print(n, 'la SNT')\r\n-    else:\r\n-        print(n, 'khong la SNT')\r\n+n=int(input('n='))\r\n+if n==2: print(n,'la SNT')\r\n+for i in range(3,n,2):\r\n+    if n%i==0: print(n,'khong la SNT')\r\n+    else: print(n,'la SNT')\r\n"
+                },
+                {
+                    "date": 1677943763541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n n=int(input('n='))\r\n if n==2: print(n,'la SNT')\r\n for i in range(3,n,2):\r\n-    if n%i==0: print(n,'khong la SNT')\r\n-    else: print(n,'la SNT')\r\n+    if n%i==0: break\r\n+    else: x= True\r\n+if x : print(n, 'la SNT')\r\n+else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677943821365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n n=int(input('n='))\r\n-if n==2: print(n,'la SNT')\r\n+if n==2: x=True\r\n for i in range(3,n,2):\r\n     if n%i==0: break\r\n     else: x= True\r\n if x : print(n, 'la SNT')\r\n"
+                },
+                {
+                    "date": 1677943858742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n if n==2: x=True\r\n for i in range(3,n,2):\r\n     if n%i==0: break\r\n     else: x= True\r\n-if x : print(n, 'la SNT')\r\n+if x==True : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677943881951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n n=int(input('n='))\r\n if n==2: x=True\r\n-for i in range(3,n,2):\r\n+for i in range(2,n,2):\r\n     if n%i==0: break\r\n     else: x= True\r\n if x==True : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677943894074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n n=int(input('n='))\r\n if n==2: x=True\r\n-for i in range(2,n,2):\r\n+for i in range(2,n):\r\n     if n%i==0: break\r\n     else: x= True\r\n if x==True : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677943941550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n n=int(input('n='))\r\n-if n==2: x=True\r\n+x=0\r\n+if n==2: x=1\r\n for i in range(2,n):\r\n     if n%i==0: break\r\n-    else: x= True\r\n-if x==True : print(n, 'la SNT')\r\n+    else: x=1\r\n+if x==1 : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677943984536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n n=int(input('n='))\r\n x=0\r\n if n==2: x=1\r\n-for i in range(2,n):\r\n+for i in range(3,n,2):\r\n     if n%i==0: break\r\n     else: x=1\r\n if x==1 : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677944098150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n n=int(input('n='))\r\n x=0\r\n if n==2: x=1\r\n-for i in range(3,n,2):\r\n+for i in range(2,n,2):\r\n     if n%i==0: break\r\n     else: x=1\r\n if x==1 : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677944121735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n n=int(input('n='))\r\n x=0\r\n if n==2: x=1\r\n-for i in range(2,n,2):\r\n+for i in range(3,n,2):\r\n     if n%i==0: break\r\n     else: x=1\r\n if x==1 : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677944202224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n n=int(input('n='))\r\n x=0\r\n if n==2: x=1\r\n for i in range(3,n,2):\r\n-    if n%i==0: break\r\n+    if n==3: x=1\r\n+    elif n%i==0: break\r\n     else: x=1\r\n if x==1 : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677944238829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n n=int(input('n='))\r\n x=0\r\n if n==2: x=1\r\n+if n==3:x=1\r\n for i in range(3,n,2):\r\n-    if n==3: x=1\r\n-    elif n%i==0: break\r\n+    if n%i==0: break\r\n     else: x=1\r\n if x==1 : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677944658043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n n=int(input('n='))\r\n x=0\r\n-if n==2: x=1\r\n-if n==3:x=1\r\n+if n==2 or n==3: x=1\r\n+if n%2==0: x=1\r\n for i in range(3,n,2):\r\n     if n%i==0: break\r\n     else: x=1\r\n if x==1 : print(n, 'la SNT')\r\n"
+                },
+                {
+                    "date": 1677944751958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n n=int(input('n='))\r\n x=0\r\n-if n==2 or n==3: x=1\r\n-if n%2==0: x=1\r\n-for i in range(3,n,2):\r\n+if n==2: x=1\r\n+for i in range(2,n):\r\n+    if n%2==0:break\r\n     if n%i==0: break\r\n     else: x=1\r\n if x==1 : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677945018193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n n=int(input('n='))\r\n x=0\r\n if n==2: x=1\r\n for i in range(2,n):\r\n-    if n%2==0:break\r\n-    if n%i==0: break\r\n+    if n%i==0:\r\n+        x=0\r\n+        break\r\n     else: x=1\r\n if x==1 : print(n, 'la SNT')\r\n else: print(n, 'Khong la SNT')\r\n"
+                },
+                {
+                    "date": 1677945199851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n n=int(input('n='))\r\n x=0\r\n if n==2: x=1\r\n-for i in range(2,n):\r\n+if n>2 and n<=100:\r\n+ for i in range(2,n):\r\n     if n%i==0:\r\n         x=0\r\n         break\r\n     else: x=1\r\n-if x==1 : print(n, 'la SNT')\r\n-else: print(n, 'Khong la SNT')\r\n+ if x==1 : print(n, 'la SNT')\r\n+ else: print(n, 'Khong la SNT')\r\n"
+                }
+            ],
+            "date": 1677943244709,
+            "name": "Commit-0",
+            "content": "n = int(input('n='))\r\nif n >= 2 and n <= 100:\r\n    if n == 2:\r\n        print(n, 'la SNT')\r\n    # elif n % 2 == 1 and n % 5 != 0:\r\nelse: \r\n    for i in range(2,n):\r\n          if n%i==0:break\r\n          else:\r\n           print(n, 'la SNT')\r\n    else:\r\n        print(n, 'khong la SNT')\r\n"
+        }
+    ]
+}

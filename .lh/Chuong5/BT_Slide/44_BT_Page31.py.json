@@ -1,0 +1,106 @@
+{
+    "sourceFile": "Chuong5/BT_Slide/44_BT_Page31.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1678005825037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678006012528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,10 @@\n songuyen=[]\r\n while len(songuyen)<=9:\r\n     n= int(input())\r\n     songuyen=songuyen+[n]\r\n+x=int(input('So nguyen X: '))\r\n+for i in range(len(songuyen)+1):\r\n+    if songuyen[i]==5: \r\n+        songuyen[i]=x\r\n print(songuyen)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006050097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n while len(songuyen)<=9:\r\n     n= int(input())\r\n     songuyen=songuyen+[n]\r\n x=int(input('So nguyen X: '))\r\n-for i in range(len(songuyen)+1):\r\n+for i in range(len(songuyen)):\r\n     if songuyen[i]==5: \r\n         songuyen[i]=x\r\n print(songuyen)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006158341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,9 @@\n for i in range(len(songuyen)):\r\n     if songuyen[i]==5: \r\n         songuyen[i]=x\r\n print(songuyen)\r\n+for i in range(len(songuyen)):\r\n+    if songuyen[i]==x:\r\n+        del songuyen[i]\r\n+print(songuyen)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006215967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n songuyen=[]\r\n while len(songuyen)<=9:\r\n     n= int(input())\r\n     songuyen=songuyen+[n]\r\n-x=int(input('So nguyen X: '))\r\n+# x=int(input('So nguyen X: '))\r\n for i in range(len(songuyen)):\r\n     if songuyen[i]==5: \r\n-        songuyen[i]=x\r\n+        songuyen[i]='x'\r\n print(songuyen)\r\n for i in range(len(songuyen)):\r\n     if songuyen[i]==x:\r\n         del songuyen[i]\r\n"
+                },
+                {
+                    "date": 1678006244372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     songuyen=songuyen+[n]\r\n # x=int(input('So nguyen X: '))\r\n for i in range(len(songuyen)):\r\n     if songuyen[i]==5: \r\n-        songuyen[i]='x'\r\n+        songuyen[i]=['x']\r\n print(songuyen)\r\n for i in range(len(songuyen)):\r\n     if songuyen[i]==x:\r\n         del songuyen[i]\r\n"
+                },
+                {
+                    "date": 1678006298007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,14 @@\n songuyen=[]\r\n while len(songuyen)<=9:\r\n     n= int(input())\r\n     songuyen=songuyen+[n]\r\n-# x=int(input('So nguyen X: '))\r\n+x=int(input('So nguyen X: '))\r\n for i in range(len(songuyen)):\r\n     if songuyen[i]==5: \r\n-        songuyen[i]=['x']\r\n+        songuyen[i]=x\r\n print(songuyen)\r\n-for i in range(len(songuyen)):\r\n-    if songuyen[i]==x:\r\n-        del songuyen[i]\r\n+for j in range(len(songuyen)):\r\n+    if songuyen[j]==x:\r\n+        del songuyen[j]\r\n print(songuyen)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006370385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n while len(songuyen)<=9:\r\n     n= int(input())\r\n     songuyen=songuyen+[n]\r\n x=int(input('So nguyen X: '))\r\n-for i in range(len(songuyen)):\r\n-    if songuyen[i]==5: \r\n-        songuyen[i]=x\r\n-print(songuyen)\r\n+# for i in range(len(songuyen)):\r\n+#     if songuyen[i]==5: \r\n+#         songuyen[i]=x\r\n+# print(songuyen)\r\n for j in range(len(songuyen)):\r\n     if songuyen[j]==x:\r\n         del songuyen[j]\r\n print(songuyen)\r\n"
+                },
+                {
+                    "date": 1678006503176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n while len(songuyen)<=9:\r\n     n= int(input())\r\n     songuyen=songuyen+[n]\r\n x=int(input('So nguyen X: '))\r\n-# for i in range(len(songuyen)):\r\n-#     if songuyen[i]==5: \r\n-#         songuyen[i]=x\r\n+for i in range(len(songuyen)):\r\n+    if songuyen[i]==5: \r\n+        songuyen[i]=x\r\n+print(songuyen)\r\n+# for j in range(len(songuyen)):\r\n+#     if songuyen[j]==x:\r\n+#         del songuyen[j]\r\n # print(songuyen)\r\n-for j in range(len(songuyen)):\r\n-    if songuyen[j]==x:\r\n-        del songuyen[j]\r\n-print(songuyen)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006595490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n x=int(input('So nguyen X: '))\r\n for i in range(len(songuyen)):\r\n     if songuyen[i]==5: \r\n         songuyen[i]=x\r\n-print(songuyen)\r\n-# for j in range(len(songuyen)):\r\n-#     if songuyen[j]==x:\r\n-#         del songuyen[j]\r\n-# print(songuyen)\r\n+k=print(songuyen)\r\n+for j in range(len(k)):\r\n+    if k[j]==x:\r\n+        del k[j]\r\n+print(k)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006614798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n for i in range(len(songuyen)):\r\n     if songuyen[i]==5: \r\n         songuyen[i]=x\r\n k=print(songuyen)\r\n-for j in range(len(k)):\r\n+for j in range(len(songuyen)):\r\n     if k[j]==x:\r\n         del k[j]\r\n print(k)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006667748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n x=int(input('So nguyen X: '))\r\n for i in range(len(songuyen)):\r\n     if songuyen[i]==5: \r\n         songuyen[i]=x\r\n-k=print(songuyen)\r\n+print(songuyen)\r\n for j in range(len(songuyen)):\r\n-    if k[j]==x:\r\n-        del k[j]\r\n-print(k)\r\n+    if songuyen[j]==x:\r\n+        del songuyen[j]\r\n+print(songuyen)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006727191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n for i in range(len(songuyen)):\r\n     if songuyen[i]==5: \r\n         songuyen[i]=x\r\n print(songuyen)\r\n-for j in range(len(songuyen)):\r\n+for j in range(0,len(songuyen)):\r\n     if songuyen[j]==x:\r\n         del songuyen[j]\r\n print(songuyen)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006808338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n for i in range(len(songuyen)):\r\n     if songuyen[i]==5: \r\n         songuyen[i]=x\r\n print(songuyen)\r\n-for j in range(0,len(songuyen)):\r\n-    if songuyen[j]==x:\r\n-        del songuyen[j]\r\n+for i in range(len(songuyen)):\r\n+    if songuyen[i]==x: \r\n+        songuyen[i]=5\r\n print(songuyen)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006848522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n         songuyen[i]=x\r\n print(songuyen)\r\n for i in range(len(songuyen)):\r\n     if songuyen[i]==x: \r\n-        songuyen[i]=5\r\n+        del songuyen[i]\r\n print(songuyen)\r\n     \r\n"
+                },
+                {
+                    "date": 1678006888941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n         songuyen[i]=x\r\n print(songuyen)\r\n for i in range(len(songuyen)):\r\n     if songuyen[i]==x: \r\n-        del songuyen[i]\r\n+        del(songuyen[i])\r\n print(songuyen)\r\n     \r\n"
+                },
+                {
+                    "date": 1678007709698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,14 @@\n print('Nhap 10 so nguyen:')\r\n-songuyen=[]\r\n-while len(songuyen)<=9:\r\n+num=[]\r\n+while len(num)<=9:\r\n     n= int(input())\r\n-    songuyen=songuyen+[n]\r\n+    num=num+[n]\r\n x=int(input('So nguyen X: '))\r\n-for i in range(len(songuyen)):\r\n-    if songuyen[i]==5: \r\n-        songuyen[i]=x\r\n-print(songuyen)\r\n-for i in range(len(songuyen)):\r\n-    if songuyen[i]==x: \r\n-        del(songuyen[i])\r\n-print(songuyen)\r\n+for i in range(len(num)):\r\n+    if num[i]==5: \r\n+        num[i]=x\r\n+print(num)\r\n+if x in num:\r\n+    num=[i for i in num if num !=x]\r\n+print(num)\r\n     \r\n"
+                },
+                {
+                    "date": 1678007763361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n         num[i]=x\r\n print(num)\r\n if x in num:\r\n     num=[i for i in num if num !=x]\r\n-print(num)\r\n+    print(num)\r\n     \r\n"
+                },
+                {
+                    "date": 1678007794048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     if num[i]==5: \r\n         num[i]=x\r\n print(num)\r\n if x in num:\r\n-    num=[i for i in num if num !=x]\r\n+    num=[n for n in num if num !=x]\r\n     print(num)\r\n     \r\n"
+                },
+                {
+                    "date": 1678007845405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     if num[i]==5: \r\n         num[i]=x\r\n print(num)\r\n if x in num:\r\n-    num=[n for n in num if num !=x]\r\n+    num=num-x\r\n     print(num)\r\n     \r\n"
+                },
+                {
+                    "date": 1678007875696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     if num[i]==5: \r\n         num[i]=x\r\n print(num)\r\n if x in num:\r\n-    num=num-x\r\n+    num=num-[x]\r\n     print(num)\r\n     \r\n"
+                },
+                {
+                    "date": 1678007932425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     if num[i]==5: \r\n         num[i]=x\r\n print(num)\r\n if x in num:\r\n-    num=num-[x]\r\n+    num=[n for n in num if n!=x]\r\n     print(num)\r\n     \r\n"
+                },
+                {
+                    "date": 1678008027211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n         num[i]=x\r\n print(num)\r\n if x in num:\r\n     num=[n for n in num if n!=x]\r\n+    # num = [(for)chay n trong day num if n khac x thi in n]\r\n     print(num)\r\n     \r\n"
+                }
+            ],
+            "date": 1678005825036,
+            "name": "Commit-0",
+            "content": "print('Nhap 10 so nguyen:')\r\nsonguyen=[]\r\nwhile len(songuyen)<=9:\r\n    n= int(input())\r\n    songuyen=songuyen+[n]\r\nprint(songuyen)\r\n    \r\n"
+        }
+    ]
+}
