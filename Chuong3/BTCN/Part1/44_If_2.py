@@ -1,7 +1,7 @@
-a = float(input('M1='))
-b = float(input('M2='))
-c = float(input('M3='))
-s = float(input('S='))
+a = int(input('M1='))
+b = int(input('M2='))
+c = int(input('M3='))
+s = int(input('S='))
 if s <= 100:
     p = s*a
 elif s >= 101 and s <= 150:

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Chuong3/BTCN/Part1/44_If_2.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1678158755858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1678158755858,
+            "name": "Commit-0",
+            "content": "a = int(input('M1='))\r\nb = int(input('M2='))\r\nc = int(input('M3='))\r\ns = int(input('S='))\r\nif s <= 100:\r\n    p = s*a\r\nelif s >= 101 and s <= 150:\r\n    p = 100*a+(s-100)*b\r\nelif s >= 151:\r\n    p = 100*a+(s-150)*c+50*b\r\nprint('Phai tra='+str(int(p)))\r\n"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Chuong3/BTCN/Part1/44_If_1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1678158931891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678158965113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n c = float(input('c='))\r\n if (a+b) > c and (a+c) > b and (b+c) > a:\r\n     p = (a+b+c)/2\r\n     s = math.sqrt((p*(p-a)*(p-b)*(p-c)))\r\n-    prfloat('Dien tich='+str(round(s, 3)))\r\n+    print('Dien tich='+str(round(s, 3)))\r\n else:\r\n-    prfloat('Khong hop le')\r\n+    print('Khong hop le')\r\n"
+                },
+                {
+                    "date": 1678159002212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import math\r\n a = float(input('a='))\r\n b = float(input('b='))\r\n c = float(input('c='))\r\n-if (a+b) > c and (a+c) > b and (b+c) > a:\r\n+if a>0 and b>0 and c>0:\r\n+ if (a+b) > c and (a+c) > b and (b+c) > a:\r\n     p = (a+b+c)/2\r\n     s = math.sqrt((p*(p-a)*(p-b)*(p-c)))\r\n     print('Dien tich='+str(round(s, 3)))\r\n-else:\r\n+ else:\r\n     print('Khong hop le')\r\n"
+                }
+            ],
+            "date": 1678158931891,
+            "name": "Commit-0",
+            "content": "import math\r\na = float(input('a='))\r\nb = float(input('b='))\r\nc = float(input('c='))\r\nif (a+b) > c and (a+c) > b and (b+c) > a:\r\n    p = (a+b+c)/2\r\n    s = math.sqrt((p*(p-a)*(p-b)*(p-c)))\r\n    prfloat('Dien tich='+str(round(s, 3)))\r\nelse:\r\n    prfloat('Khong hop le')\r\n"
+        }
+    ]
+}

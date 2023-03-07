@@ -1,6 +1,6 @@
-a = float(input(''))
-b = float(input(''))
-c = float(input(''))
+a = int(input(''))
+b = int(input(''))
+c = int(input(''))
 avg = (a*2+b*3+c)/6
 if avg < 3:
     print('Kem')
