@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Chuong5/BT_Slide/PhuongThucCuaList.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1678084255481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678084334172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,11 @@\n names.insert(0, 7)  # chèn 7 vào vị trí 0 trong dãy names\r\n print(names)\r\n names.insert(-1, 8)\r\n print(names)\r\n-names.index(2)  # trả về vị trí số 2 trong dãy names\r\n+u=names.index(2)  # trả về vị trí số 2 trong dãy names\r\n                 # ở đây names.index(2)=1\r\n-print(names)\r\n+print(u)\r\n names.remove(2)  # xoá số 2 đầu tiên trong dãy names\r\n print(names)\r\n # .sort(): chỉ thực hiện khi trong dãy có cùng kiểu dữ liệu\r\n names.sort()  # sắp xếp các phần tử trong dãy ( mặc định là tăng dần)\r\n"
+                }
+            ],
+            "date": 1678084255480,
+            "name": "Commit-0",
+            "content": "names = [1, 2, 3, 2, 4, 5]\r\nnames.append(6)  # thêm 6 vào cuối dãy names\r\nprint(names)\r\nnames.insert(0, 7)  # chèn 7 vào vị trí 0 trong dãy names\r\nprint(names)\r\nnames.insert(-1, 8)\r\nprint(names)\r\nnames.index(2)  # trả về vị trí số 2 trong dãy names\r\n                # ở đây names.index(2)=1\r\nprint(names)\r\nnames.remove(2)  # xoá số 2 đầu tiên trong dãy names\r\nprint(names)\r\n# .sort(): chỉ thực hiện khi trong dãy có cùng kiểu dữ liệu\r\nnames.sort()  # sắp xếp các phần tử trong dãy ( mặc định là tăng dần)\r\nprint(names)\r\nnames.sort(reverse=True) # sắp xếp các phần tử trong dãy giảm dần ( reverse=True)\r\nprint(names) \r\n# nếu dãy là kiểu dữ liệu: sẽ được sắp xếp theo ký tự đầu tiên theo bảng chữ cái alphabet           \r\nnames.reverse() # đảo ngược thứ tự các phần tử trong dãy\r\n                # vd: cho dãy [1,2,3,4,5]\r\n                # thực hiện đảo ngược\r\n                # -> [5,4,3,2,1]\r\nprint(names)\r\nprint(names.count(2)) # thực hiện đếm số 2 có trong list\r\n               # ở đây name.count(2)=2 vì có 2 số 2 trong list\r\nname1=names.copy() # thực hiện copy list names gán cho name1\r\nprint(name1)\r\nx=names.pop(2) # thực hiện xoá và lấy ra giá trị thứ 2 trong list\r\n             # nếu để trống vd: .pop() thì mặc định là gí trị cuối trong list\r\nprint(names)\r\nprint(x)\r\nnames.clear() # xoá tất cả các phần tử trong list\r\nprint(names)"
+        }
+    ]
+}

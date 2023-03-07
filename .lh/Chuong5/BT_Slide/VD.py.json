@@ -1,9 +1,9 @@
 {
-    "sourceFile": "Chuong5/BT_Slide/VD.py",
+    "sourceFile": "Chuong5/BT_Slide/vd.py",
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 18,
             "patches": [
                 {
                     "date": 1678004866845,
@@ -52,6 +52,34 @@
                 {
                     "date": 1678005507390,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-catNames = [0]\r\n+catNames = []\r\n while True:\r\n     print('Enter the name of cat ' + str(len(catNames) + 1)\r\n           + ' (Or enter nothing to stop.):')\r\n     name = input()\r\n"
+                },
+                {
+                    "date": 1678082394761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,7 @@\n-catNames = []\r\n-while True:\r\n-    print('Enter the name of cat ' + str(len(catNames) + 1)\r\n-          + ' (Or enter nothing to stop.):')\r\n-    name = input()\r\n-    if name == '':\r\n-        break\r\n-    catNames = catNames + [name]  # list concatenation\r\n-    print('The cat names are:')\r\n-    for name in catNames:\r\n-        print(' ' + name)\r\n+names = [1, 2, 3, 4, 5, 6]\r\n+names.append(6)\r\n+print(names)\r\n+names.insert(0,7)\r\n+print(names)\r\n+names.insert(-1,8)\r\n+int(names)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678082409405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n print(names)\r\n names.insert(0,7)\r\n print(names)\r\n names.insert(-1,8)\r\n-int(names)\n\\ No newline at end of file\n+print(names)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678082908990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n names = [1, 2, 3, 4, 5, 6]\r\n-names.append(6)\r\n+names.append(6) # thêm 6 vào cuối dãy names\r\n print(names)\r\n-names.insert(0,7)\r\n+names.insert(0,7) # chèn 7 vào vị trí 0 trong dãy\r\n print(names)\r\n-names.insert(-1,8)\r\n+names.insert(-1,8) \r\n+print(names)\r\n+names.index('2') # trả về vị trí của '2' trong dãy\r\n+                 # ở đây names.index('2')=1\r\n+print(names)\r\n+names.remove(2)\r\n print(names)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678082921763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n names.insert(0,7) # chèn 7 vào vị trí 0 trong dãy\r\n print(names)\r\n names.insert(-1,8) \r\n print(names)\r\n-names.index('2') # trả về vị trí của '2' trong dãy\r\n+names.index(2) # trả về vị trí của 2 trong dãy\r\n                  # ở đây names.index('2')=1\r\n print(names)\r\n names.remove(2)\r\n print(names)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678082962972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n-names = [1, 2, 3, 4, 5, 6]\r\n+names = [1, 2, 3,2, 4, 5, 6]\r\n names.append(6) # thêm 6 vào cuối dãy names\r\n print(names)\r\n names.insert(0,7) # chèn 7 vào vị trí 0 trong dãy\r\n print(names)\r\n names.insert(-1,8) \r\n print(names)\r\n names.index(2) # trả về vị trí của 2 trong dãy\r\n-                 # ở đây names.index('2')=1\r\n+                 # ở đây names.index(2)=1\r\n print(names)\r\n-names.remove(2)\r\n+names.remove(2) # xoá phần từ\r\n print(names)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678083081630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n names = [1, 2, 3,2, 4, 5, 6]\r\n names.append(6) # thêm 6 vào cuối dãy names\r\n print(names)\r\n-names.insert(0,7) # chèn 7 vào vị trí 0 trong dãy\r\n+names.insert(0,7) # chèn 7 vào vị trí 0 trong dãy names\r\n print(names)\r\n names.insert(-1,8) \r\n print(names)\r\n-names.index(2) # trả về vị trí của 2 trong dãy\r\n+names.index(2) # trả về vị trí số 2 trong dãy names\r\n                  # ở đây names.index(2)=1\r\n print(names)\r\n-names.remove(2) # xoá phần từ\r\n+names.remove(2) # xoá số 2 đầu tiên trong dãy names\r\n+print(names)\r\n+names.sort() # sắp xếp các phần tử trong dãy\r\n print(names)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678083185723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n-names = [1, 2, 3,2, 4, 5, 6]\r\n-names.append(6) # thêm 6 vào cuối dãy names\r\n+names = [1, 2, 3, 2, 4, 5, 6]\r\n+names.append(6)  # thêm 6 vào cuối dãy names\r\n print(names)\r\n-names.insert(0,7) # chèn 7 vào vị trí 0 trong dãy names\r\n+names.insert(0, 7)  # chèn 7 vào vị trí 0 trong dãy names\r\n print(names)\r\n-names.insert(-1,8) \r\n+names.insert(-1, 8)\r\n print(names)\r\n-names.index(2) # trả về vị trí số 2 trong dãy names\r\n-                 # ở đây names.index(2)=1\r\n+names.index(2)  # trả về vị trí số 2 trong dãy names\r\n\\ No newline at end of file\n+                # ở đây names.index(2)=1\r\n print(names)\r\n-names.remove(2) # xoá số 2 đầu tiên trong dãy names\r\n+names.remove(2)  # xoá số 2 đầu tiên trong dãy names\r\n print(names)\r\n-names.sort() # sắp xếp các phần tử trong dãy\r\n-print(names)\n+names.sort()  # sắp xếp các phần tử trong dãy ( mặc định là tăng dần)\r\n+print(names)\r\n+names.sort(reverse=True) # sắp xếp các phần tử trong dãy giảm dần ( reverse=True)\r\n+print(names)\r\n"
                 }
             ],
             "date": 1678004866845,
