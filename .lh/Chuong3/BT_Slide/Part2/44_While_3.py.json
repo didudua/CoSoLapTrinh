@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Chuong3/BT_Slide/Part2/44_While_3.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1678161893014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678161899889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n     j=1\r\n     while j<=9:\r\n         print(i*j,end='\\t')\r\n         j=j+1\r\n-    print('')\r\n+    print('\\n')\r\n     i=i+1\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678161937723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n     j=1\r\n     while j<=9:\r\n         print(i*j,end='\\t')\r\n         j=j+1\r\n-    print('\\n')\r\n+    print('\\t')\r\n     i=i+1\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678161946149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n     j=1\r\n     while j<=9:\r\n         print(i*j,end='\\t')\r\n         j=j+1\r\n-    print('\\t')\r\n+    print('\\n')\r\n     i=i+1\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1678161893014,
+            "name": "Commit-0",
+            "content": "i=1\r\nwhile i<=9:\r\n    j=1\r\n    while j<=9:\r\n        print(i*j,end='\\t')\r\n        j=j+1\r\n    print('')\r\n    i=i+1"
+        }
+    ]
+}

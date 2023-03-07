@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Chuong3/BT_Slide/Part2/44_for_4b.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1678163719363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1678163719363,
+            "name": "Commit-0",
+            "content": "# for i in range(1,18,2):\r\n#     for k in range (i,18,2):\r\n#         print(' ',end=\"\")\r\n#     for j in range(1,i+1):\r\n#            print('*',end=\"\")\r\n#     print('')\r\n#c2\r\nn=9\r\nfor i in range(1,10):\r\n    print(' '*(n-i),end='')\r\n    print('*'*(2*i-1))"
+        }
+    ]
+}
