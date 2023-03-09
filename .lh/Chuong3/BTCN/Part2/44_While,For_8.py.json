@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Chuong3/BTCN/Part2/44_While,For_8.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1678165417225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678165442540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n a = input()\r\n n = int(input())\r\n for i in range(1,n+1):\r\n-    print('* '*i)\r\n-    print(\"\")\r\n+    print('n '*i)\r\n"
+                },
+                {
+                    "date": 1678165483865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n a = input()\r\n n = int(input())\r\n for i in range(1,n+1):\r\n-    print('n '*i)\r\n+    print((str(n)+' ')*i)\r\n"
+                },
+                {
+                    "date": 1678165494633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n a = input()\r\n n = int(input())\r\n for i in range(1,n+1):\r\n-    print((str(n)+' ')*i)\r\n+    print((str(a)+' ')*i)\r\n"
+                }
+            ],
+            "date": 1678165417225,
+            "name": "Commit-0",
+            "content": "a = input()\r\nn = int(input())\r\nfor i in range(1,n+1):\r\n    print('* '*i)\r\n    print(\"\")\r\n"
+        }
+    ]
+}
