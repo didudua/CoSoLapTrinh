@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Chuong5/BT_Slide/44_BTOT.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1678336105461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1678336105461,
+            "name": "Commit-0",
+            "content": "L=[1,2,3,4,5,5,7]\r\ndef nhap():\r\n    x=input('nhap x: ')\r\n    k=int(input('vi tri k: '))\r\n    y=input('y thay the x: ')\r\n    return x,k,y\r\ndef add(L,x,k):\r\n    if k > len(L):\r\n        L=L.append(x) # them x vao vi tri cuoi cua day\r\n    else: L=L.insert(k,x) # them x vao vi tri k cua day\r\n    return L\r\n#cau 2\r\ndef search(L,x):\r\n    if x in L:\r\n        u=L.index(x)\r\n        return u\r\n    else:  return None\r\n#cau 3\r\ndef delete(L,x):\r\n    if x in L:\r\n        L=L.clear(x)\r\n    return L\r\n#cau4\r\ndef count(L) :\r\n    c=len(L)\r\n    return c\r\n#cau5\r\ndef update(L,x,y):\r\n    if x in L:\r\n        L=L.insret(L.index(x),y)\r\n    return L\r\n\r\nx,k,y=nhap()\r\nprint('cau1')\r\nadd(L,x,y)\r\nprint(L)\r\nprint('cau2')\r\nu=search(L,x)\r\nprint(u)\r\nprint('cau3')\r\ndelete(L,x)\r\nprint(L)\r\nprint('cau4')\r\nc=count(L)\r\nprint(c)\r\nprint('cau5')\r\nupdate(L,x,y)\r\nprint(L)\r\n"
+        }
+    ]
+}

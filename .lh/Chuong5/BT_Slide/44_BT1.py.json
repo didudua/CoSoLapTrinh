@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Chuong5/BT_Slide/44_BT1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1678335020159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678335077401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,10 +31,8 @@\n L=[1,2,3,4,5,5,7]\r\n x=input('x=')\r\n k=int(input('k='))\r\n y=input('y=')\r\n-L=add(L,x,k)\r\n-print(L)\r\n if x in L:\r\n  u=search(L,x)\r\n else: None\r\n print(u)\r\n"
+                },
+                {
+                    "date": 1678335098395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,11 +31,7 @@\n L=[1,2,3,4,5,5,7]\r\n x=input('x=')\r\n k=int(input('k='))\r\n y=input('y=')\r\n-if x in L:\r\n- u=search(L,x)\r\n-else: None\r\n-print(u)\r\n n=count(L)\r\n print(n)\r\n L=update(L,x,y)\r\n"
+                },
+                {
+                    "date": 1678335594184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,37 +1,48 @@\n-# L=[1,2,3,4,5,5,7]\r\n-# def nhap():\r\n-#     x=input('nhap x: ')\r\n-#     k=int(input('vi tri k: '))\r\n-#     y=input('y thay the x: ')\r\n-#     return x,k,y\r\n-# def add(L,x,k):\r\n-#     if k>len(L):\r\n-#         L=L.append(x) # them x vao vi tri cuoi cua day\r\n-#     else: L=L.insert(k,x) # them x vao vi tri k cua day\r\n-#     print(L)\r\n-# #cau 2\r\n-# def search(L,x):\r\n-#     if x in L:\r\n-#         u=L.index(x)\r\n-#         return u\r\n-#     else:  return None\r\n-# #cau 3\r\n-# def delete(L,x):\r\n-#     if x in L:\r\n-#         L=L.clear(x)\r\n-# #cau4\r\n-# def count(L) :\r\n-#     c=count(L)\r\n-from audioop import add\r\n-from itertools import count\r\n-from re import search\r\n-from turtle import update\r\n+L=[1,2,3,4,5,5,7]\r\n+def nhap():\r\n+    x=input('nhap x: ')\r\n+    k=int(input('vi tri k: '))\r\n+    y=input('y thay the x: ')\r\n+    return x,k,y\r\n+def add(L,x,k):\r\n+    if k>len(L):\r\n+        L=L.append(x) # them x vao vi tri cuoi cua day\r\n+    else: L=L.insert(k,x) # them x vao vi tri k cua day\r\n+    return L\r\n+#cau 2\r\n+def search(L,x):\r\n+    if x in L:\r\n+        u=L.index(x)\r\n+        return u\r\n+    else:  return None\r\n+#cau 3\r\n+def delete(L,x):\r\n+    if x in L:\r\n+        L=L.clear(x)\r\n+    return L\r\n+#cau4\r\n+def count(L) :\r\n+    c=len(L)\r\n+    return c\r\n+#cau5\r\n+def update(L,x,y):\r\n+    if x in L:\r\n+        L=L.insret(L.index(x),y)\r\n+    return L\r\n \r\n-\r\n-L=[1,2,3,4,5,5,7]\r\n-x=input('x=')\r\n-k=int(input('k='))\r\n-y=input('y=')\r\n-n=count(L)\r\n-print(n)\r\n-L=update(L,x,y)\r\n+x,k,y=nhap()\r\n+print('cau1')\r\n+add(L,x,y)\r\n+print(L)\r\n+print('cau2')\r\n+u=search(L,x)\r\n+print(u)\r\n+print('cau3')\r\n+delete(L,x)\r\n+print(L)\r\n+print('cau4')\r\n+c=count(L)\r\n+print(c)\r\n+print('cau5')\r\n+update(L,x,y)\r\n+print(L)\r\n"
+                },
+                {
+                    "date": 1678335781853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     k=int(input('vi tri k: '))\r\n     y=input('y thay the x: ')\r\n     return x,k,y\r\n def add(L,x,k):\r\n-    if k>len(L):\r\n+    if k > len(L):\r\n         L=L.append(x) # them x vao vi tri cuoi cua day\r\n     else: L=L.insert(k,x) # them x vao vi tri k cua day\r\n     return L\r\n #cau 2\r\n"
+                },
+                {
+                    "date": 1678335872252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n     k=int(input('vi tri k: '))\r\n     y=input('y thay the x: ')\r\n     return x,k,y\r\n def add(L,x,k):\r\n-    if k > len(L):\r\n+    v=len(L)\r\n+    if k > v:\r\n         L=L.append(x) # them x vao vi tri cuoi cua day\r\n     else: L=L.insert(k,x) # them x vao vi tri k cua day\r\n     return L\r\n #cau 2\r\n"
+                }
+            ],
+            "date": 1678335020159,
+            "name": "Commit-0",
+            "content": "# L=[1,2,3,4,5,5,7]\r\n# def nhap():\r\n#     x=input('nhap x: ')\r\n#     k=int(input('vi tri k: '))\r\n#     y=input('y thay the x: ')\r\n#     return x,k,y\r\n# def add(L,x,k):\r\n#     if k>len(L):\r\n#         L=L.append(x) # them x vao vi tri cuoi cua day\r\n#     else: L=L.insert(k,x) # them x vao vi tri k cua day\r\n#     print(L)\r\n# #cau 2\r\n# def search(L,x):\r\n#     if x in L:\r\n#         u=L.index(x)\r\n#         return u\r\n#     else:  return None\r\n# #cau 3\r\n# def delete(L,x):\r\n#     if x in L:\r\n#         L=L.clear(x)\r\n# #cau4\r\n# def count(L) :\r\n#     c=count(L)\r\nfrom audioop import add\r\nfrom itertools import count\r\nfrom re import search\r\nfrom turtle import update\r\n\r\n\r\nL=[1,2,3,4,5,5,7]\r\nx=input('x=')\r\nk=int(input('k='))\r\ny=input('y=')\r\nL=add(L,x,k)\r\nprint(L)\r\nif x in L:\r\n u=search(L,x)\r\nelse: None\r\nprint(u)\r\nn=count(L)\r\nprint(n)\r\nL=update(L,x,y)\r\n"
+        }
+    ]
+}

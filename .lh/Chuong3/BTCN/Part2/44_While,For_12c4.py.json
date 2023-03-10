@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Chuong3/BTCN/Part2/44_While,For_12c4.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1678372766347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678372794462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,6 @@\n         n_str += \"H\"\r\n     elif i == \"8\":\r\n         n_str += \"K\"\r\n     elif i == \"9\":\r\n-        n\n\\ No newline at end of file\n+        n\r\n+print(n_str)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678372900940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,6 @@\n         n_str += \"H\"\r\n     elif i == \"8\":\r\n         n_str += \"K\"\r\n     elif i == \"9\":\r\n-        n\r\n+        n_str += \"L\"\r\n print(n_str)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1678372766347,
+            "name": "Commit-0",
+            "content": "n = int(input(\"\"))\r\nn_str = \"\"\r\nfor i in str(n):\r\n    if i == \"0\":\r\n        n_str += \"A\"\r\n    elif i == \"1\":\r\n        n_str += \"B\"\r\n    elif i == \"2\":\r\n        n_str += \"C\"\r\n    elif i == \"3\":\r\n        n_str += \"D\"\r\n    elif i == \"4\":\r\n        n_str += \"E\"\r\n    elif i == \"5\":\r\n        n_str += \"F\"\r\n    elif i == \"6\":\r\n        n_str += \"G\"\r\n    elif i == \"7\":\r\n        n_str += \"H\"\r\n    elif i == \"8\":\r\n        n_str += \"K\"\r\n    elif i == \"9\":\r\n        n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Chuong3/BTCN/Part2/44_while,for_12c2.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1678368251255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1678368251255,
+            "name": "Commit-0",
+            "content": "n = int(input())\r\nmh = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'K', 'L']\r\nn_str = str(n)\r\nbienphu = ''\r\nfor i in n_str:\r\n    bienphu += mh[int(i)]\r\nprint(bienphu)\r\n"
+        }
+    ]
+}

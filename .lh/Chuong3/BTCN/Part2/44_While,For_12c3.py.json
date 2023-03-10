@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Chuong3/BTCN/Part2/44_While,For_12c3.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1678372633316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678372651366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-n = int(input(\"Nhập số nguyên n (0 <= n <= 9999): \"))\r\n+n = int(input(\"\"))\r\n n_str = \"\"\r\n while n > 0:\r\n     digit = n % 10\r\n     if digit == 0:\r\n@@ -22,5 +22,5 @@\n         n_str = \"K\" + n_str\r\n     elif digit == 9:\r\n         n_str = \"L\" + n_str\r\n     n //= 10\r\n-print(\"Số nguyên n được mã hóa thành:\", n_str)\n\\ No newline at end of file\n+print(n_str)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678373007326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,26 @@\n n = int(input(\"\"))\r\n n_str = \"\"\r\n while n > 0:\r\n-    digit = n % 10\r\n-    if digit == 0:\r\n+    S = n % 10\r\n+    if S == 0:\r\n         n_str = \"A\" + n_str\r\n-    elif digit == 1:\r\n+    elif S == 1:\r\n         n_str = \"B\" + n_str\r\n-    elif digit == 2:\r\n+    elif S == 2:\r\n         n_str = \"C\" + n_str\r\n-    elif digit == 3:\r\n+    elif S == 3:\r\n         n_str = \"D\" + n_str\r\n-    elif digit == 4:\r\n+    elif S == 4:\r\n         n_str = \"E\" + n_str\r\n-    elif digit == 5:\r\n+    elif S == 5:\r\n         n_str = \"F\" + n_str\r\n-    elif digit == 6:\r\n+    elif S == 6:\r\n         n_str = \"G\" + n_str\r\n-    elif digit == 7:\r\n+    elif S == 7:\r\n         n_str = \"H\" + n_str\r\n-    elif digit == 8:\r\n+    elif S == 8:\r\n         n_str = \"K\" + n_str\r\n-    elif digit == 9:\r\n+    elif S == 9:\r\n         n_str = \"L\" + n_str\r\n     n //= 10\r\n print(n_str)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1678372633316,
+            "name": "Commit-0",
+            "content": "n = int(input(\"Nhập số nguyên n (0 <= n <= 9999): \"))\r\nn_str = \"\"\r\nwhile n > 0:\r\n    digit = n % 10\r\n    if digit == 0:\r\n        n_str = \"A\" + n_str\r\n    elif digit == 1:\r\n        n_str = \"B\" + n_str\r\n    elif digit == 2:\r\n        n_str = \"C\" + n_str\r\n    elif digit == 3:\r\n        n_str = \"D\" + n_str\r\n    elif digit == 4:\r\n        n_str = \"E\" + n_str\r\n    elif digit == 5:\r\n        n_str = \"F\" + n_str\r\n    elif digit == 6:\r\n        n_str = \"G\" + n_str\r\n    elif digit == 7:\r\n        n_str = \"H\" + n_str\r\n    elif digit == 8:\r\n        n_str = \"K\" + n_str\r\n    elif digit == 9:\r\n        n_str = \"L\" + n_str\r\n    n //= 10\r\nprint(\"Số nguyên n được mã hóa thành:\", n_str)"
+        }
+    ]
+}
