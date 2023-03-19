@@ -1,0 +1,26 @@
+{
+    "sourceFile": "OnTapGiuaKy/b6.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1678765018933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678765093396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n y=0\r\n while True:\r\n     n=input()\r\n     if n =='T':break\r\n-    for i in range(2,int(n)+1,2):\r\n-        z+=i\r\n+    elif int(n)%2==0:\r\n+        z+=n\r\n         y+=1\r\n-    print('trung binh cong cac so chan:',z/y)\r\n+print('trung binh cong cac so chan:',z/y)\r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678765115728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n while True:\r\n     n=input()\r\n     if n =='T':break\r\n     elif int(n)%2==0:\r\n-        z+=n\r\n+        z+=int(n)\r\n         y+=1\r\n print('trung binh cong cac so chan:',z/y)\r\n     \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1678765018933,
+            "name": "Commit-0",
+            "content": "z=0\r\ny=0\r\nwhile True:\r\n    n=input()\r\n    if n =='T':break\r\n    for i in range(2,int(n)+1,2):\r\n        z+=i\r\n        y+=1\r\n    print('trung binh cong cac so chan:',z/y)\r\n    "
+        }
+    ]
+}

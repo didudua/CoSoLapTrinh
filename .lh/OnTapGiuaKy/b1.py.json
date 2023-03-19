@@ -1,0 +1,34 @@
+{
+    "sourceFile": "OnTapGiuaKy/b1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1678763656169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678763746792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n n=int(input('n='))\r\n s=0\r\n for i in range(1,n+1,2):\r\n     s+=i\r\n-print('Tong nghich dao cac so le la:',s)\r\n+print('Tong nghich dao cac so le la:',round(s,2))\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678763769672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-n=int(input('n='))\r\n+n=float(input('n='))\r\n s=0\r\n for i in range(1,n+1,2):\r\n     s+=i\r\n print('Tong nghich dao cac so le la:',round(s,2))\r\n"
+                },
+                {
+                    "date": 1678794691979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n-n=float(input('n='))\r\n+n=int(input('n='))\r\n s=0\r\n for i in range(1,n+1,2):\r\n-    s+=i\r\n+    s+=1/i\r\n print('Tong nghich dao cac so le la:',round(s,2))\r\n+\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679194544790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n n=int(input('n='))\r\n s=0\r\n for i in range(1,n+1,2):\r\n     s+=1/i\r\n-print('Tong nghich dao cac so le la:',round(s,2))\r\n-\r\n-  \n\\ No newline at end of file\n+print('Tong nghich dao cac so le la:',round(s,2))  \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1678763656169,
+            "name": "Commit-0",
+            "content": "n=int(input('n='))\r\ns=0\r\nfor i in range(1,n+1,2):\r\n    s+=i\r\nprint('Tong nghich dao cac so le la:',s)\r\n  "
+        }
+    ]
+}

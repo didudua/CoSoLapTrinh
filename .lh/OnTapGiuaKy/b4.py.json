@@ -1,0 +1,38 @@
+{
+    "sourceFile": "OnTapGiuaKy/b4.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1678764455454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678764475374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n s=0\r\n while True:\r\n-    n=int(input())\r\n+    n=int(input(end=''))\r\n     if n==0: break\r\n     s+=1\r\n-    print(end='')\r\n print('co',s,'so')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678764485788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n s=0\r\n while True:\r\n-    n=int(input(end=''))\r\n+    n=int(input('',end=''))\r\n     if n==0: break\r\n     s+=1\r\n print('co',s,'so')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678765624343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,20 @@\n-s=0\r\n+# s=0\r\n+# while True:\r\n+#     n=int(input())\r\n+#     if n==0: break\r\n+#     s+=1\r\n\\ No newline at end of file\n+# print('co',s,'so')\r\n+\r\n+dem=0\r\n while True:\r\n-    n=int(input('',end=''))\r\n-    if n==0: break\r\n-    s+=1\r\n-print('co',s,'so')\n+    n=int(input('n='))\r\n+    if n==0:\r\n+        print(dem)\r\n+        break\r\n+    t=1\r\n+    if n>=2:\r\n+        for i in range(2,n):\r\n+            if n%i==0:\r\n+                t=0\r\n+    else: t=0\r\n+if t==1: dem=dem+1\r\n"
+                },
+                {
+                    "date": 1678766057775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,11 @@\n-# s=0\r\n-# while True:\r\n-#     n=int(input())\r\n-#     if n==0: break\r\n-#     s+=1\r\n-# print('co',s,'so')\r\n-\r\n-dem=0\r\n+s=0\r\n while True:\r\n-    n=int(input('n='))\r\n-    if n==0:\r\n-        print(dem)\r\n-        break\r\n-    t=1\r\n-    if n>=2:\r\n-        for i in range(2,n):\r\n-            if n%i==0:\r\n-                t=0\r\n-    else: t=0\r\n\\ No newline at end of file\n-if t==1: dem=dem+1\n+    n=int(input())\r\n+    if n==0: break\r\n+    for i in range(2,n):\r\n+        if n%i!=0: u=1\r\n+        else: break\r\n+    if u==1: s+=1\r\n+    if n==2: s+=1\r\n+    \r\n+print('co',s,'so nguyen to')\r\n"
+                },
+                {
+                    "date": 1678766079911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n s=0\r\n+u=0\r\n while True:\r\n     n=int(input())\r\n     if n==0: break\r\n     for i in range(2,n):\r\n"
+                }
+            ],
+            "date": 1678764455454,
+            "name": "Commit-0",
+            "content": "s=0\r\nwhile True:\r\n    n=int(input())\r\n    if n==0: break\r\n    s+=1\r\n    print(end='')\r\nprint('co',s,'so')"
+        }
+    ]
+}

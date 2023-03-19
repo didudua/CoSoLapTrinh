@@ -1,0 +1,62 @@
+{
+    "sourceFile": "Chuong4/BT_Slide/test.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1679013517680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679014598649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,20 @@\n def Nhap():\r\n     print(\"Nhap mot so nguyen:\")\r\n     n = int(input(\"n=\"))\r\n     return n\r\n+\r\n+\r\n def Tinh(n):\r\n-    S=0\r\n-    for i in range(1,n+1):\r\n-        S+=i\r\n+    S = 0\r\n+    for i in range(1, n+1):\r\n+        S += i\r\n     return S\r\n-def InKQ(n,S):\r\n\\ No newline at end of file\n-    print('Tong cua ',n,' so nguyen duong dau tien=',S,sep='')\r\n \r\n-n=Nhap()\r\n-S=Tinh(n)\r\n-InKQ(n,S)        \n+\r\n+def InKQ(n, S):\r\n+    print('Tong cua ', n, ' so nguyen duong dau tien=', S, sep='')\r\n+\r\n+\r\n+n = Nhap()\r\n+S = Tinh(n)\r\n+InKQ(n, S)\r\n"
+                },
+                {
+                    "date": 1679015219681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,29 @@\n \r\n-def Nhap():\r\n-    print(\"Nhap mot so nguyen:\")\r\n-    n = int(input(\"n=\"))\r\n-    return n\r\n+# def Nhap():\r\n+#     print(\"Nhap mot so nguyen:\")\r\n+#     n = int(input(\"n=\"))\r\n+#     return n\r\n \r\n \r\n-def Tinh(n):\r\n-    S = 0\r\n-    for i in range(1, n+1):\r\n-        S += i\r\n-    return S\r\n+# def Tinh(n):\r\n+#     S = 0\r\n+#     for i in range(1, n+1):\r\n+#         S += i\r\n+#     return S\r\n \r\n \r\n-def InKQ(n, S):\r\n-    print('Tong cua ', n, ' so nguyen duong dau tien=', S, sep='')\r\n+# def InKQ(n, S):\r\n+#     print('Tong cua ', n, ' so nguyen duong dau tien=', S, sep='')\r\n \r\n \r\n-n = Nhap()\r\n-S = Tinh(n)\r\n-InKQ(n, S)\r\n+# n = Nhap()\r\n+# S = Tinh(n)\r\n+# InKQ(n, S)\r\n+\r\n+\r\n+def show_number(m, n):\r\n+    for i in range(m, n+1):\r\n+     print(i)\r\n+\r\n+\r\n+show_number(1, 4)\r\n"
+                },
+                {
+                    "date": 1679015254869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,5 @@\n     for i in range(m, n+1):\r\n      print(i)\r\n \r\n \r\n-show_number(1, 4)\r\n+show_number(1, 100)\r\n"
+                },
+                {
+                    "date": 1679016117588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,11 @@\n # S = Tinh(n)\r\n # InKQ(n, S)\r\n \r\n \r\n-def show_number(m, n):\r\n-    for i in range(m, n+1):\r\n-     print(i)\r\n+def show_number(m=1,n=10):\r\n+ for i in range(m,n+1):\r\n+  print(i)\r\n \r\n-\r\n-show_number(1, 100)\r\n+show_number(3,7)\r\n+show_number(3,)\r\n+show_number()\r\n"
+                },
+                {
+                    "date": 1679016125553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,6 +25,6 @@\n  for i in range(m,n+1):\r\n   print(i)\r\n \r\n show_number(3,7)\r\n-show_number(3,)\r\n+show_number(3)\r\n show_number()\r\n"
+                },
+                {
+                    "date": 1679016142362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,6 +25,6 @@\n  for i in range(m,n+1):\r\n   print(i)\r\n \r\n show_number(3,7)\r\n-show_number(3)\r\n+show_number(3,)\r\n show_number()\r\n"
+                },
+                {
+                    "date": 1679018009777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,11 +20,15 @@\n # S = Tinh(n)\r\n # InKQ(n, S)\r\n \r\n \r\n-def show_number(m=1,n=10):\r\n- for i in range(m,n+1):\r\n-  print(i)\r\n+num = int(input(\"Nhập vào một số nguyên: \"))\r\n \r\n-show_number(3,7)\r\n-show_number(3,)\r\n-show_number()\r\n+if num > 1:\r\n+    for i in range(2, num):\r\n+        if (num % i) == 0:\r\n+            print(num, \"không phải là số nguyên tố\")\r\n+            break\r\n+    else:\r\n+        print(num, \"là số nguyên tố\")\r\n+else:\r\n+    print(num, \"không phải là số nguyên tố\")\r\n"
+                },
+                {
+                    "date": 1679018721561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +1,9 @@\n+def Nhap():\r\n \r\n-# def Nhap():\r\n-#     print(\"Nhap mot so nguyen:\")\r\n-#     n = int(input(\"n=\"))\r\n-#     return n\r\n+    x = int(input('x='))\r\n+    y = int(input('y='))\r\n+    return x, y\r\n \r\n \r\n-# def Tinh(n):\r\n-#     S = 0\r\n-#     for i in range(1, n+1):\r\n-#         S += i\r\n-#     return S\r\n-\r\n-\r\n-# def InKQ(n, S):\r\n-#     print('Tong cua ', n, ' so nguyen duong dau tien=', S, sep='')\r\n-\r\n-\r\n-# n = Nhap()\r\n-# S = Tinh(n)\r\n-# InKQ(n, S)\r\n-\r\n-\r\n-num = int(input(\"Nhập vào một số nguyên: \"))\r\n-\r\n-if num > 1:\r\n-    for i in range(2, num):\r\n-        if (num % i) == 0:\r\n-            print(num, \"không phải là số nguyên tố\")\r\n-            break\r\n-    else:\r\n-        print(num, \"là số nguyên tố\")\r\n-else:\r\n-    print(num, \"không phải là số nguyên tố\")\r\n+a, b = Nhap()\r\n+print('Hai so nguyen da nhap=', a, b)\r\n"
+                },
+                {
+                    "date": 1679020065143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,13 @@\n-def Nhap():\r\n-\r\n-    x = int(input('x='))\r\n-    y = int(input('y='))\r\n-    return x, y\r\n-\r\n-\r\n-a, b = Nhap()\r\n-print('Hai so nguyen da nhap=', a, b)\r\n+import random\r\n+while True:\r\n+ n=int(input('Nguoi:'))\r\n+ m=random.randint(1,3)\r\n+ print('May:',m)\r\n+ if n==m: print('Ket qua:'+' Hoa')\r\n+ elif n==1 and m==2: print('Ket qua:'+' Nguoi thang')\r\n+ elif n==2 and m==3: print('Ket qua:'+' Nguoi thang')\r\n+ elif n==3 and m==1: print('Ket qua:'+' Nguoi thang')\r\n+ elif n==2 and m==1: print('Ket qua:'+' Nguoi thua')\r\n+ elif n==3 and m==2: print('Ket qua:'+' Nguoi thua')\r\n+ elif n==1 and m==3: print('Ket qua:'+' Nguoi thua')\r\n+ if n==0: break\r\n"
+                },
+                {
+                    "date": 1679020121779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import random\r\n while True:\r\n  n=int(input('Nguoi:'))\r\n+ if n==0: break\r\n  m=random.randint(1,3)\r\n  print('May:',m)\r\n  if n==m: print('Ket qua:'+' Hoa')\r\n  elif n==1 and m==2: print('Ket qua:'+' Nguoi thang')\r\n@@ -9,5 +10,5 @@\n  elif n==3 and m==1: print('Ket qua:'+' Nguoi thang')\r\n  elif n==2 and m==1: print('Ket qua:'+' Nguoi thua')\r\n  elif n==3 and m==2: print('Ket qua:'+' Nguoi thua')\r\n  elif n==1 and m==3: print('Ket qua:'+' Nguoi thua')\r\n- if n==0: break\r\n+ \r\n"
+                },
+                {
+                    "date": 1679020153716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import random\r\n while True:\r\n- n=int(input('Nguoi:'))\r\n+ n=int(input('Nguoi: '))\r\n  if n==0: break\r\n  m=random.randint(1,3)\r\n  print('May:',m)\r\n  if n==m: print('Ket qua:'+' Hoa')\r\n@@ -9,6 +9,5 @@\n  elif n==2 and m==3: print('Ket qua:'+' Nguoi thang')\r\n  elif n==3 and m==1: print('Ket qua:'+' Nguoi thang')\r\n  elif n==2 and m==1: print('Ket qua:'+' Nguoi thua')\r\n  elif n==3 and m==2: print('Ket qua:'+' Nguoi thua')\r\n- elif n==1 and m==3: print('Ket qua:'+' Nguoi thua')\r\n- \r\n+ elif n==1 and m==3: print('Ket qua:'+' Nguoi thua')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1679013517680,
+            "name": "Commit-0",
+            "content": "\r\ndef Nhap():\r\n    print(\"Nhap mot so nguyen:\")\r\n    n = int(input(\"n=\"))\r\n    return n\r\ndef Tinh(n):\r\n    S=0\r\n    for i in range(1,n+1):\r\n        S+=i\r\n    return S\r\ndef InKQ(n,S):\r\n    print('Tong cua ',n,' so nguyen duong dau tien=',S,sep='')\r\n\r\nn=Nhap()\r\nS=Tinh(n)\r\nInKQ(n,S)        "
+        }
+    ]
+}

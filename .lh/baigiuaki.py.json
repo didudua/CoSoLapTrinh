@@ -1,0 +1,102 @@
+{
+    "sourceFile": "baigiuaki.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1679194729817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679194872452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,14 @@\n-a=int(input())\r\n-b=int(input())\r\n+#cau1\r\n+# a=int(input())\r\n+# b=int(input())\r\n+# u=0\r\n+# for i in range(a+1,b+1):\r\n+#     u+=i\r\n+# print(u)\r\n+#cau2\r\n+n=int(input())\r\n u=0\r\n-for i in range(a+1,b+1):\r\n-    u+=i\r\n+for i in range(1,n+1):\r\n+    if i%3==0 and i%5==0:\r\n+        u+=1\r\n print(u)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679195186340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,21 @@\n # for i in range(a+1,b+1):\r\n #     u+=i\r\n # print(u)\r\n #cau2\r\n+# n=int(input())\r\n+# u=0\r\n+# for i in range(1,n+1):\r\n+#     if i%3==0 and i%5==0:\r\n+#         u+=1\r\n+# print(u)\r\n\\ No newline at end of file\n+#cau3\r\n+#a...b=n\r\n+#neu ko co : NO\r\n+a=int(input())\r\n+b=int(input())\r\n n=int(input())\r\n-u=0\r\n-for i in range(1,n+1):\r\n-    if i%3==0 and i%5==0:\r\n-        u+=1\r\n-print(u)\n+if a/b==n: print(\"/\")\r\n+elif a*b==n: print(\"*\")\r\n+elif a+b==n: print(\"+\")\r\n+elif a-b==n: print(\"-\")\r\n+else: print(\"NO\")\r\n"
+                },
+                {
+                    "date": 1679195401484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,11 @@\n #neu ko co : NO\r\n a=int(input())\r\n b=int(input())\r\n n=int(input())\r\n-if a/b==n: print(\"/\")\r\n-elif a*b==n: print(\"*\")\r\n+if a*b==n: print(\"*\")\r\n elif a+b==n: print(\"+\")\r\n elif a-b==n: print(\"-\")\r\n\\ No newline at end of file\n-else: print(\"NO\")\n+if b==0:print(\"NO\")\r\n+else:\r\n+    if a/b==n: print(\"/\")\r\n+    else: print(\"NO\")\r\n"
+                },
+                {
+                    "date": 1679195494495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,5 @@\n elif a-b==n: print(\"-\")\r\n if b==0:print(\"NO\")\r\n else:\r\n     if a/b==n: print(\"/\")\r\n-    else: print(\"NO\")\n\\ No newline at end of file\n+    else: print(\"NO\")\r\n"
+                },
+                {
+                    "date": 1679195843584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,14 +14,21 @@\n # print(u)\r\n #cau3\r\n #a...b=n\r\n #neu ko co : NO\r\n-a=int(input())\r\n-b=int(input())\r\n+# a=int(input())\r\n+# b=int(input())\r\n+# n=int(input())\r\n+# if a*b==n: print(\"*\")\r\n+# elif a+b==n: print(\"+\")\r\n+# elif a-b==n: print(\"-\")\r\n+# if b==0:print(\"NO\")\r\n+# else:\r\n+#     if a/b==n: print(\"/\")\r\n+#     else: print(\"NO\")\r\n+#cau4\r\n n=int(input())\r\n-if a*b==n: print(\"*\")\r\n-elif a+b==n: print(\"+\")\r\n-elif a-b==n: print(\"-\")\r\n-if b==0:print(\"NO\")\r\n+if n>0 and n<10:\r\n+    print('0')\r\n else:\r\n-    if a/b==n: print(\"/\")\r\n-    else: print(\"NO\")\r\n+    for i in n:\r\n+        print(n[-1]+n[-2])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679195865316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,6 +29,6 @@\n n=int(input())\r\n if n>0 and n<10:\r\n     print('0')\r\n else:\r\n-    for i in n:\r\n+    for i in str(n):\r\n         print(n[-1]+n[-2])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679195918974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,6 +29,6 @@\n n=int(input())\r\n if n>0 and n<10:\r\n     print('0')\r\n else:\r\n-    for i in str(n):\r\n-        print(n[-1]+n[-2])\n\\ No newline at end of file\n+    n=str(n)\r\n+    print(n[-1]+n[-2])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679195939316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,5 @@\n if n>0 and n<10:\r\n     print('0')\r\n else:\r\n     n=str(n)\r\n-    print(n[-1]+n[-2])\n\\ No newline at end of file\n+    print(int(n[-1])+int(n[-2]))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679196110373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,16 @@\n # else:\r\n #     if a/b==n: print(\"/\")\r\n #     else: print(\"NO\")\r\n #cau4\r\n+# n=int(input())\r\n+# if n>0 and n<10:\r\n+#     print('0')\r\n+# else:\r\n+#     n=str(n)\r\n+#     print(int(n[-1])+int(n[-2]))\r\n\\ No newline at end of file\n+#cau5\r\n n=int(input())\r\n-if n>0 and n<10:\r\n-    print('0')\r\n-else:\r\n-    n=str(n)\r\n-    print(int(n[-1])+int(n[-2]))\n+u=0\r\n+for i in range(2,n+1,2):\r\n+    u+=i\r\n+print(u)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679196384569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,27 +14,27 @@\n # print(u)\r\n #cau3\r\n #a...b=n\r\n #neu ko co : NO\r\n-# a=int(input())\r\n-# b=int(input())\r\n-# n=int(input())\r\n-# if a*b==n: print(\"*\")\r\n-# elif a+b==n: print(\"+\")\r\n-# elif a-b==n: print(\"-\")\r\n-# if b==0:print(\"NO\")\r\n-# else:\r\n-#     if a/b==n: print(\"/\")\r\n-#     else: print(\"NO\")\r\n+a=int(input())\r\n+b=int(input())\r\n+n=int(input())\r\n+if a*b==n: print(\"*\")\r\n+elif a+b==n: print(\"+\")\r\n+elif a-b==n: print(\"-\")\r\n+if b==0:print(\"NO\")\r\n+else:\r\n+    if a/b==n: print(\"/\")\r\n+    else: print(\"NO\")\r\n #cau4\r\n # n=int(input())\r\n # if n>0 and n<10:\r\n\\ No newline at end of file\n #     print('0')\r\n # else:\r\n #     n=str(n)\r\n #     print(int(n[-1])+int(n[-2]))\r\n #cau5\r\n-n=int(input())\r\n-u=0\r\n-for i in range(2,n+1,2):\r\n-    u+=i\r\n-print(u)\n+# n=int(input())\r\n+# u=0\r\n+# for i in range(2,n+1,2):\r\n+#     u+=i\r\n+# print(u)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679196752160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,30 +11,43 @@\n # for i in range(1,n+1):\r\n #     if i%3==0 and i%5==0:\r\n #         u+=1\r\n # print(u)\r\n-#cau3\r\n-#a...b=n\r\n-#neu ko co : NO\r\n-a=int(input())\r\n-b=int(input())\r\n-n=int(input())\r\n-if a*b==n: print(\"*\")\r\n-elif a+b==n: print(\"+\")\r\n-elif a-b==n: print(\"-\")\r\n-if b==0:print(\"NO\")\r\n-else:\r\n-    if a/b==n: print(\"/\")\r\n-    else: print(\"NO\")\r\n #cau4\r\n # n=int(input())\r\n # if n>0 and n<10:\r\n #     print('0')\r\n # else:\r\n #     n=str(n)\r\n #     print(int(n[-1])+int(n[-2]))\r\n+#cau4c2\r\n+n = int(input())\r\n+if n>0 and n<10:\r\n+    print('0')\r\n+else:\r\n+# Tính số dư của n khi chia cho 100\r\n\\ No newline at end of file\n+ u = n % 100\r\n+\r\n+# Tính tổng 2 chữ số cuối của số dư\r\n+ s = (u % 10) + (u // 10)\r\n+\r\n+print(s)\r\n #cau5\r\n # n=int(input())\r\n # u=0\r\n # for i in range(2,n+1,2):\r\n #     u+=i\r\n-# print(u)\n+# print(u)\r\n+#cau3\r\n+#a...b=n\r\n+#neu ko co : NO\r\n+# a=int(input())\r\n+# b=int(input())\r\n+# n=int(input())\r\n+# if b==0:\r\n+#  if a*b==n: print(\"*\")\r\n+# elif a+b==n: print(\"+\")\r\n+# elif a-b==n: print(\"-\")\r\n+# if b==0:print(\"NO\")\r\n+# else:\r\n+#     if a/b==n: print(\"/\")\r\n+#     else: print(\"NO\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679196765042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \r\n # Tính tổng 2 chữ số cuối của số dư\r\n  s = (u % 10) + (u // 10)\r\n \r\n-print(s)\r\n+ print(s)\r\n #cau5\r\n # n=int(input())\r\n # u=0\r\n # for i in range(2,n+1,2):\r\n"
+                },
+                {
+                    "date": 1679197150792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,19 +19,15 @@\n # else:\r\n #     n=str(n)\r\n #     print(int(n[-1])+int(n[-2]))\r\n #cau4c2\r\n-n = int(input())\r\n-if n>0 and n<10:\r\n-    print('0')\r\n-else:\r\n-# Tính số dư của n khi chia cho 100\r\n- u = n % 100\r\n-\r\n-# Tính tổng 2 chữ số cuối của số dư\r\n- s = (u % 10) + (u // 10)\r\n-\r\n- print(s)\r\n+# n = int(input())\r\n+# if n>0 and n<10:\r\n+#     print('0')\r\n+# else:\r\n+#  u = n % 100\r\n+#  s = (u % 10) + (u // 10)\r\n+#  print(s)\r\n #cau5\r\n # n=int(input())\r\n # u=0\r\n # for i in range(2,n+1,2):\r\n@@ -39,15 +35,12 @@\n # print(u)\r\n #cau3\r\n #a...b=n\r\n #neu ko co : NO\r\n-# a=int(input())\r\n-# b=int(input())\r\n-# n=int(input())\r\n-# if b==0:\r\n-#  if a*b==n: print(\"*\")\r\n-# elif a+b==n: print(\"+\")\r\n-# elif a-b==n: print(\"-\")\r\n-# if b==0:print(\"NO\")\r\n-# else:\r\n-#     if a/b==n: print(\"/\")\r\n-#     else: print(\"NO\")\n\\ No newline at end of file\n+a=int(input())\r\n+b=int(input())\r\n+n=int(input())\r\n+if a*b==n: print(\"*\")\r\n+elif a+b==n: print(\"+\")\r\n+elif a-b==n: print(\"-\")\r\n+elif b!=0 and a/b==n: print(\"/\")\r\n+else: print(\"NO\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679197796790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,46 +1,47 @@\n-#cau1\r\n-# a=int(input())\r\n-# b=int(input())\r\n-# u=0\r\n-# for i in range(a+1,b+1):\r\n-#     u+=i\r\n-# print(u)\r\n-#cau2\r\n+# cau1\r\n+a=int(input())\r\n+b=int(input())\r\n+u=0\r\n+if a<=b:\r\n+ for i in range(a+1,b+1):\r\n+    u+=i\r\n+ print(u)\r\n+# cau2\r\n # n=int(input())\r\n # u=0\r\n # for i in range(1,n+1):\r\n #     if i%3==0 and i%5==0:\r\n #         u+=1\r\n # print(u)\r\n-#cau4\r\n+# cau4\r\n # n=int(input())\r\n # if n>0 and n<10:\r\n #     print('0')\r\n # else:\r\n #     n=str(n)\r\n #     print(int(n[-1])+int(n[-2]))\r\n-#cau4c2\r\n+# cau4c2\r\n # n = int(input())\r\n # if n>0 and n<10:\r\n #     print('0')\r\n # else:\r\n #  u = n % 100\r\n #  s = (u % 10) + (u // 10)\r\n #  print(s)\r\n-#cau5\r\n+# cau5\r\n # n=int(input())\r\n # u=0\r\n # for i in range(2,n+1,2):\r\n #     u+=i\r\n\\ No newline at end of file\n # print(u)\r\n-#cau3\r\n-#a...b=n\r\n-#neu ko co : NO\r\n-a=int(input())\r\n-b=int(input())\r\n-n=int(input())\r\n-if a*b==n: print(\"*\")\r\n-elif a+b==n: print(\"+\")\r\n-elif a-b==n: print(\"-\")\r\n-elif b!=0 and a/b==n: print(\"/\")\r\n-else: print(\"NO\")\n+# cau3\r\n+# a...b=n\r\n+# neu ko co : NO\r\n+# a=int(input())\r\n+# b=int(input())\r\n+# n=int(input())\r\n+# if a*b==n: print(\"*\")\r\n+# elif a+b==n: print(\"+\")\r\n+# elif a-b==n: print(\"-\")\r\n+# elif b!=0 and a/b==n: print(\"/\")\r\n+# else: print(\"NO\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679198057127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,15 +20,16 @@\n # else:\r\n #     n=str(n)\r\n #     print(int(n[-1])+int(n[-2]))\r\n # cau4c2\r\n-# n = int(input())\r\n-# if n>0 and n<10:\r\n-#     print('0')\r\n-# else:\r\n-#  u = n % 100\r\n-#  s = (u % 10) + (u // 10)\r\n-#  print(s)\r\n+n = int(input())\r\n+if n>0 and n<10**6:\r\n+ if n<10:\r\n+    print('0')\r\n+ else:\r\n+  u = n % 100\r\n+  s = (u % 10) + (u // 10)\r\n+  print(s)\r\n # cau5\r\n # n=int(input())\r\n # u=0\r\n # for i in range(2,n+1,2):\r\n"
+                },
+                {
+                    "date": 1679198082125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n # cau1\r\n-a=int(input())\r\n-b=int(input())\r\n-u=0\r\n-if a<=b:\r\n- for i in range(a+1,b+1):\r\n-    u+=i\r\n- print(u)\r\n+# a=int(input())\r\n+# b=int(input())\r\n+# u=0\r\n+# if a<=b:\r\n+#  for i in range(a+1,b+1):\r\n+#     u+=i\r\n+#  print(u)\r\n # cau2\r\n # n=int(input())\r\n # u=0\r\n # for i in range(1,n+1):\r\n"
+                },
+                {
+                    "date": 1679198141306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,16 +20,16 @@\n # else:\r\n #     n=str(n)\r\n #     print(int(n[-1])+int(n[-2]))\r\n # cau4c2\r\n-n = int(input())\r\n-if n>0 and n<10**6:\r\n- if n<10:\r\n-    print('0')\r\n- else:\r\n-  u = n % 100\r\n-  s = (u % 10) + (u // 10)\r\n-  print(s)\r\n+# n = int(input())\r\n+# if n>0 and n<10**6:\r\n+#  if n<10:\r\n+#     print('0')\r\n+#  else:\r\n+#   u = n % 100\r\n+#   s = (u % 10) + (u // 10)\r\n+#   print(s)\r\n # cau5\r\n # n=int(input())\r\n # u=0\r\n # for i in range(2,n+1,2):\r\n"
+                },
+                {
+                    "date": 1679198186396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,13 +29,14 @@\n #   u = n % 100\r\n #   s = (u % 10) + (u // 10)\r\n #   print(s)\r\n # cau5\r\n-# n=int(input())\r\n-# u=0\r\n-# for i in range(2,n+1,2):\r\n-#     u+=i\r\n-# print(u)\r\n+n=int(input())\r\n+u=0\r\n+if n>=0 and n<=106:\r\n+ for i in range(2,n+1,2):\r\n+    u+=i\r\n+ print(u)\r\n # cau3\r\n # a...b=n\r\n # neu ko co : NO\r\n # a=int(input())\r\n"
+                },
+                {
+                    "date": 1679198297235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,14 +6,15 @@\n #  for i in range(a+1,b+1):\r\n #     u+=i\r\n #  print(u)\r\n # cau2\r\n-# n=int(input())\r\n-# u=0\r\n-# for i in range(1,n+1):\r\n-#     if i%3==0 and i%5==0:\r\n-#         u+=1\r\n-# print(u)\r\n+n=int(input())\r\n+u=0\r\n+if n>=0 and n<=10**6:\r\n+ for i in range(1,n+1):\r\n+    if i%3==0 and i%5==0:\r\n+        u+=1\r\n+ print(u)\r\n # cau4\r\n # n=int(input())\r\n # if n>0 and n<10:\r\n #     print('0')\r\n@@ -29,14 +30,14 @@\n #   u = n % 100\r\n #   s = (u % 10) + (u // 10)\r\n #   print(s)\r\n # cau5\r\n-n=int(input())\r\n-u=0\r\n-if n>=0 and n<=106:\r\n- for i in range(2,n+1,2):\r\n-    u+=i\r\n- print(u)\r\n+# n=int(input())\r\n+# u=0\r\n+# if n>=0 and n<=106:\r\n+#  for i in range(2,n+1,2):\r\n+#     u+=i\r\n+#  print(u)\r\n # cau3\r\n # a...b=n\r\n # neu ko co : NO\r\n # a=int(input())\r\n"
+                },
+                {
+                    "date": 1679198441132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,15 +6,15 @@\n #  for i in range(a+1,b+1):\r\n #     u+=i\r\n #  print(u)\r\n # cau2\r\n-n=int(input())\r\n-u=0\r\n-if n>=0 and n<=10**6:\r\n- for i in range(1,n+1):\r\n-    if i%3==0 and i%5==0:\r\n-        u+=1\r\n- print(u)\r\n+# n=int(input())\r\n+# u=0\r\n+# if n>=0 and n<=10**6:\r\n+#  for i in range(1,n+1):\r\n+#     if i%3==0 and i%5==0:\r\n+#         u+=1\r\n+#  print(u)\r\n # cau4\r\n # n=int(input())\r\n # if n>0 and n<10:\r\n #     print('0')\r\n@@ -30,14 +30,14 @@\n #   u = n % 100\r\n #   s = (u % 10) + (u // 10)\r\n #   print(s)\r\n # cau5\r\n-# n=int(input())\r\n-# u=0\r\n-# if n>=0 and n<=106:\r\n-#  for i in range(2,n+1,2):\r\n-#     u+=i\r\n-#  print(u)\r\n+n=int(input())\r\n+u=0\r\n+if n>=0 and n<=10**6:\r\n+ for i in range(2,n+1,2):\r\n+    u+=i\r\n+ print(u)\r\n # cau3\r\n # a...b=n\r\n # neu ko co : NO\r\n # a=int(input())\r\n"
+                },
+                {
+                    "date": 1679199165420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,14 +30,14 @@\n #   u = n % 100\r\n #   s = (u % 10) + (u // 10)\r\n #   print(s)\r\n # cau5\r\n-n=int(input())\r\n-u=0\r\n-if n>=0 and n<=10**6:\r\n- for i in range(2,n+1,2):\r\n-    u+=i\r\n- print(u)\r\n+# n=int(input())\r\n+# u=0\r\n+# if n>=0 and n<=10**6:\r\n+#  for i in range(2,n+1,2):\r\n+#     u+=i\r\n+#  print(u)\r\n # cau3\r\n # a...b=n\r\n # neu ko co : NO\r\n # a=int(input())\r\n"
+                }
+            ],
+            "date": 1679194729817,
+            "name": "Commit-0",
+            "content": "a=int(input())\r\nb=int(input())\r\nu=0\r\nfor i in range(a+1,b+1):\r\n    u+=i\r\nprint(u)"
+        }
+    ]
+}

@@ -1,0 +1,250 @@
+{
+    "sourceFile": "OnTapGiuaKy/b5.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 58,
+            "patches": [
+                {
+                    "date": 1678935642757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678935676049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +0,0 @@\n-n=int(input())\r\n-s=0\r\n-for i in range(2,n):\r\n-    s+=i\r\n-s+=2*n\r\n-print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678935828428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+n=int(input())\r\n+s=0\r\n+for i in range(2,n+1):\r\n+    s+=1/i\r\n+print(round(s,4,0))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678935835870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n n=int(input())\r\n s=0\r\n for i in range(2,n+1):\r\n     s+=1/i\r\n-print(round(s,4,0))\n\\ No newline at end of file\n+print(round(s))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678935845743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n n=int(input())\r\n s=0\r\n for i in range(2,n+1):\r\n     s+=1/i\r\n-print(round(s))\n\\ No newline at end of file\n+print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678935869500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n n=int(input())\r\n s=0\r\n for i in range(2,n+1):\r\n     s+=1/i\r\n-print(s)\n\\ No newline at end of file\n+print(float(s))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678936168039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,15 @@\n-n=int(input())\r\n-s=0\r\n-for i in range(2,n+1):\r\n-    s+=1/i\r\n-print(float(s))\n\\ No newline at end of file\n+# Nhập giá trị n từ người dùng\r\n+n = int(input(\"Nhập n: \"))\r\n+\r\n+# Khởi tạo tổng ban đầu là 0\r\n+S = 0\r\n+\r\n+# Tính tổng S\r\n+for i in range(2, n+1):\r\n+    S += 1/i\r\n+\r\n+# Làm tròn tổng S đến chữ số thập phân thứ 4\r\n+S = round(S, 4)\r\n+\r\n+# In kết quả\r\n+print(\"S =\", S)\r\n"
+                },
+                {
+                    "date": 1678936212490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,4 @@\n-# Nhập giá trị n từ người dùng\r\n-n = int(input(\"Nhập n: \"))\r\n+n = int(input(\"Nhập số n: \"))\r\n+S = sum([1/i for i in range(2,n+1)])\r\n \r\n-# Khởi tạo tổng ban đầu là 0\r\n-S = 0\r\n-\r\n-# Tính tổng S\r\n-for i in range(2, n+1):\r\n-    S += 1/i\r\n-\r\n-# Làm tròn tổng S đến chữ số thập phân thứ 4\r\n-S = round(S, 4)\r\n-\r\n-# In kết quả\r\n-print(\"S =\", S)\r\n+print(\"{:.4f}\".format(S))\r\n"
+                },
+                {
+                    "date": 1678936386900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n n = int(input(\"Nhập số n: \"))\r\n S = sum([1/i for i in range(2,n+1)])\r\n \r\n-print(\"{:.4f}\".format(S))\r\n+print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n"
+                },
+                {
+                    "date": 1678936944937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n-n = int(input(\"Nhập số n: \"))\r\n-S = sum([1/i for i in range(2,n+1)])\r\n+# n = int(input(\"Nhập số n: \"))\r\n+# S = sum([1/i for i in range(2,n+1)])\r\n \r\n-print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n+# print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n+n=int(input(end=\"\"))\r\n+k=int(input())\r\n+if 1<=k<=n<=25:\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678936961105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n n=int(input(end=\"\"))\r\n k=int(input())\r\n-if 1<=k<=n<=25:\n\\ No newline at end of file\n+if 1<=k<=n and n<=25:\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678936976767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n n=int(input(end=\"\"))\r\n k=int(input())\r\n-if 1<=k<=n and n<=25:\n\\ No newline at end of file\n+if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678936988199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n=int(input(end=\"\"))\r\n+n=int(input(\"\",end=\"\"))\r\n k=int(input())\r\n if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937000873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n=int(input(\"\",end=\"\"))\r\n+n=int(input())\r\n k=int(input())\r\n if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937024754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n=int(input())\r\n+n=int(input(),end=\"\")\r\n k=int(input())\r\n if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937060940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n=int(input(),end=\"\")\r\n-k=int(input())\r\n+n=print(int(input(),end=\"\"))\r\n+k=print(int(input()))\r\n if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937101999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n=print(int(input(),end=\"\"))\r\n-k=print(int(input()))\r\n+n=print(input(),end=\"\")\r\n+k=print(input())\r\n if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937139586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n=print(input(),end=\"\")\r\n-k=print(input())\r\n+n=input(print(end=\" \"))\r\n+k=input()\r\n if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937161538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n=input(print(end=\" \"))\r\n-k=input()\r\n+n=int(input(print(end=\" \")))\r\n+k=int(input())\r\n if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937377678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n=int(input(print(end=\" \")))\r\n-k=int(input())\r\n+n,k=input().split()\r\n if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937393597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n,k=input().split()\r\n+n, k=input().split()\r\n if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937452795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n, k=input().split()\r\n+n,k=map(int,input().split())\r\n if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937464609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n,k=map(int,input().split())\r\n-if 1<=k<=n<=25: print(n,k)\n\\ No newline at end of file\n+n, k = map(int,input().split())\r\n+if (1 <= k <= 25) and (1 <= n <= 25): \r\n+    print(n,k)\r\n"
+                },
+                {
+                    "date": 1678937778753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,18 @@\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n-n, k = map(int,input().split())\r\n-if (1 <= k <= 25) and (1 <= n <= 25): \r\n-    print(n,k)\r\n+\r\n+n=int(input())\r\n+k=int(input())\r\n+s=1\r\n+p=1\r\n+h=1\r\n+if 1<=k<=n and n<=25: \r\n+  for i in range(1,n+1):\r\n+       s*=i\r\n+  for j in range(1,k+1):\r\n+       p*=j\r\n+  for l in range(1,n-k+1):\r\n+       h*=l\r\n+print(s/(p*h))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678937842094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n   for j in range(1,k+1):\r\n        p*=j\r\n   for l in range(1,n-k+1):\r\n        h*=l\r\n-print(s/(p*h))\n\\ No newline at end of file\n+print(round(s/(p*h)))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678938292505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,7 @@\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n \r\n-n=int(input())\r\n-k=int(input())\r\n-s=1\r\n-p=1\r\n-h=1\r\n-if 1<=k<=n and n<=25: \r\n-  for i in range(1,n+1):\r\n-       s*=i\r\n-  for j in range(1,k+1):\r\n-       p*=j\r\n-  for l in range(1,n-k+1):\r\n-       h*=l\r\n-print(round(s/(p*h)))\n\\ No newline at end of file\n+a,b= map(int,input().split)\r\n+s= sum([i for i in range(a,b+1) if i%2==0])\r\n+print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678938322656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,8 @@\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n \r\n-a,b= map(int,input().split)\r\n+a= int(input())\r\n+b= int(input())\r\n s= sum([i for i in range(a,b+1) if i%2==0])\r\n print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678938383218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,7 @@\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n \r\n-a= int(input())\r\n-b= int(input())\r\n+a= int(input()).b= int(input())\r\n s= sum([i for i in range(a,b+1) if i%2==0])\r\n print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678938401184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,9 @@\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n \r\n-a= int(input()).b= int(input())\r\n+a= int(input())\r\n+print(end=\" \")\r\n+b= int(input())\r\n s= sum([i for i in range(a,b+1) if i%2==0])\r\n print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678938614188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,7 @@\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n \r\n-a= int(input())\r\n-print(end=\" \")\r\n-b= int(input())\r\n+a,b = input().split()\r\n s= sum([i for i in range(a,b+1) if i%2==0])\r\n print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678938765350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,9 @@\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n \r\n-a,b = input().split()\r\n-s= sum([i for i in range(a,b+1) if i%2==0])\r\n-print(s)\n\\ No newline at end of file\n+n=int(input())\r\n+s=''\r\n+for i in n:\r\n+   s+=i\r\n+print(len(s))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678938782677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n \r\n n=int(input())\r\n s=''\r\n for i in n:\r\n-   s+=i\r\n+   s+=str(i)\r\n print(len(s))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678938799911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n \r\n n=int(input())\r\n s=''\r\n-for i in n:\r\n+for i in str(n):\r\n    s+=str(i)\r\n print(len(s))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678938875027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n \r\n n=int(input())\r\n s=''\r\n+if n<0: n*=-1\r\n for i in str(n):\r\n    s+=str(i)\r\n print(len(s))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678939073625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,20 @@\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n \r\n-n=int(input())\r\n-s=''\r\n-if n<0: n*=-1\r\n-for i in str(n):\r\n-   s+=str(i)\r\n-print(len(s))\n\\ No newline at end of file\n+# n=int(input())\r\n+# s=''\r\n+# if n<0: n*=-1\r\n+# for i in str(n):\r\n+#    s+=str(i)\r\n+# print(len(s))\r\n+\r\n+n = int(input())\r\n+if n == 2:\r\n+    print('Yes')\r\n+for i in range(2, n):\r\n+    if n % i == 0:\r\n+        print('NO')\r\n+        break\r\n+    else:\r\n+        continue\r\n"
+                },
+                {
+                    "date": 1678939117088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,6 @@\n     if n % i == 0:\r\n         print('NO')\r\n         break\r\n     else:\r\n-        continue\r\n+        u=1\r\n+if u==1: print('Yes')\r\n"
+                },
+                {
+                    "date": 1678939134550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n #    s+=str(i)\r\n # print(len(s))\r\n \r\n n = int(input())\r\n+u=0\r\n if n == 2:\r\n     print('Yes')\r\n for i in range(2, n):\r\n     if n % i == 0:\r\n"
+                },
+                {
+                    "date": 1678939233963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,12 @@\n \r\n n = int(input())\r\n u=0\r\n if n == 2:\r\n-    print('Yes')\r\n+    print('YES')\r\n for i in range(2, n):\r\n     if n % i == 0:\r\n         print('NO')\r\n         break\r\n     else:\r\n         u=1\r\n-if u==1: print('Yes')\r\n+if u==1: print('YES')\r\n"
+                },
+                {
+                    "date": 1678939343343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n if n == 2:\r\n     print('YES')\r\n for i in range(2, n):\r\n     if n % i == 0:\r\n-        print('NO')\r\n+        u=0\r\n         break\r\n     else:\r\n         u=1\r\n if u==1: print('YES')\r\n+if u==0: print('NO')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678942308781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,16 +9,25 @@\n # for i in str(n):\r\n #    s+=str(i)\r\n # print(len(s))\r\n \r\n-n = int(input())\r\n-u=0\r\n-if n == 2:\r\n-    print('YES')\r\n-for i in range(2, n):\r\n-    if n % i == 0:\r\n-        u=0\r\n+n=int(input('n='))\r\n+x=0\r\n+if n==2: x=1\r\n+for i in range(2,n):\r\n+    if n%i==0:\r\n\\ No newline at end of file\n+        x=0\r\n         break\r\n+    else: x=1\r\n+if x==1 : print(n, 'la SNT')\r\n+else: print(n, 'Khong la SNT'a = int(input(\"Enter first integer: \"))\r\n+b = int(input(\"Enter second integer: \"))\r\n+\r\n+# Function to find GCD of two numbers\r\n+def gcd(a,b):\r\n+    if(b == 0):\r\n+        return a;\r\n     else:\r\n-        u=1\r\n-if u==1: print('YES')\r\n-if u==0: print('NO')\n+        return gcd(b, a % b)\r\n+\r\n+# Calculate and print the GCD of two numbers\r\n+print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n"
+                },
+                {
+                    "date": 1678942321160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,18 +9,9 @@\n # for i in str(n):\r\n #    s+=str(i)\r\n # print(len(s))\r\n \r\n-n=int(input('n='))\r\n-x=0\r\n-if n==2: x=1\r\n-for i in range(2,n):\r\n-    if n%i==0:\r\n-        x=0\r\n-        break\r\n-    else: x=1\r\n-if x==1 : print(n, 'la SNT')\r\n-else: print(n, 'Khong la SNT'a = int(input(\"Enter first integer: \"))\r\n+a = int(input(\"Enter first integer: \"))\r\n b = int(input(\"Enter second integer: \"))\r\n \r\n # Function to find GCD of two numbers\r\n def gcd(a,b):\r\n@@ -29,5 +20,5 @@\n     else:\r\n         return gcd(b, a % b)\r\n \r\n # Calculate and print the GCD of two numbers\r\n-print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\n\\ No newline at end of file\n+print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n"
+                },
+                {
+                    "date": 1678942428257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,11 @@\n a = int(input(\"Enter first integer: \"))\r\n b = int(input(\"Enter second integer: \"))\r\n \r\n # Function to find GCD of two numbers\r\n+if a<0 and b<0: \r\n+    a*=-1            \r\n+    b*=-1\r\n def gcd(a,b):\r\n     if(b == 0):\r\n         return a;\r\n     else:\r\n"
+                },
+                {
+                    "date": 1678942479263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,16 +12,12 @@\n \r\n a = int(input(\"Enter first integer: \"))\r\n b = int(input(\"Enter second integer: \"))\r\n \r\n-# Function to find GCD of two numbers\r\n-if a<0 and b<0: \r\n-    a*=-1            \r\n-    b*=-1\r\n+# Ước CHung lớn nhất\r\n def gcd(a,b):\r\n     if(b == 0):\r\n         return a;\r\n     else:\r\n         return gcd(b, a % b)\r\n \r\n-# Calculate and print the GCD of two numbers\r\n print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n"
+                },
+                {
+                    "date": 1678942898027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,15 +9,21 @@\n # for i in str(n):\r\n #    s+=str(i)\r\n # print(len(s))\r\n \r\n-a = int(input(\"Enter first integer: \"))\r\n-b = int(input(\"Enter second integer: \"))\r\n+# a = int(input(\"Enter first integer: \"))\r\n+# b = int(input(\"Enter second integer: \"))\r\n \r\n-# Ước CHung lớn nhất\r\n-def gcd(a,b):\r\n-    if(b == 0):\r\n-        return a;\r\n-    else:\r\n-        return gcd(b, a % b)\r\n+# # Ước CHung lớn nhất\r\n+# def gcd(a,b):\r\n+#     if(b == 0):\r\n+#         return a;\r\n+#     else:\r\n+#         return gcd(b, a % b)\r\n \r\n-print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n+# print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n+\r\n+n=int(input())\r\n+s=''\r\n+for i in str(n):\r\n+ s+=n\r\n+print(s.sort(reverse=True))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678942909714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,6 @@\n \r\n n=int(input())\r\n s=''\r\n for i in str(n):\r\n- s+=n\r\n+ s+=str(n)\r\n print(s.sort(reverse=True))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678942924420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,6 @@\n n=int(input())\r\n s=''\r\n for i in str(n):\r\n  s+=str(n)\r\n-print(s.sort(reverse=True))\n\\ No newline at end of file\n+s=s.sort(reverse=True)\r\n+print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678942944775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,6 +25,5 @@\n n=int(input())\r\n s=''\r\n for i in str(n):\r\n  s+=str(n)\r\n-s=s.sort(reverse=True)\r\n print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678942962623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,6 @@\n \r\n n=int(input())\r\n s=''\r\n for i in str(n):\r\n- s+=str(n)\r\n+ s+=str(i)\r\n print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678942992358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,6 @@\n \r\n n=int(input())\r\n s=''\r\n for i in str(n):\r\n- s+=str(i)\r\n+ s=str(i)+s\r\n print(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678943209753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,15 @@\n #         return gcd(b, a % b)\r\n \r\n # print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n \r\n-n=int(input())\r\n-s=''\r\n-for i in str(n):\r\n- s=str(i)+s\r\n-print(s)\n\\ No newline at end of file\n+# nhập vào số 123 và in ra 321\r\n+\r\n+# n=int(input())\r\n+# s=''\r\n+# for i in str(n):\r\n+#  s=str(i)+s\r\n+# print(s)\r\n+a=int(input())\r\n+b=int(input())\r\n+for i in range(b+1,a,-1):\r\n+ if i%3==0: print(i,end=' ')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678958536244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,7 @@\n # s=''\r\n # for i in str(n):\r\n #  s=str(i)+s\r\n # print(s)\r\n-a=int(input())\r\n-b=int(input())\r\n+a,b=input().split()\r\n for i in range(b+1,a,-1):\r\n  if i%3==0: print(i,end=' ')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678959422839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,6 +29,7 @@\n # for i in str(n):\r\n #  s=str(i)+s\r\n # print(s)\r\n a,b=input().split()\r\n+b=int(b)\r\n for i in range(b+1,a,-1):\r\n  if i%3==0: print(i,end=' ')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678959445194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,6 +30,7 @@\n #  s=str(i)+s\r\n # print(s)\r\n a,b=input().split()\r\n b=int(b)\r\n+a=int(a)\r\n for i in range(b+1,a,-1):\r\n  if i%3==0: print(i,end=' ')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678959594169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,7 @@\n # s=''\r\n # for i in str(n):\r\n #  s=str(i)+s\r\n # print(s)\r\n-a,b=input().split()\r\n-b=int(b)\r\n-a=int(a)\r\n+a,b=map(int.input().split())\r\n for i in range(b+1,a,-1):\r\n  if i%3==0: print(i,end=' ')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678961461426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,8 @@\n # s=''\r\n # for i in str(n):\r\n #  s=str(i)+s\r\n # print(s)\r\n-a,b=map(int.input().split())\r\n+a,b=input().split()\r\n+a,b=int()\r\n for i in range(b+1,a,-1):\r\n  if i%3==0: print(i,end=' ')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678961489082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,8 @@\n # for i in str(n):\r\n #  s=str(i)+s\r\n # print(s)\r\n a,b=input().split()\r\n-a,b=int()\r\n+a=int(a)\r\n+b=int(b)\r\n for i in range(b+1,a,-1):\r\n  if i%3==0: print(i,end=' ')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679014594997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,13 @@\n # s=''\r\n # for i in str(n):\r\n #  s=str(i)+s\r\n # print(s)\r\n-a,b=input().split()\r\n-a=int(a)\r\n-b=int(b)\r\n-for i in range(b+1,a,-1):\r\n- if i%3==0: print(i,end=' ')\n\\ No newline at end of file\n+a, b = input().split()\r\n+a = int(a)\r\n+b = int(b)\r\n+for i in range(b+1, a, -1):\r\n+    if i % 3 == 0:\r\n+        print(i, end=' ')\r\n+        continue\r\n+    else: s=1\r\n+if s==1: print('NOT FOUND')\r\n"
+                },
+                {
+                    "date": 1679016637503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,32 +9,32 @@\n # for i in str(n):\r\n #    s+=str(i)\r\n # print(len(s))\r\n \r\n-# a = int(input(\"Enter first integer: \"))\r\n-# b = int(input(\"Enter second integer: \"))\r\n+a = int(input(\"Enter first integer: \"))\r\n+b = int(input(\"Enter second integer: \"))\r\n \r\n-# # Ước CHung lớn nhất\r\n-# def gcd(a,b):\r\n-#     if(b == 0):\r\n-#         return a;\r\n-#     else:\r\n-#         return gcd(b, a % b)\r\n+# Ước CHung lớn nhất\r\n+def gcd(a,b):\r\n+    if(b == 0):\r\n+        return a;\r\n+    else:\r\n+        return gcd(b, a % b)\r\n \r\n-# print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n+print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n \r\n # nhập vào số 123 và in ra 321\r\n \r\n # n=int(input())\r\n # s=''\r\n # for i in str(n):\r\n #  s=str(i)+s\r\n # print(s)\r\n-a, b = input().split()\r\n-a = int(a)\r\n-b = int(b)\r\n-for i in range(b+1, a, -1):\r\n-    if i % 3 == 0:\r\n-        print(i, end=' ')\r\n-        continue\r\n-    else: s=1\r\n-if s==1: print('NOT FOUND')\r\n+# a, b = input().split()\r\n+# a = int(a)\r\n+# b = int(b)\r\n+# for i in range(b+1, a, -1):\r\n+#     if i % 3 == 0:\r\n+#         print(i, end=' ')\r\n+#         continue\r\n+#     else: s=1\r\n+# if s==1: print('NOT FOUND')\r\n"
+                },
+                {
+                    "date": 1679019422346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,19 +9,19 @@\n # for i in str(n):\r\n #    s+=str(i)\r\n # print(len(s))\r\n \r\n-a = int(input(\"Enter first integer: \"))\r\n-b = int(input(\"Enter second integer: \"))\r\n+# a = int(input(\"Enter first integer: \"))\r\n+# b = int(input(\"Enter second integer: \"))\r\n \r\n-# Ước CHung lớn nhất\r\n-def gcd(a,b):\r\n-    if(b == 0):\r\n-        return a;\r\n-    else:\r\n-        return gcd(b, a % b)\r\n+# # Ước CHung lớn nhất\r\n+# def gcd(a,b):\r\n+#     if(b == 0):\r\n+#         return a;\r\n+#     else:\r\n+#         return gcd(b, a % b)\r\n \r\n-print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n+# print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n \r\n # nhập vào số 123 và in ra 321\r\n \r\n # n=int(input())\r\n@@ -37,4 +37,17 @@\n #         print(i, end=' ')\r\n #         continue\r\n #     else: s=1\r\n # if s==1: print('NOT FOUND')\r\n+\r\n+\r\n+num = int(input(\"Nhập vào một số nguyên: \"))\r\n+\r\n+if num > 1:\r\n+    for i in range(2, num):\r\n+        if (num % i) == 0:\r\n+            print(num, \"không phải là số nguyên tố\")\r\n+            break\r\n+    else:\r\n+        print(num, \"là số nguyên tố\")\r\n+else:\r\n+    print(num, \"không phải là số nguyên tố\")\r\n"
+                }
+            ],
+            "date": 1678935642757,
+            "name": "Commit-0",
+            "content": "n=int(input())\r\ns=0\r\nfor i in range(2,n):\r\n    s+=i\r\ns+=2*n\r\nprint(s)"
+        }
+    ]
+}
