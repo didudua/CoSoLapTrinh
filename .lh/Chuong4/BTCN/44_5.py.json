@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 46,
+            "activePatchIndex": 47,
             "patches": [
                 {
                     "date": 1677804959806,
@@ -192,6 +192,10 @@
                 {
                     "date": 1677945941354,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     while True:\r\n         x=int(input())\r\n         if SoHople(x): break\r\n         else: \r\n-            if LaSoNguyenTo(x)==True: kq+=1\r\n+            if LaSoNguyenTo(x): kq+=1\r\n     return kq\r\n         \r\n def InKQ(kq):\r\n     print('Co',kq,'so nguyen to') \r\n"
+                },
+                {
+                    "date": 1679383413489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n \r\n def LaSoNguyenTo(x):\r\n     u=0\r\n-    if x==2 : u=True\r\n+    if x==2 : return True\r\n     for i in range(2,x):\r\n         if x%i==0: \r\n-            u=False\r\n-            break\r\n+            return False\r\n         else: u=True\r\n     return u\r\n def SoHople(x):\r\n     if x<=1: return True\r\n"
                 }
             ],
             "date": 1677804959806,

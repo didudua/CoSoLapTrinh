@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Chuong4/BTCN/44_4.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1679369985912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679370002569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n \r\n a,b,c=nhap()\r\n kq=max3(a,b,c)\r\n inkq(kq)\r\n-inkq(max(nhap()))\n\\ No newline at end of file\n+# inkq(max(nhap()))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1679369985912,
+            "name": "Commit-0",
+            "content": "def nhap():\r\n    print('Nhap 3 so nguyen:')\r\n    a=int(input('a='))\r\n    b=int(input('b='))\r\n    c=int(input('c='))\r\n    return a,b,c\r\ndef max3(a,b,c):\r\n    max=a\r\n    if b>= max: max=b\r\n    if c>= max: max=c\r\n    kq=max\r\n    return kq\r\ndef inkq(kq):\r\n    print('So lon nhat la:',kq)\r\n\r\na,b,c=nhap()\r\nkq=max3(a,b,c)\r\ninkq(kq)\r\ninkq(max(nhap()))"
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 def nhap():
     n=int(input('n='))
     print('Nhap', n, 'so nguyen:')
+    # print(f'Nhap {n} so nguyen:')
     return n
 
 def NhapVaDem(n):
@@ -18,3 +19,5 @@ def InKQ(kq):
 n=nhap()
 kq=NhapVaDem(n)
 InKQ(kq)
+
+# InKQ(NhapVaDem(nhap()))

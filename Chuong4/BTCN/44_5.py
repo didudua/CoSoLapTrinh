@@ -1,11 +1,9 @@
 
 def LaSoNguyenTo(x):
-    u=0
-    if x==2 : u=True
+    if x==2 : return True
     for i in range(2,x):
         if x%i==0: 
-            u=False
-            break
+            return False
         else: u=True
     return u
 def SoHople(x):

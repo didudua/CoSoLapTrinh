@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Chuong4/BT_Slide/Page31.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1679368299638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679368333800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n def nhap():\r\n     n=int(input('n='))\r\n     print('Nhap', n, 'so nguyen:')\r\n-    print(f'Nhap {n} so nguyen:')\r\n+    # print(f'Nhap {n} so nguyen:')\r\n     return n\r\n \r\n def NhapVaDem(n):\r\n     kq = 0\r\n"
+                },
+                {
+                    "date": 1679368879830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,9 @@\n def InKQ(kq):\r\n     print('So chu so chan la:', kq)\r\n \r\n \r\n-n=nhap()\r\n-kq=NhapVaDem(n)\r\n-InKQ(kq)\r\n+# n=nhap()\r\n+# kq=NhapVaDem(n)\r\n+# InKQ(kq)\r\n+\r\n+InKQ(NhapVaDem(nhap()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679368912893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n def InKQ(kq):\r\n     print('So chu so chan la:', kq)\r\n \r\n \r\n-# n=nhap()\r\n-# kq=NhapVaDem(n)\r\n-# InKQ(kq)\r\n+n=nhap()\r\n+kq=NhapVaDem(n)\r\n\\ No newline at end of file\n+InKQ(kq)\r\n \r\n-InKQ(NhapVaDem(nhap()))\n+# InKQ(NhapVaDem(nhap()))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1679368299638,
+            "name": "Commit-0",
+            "content": "def nhap():\r\n    n=int(input('n='))\r\n    print('Nhap', n, 'so nguyen:')\r\n    print(f'Nhap {n} so nguyen:')\r\n    return n\r\n\r\ndef NhapVaDem(n):\r\n    kq = 0\r\n    while n > 0:\r\n        a = int(input())\r\n        if a % 2 == 0 and a != 0:\r\n            kq = kq+1\r\n        n = n-1\r\n    return kq\r\ndef InKQ(kq):\r\n    print('So chu so chan la:', kq)\r\n\r\n\r\nn=nhap()\r\nkq=NhapVaDem(n)\r\nInKQ(kq)\r\n"
+        }
+    ]
+}

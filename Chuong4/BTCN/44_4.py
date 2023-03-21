@@ -16,3 +16,4 @@ def inkq(kq):
 a,b,c=nhap()
 kq=max3(a,b,c)
 inkq(kq)
+# inkq(max(nhap()))
