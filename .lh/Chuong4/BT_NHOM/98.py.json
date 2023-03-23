@@ -1,0 +1,86 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/98.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1679549054561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679549224450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,13 @@\n # ta 2 ham , hex2in(): chuyen thap luc phan sang thap phan\r\n             # int2hex(): chuyen thap phan sang thap luc phan\r\n-def ThapSangLuc():\r\n-    doi='123456789ABCDEF'\r\n-doi='123456789ABCDEF'\r\n-print(doi[1])\n\\ No newline at end of file\n+def ThapSangLuc(n):\r\n+    doi='0123456789ABCDEF'\r\n+    kq=''\r\n+    while True:\r\n+        xet=n%16\r\n+        kq+=doi[xet]\r\n+        n//=16\r\n+        if n==0: break\r\n+n=int(input('Nhap so thap phan: '))\r\n+ThapSangLuc(n)\r\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679549312838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,8 @@\n         xet=n%16\r\n         kq+=doi[xet]\r\n         n//=16\r\n         if n==0: break\r\n+    return kq\r\n n=int(input('Nhap so thap phan: '))\r\n-ThapSangLuc(n)\r\n+print(f'doi sang thap luc phan la: {ThapSangLuc(n)}')\r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679549366625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     doi='0123456789ABCDEF'\r\n     kq=''\r\n     while True:\r\n         xet=n%16\r\n-        kq+=doi[xet]\r\n+        kq=kq+doi[xet]\r\n         n//=16\r\n         if n==0: break\r\n     return kq\r\n n=int(input('Nhap so thap phan: '))\r\n"
+                },
+                {
+                    "date": 1679549377853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     doi='0123456789ABCDEF'\r\n     kq=''\r\n     while True:\r\n         xet=n%16\r\n-        kq=kq+doi[xet]\r\n+        kq=doi[xet] +kq\r\n         n//=16\r\n         if n==0: break\r\n     return kq\r\n n=int(input('Nhap so thap phan: '))\r\n"
+                },
+                {
+                    "date": 1679549429836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n def ThapSangLuc(n):\r\n     doi='0123456789ABCDEF'\r\n     kq=''\r\n     while True:\r\n-        xet=n%16\r\n-        kq=doi[xet] +kq\r\n+        du=n%16\r\n+        kq=doi[du] +kq\r\n         n//=16\r\n         if n==0: break\r\n     return kq\r\n n=int(input('Nhap so thap phan: '))\r\n"
+                },
+                {
+                    "date": 1679549456225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n # ta 2 ham , hex2in(): chuyen thap luc phan sang thap phan\r\n-            # int2hex(): chuyen thap phan sang thap luc phan\r\n+# int2hex(): chuyen thap phan sang thap luc phan\r\n def ThapSangLuc(n):\r\n-    doi='0123456789ABCDEF'\r\n-    kq=''\r\n+    doi = '0123456789ABCDEF'\r\n+    kq = ''\r\n     while True:\r\n-        du=n%16\r\n-        kq=doi[du] +kq\r\n-        n//=16\r\n-        if n==0: break\r\n+        du = n % 16\r\n\\ No newline at end of file\n+        kq = doi[du] + kq\r\n+        n //= 16\r\n+        if n == 0:\r\n+            break\r\n     return kq\r\n-n=int(input('Nhap so thap phan: '))\r\n+\r\n+\r\n+n = int(input('Nhap so thap phan: '))\r\n print(f'doi sang thap luc phan la: {ThapSangLuc(n)}')\r\n-    \n"
+                },
+                {
+                    "date": 1679549804459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,18 @@\n         if n == 0:\r\n             break\r\n     return kq\r\n \r\n+def LucSangThap(m):\r\n+    dodai=len(m)\r\n+    for i in range(dodai,-1,-1):\r\n\\ No newline at end of file\n+        Kq+=dodai*16**i\r\n+        dodai-=1\r\n+    return Kq\r\n+    \r\n \r\n+\r\n+\r\n n = int(input('Nhap so thap phan: '))\r\n-print(f'doi sang thap luc phan la: {ThapSangLuc(n)}')\n+print(f'doi sang thap luc phan la: {ThapSangLuc(n)}')\r\n+m = int(input('Nhap so thap luc phan: '))\r\n+print(f'doi sang thap phan la: {LucSangThap(m)}')\r\n"
+                },
+                {
+                    "date": 1679549846561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             break\r\n     return kq\r\n \r\n def LucSangThap(m):\r\n-    dodai=len(m)\r\n+    dodai=len(str(m))\r\n     for i in range(dodai,-1,-1):\r\n         Kq+=dodai*16**i\r\n         dodai-=1\r\n     return Kq\r\n@@ -23,5 +23,5 @@\n \r\n n = int(input('Nhap so thap phan: '))\r\n print(f'doi sang thap luc phan la: {ThapSangLuc(n)}')\r\n m = int(input('Nhap so thap luc phan: '))\r\n-print(f'doi sang thap phan la: {LucSangThap(m)}')\n\\ No newline at end of file\n+print(f'doi sang thap phan la: {LucSangThap(m)}')\r\n"
+                },
+                {
+                    "date": 1679549899129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             break\r\n     return kq\r\n \r\n def LucSangThap(m):\r\n-    dodai=len(str(m))\r\n+    dodai=len(m)\r\n     for i in range(dodai,-1,-1):\r\n         Kq+=dodai*16**i\r\n         dodai-=1\r\n     return Kq\r\n@@ -22,6 +22,6 @@\n \r\n \r\n n = int(input('Nhap so thap phan: '))\r\n print(f'doi sang thap luc phan la: {ThapSangLuc(n)}')\r\n-m = int(input('Nhap so thap luc phan: '))\r\n+m = input('Nhap so thap luc phan: ')\r\n print(f'doi sang thap phan la: {LucSangThap(m)}')\r\n"
+                },
+                {
+                    "date": 1679549932601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n     return kq\r\n \r\n def LucSangThap(m):\r\n     dodai=len(m)\r\n+    Kq=0\r\n     for i in range(dodai,-1,-1):\r\n         Kq+=dodai*16**i\r\n         dodai-=1\r\n     return Kq\r\n"
+                },
+                {
+                    "date": 1679550297870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,14 @@\n             break\r\n     return kq\r\n \r\n def LucSangThap(m):\r\n-    dodai=len(m)\r\n+    doi='0123456789ABCDEF'\r\n+    mu=len(m)-1\r\n     Kq=0\r\n-    for i in range(dodai,-1,-1):\r\n-        Kq+=dodai*16**i\r\n-        dodai-=1\r\n+    for i in m:\r\n+        Kq+=Kq*16**mu\r\n+        mu-=1\r\n     return Kq\r\n     \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1679550373150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     doi='0123456789ABCDEF'\r\n     mu=len(m)-1\r\n     Kq=0\r\n     for i in m:\r\n-        Kq+=Kq*16**mu\r\n+        Kq+=doi.index(i)*16**mu\r\n         mu-=1\r\n     return Kq\r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1679550445669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,9 @@\n         Kq+=doi.index(i)*16**mu\r\n         mu-=1\r\n     return Kq\r\n     \r\n-\r\n-\r\n-\r\n+    \r\n n = int(input('Nhap so thap phan: '))\r\n print(f'doi sang thap luc phan la: {ThapSangLuc(n)}')\r\n m = input('Nhap so thap luc phan: ')\r\n-print(f'doi sang thap phan la: {LucSangThap(m)}')\r\n+print(f'doi sang thap phan la: {LucSangThap(m)}')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679550588580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # ta 2 ham , hex2in(): chuyen thap luc phan sang thap phan\r\n # int2hex(): chuyen thap phan sang thap luc phan\r\n-def ThapSangLuc(n):\r\n+def int2hex(n):\r\n     doi = '0123456789ABCDEF'\r\n     kq = ''\r\n     while True:\r\n         du = n % 16\r\n@@ -10,9 +10,9 @@\n         if n == 0:\r\n             break\r\n     return kq\r\n \r\n-def LucSangThap(m):\r\n+def hex2in(m):\r\n     doi='0123456789ABCDEF'\r\n     mu=len(m)-1\r\n     Kq=0\r\n     for i in m:\r\n@@ -21,7 +21,7 @@\n     return Kq\r\n     \r\n     \r\n n = int(input('Nhap so thap phan: '))\r\n-print(f'doi sang thap luc phan la: {ThapSangLuc(n)}')\r\n+print(f'doi sang thap luc phan la: {int2hex(n)}')\r\n m = input('Nhap so thap luc phan: ')\r\n\\ No newline at end of file\n-print(f'doi sang thap phan la: {LucSangThap(m)}')\n+print(f'doi sang thap phan la: {hex2in(m)}')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679550719186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,18 +10,19 @@\n         if n == 0:\r\n             break\r\n     return kq\r\n \r\n+\r\n def hex2in(m):\r\n-    doi='0123456789ABCDEF'\r\n-    mu=len(m)-1\r\n-    Kq=0\r\n+    doi = '0123456789ABCDEF'\r\n+    mu = len(m)-1\r\n+    Kq = 0\r\n     for i in m:\r\n-        Kq+=doi.index(i)*16**mu\r\n-        mu-=1\r\n+        Kq += doi.index(i)*16**mu\r\n+        mu -= 1\r\n     return Kq\r\n\\ No newline at end of file\n-    \r\n-    \r\n+\r\n+\r\n n = int(input('Nhap so thap phan: '))\r\n print(f'doi sang thap luc phan la: {int2hex(n)}')\r\n m = input('Nhap so thap luc phan: ')\r\n-print(f'doi sang thap phan la: {hex2in(m)}')\n+print(f'doi sang thap phan la: {hex2in(m)}')\r\n"
+                },
+                {
+                    "date": 1679558969608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,15 +14,15 @@\n \r\n def hex2in(m):\r\n     doi = '0123456789ABCDEF'\r\n     mu = len(m)-1\r\n-    Kq = 0\r\n+    kq = 0\r\n     for i in m:\r\n-        Kq += doi.index(i)*16**mu\r\n+        kq += doi.index(i)*16**mu\r\n         mu -= 1\r\n-    return Kq\r\n+    return kq\r\n \r\n \r\n n = int(input('Nhap so thap phan: '))\r\n\\ No newline at end of file\n print(f'doi sang thap luc phan la: {int2hex(n)}')\r\n m = input('Nhap so thap luc phan: ')\r\n-print(f'doi sang thap phan la: {hex2in(m)}')\n+print(f'doi sang thap phan la: {hex2in(m)}')\r\n"
+                },
+                {
+                    "date": 1679569097508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n # ta 2 ham , hex2in(): chuyen thap luc phan sang thap phan\r\n # int2hex(): chuyen thap phan sang thap luc phan\r\n-def int2hex(n):\r\n-    doi = '0123456789ABCDEF'\r\n+def int2hex(n,doi):\r\n     kq = ''\r\n     while True:\r\n         du = n % 16\r\n         kq = doi[du] + kq\r\n@@ -11,18 +10,17 @@\n             break\r\n     return kq\r\n \r\n \r\n-def hex2in(m):\r\n-    doi = '0123456789ABCDEF'\r\n+def hex2in(m,doi):\r\n     mu = len(m)-1\r\n     kq = 0\r\n     for i in m:\r\n         kq += doi.index(i)*16**mu\r\n         mu -= 1\r\n     return kq\r\n \r\n-\r\n+doi = '0123456789ABCDEF'\r\n n = int(input('Nhap so thap phan: '))\r\n-print(f'doi sang thap luc phan la: {int2hex(n)}')\r\n\\ No newline at end of file\n+print(f'doi sang thap luc phan la: {int2hex(n,doi)}')\r\n m = input('Nhap so thap luc phan: ')\r\n-print(f'doi sang thap phan la: {hex2in(m)}')\n+print(f'doi sang thap phan la: {hex2in(m,doi)}')\r\n"
+                }
+            ],
+            "date": 1679549054561,
+            "name": "Commit-0",
+            "content": "# ta 2 ham , hex2in(): chuyen thap luc phan sang thap phan\r\n            # int2hex(): chuyen thap phan sang thap luc phan\r\ndef ThapSangLuc():\r\n    doi='123456789ABCDEF'\r\ndoi='123456789ABCDEF'\r\nprint(doi[1])"
+        }
+    ]
+}

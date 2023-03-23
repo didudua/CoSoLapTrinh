@@ -1,0 +1,82 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/97.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1679565506822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679565522761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-str='01234 6789'\r\n+str='0123456789'\r\n print(str[:6])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679565530184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n str='0123456789'\r\n-print(str[:6])\n\\ No newline at end of file\n+print(str[1:6])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679565538032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n str='0123456789'\r\n-print(str[1:6])\n\\ No newline at end of file\n+print(str[1:6:2])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679565888371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n str='0123456789'\r\n-print(str[1:6:2])\n\\ No newline at end of file\n+print(str[1:6])\r\n+n=[1,2,3,4,5,6,7,8,9]\r\n+print(n[1:6])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679565920003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n str='0123456789'\r\n print(str[1:6])\r\n-n=[1,2,3,4,5,6,7,8,9]\r\n+n=[0,1,2,3,4,5,6,7,8,9]\r\n print(n[1:6])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679566887788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n-str='0123456789'\r\n-print(str[1:6])\r\n-n=[0,1,2,3,4,5,6,7,8,9]\r\n-print(n[1:6])\n\\ No newline at end of file\n+import copy\r\n+numbers1 = [1,2,3,4,5]\r\n+numbers2 = copy.copy(numbers1)\r\n+print(numbers2)\r\n+numbers3 = numbers1\r\n+numbers3[2] = 6\r\n+print(numbers3)\r\n"
+                },
+                {
+                    "date": 1679566975027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import copy\r\n-numbers1 = [1,2,3,4,5]\r\n-numbers2 = copy.copy(numbers1)\r\n-print(numbers2)\r\n-numbers3 = numbers1\r\n-numbers3[2] = 6\r\n-print(numbers3)\r\n+names = ['an','nam','binh','Ngoc']\r\n+names.remove('an')\r\n+del(names[0])\r\n+x=names.pop(-2)\r\n+print(x)\r\n+print(names)\r\n"
+                },
+                {
+                    "date": 1679567027933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import copy\r\n names = ['an','nam','binh','Ngoc']\r\n-names.remove('an')\r\n-del(names[0])\r\n-x=names.pop(-2)\r\n-print(x)\r\n+x1=names.pop(0)\r\n+x2=names.pop(-1)\r\n+print(x1)\r\n+print(x2)\r\n print(names)\r\n"
+                },
+                {
+                    "date": 1679567076134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import copy\r\n names = ['an','nam','binh','Ngoc']\r\n-x1=names.pop(0)\r\n-x2=names.pop(-1)\r\n-print(x1)\r\n-print(x2)\r\n-print(names)\r\n+x=names.copy()\r\n+print(x)\r\n+print(x.count('nam'))\r\n+\r\n"
+                },
+                {
+                    "date": 1679567159159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n-import copy\r\n-names = ['an','nam','binh','Ngoc']\r\n-x=names.copy()\r\n-print(x)\r\n-print(x.count('nam'))\r\n-\r\n+names = [1, 2, 3, 4, 5, 6]\r\n+names.append(6)\r\n+print(names)\r\n+names.insert(0,7)\r\n+print(names)\r\n+names.insert(-1,8)\r\n+print(names)\r\n"
+                },
+                {
+                    "date": 1679567341392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,1 @@\n-names = [1, 2, 3, 4, 5, 6]\r\n-names.append(6)\r\n-print(names)\r\n-names.insert(0,7)\r\n-print(names)\r\n-names.insert(-1,8)\r\n-print(names)\r\n+print(r'\"Đen Vâu\" is a rap singer'\\n' He\\'s 32 years old\\n'I want to become a rapper')\r\n"
+                },
+                {
+                    "date": 1679567413956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-print(r'\"Đen Vâu\" is a rap singer'\\n' He\\'s 32 years old\\n'I want to become a rapper')\r\n+print(r'\"Đen Vâu\" is a rap singer' r'He's 32 years old' 'I want to become a rapper)\r\n"
+                },
+                {
+                    "date": 1679567515505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-print(r'\"Đen Vâu\" is a rap singer' r'He's 32 years old' 'I want to become a rapper)\r\n+print(r'\"Đen Vâu\" is a rap singer''\\nHe\\'s 32 years old \\nI want to become a rapper')\r\n"
+                },
+                {
+                    "date": 1679567968619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-print(r'\"Đen Vâu\" is a rap singer''\\nHe\\'s 32 years old \\nI want to become a rapper')\r\n+u='1234'\r\n+print(u[-3:])\r\n"
+                },
+                {
+                    "date": 1679567993050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n u='1234'\r\n-print(u[-3:])\r\n+print(u[-3:]+u[:2])\r\n"
+                },
+                {
+                    "date": 1679568123290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +0,0 @@\n-u='1234'\r\n-print(u[-3:]+u[:2])\r\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1679565506821,
+            "name": "Commit-0",
+            "content": "str='01234 6789'\r\nprint(str[:6])"
+        }
+    ]
+}

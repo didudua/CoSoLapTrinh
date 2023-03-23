@@ -1,0 +1,66 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/101.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1679557355849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679557386655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # nhập vào 2 số nguyên. in ra kết quả phân số tối giản của 2 số đó\r\n def UCLN(a,b):\r\n     if b==0: return a\r\n-    kq=UCLN(b,b%a)\r\n+    else: return UCLN(b,b%a)\r\n a=int(input())\r\n b=int(input())\r\n UCLN(a,b)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679557409309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n     if b==0: return a\r\n     else: return UCLN(b,b%a)\r\n a=int(input())\r\n b=int(input())\r\n-UCLN(a,b)\n\\ No newline at end of file\n+print(UCLN(a,b))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679557480667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # nhập vào 2 số nguyên. in ra kết quả phân số tối giản của 2 số đó\r\n def UCLN(a,b):\r\n-    if b==0: return a\r\n+    if (b==0): return a\r\n     else: return UCLN(b,b%a)\r\n a=int(input())\r\n b=int(input())\r\n print(UCLN(a,b))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679557513102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # nhập vào 2 số nguyên. in ra kết quả phân số tối giản của 2 số đó\r\n def UCLN(a,b):\r\n-    if (b==0): return a\r\n-    else: return UCLN(b,b%a)\r\n+    if (b==0): return a;\r\n+    else: return UCLN(b,a%b)\r\n a=int(input())\r\n b=int(input())\r\n print(UCLN(a,b))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679557526471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # nhập vào 2 số nguyên. in ra kết quả phân số tối giản của 2 số đó\r\n def UCLN(a,b):\r\n-    if (b==0): return a;\r\n+    if (b==0): return a\r\n     else: return UCLN(b,a%b)\r\n a=int(input())\r\n b=int(input())\r\n print(UCLN(a,b))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679557536293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # nhập vào 2 số nguyên. in ra kết quả phân số tối giản của 2 số đó\r\n def UCLN(a,b):\r\n-    if (b==0): return a\r\n+    if b==0: return a\r\n     else: return UCLN(b,a%b)\r\n a=int(input())\r\n b=int(input())\r\n print(UCLN(a,b))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679557664082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n     if b==0: return a\r\n     else: return UCLN(b,a%b)\r\n a=int(input())\r\n b=int(input())\r\n-print(UCLN(a,b))\n\\ No newline at end of file\n+print(f'phan so toi gian {a}/{b} = {a/UCLN(a,b)}/{b/UCLN(a,b)}')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679557709974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n     if b==0: return a\r\n     else: return UCLN(b,a%b)\r\n a=int(input())\r\n b=int(input())\r\n-print(f'phan so toi gian {a}/{b} = {a/UCLN(a,b)}/{b/UCLN(a,b)}')\n\\ No newline at end of file\n+print(f'phan so toi gian {a}/{b} = {int(a/UCLN(a,b))}/{int(b/UCLN(a,b))}')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679557809082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n     if b==0: return a\r\n     else: return UCLN(b,a%b)\r\n a=int(input())\r\n b=int(input())\r\n-print(f'phan so toi gian {a}/{b} = {int(a/UCLN(a,b))}/{int(b/UCLN(a,b))}')\n\\ No newline at end of file\n+print(f'phan so toi gian {a}/{b} = {int(a/UCLN(a,b))}/{int(b/UCLN(a,b))}')\r\n+print(a%b)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679557863136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n     else: return UCLN(b,a%b)\r\n a=int(input())\r\n b=int(input())\r\n print(f'phan so toi gian {a}/{b} = {int(a/UCLN(a,b))}/{int(b/UCLN(a,b))}')\r\n-print(a%b)\n\\ No newline at end of file\n+print(b%a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679557999855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,5 @@\n     if b==0: return a\r\n     else: return UCLN(b,a%b)\r\n a=int(input())\r\n b=int(input())\r\n-print(f'phan so toi gian {a}/{b} = {int(a/UCLN(a,b))}/{int(b/UCLN(a,b))}')\r\n-print(b%a)\n\\ No newline at end of file\n+print(f'phan so toi gian {a}/{b} = {int(a/UCLN(a,b))}/{int(b/UCLN(a,b))}')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679570146927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n # nhập vào 2 số nguyên. in ra kết quả phân số tối giản của 2 số đó\r\n def UCLN(a,b):\r\n     if b==0: return a\r\n     else: return UCLN(b,a%b)\r\n-a=int(input())\r\n-b=int(input())\r\n+a=int(input('Nhap tu so:'))\r\n+b=int(input('Nhap mau so:'))\r\n print(f'phan so toi gian {a}/{b} = {int(a/UCLN(a,b))}/{int(b/UCLN(a,b))}')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1679557355848,
+            "name": "Commit-0",
+            "content": "# nhập vào 2 số nguyên. in ra kết quả phân số tối giản của 2 số đó\r\ndef UCLN(a,b):\r\n    if b==0: return a\r\n    kq=UCLN(b,b%a)\r\na=int(input())\r\nb=int(input())\r\nUCLN(a,b)"
+        }
+    ]
+}
