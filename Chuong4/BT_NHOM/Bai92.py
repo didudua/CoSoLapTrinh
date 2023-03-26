@@ -8,10 +8,12 @@ def kiemtrasonguyento(n):
         if n % i == 0:
             return False
     return True
+
 if __name__ == '__main__':
-# Chương trình chính
- n = int(input("Nhập một số nguyên: "))
- if kiemtrasonguyento(n):
-    print(f"{n} là số nguyên tố.")
- else:
-    print(f"{n} không phải là số nguyên tố.")
+    # Chương trình chính
+    # Xác định chương trình đang chạy có giống với chương trình chính hay không
+    n = int(input("Nhập một số nguyên: "))
+    if kiemtrasonguyento(n):
+        print(f"{n} là số nguyên tố.")
+    else:
+        print(f"{n} không phải là số nguyên tố.")

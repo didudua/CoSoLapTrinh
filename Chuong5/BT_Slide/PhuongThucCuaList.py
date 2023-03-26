@@ -31,3 +31,7 @@ print(names)
 print(x)
 names.clear() # xoá tất cả các phần tử trong list
 print(names)
+# chuong 7
+str.isdigit() # trả về chuỗi str đó có phải là số hay không vd: a=1000 a.isdigit()= True
+              # vd: a=100ABC a[0:2].isdigit()=True\
+str.isalpha() #

@@ -1,5 +1,4 @@
 from Bai92 import kiemtrasonguyento
-import math
 
 def songuyentotieptheo(n):
     """Tìm số nguyên tố đầu tiên lớn hơn một số nguyên n cho trước."""

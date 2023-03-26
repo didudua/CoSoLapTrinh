@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai85.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1679806401868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679806676317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,8 @@\n     else:\r\n         return str(n) + 'th'\r\n def inkq(kq):\r\n     print (kq)\r\n-    \r\n-n=nhap()\r\n-kq=sodoi(n)\r\n-inkq(kq)\n\\ No newline at end of file\n+if __name__ == '__main__':\r\n+    n=nhap()\r\n+    kq=sodoi(n)\r\n+    inkq(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679807190063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,19 +5,31 @@\n def sodoi(n):\r\n     if n < 1 or n > 12:\r\n         return ''\r\n     elif n == 1:\r\n-        return '1st'\r\n+        return 'first'\r\n     elif n == 2:\r\n-        return '2nd'\r\n+        return 'second'\r\n     elif n == 3:\r\n-        return '3rd'\r\n+        return 'fourth'\r\n+    elif n == 4:\r\n+        return 'fourth'\r\n+    elif n == 5:\r\n+        return 'fifth'\r\n+    elif n == 6:\r\n+        return 'sixth'\r\n+    elif n == 7:\r\n+        return 'seventh'\r\n+    elif n == 8:\r\n+        return 'eighth'\r\n+    elif n == 9:\r\n+        return 'ninth'\r\n+    elif n == 10:\r\n+        return 'tenth'\r\n     elif n == 11:\r\n         return 'eleventh'\r\n     elif n == 12:\r\n         return 'twelfth'\r\n-    else:\r\n-        return str(n) + 'th'\r\n def inkq(kq):\r\n     print (kq)\r\n if __name__ == '__main__':\r\n     n=nhap()\r\n"
+                },
+                {
+                    "date": 1679807238785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         return 'first'\r\n     elif n == 2:\r\n         return 'second'\r\n     elif n == 3:\r\n-        return 'fourth'\r\n+        return 'third'\r\n     elif n == 4:\r\n         return 'fourth'\r\n     elif n == 5:\r\n         return 'fifth'\r\n"
+                }
+            ],
+            "date": 1679806401868,
+            "name": "Commit-0",
+            "content": "def nhap():\r\n    n=int(input('n='))\r\n    return n\r\n\r\ndef sodoi(n):\r\n    if n < 1 or n > 12:\r\n        return ''\r\n    elif n == 1:\r\n        return '1st'\r\n    elif n == 2:\r\n        return '2nd'\r\n    elif n == 3:\r\n        return '3rd'\r\n    elif n == 11:\r\n        return 'eleventh'\r\n    elif n == 12:\r\n        return 'twelfth'\r\n    else:\r\n        return str(n) + 'th'\r\ndef inkq(kq):\r\n    print (kq)\r\n    \r\nn=nhap()\r\nkq=sodoi(n)\r\ninkq(kq)"
+        }
+    ]
+}

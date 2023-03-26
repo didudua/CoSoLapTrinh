@@ -1,4 +1,4 @@
-def BatkySangThap(n, hevao,he16):
+def BatkySangThap(n, hevao, he16):
     mu = len(n)-1
     kq = 0
     if hevao == 16:
@@ -12,7 +12,7 @@ def BatkySangThap(n, hevao,he16):
             mu -= 1
         return kq
 
-def ThapSangBatKy(u, hera,he16):
+def ThapSangBatKy(u, hera, he16):
     kq = ''
     if hera == 2:
         for i in range(7, -1, -1):
@@ -38,7 +38,7 @@ def ThapSangBatKy(u, hera,he16):
 
 n = input('nhap so bat ky: ')
 he = [2, 8, 10, 16]
-he2 ='01'
+he2 = '01'
 he16 = '0123456789ABCDEF'
 hevao = int(input('so do thuoc he: '))
 hera = int(input('chuyen so do thanh he: '))
@@ -46,11 +46,17 @@ if hevao in he and hera in he:
     if hevao == 2:
         for i in n:
             if i in he2 and len(n) <= 8:
-                print(f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')
-            else: 
-                print('so ban nhap khong thuoc he 2')
+                u = True
+            else:
+                u = False
                 break
+        if u:
+            print(
+                f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')
+        else:
+            print('so ban nhap khong thuoc he 2')
     else:
-        print(f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')
+        print(
+            f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')
 else:
     print('khong tim duoc he ma ban da nhap')

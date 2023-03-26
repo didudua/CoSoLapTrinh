@@ -1,0 +1,34 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai86.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1679806530520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679806545239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,21 @@\n+def sodoi(n):\r\n+    if n < 1 or n > 12:\r\n+        return ''\r\n+    elif n == 1:\r\n+        return 'first'\r\n+    elif n == 2:\r\n+        return 'second'\r\n+    elif n == 3:\r\n+        return 'third'\r\n+    elif n == 11:\r\n+        return 'eleventh'\r\n+    elif n == 12:\r\n+        return 'twelfth'\r\n+    else:\r\n+        return str(n) + 'th'\r\n+\r\n+\r\n def display_verse(ngay):\r\n     print(f\"On the {sodoi(ngay)} ngay of Christmas\")\r\n     print(\"my true love sent to me:\")\r\n     if ngay >= 12:\r\n"
+                },
+                {
+                    "date": 1679806702605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,20 @@\n-def sodoi(n):\r\n-    if n < 1 or n > 12:\r\n-        return ''\r\n-    elif n == 1:\r\n-        return 'first'\r\n-    elif n == 2:\r\n-        return 'second'\r\n-    elif n == 3:\r\n-        return 'third'\r\n-    elif n == 11:\r\n-        return 'eleventh'\r\n-    elif n == 12:\r\n-        return 'twelfth'\r\n-    else:\r\n-        return str(n) + 'th'\r\n-\r\n-\r\n+# def sodoi(n):\r\n+#     if n < 1 or n > 12:\r\n+#         return ''\r\n+#     elif n == 1:\r\n+#         return 'first'\r\n+#     elif n == 2:\r\n+#         return 'second'\r\n+#     elif n == 3:\r\n+#         return 'third'\r\n+#     elif n == 11:\r\n+#         return 'eleventh'\r\n+#     elif n == 12:\r\n+#         return 'twelfth'\r\n+#     else:\r\n+#         return str(n) + 'th'\r\n+from Bai85 import sodoi\r\n def display_verse(ngay):\r\n     print(f\"On the {sodoi(ngay)} ngay of Christmas\")\r\n     print(\"my true love sent to me:\")\r\n     if ngay >= 12:\r\n@@ -44,9 +43,8 @@\n         print(\"A partridge in a pear tree.\")\r\n     else:\r\n         print(\"And a partridge in a pear tree.\")\r\n \r\n-\r\n if __name__ == '__main__':\r\n     for i in range(1, 13):\r\n         display_verse(i)\r\n-        print()\r\n+        print()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679806887882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n #     else:\r\n #         return str(n) + 'th'\r\n from Bai85 import sodoi\r\n def display_verse(ngay):\r\n-    print(f\"On the {sodoi(ngay)} ngay of Christmas\")\r\n+    print(f\"On the {sodoi(ngay)} day of Christmas\")\r\n     print(\"my true love sent to me:\")\r\n     if ngay >= 12:\r\n         print(\"Twelve drummers drumming,\")\r\n     if ngay >= 11:\r\n"
+                },
+                {
+                    "date": 1679807376310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,6 @@\n-# def sodoi(n):\r\n-#     if n < 1 or n > 12:\r\n-#         return ''\r\n-#     elif n == 1:\r\n-#         return 'first'\r\n-#     elif n == 2:\r\n-#         return 'second'\r\n-#     elif n == 3:\r\n-#         return 'third'\r\n-#     elif n == 11:\r\n-#         return 'eleventh'\r\n-#     elif n == 12:\r\n-#         return 'twelfth'\r\n-#     else:\r\n-#         return str(n) + 'th'\r\n from Bai85 import sodoi\r\n+\r\n def display_verse(ngay):\r\n     print(f\"On the {sodoi(ngay)} day of Christmas\")\r\n     print(\"my true love sent to me:\")\r\n     if ngay >= 12:\r\n"
+                }
+            ],
+            "date": 1679806530520,
+            "name": "Commit-0",
+            "content": "def display_verse(ngay):\r\n    print(f\"On the {sodoi(ngay)} ngay of Christmas\")\r\n    print(\"my true love sent to me:\")\r\n    if ngay >= 12:\r\n        print(\"Twelve drummers drumming,\")\r\n    if ngay >= 11:\r\n        print(\"Eleven pipers piping,\")\r\n    if ngay >= 10:\r\n        print(\"Ten lords a-leaping,\")\r\n    if ngay >= 9:\r\n        print(\"Nine ladies dancing,\")\r\n    if ngay >= 8:\r\n        print(\"Eight maids a-milking,\")\r\n    if ngay >= 7:\r\n        print(\"Seven swans a-swimming,\")\r\n    if ngay >= 6:\r\n        print(\"Six geese a-laying,\")\r\n    if ngay >= 5:\r\n        print(\"Five golden rings,\")\r\n    if ngay >= 4:\r\n        print(\"Four calling birds,\")\r\n    if ngay >= 3:\r\n        print(\"Three French hens,\")\r\n    if ngay >= 2:\r\n        print(\"Two turtle doves,\")\r\n    if ngay == 1:\r\n        print(\"A partridge in a pear tree.\")\r\n    else:\r\n        print(\"And a partridge in a pear tree.\")\r\n\r\n\r\nif __name__ == '__main__':\r\n    for i in range(1, 13):\r\n        display_verse(i)\r\n        print()\r\n"
+        }
+    ]
+}

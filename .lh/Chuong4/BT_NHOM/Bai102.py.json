@@ -1,0 +1,58 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai102.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1679716197555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679716373109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,7 @@\n         coc = soluong // (16 * 3)\r\n         muong_canh = (soluong % (16 * 3)) // 3\r\n         ca_phe = soluong % 3\r\n     return coc,muong_canh,ca_phe\r\n-print(KetQua(nhap()))\n\\ No newline at end of file\n+soluong,donvi=nhap()\r\n+coc,muong_canh,ca_phe=KetQua(soluong,donvi)\r\n+print(f'{soluong} {donvi} tuong duong {coc} coc {muong_canh} muong canh {ca_phe} muong ca phe')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679716403270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n         ca_phe = soluong % 3\r\n     return coc,muong_canh,ca_phe\r\n soluong,donvi=nhap()\r\n coc,muong_canh,ca_phe=KetQua(soluong,donvi)\r\n-print(f'{soluong} {donvi} tuong duong {coc} coc {muong_canh} muong canh {ca_phe} muong ca phe')\n\\ No newline at end of file\n+print(f'{soluong} {donvi} tuong duong {coc} coc, {muong_canh} muong canh, {ca_phe} muong ca phe')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679716464600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n def nhap():\r\n-    soluong=int(input('so luong: '))\r\n-    donvi=input('don vi: ')\r\n-    return soluong,donvi\r\n-def KetQua(soluong,donvi):\r\n+    soluong = int(input('so luong: '))\r\n+    donvi = input('don vi: ')\r\n+    return soluong, donvi\r\n+\r\n+\r\n+def KetQua(soluong, donvi):\r\n     if donvi == \"coc\":\r\n         coc = soluong\r\n         muong_canh = coc * 16\r\n         ca_phe = muong_canh * 3\r\n@@ -14,8 +16,10 @@\n     elif donvi == \"muong ca phe\":\r\n         coc = soluong // (16 * 3)\r\n         muong_canh = (soluong % (16 * 3)) // 3\r\n         ca_phe = soluong % 3\r\n-    return coc,muong_canh,ca_phe\r\n-soluong,donvi=nhap()\r\n-coc,muong_canh,ca_phe=KetQua(soluong,donvi)\r\n-print(f'{soluong} {donvi} tuong duong {coc} coc, {muong_canh} muong canh, {ca_phe} muong ca phe')\n\\ No newline at end of file\n+    return coc, muong_canh, ca_phe\r\n+\r\n+\r\n+soluong, donvi = nhap()\r\n+coc, muong_canh, ca_phe = KetQua(soluong, donvi)\r\n+print(f'{soluong} {donvi} tuong duong {coc} coc, {muong_canh} muong canh, {ca_phe} muong ca phe')\r\n"
+                },
+                {
+                    "date": 1679716565595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n+# 1 coc = 16 muong canh\r\n+# 1 muong canh = 3 muong ca phe\r\n+# 1 coc = 48 muong ca  phe\r\n def nhap():\r\n     soluong = int(input('so luong: '))\r\n     donvi = input('don vi: ')\r\n     return soluong, donvi\r\n"
+                },
+                {
+                    "date": 1679717236848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         ca_phe = muong_canh * 3\r\n     elif donvi == \"muong canh\":\r\n         coc = soluong // 16\r\n         muong_canh = soluong % 16\r\n-        ca_phe = muong_canh * 3\r\n+        ca_phe = (soluong % 16) * 3\r\n     elif donvi == \"muong ca phe\":\r\n         coc = soluong // (16 * 3)\r\n         muong_canh = (soluong % (16 * 3)) // 3\r\n         ca_phe = soluong % 3\r\n"
+                },
+                {
+                    "date": 1679717256135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         muong_canh = soluong % 16\r\n         ca_phe = (soluong % 16) * 3\r\n     elif donvi == \"muong ca phe\":\r\n         coc = soluong // (16 * 3)\r\n-        muong_canh = (soluong % (16 * 3)) // 3\r\n+        muong_canh = coc // 3\r\n         ca_phe = soluong % 3\r\n     return coc, muong_canh, ca_phe\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1679717667280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,12 +14,12 @@\n         ca_phe = muong_canh * 3\r\n     elif donvi == \"muong canh\":\r\n         coc = soluong // 16\r\n         muong_canh = soluong % 16\r\n-        ca_phe = (soluong % 16) * 3\r\n+        ca_phe = soluong % 16\r\n     elif donvi == \"muong ca phe\":\r\n         coc = soluong // (16 * 3)\r\n-        muong_canh = coc // 3\r\n+        muong_canh = (soluong % (16 * 3)) // 3\r\n         ca_phe = soluong % 3\r\n     return coc, muong_canh, ca_phe\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1679717725844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         ca_phe = muong_canh * 3\r\n     elif donvi == \"muong canh\":\r\n         coc = soluong // 16\r\n         muong_canh = soluong % 16\r\n-        ca_phe = soluong % 16\r\n+        ca_phe = (soluong % 16) * 3\r\n     elif donvi == \"muong ca phe\":\r\n         coc = soluong // (16 * 3)\r\n         muong_canh = (soluong % (16 * 3)) // 3\r\n         ca_phe = soluong % 3\r\n"
+                },
+                {
+                    "date": 1679718429388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,14 +9,14 @@\n \r\n def KetQua(soluong, donvi):\r\n     if donvi == \"coc\":\r\n         coc = soluong\r\n-        muong_canh = coc * 16\r\n-        ca_phe = muong_canh * 3\r\n+        muong_canh = 0\r\n+        ca_phe = 0\r\n     elif donvi == \"muong canh\":\r\n         coc = soluong // 16\r\n         muong_canh = soluong % 16\r\n-        ca_phe = (soluong % 16) * 3\r\n+        ca_phe =0 \r\n     elif donvi == \"muong ca phe\":\r\n         coc = soluong // (16 * 3)\r\n         muong_canh = (soluong % (16 * 3)) // 3\r\n         ca_phe = soluong % 3\r\n"
+                },
+                {
+                    "date": 1679801279421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         ca_phe = 0\r\n     elif donvi == \"muong canh\":\r\n         coc = soluong // 16\r\n         muong_canh = soluong % 16\r\n-        ca_phe =0 \r\n+        ca_phe = 0\r\n     elif donvi == \"muong ca phe\":\r\n         coc = soluong // (16 * 3)\r\n         muong_canh = (soluong % (16 * 3)) // 3\r\n         ca_phe = soluong % 3\r\n"
+                }
+            ],
+            "date": 1679716197555,
+            "name": "Commit-0",
+            "content": "def nhap():\r\n    soluong=int(input('so luong: '))\r\n    donvi=input('don vi: ')\r\n    return soluong,donvi\r\ndef KetQua(soluong,donvi):\r\n    if donvi == \"coc\":\r\n        coc = soluong\r\n        muong_canh = coc * 16\r\n        ca_phe = muong_canh * 3\r\n    elif donvi == \"muong canh\":\r\n        coc = soluong // 16\r\n        muong_canh = soluong % 16\r\n        ca_phe = muong_canh * 3\r\n    elif donvi == \"muong ca phe\":\r\n        coc = soluong // (16 * 3)\r\n        muong_canh = (soluong % (16 * 3)) // 3\r\n        ca_phe = soluong % 3\r\n    return coc,muong_canh,ca_phe\r\nprint(KetQua(nhap()))"
+        }
+    ]
+}

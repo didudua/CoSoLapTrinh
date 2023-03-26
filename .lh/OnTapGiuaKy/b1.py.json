@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1678763656169,
@@ -24,6 +24,46 @@
                 {
                     "date": 1679194544790,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n n=int(input('n='))\r\n s=0\r\n for i in range(1,n+1,2):\r\n     s+=1/i\r\n-print('Tong nghich dao cac so le la:',round(s,2))\r\n-\r\n-  \n\\ No newline at end of file\n+print('Tong nghich dao cac so le la:',round(s,2))  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679656934145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +0,0 @@\n-n=int(input('n='))\r\n-s=0\r\n-for i in range(1,n+1,2):\r\n-    s+=1/i\r\n-print('Tong nghich dao cac so le la:',round(s,2))  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679665331987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+u=0\r\n+for i in range(1,1000+1):\r\n+    for j in i:\r\n+        if int(j)==9: \r\n+            u+=1\r\n+            break\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679665349097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n u=0\r\n for i in range(1,1000+1):\r\n-    for j in i:\r\n+    for j in str(i):\r\n         if int(j)==9: \r\n             u+=1\r\n             break\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679665361040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,6 @@\n for i in range(1,1000+1):\r\n     for j in str(i):\r\n         if int(j)==9: \r\n             u+=1\r\n-            break\n\\ No newline at end of file\n+            break\r\n+print(u)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679665660103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n u=0\r\n-for i in range(1,1000+1):\r\n+for i in range(1,1000):\r\n     for j in str(i):\r\n         if int(j)==9: \r\n             u+=1\r\n             break\r\n"
+                },
+                {
+                    "date": 1679666326165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n     for j in str(i):\r\n         if int(j)==9: \r\n             u+=1\r\n             break\r\n+    print(i)\r\n print(u)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679666365130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n u=0\r\n for i in range(1,1000):\r\n     for j in str(i):\r\n-        if int(j)==9: \r\n+        if int(j)==9:\r\n+            print(i) \r\n             u+=1\r\n             break\r\n-    print(i)\r\n print(u)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679667201496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n u=0\r\n for i in range(1,1000):\r\n     for j in str(i):\r\n         if int(j)==9:\r\n-            print(i) \r\n+            print(i,end='') \r\n             u+=1\r\n             break\r\n print(u)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679667207994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n u=0\r\n for i in range(1,1000):\r\n     for j in str(i):\r\n         if int(j)==9:\r\n-            print(i,end='') \r\n+            print(i,end=' ') \r\n             u+=1\r\n             break\r\n print(u)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679667288250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n u=0\r\n for i in range(1,1000):\r\n     for j in str(i):\r\n         if int(j)==9:\r\n-            print(i,end=' ') \r\n+            print(i,end='\\t') \r\n             u+=1\r\n             break\r\n print(u)\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1678763656169,

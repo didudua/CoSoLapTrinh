@@ -1,0 +1,22 @@
+{
+    "sourceFile": "OnTapGiuaKy/b8.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1679646682868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679646772153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,7 @@\n     # Đảo ngược các số từ vị trí i+1 đến cuối để tạo ra hoán vị liền sau\r\n     nums[i+1:] = nums[i+1:][::-1]\r\n     \r\n     return nums\r\n+# hoán vị liền sau: \r\n nums = [4,5,1,2,6,3]\r\n print(next_permutation(nums))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1679646682868,
+            "name": "Commit-0",
+            "content": "def next_permutation(nums):\r\n    # Tìm vị trí lớn nhất trong dãy số mà số tại vị trí đó vẫn có thể tăng lên được\r\n    i = len(nums) - 2\r\n    while i >= 0 and nums[i] >= nums[i+1]:\r\n        i -= 1\r\n    \r\n    # Nếu không tìm thấy vị trí như vậy, dãy số đã là hoán vị lớn nhất\r\n    if i == -1:\r\n        nums.reverse()\r\n        return nums\r\n    \r\n    # Tìm số lớn nhất ở phía bên phải của vị trí i\r\n    j = len(nums) - 1\r\n    while j >= 0 and nums[j] <= nums[i]:\r\n        j -= 1\r\n    \r\n    # Hoán đổi số ở vị trí i và j\r\n    nums[i], nums[j] = nums[j], nums[i]\r\n    \r\n    # Đảo ngược các số từ vị trí i+1 đến cuối để tạo ra hoán vị liền sau\r\n    nums[i+1:] = nums[i+1:][::-1]\r\n    \r\n    return nums\r\nnums = [4,5,1,2,6,3]\r\nprint(next_permutation(nums))"
+        }
+    ]
+}

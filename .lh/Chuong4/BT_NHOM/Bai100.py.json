@@ -1,0 +1,34 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai100.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1679799947382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679801291575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,13 @@\n     else:\r\n         if int(nam) % 4 == 0:\r\n             return True\r\n \r\n+\r\n ngay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n ngayn = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n thang = input('nhap thang: ')\r\n nam = input('nhap nam: ')\r\n if XetNam(nam):\r\n-        print(f'thang {thang}, nam {nam} co {ngayn[int(thang)-1]} ngay')\r\n+    print(f'thang {thang}, nam {nam} co {ngayn[int(thang)-1]} ngay')\r\n\\ No newline at end of file\n else:\r\n-        print(f'thang {thang}, nam {nam} co {ngay[int(thang)-1]} ngay')\n+    print(f'thang {thang}, nam {nam} co {ngay[int(thang)-1]} ngay')\r\n"
+                },
+                {
+                    "date": 1679804548670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,20 @@\n # viết chương trình xét xem 1 tháng trong năm đó có bao nhiêu ngày:\r\n # hàm nhận 2 tham số, tháng và năm\r\n def XetNam(nam):\r\n-    if int(nam[-1]) == 0 and int(nam[-2]) == 0:\r\n-        if int(nam) % 400 == 0:\r\n-            return True\r\n-    else:\r\n-        if int(nam) % 4 == 0:\r\n-            return True\r\n+    # if int(nam[-1]) == 0 and int(nam[-2]) == 0:\r\n+    #     if int(nam) % 400 == 0:\r\n+    #         return True\r\n+    # else:\r\n+    #     if int(nam) % 4 == 0:\r\n+    #         return True\r\n+    if nam % 4 == 0 and (nam % 100 != 0 or nam % 400 == 0): return True\r\n \r\n \r\n ngay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n\\ No newline at end of file\n ngayn = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n thang = input('nhap thang: ')\r\n nam = input('nhap nam: ')\r\n-if XetNam(nam):\r\n+if XetNam(int(nam)):\r\n     print(f'thang {thang}, nam {nam} co {ngayn[int(thang)-1]} ngay')\r\n else:\r\n-    print(f'thang {thang}, nam {nam} co {ngay[int(thang)-1]} ngay')\n+    print(f'thang {thang}, nam {nam} co {ngay[int(thang)-1]} ngay')\r\n"
+                },
+                {
+                    "date": 1679804656774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,7 @@\n-# viết chương trình xét xem 1 tháng trong năm đó có bao nhiêu ngày:\r\n-# hàm nhận 2 tham số, tháng và năm\r\n def XetNam(nam):\r\n-    # if int(nam[-1]) == 0 and int(nam[-2]) == 0:\r\n-    #     if int(nam) % 400 == 0:\r\n-    #         return True\r\n-    # else:\r\n-    #     if int(nam) % 4 == 0:\r\n-    #         return True\r\n     if nam % 4 == 0 and (nam % 100 != 0 or nam % 400 == 0): return True\r\n-\r\n-\r\n+    \r\n ngay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n ngayn = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n thang = input('nhap thang: ')\r\n nam = input('nhap nam: ')\r\n"
+                },
+                {
+                    "date": 1679804712835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n def XetNam(nam):\r\n-    if nam % 4 == 0 and (nam % 100 != 0 or nam % 400 == 0): return True\r\n-    \r\n+    if nam % 4 == 0 and (nam % 100 != 0 or nam % 400 == 0):\r\n+        return True\r\n+\r\n ngay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n ngayn = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n thang = input('nhap thang: ')\r\n nam = input('nhap nam: ')\r\n"
+                }
+            ],
+            "date": 1679799947382,
+            "name": "Commit-0",
+            "content": "# viết chương trình xét xem 1 tháng trong năm đó có bao nhiêu ngày:\r\n# hàm nhận 2 tham số, tháng và năm\r\ndef XetNam(nam):\r\n    if int(nam[-1]) == 0 and int(nam[-2]) == 0:\r\n        if int(nam) % 400 == 0:\r\n            return True\r\n    else:\r\n        if int(nam) % 4 == 0:\r\n            return True\r\n\r\nngay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\nngayn = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\nthang = input('nhap thang: ')\r\nnam = input('nhap nam: ')\r\nif XetNam(nam):\r\n        print(f'thang {thang}, nam {nam} co {ngayn[int(thang)-1]} ngay')\r\nelse:\r\n        print(f'thang {thang}, nam {nam} co {ngay[int(thang)-1]} ngay')"
+        }
+    ]
+}

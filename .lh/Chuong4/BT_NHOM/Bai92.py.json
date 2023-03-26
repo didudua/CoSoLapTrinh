@@ -1,0 +1,46 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai92.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1679669551848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679669590051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,8 @@\n         for i in range(2,n):\r\n          if n%i==0:\r\n             u=1\r\n             break\r\n-    if u ==1: print(n,'khong phai la SNt')\r\n-    else: print(n,'la SNT')   \r\n+        if u ==1: print(n,'khong phai la SNt')\r\n+        else: print(n,'la SNT')   \r\n n=Nhap()\r\n InKQ(n)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679669600293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     return n\r\n def InKQ(n):\r\n     u=0\r\n     if n==2:\r\n-        print(n,'la so nguyen to')\r\n+        print(n,'la SNT')\r\n     else:\r\n         for i in range(2,n):\r\n          if n%i==0:\r\n             u=1\r\n"
+                },
+                {
+                    "date": 1679714771025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +1,17 @@\n-# import math\r\n+import math\r\n \r\n-# def kiemtrasonguyento(n):\r\n-#     \"\"\"Kiểm tra xem một số nguyên có phải là số nguyên tố hay không.\"\"\"\r\n-#     if n < 2:\r\n-#         return False\r\n-#     for i in range(2, int(math.sqrt(n)) + 1):\r\n-#         if n % i == 0:\r\n-#             return False\r\n-#     return True\r\n-# if __name__ == '__main__':\r\n-# # Chương trình chính\r\n-#  n = int(input(\"Nhập một số nguyên: \"))\r\n-#  if kiemtrasonguyento(n):\r\n-#     print(f\"{n} là số nguyên tố.\")\r\n-#  else:\r\n-#     print(f\"{n} không phải là số nguyên tố.\")\r\n-\r\n-def Nhap():\r\n-    n=int(input())\r\n-    return n\r\n-def InKQ(n):\r\n-    u=0\r\n-    if n==2:\r\n-        print(n,'la SNT')\r\n-    else:\r\n-        for i in range(2,n):\r\n-         if n%i==0:\r\n-            u=1\r\n-            break\r\n-        if u ==1: print(n,'khong phai la SNt')\r\n-        else: print(n,'la SNT')   \r\n-n=Nhap()\r\n\\ No newline at end of file\n-InKQ(n)\n+def kiemtrasonguyento(n):\r\n+    \"\"\"Kiểm tra xem một số nguyên có phải là số nguyên tố hay không.\"\"\"\r\n+    if n < 2:\r\n+        return False\r\n+    for i in range(2, int(math.sqrt(n)) + 1):\r\n+        if n % i == 0:\r\n+            return False\r\n+    return True\r\n+if __name__ == '__main__':\r\n+# Chương trình chính\r\n+ n = int(input(\"Nhập một số nguyên: \"))\r\n+ if kiemtrasonguyento(n):\r\n+    print(f\"{n} là số nguyên tố.\")\r\n+ else:\r\n+    print(f\"{n} không phải là số nguyên tố.\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679802898304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n     for i in range(2, int(math.sqrt(n)) + 1):\r\n         if n % i == 0:\r\n             return False\r\n     return True\r\n-if __name__ == '__main__':\r\n+# if __name__ == '__main__':\r\n # Chương trình chính\r\n- n = int(input(\"Nhập một số nguyên: \"))\r\n- if kiemtrasonguyento(n):\r\n-    print(f\"{n} là số nguyên tố.\")\r\n- else:\r\n\\ No newline at end of file\n-    print(f\"{n} không phải là số nguyên tố.\")\n+n = int(input(\"Nhập một số nguyên: \"))\r\n+if kiemtrasonguyento(n):\r\n+ print(f\"{n} là số nguyên tố.\")\r\n+else:\r\n+ print(f\"{n} không phải là số nguyên tố.\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679802914449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n     for i in range(2, int(math.sqrt(n)) + 1):\r\n         if n % i == 0:\r\n             return False\r\n     return True\r\n-# if __name__ == '__main__':\r\n+if __name__ == '__main__':\r\n # Chương trình chính\r\n-n = int(input(\"Nhập một số nguyên: \"))\r\n-if kiemtrasonguyento(n):\r\n- print(f\"{n} là số nguyên tố.\")\r\n-else:\r\n\\ No newline at end of file\n- print(f\"{n} không phải là số nguyên tố.\")\n+ n = int(input(\"Nhập một số nguyên: \"))\r\n+ if kiemtrasonguyento(n):\r\n+    print(f\"{n} là số nguyên tố.\")\r\n+ else:\r\n+    print(f\"{n} không phải là số nguyên tố.\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679803053474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,12 @@\n     for i in range(2, int(math.sqrt(n)) + 1):\r\n         if n % i == 0:\r\n             return False\r\n     return True\r\n+\r\n if __name__ == '__main__':\r\n-# Chương trình chính\r\n- n = int(input(\"Nhập một số nguyên: \"))\r\n- if kiemtrasonguyento(n):\r\n-    print(f\"{n} là số nguyên tố.\")\r\n- else:\r\n\\ No newline at end of file\n-    print(f\"{n} không phải là số nguyên tố.\")\n+    # Chương trình chính\r\n+    n = int(input(\"Nhập một số nguyên: \"))\r\n+    if kiemtrasonguyento(n):\r\n+        print(f\"{n} là số nguyên tố.\")\r\n+    else:\r\n+        print(f\"{n} không phải là số nguyên tố.\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679803115974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n     return True\r\n \r\n if __name__ == '__main__':\r\n     # Chương trình chính\r\n+    # Xác định chương trình đang chạy có giống với chương trình chính hay không\r\n     n = int(input(\"Nhập một số nguyên: \"))\r\n     if kiemtrasonguyento(n):\r\n         print(f\"{n} là số nguyên tố.\")\r\n     else:\r\n"
+                }
+            ],
+            "date": 1679669551848,
+            "name": "Commit-0",
+            "content": "# import math\r\n\r\n# def kiemtrasonguyento(n):\r\n#     \"\"\"Kiểm tra xem một số nguyên có phải là số nguyên tố hay không.\"\"\"\r\n#     if n < 2:\r\n#         return False\r\n#     for i in range(2, int(math.sqrt(n)) + 1):\r\n#         if n % i == 0:\r\n#             return False\r\n#     return True\r\n# if __name__ == '__main__':\r\n# # Chương trình chính\r\n#  n = int(input(\"Nhập một số nguyên: \"))\r\n#  if kiemtrasonguyento(n):\r\n#     print(f\"{n} là số nguyên tố.\")\r\n#  else:\r\n#     print(f\"{n} không phải là số nguyên tố.\")\r\n\r\ndef Nhap():\r\n    n=int(input())\r\n    return n\r\ndef InKQ(n):\r\n    u=0\r\n    if n==2:\r\n        print(n,'la so nguyen to')\r\n    else:\r\n        for i in range(2,n):\r\n         if n%i==0:\r\n            u=1\r\n            break\r\n    if u ==1: print(n,'khong phai la SNt')\r\n    else: print(n,'la SNT')   \r\nn=Nhap()\r\nInKQ(n)"
+        }
+    ]
+}

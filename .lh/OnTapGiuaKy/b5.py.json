@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 58,
+            "activePatchIndex": 118,
             "patches": [
                 {
                     "date": 1678935642757,
@@ -240,6 +240,246 @@
                 {
                     "date": 1679019422346,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,19 +9,19 @@\n # for i in str(n):\r\n #    s+=str(i)\r\n # print(len(s))\r\n \r\n-a = int(input(\"Enter first integer: \"))\r\n-b = int(input(\"Enter second integer: \"))\r\n+# a = int(input(\"Enter first integer: \"))\r\n+# b = int(input(\"Enter second integer: \"))\r\n \r\n-# Ước CHung lớn nhất\r\n-def gcd(a,b):\r\n-    if(b == 0):\r\n-        return a;\r\n-    else:\r\n-        return gcd(b, a % b)\r\n+# # Ước CHung lớn nhất\r\n+# def gcd(a,b):\r\n+#     if(b == 0):\r\n+#         return a;\r\n+#     else:\r\n+#         return gcd(b, a % b)\r\n \r\n-print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n+# print(\"GCD of\", a,\"and\", b,\"is\", gcd(a, b))\r\n \r\n # nhập vào số 123 và in ra 321\r\n \r\n # n=int(input())\r\n@@ -37,4 +37,17 @@\n #         print(i, end=' ')\r\n #         continue\r\n #     else: s=1\r\n # if s==1: print('NOT FOUND')\r\n+\r\n+\r\n+num = int(input(\"Nhập vào một số nguyên: \"))\r\n+\r\n+if num > 1:\r\n+    for i in range(2, num):\r\n+        if (num % i) == 0:\r\n+            print(num, \"không phải là số nguyên tố\")\r\n+            break\r\n+    else:\r\n+        print(num, \"là số nguyên tố\")\r\n+else:\r\n+    print(num, \"không phải là số nguyên tố\")\r\n"
+                },
+                {
+                    "date": 1679631297168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,15 +39,17 @@\n #     else: s=1\r\n # if s==1: print('NOT FOUND')\r\n \r\n \r\n-num = int(input(\"Nhập vào một số nguyên: \"))\r\n+# num = int(input(\"Nhập vào một số nguyên: \"))\r\n \r\n-if num > 1:\r\n-    for i in range(2, num):\r\n-        if (num % i) == 0:\r\n-            print(num, \"không phải là số nguyên tố\")\r\n-            break\r\n-    else:\r\n-        print(num, \"là số nguyên tố\")\r\n-else:\r\n-    print(num, \"không phải là số nguyên tố\")\r\n+# if num > 1:\r\n+#     for i in range(2, num):\r\n+#         if (num % i) == 0:\r\n+#             print(num, \"không phải là số nguyên tố\")\r\n+#             break\r\n+#     else:\r\n+#         print(num, \"là số nguyên tố\")\r\n+# else:\r\n+#     print(num, \"không phải là số nguyên tố\")\r\n+a=input()\r\n+print(a.capitalize())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679632854426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,6 +50,27 @@\n #     else:\r\n #         print(num, \"là số nguyên tố\")\r\n # else:\r\n #     print(num, \"không phải là số nguyên tố\")\r\n-a=input()\r\n-print(a.capitalize())\n\\ No newline at end of file\n+def nhap():\r\n+    a=str(input())\r\n+    return a\r\n+def viet_hoa(a):\r\n+    b=''\r\n+    a=a.capitalize()\r\n+    for i in a:\r\n+        if i==\".\" or i==\"?\" or i==\"!\":\r\n+            for j in range(a.index(i),len(a)+1):\r\n+                if a[j]!=' ': \r\n+                    a[j]==a[j].upper()\r\n+                    j=j\r\n+                    c=a[j]\r\n+                    break\r\n+        if j==i: \r\n+            b=c+b\r\n+            continue\r\n+        b=a[i]+b\r\n+def InKQ(f):\r\n+    print(f)\r\n+a=nhap()\r\n+f=viet_hoa(a)\r\n+InKQ(f)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679633003376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,10 @@\n     b=''\r\n     a=a.capitalize()\r\n     for i in a:\r\n         if i==\".\" or i==\"?\" or i==\"!\":\r\n-            for j in range(a.index(i),len(a)+1):\r\n+            i=a.index(i)\r\n+            for j in range(i,len(a)+1):\r\n                 if a[j]!=' ': \r\n                     a[j]==a[j].upper()\r\n                     j=j\r\n                     c=a[j]\r\n"
+                },
+                {
+                    "date": 1679633020198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n                     a[j]==a[j].upper()\r\n                     j=j\r\n                     c=a[j]\r\n                     break\r\n-        if j==i: \r\n+        if int(j)==i: \r\n             b=c+b\r\n             continue\r\n         b=a[i]+b\r\n def InKQ(f):\r\n"
+                },
+                {
+                    "date": 1679633828209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,27 +51,27 @@\n #         print(num, \"là số nguyên tố\")\r\n # else:\r\n #     print(num, \"không phải là số nguyên tố\")\r\n def nhap():\r\n-    a=str(input())\r\n+    a=input()\r\n     return a\r\n def viet_hoa(a):\r\n-    b=''\r\n+    xet='.?!'\r\n     a=a.capitalize()\r\n     for i in a:\r\n-        if i==\".\" or i==\"?\" or i==\"!\":\r\n+        if i in xet:\r\n             i=a.index(i)\r\n-            for j in range(i,len(a)+1):\r\n+            for j in range(i,len(a)):\r\n                 if a[j]!=' ': \r\n-                    a[j]==a[j].upper()\r\n                     j=j\r\n-                    c=a[j]\r\n+                    b=a.pop(j)\r\n+                    b=b.upper()\r\n                     break\r\n-        if int(j)==i: \r\n-            b=c+b\r\n-            continue\r\n\\ No newline at end of file\n-        b=a[i]+b\r\n-def InKQ(f):\r\n-    print(f)\r\n+        else: continue\r\n+        a=a.insert(j,b)\r\n+    return a\r\n a=nhap()\r\n-f=viet_hoa(a)\r\n-InKQ(f)\n+print(viet_hoa(a))\r\n+            \r\n+                \r\n+            \r\n+ \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679633945540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,10 @@\n         else: continue\r\n         a=a.insert(j,b)\r\n     return a\r\n a=nhap()\r\n-print(viet_hoa(a))\r\n+kq=viet_hoa(a)\r\n+print(kq)\r\n             \r\n                 \r\n             \r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679634000371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,17 +58,17 @@\n     xet='.?!'\r\n     a=a.capitalize()\r\n     for i in a:\r\n         if i in xet:\r\n-            i=a.index(i)\r\n-            for j in range(i,len(a)):\r\n+            x=a.index(i)\r\n+            for j in range(x,len(a)):\r\n                 if a[j]!=' ': \r\n-                    j=j\r\n+                    y=j\r\n                     b=a.pop(j)\r\n                     b=b.upper()\r\n                     break\r\n         else: continue\r\n-        a=a.insert(j,b)\r\n+        a=a.insert(y,b)\r\n     return a\r\n a=nhap()\r\n kq=viet_hoa(a)\r\n print(kq)\r\n"
+                },
+                {
+                    "date": 1679634020204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n                     break\r\n         else: continue\r\n         a=a.insert(y,b)\r\n     return a\r\n-a=nhap()\r\n+a=str(nhap())\r\n kq=viet_hoa(a)\r\n print(kq)\r\n             \r\n                 \r\n"
+                },
+                {
+                    "date": 1679634087083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,12 +50,13 @@\n #     else:\r\n #         print(num, \"là số nguyên tố\")\r\n # else:\r\n #     print(num, \"không phải là số nguyên tố\")\r\n-def nhap():\r\n+# def nhap():\r\n+#     a=input()\r\n+#     return a\r\n+def viet_hoa():\r\n     a=input()\r\n-    return a\r\n-def viet_hoa(a):\r\n     xet='.?!'\r\n     a=a.capitalize()\r\n     for i in a:\r\n         if i in xet:\r\n@@ -68,11 +69,9 @@\n                     break\r\n         else: continue\r\n         a=a.insert(y,b)\r\n     return a\r\n-a=str(nhap())\r\n-kq=viet_hoa(a)\r\n-print(kq)\r\n+print(viet_hoa())\r\n             \r\n                 \r\n             \r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679634109509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n #     print(num, \"không phải là số nguyên tố\")\r\n # def nhap():\r\n #     a=input()\r\n #     return a\r\n-def viet_hoa():\r\n+def viethoa():\r\n     a=input()\r\n     xet='.?!'\r\n     a=a.capitalize()\r\n     for i in a:\r\n@@ -69,9 +69,9 @@\n                     break\r\n         else: continue\r\n         a=a.insert(y,b)\r\n     return a\r\n-print(viet_hoa())\r\n+print(viethoa())\r\n             \r\n                 \r\n             \r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679634209640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,13 +60,12 @@\n     a=a.capitalize()\r\n     for i in a:\r\n         if i in xet:\r\n             x=a.index(i)\r\n-            for j in range(x,len(a)):\r\n+            for j in range(x+1,len(a)):\r\n                 if a[j]!=' ': \r\n                     y=j\r\n-                    b=a.pop(j)\r\n-                    b=b.upper()\r\n+                    b=a[j].upper()\r\n                     break\r\n         else: continue\r\n         a=a.insert(y,b)\r\n     return a\r\n"
+                },
+                {
+                    "date": 1679634231168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,10 +66,10 @@\n                     y=j\r\n                     b=a[j].upper()\r\n                     break\r\n         else: continue\r\n-        a=a.insert(y,b)\r\n-    return a\r\n+        c=a.insert(y,b)\r\n+    return c\r\n print(viethoa())\r\n             \r\n                 \r\n             \r\n"
+                },
+                {
+                    "date": 1679634326934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,24 +53,22 @@\n #     print(num, \"không phải là số nguyên tố\")\r\n # def nhap():\r\n #     a=input()\r\n #     return a\r\n-def viethoa():\r\n-    a=input()\r\n-    xet='.?!'\r\n-    a=a.capitalize()\r\n-    for i in a:\r\n-        if i in xet:\r\n-            x=a.index(i)\r\n-            for j in range(x+1,len(a)):\r\n-                if a[j]!=' ': \r\n-                    y=j\r\n-                    b=a[j].upper()\r\n-                    break\r\n-        else: continue\r\n-        c=a.insert(y,b)\r\n-    return c\r\n-print(viethoa())\r\n+a=input()\r\n+xet='.?!'\r\n+a=a.capitalize()\r\n+print(a)\r\n+# for i in a:\r\n+#     if i in xet:\r\n+#         x=a.index(i)\r\n+#         for j in range(x+1,len(a)):\r\n+#             if a[j]!=' ': \r\n+#                 y=j\r\n+#                 b=a[j].upper()\r\n+#                 break\r\n+#         else: continue\r\n+# c=a.insert(y,b)\r\n             \r\n                 \r\n             \r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679634376350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,17 +57,19 @@\n a=input()\r\n xet='.?!'\r\n a=a.capitalize()\r\n print(a)\r\n-# for i in a:\r\n-#     if i in xet:\r\n-#         x=a.index(i)\r\n-#         for j in range(x+1,len(a)):\r\n-#             if a[j]!=' ': \r\n-#                 y=j\r\n-#                 b=a[j].upper()\r\n-#                 break\r\n-#         else: continue\r\n+for i in a:\r\n+    if i in xet:\r\n+        x=a.index(i)\r\n+        print(x)\r\n+        for j in range(x+1,len(a)):\r\n+            if a[j]!=' ': \r\n+                y=j\r\n+                b=a[j].upper()\r\n+                print(y,b)\r\n+                break\r\n+        else: continue\r\n # c=a.insert(y,b)\r\n             \r\n                 \r\n             \r\n"
+                },
+                {
+                    "date": 1679635084754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,20 +56,19 @@\n #     return a\r\n a=input()\r\n xet='.?!'\r\n a=a.capitalize()\r\n-print(a)\r\n for i in a:\r\n     if i in xet:\r\n         x=a.index(i)\r\n-        print(x)\r\n         for j in range(x+1,len(a)):\r\n             if a[j]!=' ': \r\n                 y=j\r\n                 b=a[j].upper()\r\n-                print(y,b)\r\n                 break\r\n         else: continue\r\n+    a=a.insert(y,b)\r\n+print(a)\r\n # c=a.insert(y,b)\r\n             \r\n                 \r\n             \r\n"
+                },
+                {
+                    "date": 1679635125559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n                 y=j\r\n                 b=a[j].upper()\r\n                 break\r\n         else: continue\r\n-    a=a.insert(y,b)\r\n+    a=a.insert(int(y),str(b))\r\n print(a)\r\n # c=a.insert(y,b)\r\n             \r\n                 \r\n"
+                },
+                {
+                    "date": 1679635200417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n                 y=j\r\n                 b=a[j].upper()\r\n                 break\r\n         else: continue\r\n-    a=a.insert(int(y),str(b))\r\n+    a.insert(int(y),str(b))\r\n print(a)\r\n # c=a.insert(y,b)\r\n             \r\n                 \r\n"
+                },
+                {
+                    "date": 1679635250337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n                 y=j\r\n                 b=a[j].upper()\r\n                 break\r\n         else: continue\r\n-    a.insert(int(y),str(b))\r\n+    a=a.insert(1,'hiha')\r\n print(a)\r\n # c=a.insert(y,b)\r\n             \r\n                 \r\n"
+                },
+                {
+                    "date": 1679635489527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,11 +65,11 @@\n                 y=j\r\n                 b=a[j].upper()\r\n                 break\r\n         else: continue\r\n-    a=a.insert(1,'hiha')\r\n+    del a(y)\r\n print(a)\r\n-# c=a.insert(y,b)\r\n+#c=a.insert(y,b)\r\n             \r\n                 \r\n             \r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679635531407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,8 @@\n                 y=j\r\n                 b=a[j].upper()\r\n                 break\r\n         else: continue\r\n-    del a(y)\r\n print(a)\r\n #c=a.insert(y,b)\r\n             \r\n                 \r\n"
+                },
+                {
+                    "date": 1679635563149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,15 +56,18 @@\n #     return a\r\n a=input()\r\n xet='.?!'\r\n a=a.capitalize()\r\n+print(a)\r\n for i in a:\r\n     if i in xet:\r\n         x=a.index(i)\r\n+        print(x)\r\n         for j in range(x+1,len(a)):\r\n             if a[j]!=' ': \r\n                 y=j\r\n                 b=a[j].upper()\r\n+                print(y,b)\r\n                 break\r\n         else: continue\r\n print(a)\r\n #c=a.insert(y,b)\r\n"
+                },
+                {
+                    "date": 1679635605194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,8 @@\n                 b=a[j].upper()\r\n                 print(y,b)\r\n                 break\r\n         else: continue\r\n-print(a)\r\n #c=a.insert(y,b)\r\n             \r\n                 \r\n             \r\n"
+                },
+                {
+                    "date": 1679635934708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,10 +67,11 @@\n                 y=j\r\n                 b=a[j].upper()\r\n                 print(y,b)\r\n                 break\r\n+        \r\n         else: continue\r\n-#c=a.insert(y,b)\r\n+        a=a.insert(y,b)\r\n             \r\n                 \r\n             \r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679635972686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n                 print(y,b)\r\n                 break\r\n         \r\n         else: continue\r\n-        a=a.insert(y,b)\r\n+        a=a.insert(int(y),str(b))\r\n             \r\n                 \r\n             \r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679636059199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n                 print(y,b)\r\n                 break\r\n         \r\n         else: continue\r\n-        a=a.insert(int(y),str(b))\r\n+        a=a.insert(2,b)\r\n             \r\n                 \r\n             \r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679636095416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n                 print(y,b)\r\n                 break\r\n         \r\n         else: continue\r\n-        a=a.insert(2,b)\r\n+        y=a.insert(2,b)\r\n             \r\n                 \r\n             \r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679637045345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,11 +67,9 @@\n                 y=j\r\n                 b=a[j].upper()\r\n                 print(y,b)\r\n                 break\r\n-        \r\n         else: continue\r\n-        y=a.insert(2,b)\r\n             \r\n                 \r\n             \r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679640599892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,5 +67,5 @@\n                 y=j\r\n                 b=a[j].upper()\r\n                 print(y,b)\r\n                 break\r\n-        else: continue\n\\ No newline at end of file\n+        else: continue6\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679641239870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,21 +55,21 @@\n #     a=input()\r\n #     return a\r\n a=input()\r\n xet='.?!'\r\n-a=a.capitalize()\r\n-print(a)\r\n+A=[]\r\n for i in a:\r\n-    if i in xet:\r\n-        x=a.index(i)\r\n-        print(x)\r\n-        for j in range(x+1,len(a)):\r\n-            if a[j]!=' ': \r\n-                y=j\r\n-                b=a[j].upper()\r\n-                print(y,b)\r\n-                break\r\n-        else: continue6\n-            \r\n-                \r\n-            \r\n\\ No newline at end of file\n- \n+    A=A+i\r\n+print(A)\r\n+# a=a.capitalize()\r\n+# print(a)\r\n+# for i in a:\r\n+#     if i in xet:\r\n+#         x=a.index(i)\r\n+#         print(x)\r\n+#         for j in range(x+1,len(a)):\r\n+#             if a[j]!=' ': \r\n+#                 y=j\r\n+#                 b=a[j].upper()\r\n+#                 print(y,b)\r\n+#                 break\r\n+#         else: continue\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679641261108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n a=input()\r\n xet='.?!'\r\n A=[]\r\n for i in a:\r\n-    A=A+i\r\n+    A=A+[i]\r\n print(A)\r\n # a=a.capitalize()\r\n # print(a)\r\n # for i in a:\r\n"
+                },
+                {
+                    "date": 1679641305691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,11 +56,15 @@\n #     return a\r\n a=input()\r\n xet='.?!'\r\n A=[]\r\n+b=''\r\n for i in a:\r\n     A=A+[i]\r\n print(A)\r\n+for i in A:\r\n+    b=b+i\r\n+print(b)\r\n # a=a.capitalize()\r\n # print(a)\r\n # for i in a:\r\n #     if i in xet:\r\n"
+                },
+                {
+                    "date": 1679641360233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,23 +57,17 @@\n a=input()\r\n xet='.?!'\r\n A=[]\r\n b=''\r\n+a=a.capitalize()\r\n+print(a)\r\n for i in a:\r\n-    A=A+[i]\r\n-print(A)\r\n-for i in A:\r\n-    b=b+i\r\n-print(b)\r\n-# a=a.capitalize()\r\n-# print(a)\r\n-# for i in a:\r\n-#     if i in xet:\r\n-#         x=a.index(i)\r\n-#         print(x)\r\n-#         for j in range(x+1,len(a)):\r\n-#             if a[j]!=' ': \r\n-#                 y=j\r\n-#                 b=a[j].upper()\r\n-#                 print(y,b)\r\n\\ No newline at end of file\n-#                 break\r\n-#         else: continue\n+    if i in xet:\r\n+        x=a.index(i)\r\n+        print(x)\r\n+        for j in range(x+1,len(a)):\r\n+            if a[j]!=' ': \r\n+                y=j\r\n+                b=a[j].upper()\r\n+                print(y,b)\r\n+                break\r\n+        else: continue\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679641708678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,17 +57,19 @@\n a=input()\r\n xet='.?!'\r\n A=[]\r\n b=''\r\n+for i in a:\r\n+    A=A+[i]\r\n a=a.capitalize()\r\n-print(a)\r\n for i in a:\r\n     if i in xet:\r\n         x=a.index(i)\r\n-        print(x)\r\n         for j in range(x+1,len(a)):\r\n             if a[j]!=' ': \r\n                 y=j\r\n                 b=a[j].upper()\r\n-                print(y,b)\r\n\\ No newline at end of file\n                 break\r\n-        else: continue\n+    else: continue\r\n+    a=A.insert(y,b)\r\n+print(a)\r\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679641755944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,10 @@\n a=input()\r\n xet='.?!'\r\n A=[]\r\n b=''\r\n-for i in a:\r\n-    A=A+[i]\r\n+for k in a:\r\n+    A=A+[k]\r\n a=a.capitalize()\r\n for i in a:\r\n     if i in xet:\r\n         x=a.index(i)\r\n"
+                },
+                {
+                    "date": 1679641785814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,15 +60,15 @@\n b=''\r\n for k in a:\r\n     A=A+[k]\r\n a=a.capitalize()\r\n-for i in a:\r\n+for i in A:\r\n     if i in xet:\r\n-        x=a.index(i)\r\n-        for j in range(x+1,len(a)):\r\n-            if a[j]!=' ': \r\n+        x=A.index(i)\r\n+        for j in range(x+1,len(A)):\r\n+            if A[j]!=' ': \r\n                 y=j\r\n-                b=a[j].upper()\r\n+                b=A[j].upper()\r\n                 break\r\n     else: continue\r\n     a=A.insert(y,b)\r\n print(a)\r\n"
+                },
+                {
+                    "date": 1679642199867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,23 +53,25 @@\n #     print(num, \"không phải là số nguyên tố\")\r\n # def nhap():\r\n #     a=input()\r\n #     return a\r\n-a=input()\r\n-xet='.?!'\r\n-A=[]\r\n-b=''\r\n-for k in a:\r\n-    A=A+[k]\r\n-a=a.capitalize()\r\n-for i in A:\r\n-    if i in xet:\r\n-        x=A.index(i)\r\n-        for j in range(x+1,len(A)):\r\n-            if A[j]!=' ': \r\n-                y=j\r\n-                b=A[j].upper()\r\n-                break\r\n-    else: continue\r\n-    a=A.insert(y,b)\r\n-print(a)\r\n-    \n\\ No newline at end of file\n+# a=input()\r\n+# xet='.?!'\r\n+# A=[]\r\n+# b=''\r\n+# for k in a:\r\n+#     A=A+[k]\r\n+# a=a.capitalize()\r\n+# for i in A:\r\n+#     if i in xet:\r\n+#         x=A.index(i)\r\n+#         for j in range(x+1,len(A)):\r\n+#             if A[j]!=' ': \r\n+#                 y=j\r\n+#                 b=A[j].upper()\r\n+#                 break\r\n+#     else: continue\r\n+#     a=A.insert(y,b)\r\n+# print(a)\r\n+a='abcd'\r\n+for i in a:\r\n+    print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642208368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,5 +73,5 @@\n #     a=A.insert(y,b)\r\n # print(a)\r\n a='abcd'\r\n for i in a:\r\n-    print(a)\n\\ No newline at end of file\n+    print(i)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642299210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,25 +53,22 @@\n #     print(num, \"không phải là số nguyên tố\")\r\n # def nhap():\r\n #     a=input()\r\n #     return a\r\n-# a=input()\r\n-# xet='.?!'\r\n-# A=[]\r\n-# b=''\r\n-# for k in a:\r\n-#     A=A+[k]\r\n-# a=a.capitalize()\r\n-# for i in A:\r\n-#     if i in xet:\r\n-#         x=A.index(i)\r\n-#         for j in range(x+1,len(A)):\r\n-#             if A[j]!=' ': \r\n-#                 y=j\r\n-#                 b=A[j].upper()\r\n-#                 break\r\n-#     else: continue\r\n-#     a=A.insert(y,b)\r\n-# print(a)\r\n-a='abcd'\r\n-for i in a:\r\n-    print(i)\n\\ No newline at end of file\n+a=input()\r\n+xet='.?!'\r\n+A=[]\r\n+b=''\r\n+for k in a:\r\n+    A=A+[k]\r\n+a=a.capitalize()\r\n+for i in A:\r\n+    if i in xet:\r\n+        x=A.index(i)\r\n+        for j in range(x+1,len(A)):\r\n+            if A[j]!=' ': \r\n+                y=j\r\n+                b=A[j].upper()\r\n+                break\r\n+    else: continue\r\n+    a=A.insert(y,b)\r\n+print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642318973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,6 +69,6 @@\n                 y=j\r\n                 b=A[j].upper()\r\n                 break\r\n     else: continue\r\n-    a=A.insert(y,b)\r\n+    a=A.insert(int(y),[b])\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642352596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n # def nhap():\r\n #     a=input()\r\n #     return a\r\n a=input()\r\n-xet='.?!'\r\n+xet=['.','?','!']\r\n A=[]\r\n b=''\r\n for k in a:\r\n     A=A+[k]\r\n"
+                },
+                {
+                    "date": 1679642377307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,8 @@\n #     return a\r\n a=input()\r\n xet=['.','?','!']\r\n A=[]\r\n-b=''\r\n for k in a:\r\n     A=A+[k]\r\n a=a.capitalize()\r\n for i in A:\r\n@@ -69,6 +68,6 @@\n                 y=j\r\n                 b=A[j].upper()\r\n                 break\r\n     else: continue\r\n-    a=A.insert(int(y),[b])\r\n+    y=A.insert(int(y),[b])\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642397138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,5 +69,5 @@\n                 b=A[j].upper()\r\n                 break\r\n     else: continue\r\n     y=A.insert(int(y),[b])\r\n-print(a)\n\\ No newline at end of file\n+print(y)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642750559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,16 +58,19 @@\n xet=['.','?','!']\r\n A=[]\r\n for k in a:\r\n     A=A+[k]\r\n-a=a.capitalize()\r\n+A=A.capitalize()\r\n+print(A)\r\n for i in A:\r\n     if i in xet:\r\n         x=A.index(i)\r\n+        print(x)\r\n         for j in range(x+1,len(A)):\r\n             if A[j]!=' ': \r\n                 y=j\r\n                 b=A[j].upper()\r\n+                print(y,b)\r\n\\ No newline at end of file\n                 break\r\n     else: continue\r\n-    y=A.insert(int(y),[b])\r\n-print(y)\n+    z=A.insert(int(y),[b])\r\n+print(z)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642767257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n xet=['.','?','!']\r\n A=[]\r\n for k in a:\r\n     A=A+[k]\r\n-A=A.capitalize()\r\n+a=a.capitalize()\r\n print(A)\r\n for i in A:\r\n     if i in xet:\r\n         x=A.index(i)\r\n"
+                },
+                {
+                    "date": 1679642803116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,6 +71,6 @@\n                 b=A[j].upper()\r\n                 print(y,b)\r\n                 break\r\n     else: continue\r\n-    z=A.insert(int(y),[b])\r\n-print(z)\n\\ No newline at end of file\n+    [z]=A.insert(int(y),[b])\r\n+print([z])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642818757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,6 +71,6 @@\n                 b=A[j].upper()\r\n                 print(y,b)\r\n                 break\r\n     else: continue\r\n-    [z]=A.insert(int(y),[b])\r\n+    z=A.insert(int(y),[b])\r\n print([z])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642837101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,6 +71,6 @@\n                 b=A[j].upper()\r\n                 print(y,b)\r\n                 break\r\n     else: continue\r\n-    z=A.insert(int(y),[b])\r\n-print([z])\n\\ No newline at end of file\n+    A.insert(int(y),[b])\r\n+print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642858882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,6 +71,6 @@\n                 b=A[j].upper()\r\n                 print(y,b)\r\n                 break\r\n     else: continue\r\n-    A.insert(int(y),[b])\r\n+    A.insert(int(y),b)\r\n print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679642976943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,5 +72,6 @@\n                 print(y,b)\r\n                 break\r\n     else: continue\r\n     A.insert(int(y),b)\r\n+    A.pop(int(y)+1)\r\n print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679643012461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,11 +56,11 @@\n #     return a\r\n a=input()\r\n xet=['.','?','!']\r\n A=[]\r\n+a=a.capitalize()\r\n for k in a:\r\n     A=A+[k]\r\n-a=a.capitalize()\r\n print(A)\r\n for i in A:\r\n     if i in xet:\r\n         x=A.index(i)\r\n"
+                },
+                {
+                    "date": 1679643091098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,8 +57,9 @@\n a=input()\r\n xet=['.','?','!']\r\n A=[]\r\n a=a.capitalize()\r\n+d=''\r\n for k in a:\r\n     A=A+[k]\r\n print(A)\r\n for i in A:\r\n@@ -73,5 +74,7 @@\n                 break\r\n     else: continue\r\n     A.insert(int(y),b)\r\n     A.pop(int(y)+1)\r\n-print(A)\n\\ No newline at end of file\n+for i in A:\r\n+    d=d+i\r\n+print(d)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679643127737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,18 +60,15 @@\n a=a.capitalize()\r\n d=''\r\n for k in a:\r\n     A=A+[k]\r\n-print(A)\r\n for i in A:\r\n     if i in xet:\r\n         x=A.index(i)\r\n-        print(x)\r\n         for j in range(x+1,len(A)):\r\n             if A[j]!=' ': \r\n                 y=j\r\n                 b=A[j].upper()\r\n-                print(y,b)\r\n                 break\r\n     else: continue\r\n     A.insert(int(y),b)\r\n     A.pop(int(y)+1)\r\n"
+                },
+                {
+                    "date": 1679644731208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,25 +53,27 @@\n #     print(num, \"không phải là số nguyên tố\")\r\n # def nhap():\r\n #     a=input()\r\n #     return a\r\n-a=input()\r\n-xet=['.','?','!']\r\n-A=[]\r\n-a=a.capitalize()\r\n-d=''\r\n-for k in a:\r\n-    A=A+[k]\r\n-for i in A:\r\n-    if i in xet:\r\n-        x=A.index(i)\r\n-        for j in range(x+1,len(A)):\r\n-            if A[j]!=' ': \r\n-                y=j\r\n-                b=A[j].upper()\r\n-                break\r\n-    else: continue\r\n-    A.insert(int(y),b)\r\n-    A.pop(int(y)+1)\r\n-for i in A:\r\n-    d=d+i\r\n-print(d)\n\\ No newline at end of file\n+# a=input()\r\n+# xet=['.','?','!']\r\n+# A=[]\r\n+# a=a.capitalize()\r\n+# d=''\r\n+# for k in a:\r\n+#     A=A+[k]\r\n+# for i in A:\r\n+#     if i in xet:\r\n+#         x=A.index(i)\r\n+#         for j in range(x+1,len(A)):\r\n+#             if A[j]!=' ': \r\n+#                 y=j\r\n+#                 b=A[j].upper()\r\n+#                 break\r\n+#     else: continue\r\n+#     A.insert(int(y),b)\r\n+#     A.pop(int(y)+1)\r\n+# for i in A:\r\n+#     d=d+i\r\n+# print(d)\r\n+a='hello'\r\n+print(a.split(''))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679644738284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,5 +75,5 @@\n # for i in A:\r\n #     d=d+i\r\n # print(d)\r\n a='hello'\r\n-print(a.split(''))\n\\ No newline at end of file\n+print(a.split())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679644751968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,5 +75,5 @@\n # for i in A:\r\n #     d=d+i\r\n # print(d)\r\n a='hello'\r\n-print(a.split())\n\\ No newline at end of file\n+print(a.split('l'))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679646778581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,7 +73,5 @@\n #     A.insert(int(y),b)\r\n #     A.pop(int(y)+1)\r\n # for i in A:\r\n #     d=d+i\r\n-# print(d)\r\n-a='hello'\r\n-print(a.split('l'))\n\\ No newline at end of file\n+# print(d)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679656780298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+#APIkey: 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\r\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n"
+                },
+                {
+                    "date": 1679656952643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n #APIkey: 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\r\n+#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\r\n # n = int(input(\"Nhập số n: \"))\r\n # S = sum([1/i for i in range(2,n+1)])\r\n \r\n # print(\"{:.4f}\".format(S)) # làm tròn chữ số thập phân thứ 4 chính xác vd 0.5000\r\n@@ -74,5 +75,5 @@\n #     A.insert(int(y),b)\r\n #     A.pop(int(y)+1)\r\n # for i in A:\r\n #     d=d+i\r\n-# print(d)\n\\ No newline at end of file\n+# print(d)\r\n"
+                },
+                {
+                    "date": 1679722532567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,28 +52,28 @@\n #     else:\r\n #         print(num, \"là số nguyên tố\")\r\n # else:\r\n #     print(num, \"không phải là số nguyên tố\")\r\n-# def nhap():\r\n-#     a=input()\r\n-#     return a\r\n-# a=input()\r\n-# xet=['.','?','!']\r\n-# A=[]\r\n-# a=a.capitalize()\r\n-# d=''\r\n-# for k in a:\r\n-#     A=A+[k]\r\n-# for i in A:\r\n-#     if i in xet:\r\n-#         x=A.index(i)\r\n-#         for j in range(x+1,len(A)):\r\n-#             if A[j]!=' ': \r\n-#                 y=j\r\n-#                 b=A[j].upper()\r\n-#                 break\r\n-#     else: continue\r\n-#     A.insert(int(y),b)\r\n-#     A.pop(int(y)+1)\r\n-# for i in A:\r\n-#     d=d+i\r\n-# print(d)\r\n+def nhap():\r\n+    a=input()\r\n+    return a\r\n+a=input()\r\n+xet=['.','?','!']\r\n+A=[]\r\n+a=a.capitalize()\r\n+d=''\r\n+for k in a:\r\n+    A=A+[k]\r\n+for i in A:\r\n+    if i in xet:\r\n+        x=A.index(i)\r\n+        for j in range(x+1,len(A)):\r\n+            if A[j]!=' ': \r\n+                y=j\r\n+                b=A[j].upper()\r\n+                break\r\n+    else: continue\r\n+    A.insert(int(y),b)\r\n+    A.pop(int(y)+1)\r\n+for i in A:\r\n+    d=d+i\r\n+print(d)\r\n"
+                },
+                {
+                    "date": 1679801328773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,11 +52,8 @@\n #     else:\r\n #         print(num, \"là số nguyên tố\")\r\n # else:\r\n #     print(num, \"không phải là số nguyên tố\")\r\n-def nhap():\r\n-    a=input()\r\n-    return a\r\n a=input()\r\n xet=['.','?','!']\r\n A=[]\r\n a=a.capitalize()\r\n"
                 }
             ],
             "date": 1678935642757,

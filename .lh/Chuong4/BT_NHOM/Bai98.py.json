@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1679629002025,
@@ -24,6 +24,30 @@
                 {
                     "date": 1679629400343,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n he16='0123456789ABCDEFabcdef'\r\n doi = '0123456789ABCDEF'\r\n n = input('Nhap so thap phan: ')\r\n xethe=input('so ban nhap thuoc he: ')\r\n-if int(xethe)==10 and n in he10:\r\n+if int(xethe)==10 and int(n) in he10:\r\n     print(f'doi sang thap luc phan la: {int2hex(int(n),doi)}')\r\n elif int(xethe)==16 and n in he16:\r\n     n=n.upper()\r\n     print(f'doi sang thap phan la: {hex2in(n,doi)}')\r\n"
+                },
+                {
+                    "date": 1679801318985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,16 +9,16 @@\n         if n == 0:\r\n             break\r\n     return kq\r\n \r\n-\r\n def hex2in(n,doi):\r\n     mu = len(n)-1\r\n     kq = 0\r\n     for i in n:\r\n         kq += doi.index(i)*16**mu\r\n         mu -= 1\r\n     return kq\r\n+\r\n he10=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]\r\n he16='0123456789ABCDEFabcdef'\r\n doi = '0123456789ABCDEF'\r\n n = input('Nhap so thap phan: ')\r\n"
+                },
+                {
+                    "date": 1679803544874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n he16='0123456789ABCDEFabcdef'\r\n doi = '0123456789ABCDEF'\r\n n = input('Nhap so thap phan: ')\r\n xethe=input('so ban nhap thuoc he: ')\r\n-if int(xethe)==10 and int(n) in he10:\r\n+if int(xethe)==10 and n in he10:\r\n     print(f'doi sang thap luc phan la: {int2hex(int(n),doi)}')\r\n elif int(xethe)==16 and n in he16:\r\n     n=n.upper()\r\n     print(f'doi sang thap phan la: {hex2in(n,doi)}')\r\n"
+                },
+                {
+                    "date": 1679803650018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,10 @@\n n = input('Nhap so thap phan: ')\r\n xethe=input('so ban nhap thuoc he: ')\r\n if int(xethe)==10 and n in he10:\r\n     print(f'doi sang thap luc phan la: {int2hex(int(n),doi)}')\r\n-elif int(xethe)==16 and n in he16:\r\n+else:\r\n+    print('he 10 chi nhan cac gia tri tu 0-15. hay nhap lai')\r\n+if int(xethe)==16 and n in he16:\r\n\\ No newline at end of file\n     n=n.upper()\r\n     print(f'doi sang thap phan la: {hex2in(n,doi)}')\r\n-else: print(f'hay nhap lai. he 10 gom cac so (0-15) va he 16 gom (0123456789abcdef) bao gom chu hoa va thuong')\n+else: print(f'he 16 chi nhan cac gia tri (0123456789abcdef) gom chu hoa va thuong. hay nhap lai')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679803759315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,14 @@\n he16='0123456789ABCDEFabcdef'\r\n doi = '0123456789ABCDEF'\r\n n = input('Nhap so thap phan: ')\r\n xethe=input('so ban nhap thuoc he: ')\r\n-if int(xethe)==10 and n in he10:\r\n-    print(f'doi sang thap luc phan la: {int2hex(int(n),doi)}')\r\n-else:\r\n-    print('he 10 chi nhan cac gia tri tu 0-15. hay nhap lai')\r\n-if int(xethe)==16 and n in he16:\r\n-    n=n.upper()\r\n-    print(f'doi sang thap phan la: {hex2in(n,doi)}')\r\n-else: print(f'he 16 chi nhan cac gia tri (0123456789abcdef) gom chu hoa va thuong. hay nhap lai')\n\\ No newline at end of file\n+if int(xethe)==0 or int(xethe)== 16:\r\n+    if int(xethe)==10 and n in he10:\r\n+        print(f'doi sang thap luc phan la: {int2hex(int(n),doi)}')\r\n+    else:\r\n+        print('he 10 chi nhan cac gia tri tu 0-15. hay nhap lai')\r\n+    if int(xethe)==16 and n in he16:\r\n+        n=n.upper()\r\n+        print(f'doi sang thap phan la: {hex2in(n,doi)}')\r\n+    else: print(f'he 16 chi nhan cac gia tri (0123456789abcdef) gom chu hoa va thuong. hay nhap lai')\r\n+else: print('chuong trinh chi nhan he 10 va 16')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679803773853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,5 @@\n     if int(xethe)==16 and n in he16:\r\n         n=n.upper()\r\n         print(f'doi sang thap phan la: {hex2in(n,doi)}')\r\n     else: print(f'he 16 chi nhan cac gia tri (0123456789abcdef) gom chu hoa va thuong. hay nhap lai')\r\n-else: print('chuong trinh chi nhan he 10 va 16')\n\\ No newline at end of file\n+else: print('hay nhap lai chuong trinh chi nhan he 10 va 16')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679804669741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-# ta 2 ham , hex2in(): chuyen thap luc phan sang thap phan\r\n-# int2hex(): chuyen thap phan sang thap luc phan\r\n def int2hex(n,doi):\r\n     kq = ''\r\n     while True:\r\n         du = n % 16\r\n"
                 }
             ],
             "date": 1679629002024,

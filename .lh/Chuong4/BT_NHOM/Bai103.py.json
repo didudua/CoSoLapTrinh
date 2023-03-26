@@ -1,0 +1,50 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai103.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1679630533872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679800489425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,19 @@\n+from Bai100 import XetNam\r\n+\r\n def XetNgayKyDieu(ngay,thang,nam):\r\n     if ngay*thang==nam%100: return True\r\n     else: return False\r\n-ngay=int(input('ngay: '))\r\n-thang=int(input('thang: '))\r\n-nam=int(input('nam: '))\r\n\\ No newline at end of file\n-if XetNgayKyDieu(ngay,thang,nam): print(f'ngay {ngay} thang {thang} nam {nam} la ngay ky dieu')\r\n-else: print(f'ngay {ngay} thang {thang} nam {nam} khong la ngay ky dieu')\n+ngay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n+ngayn = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n+print('Nhung ngay ky dieu trong the ky 20 la:')\r\n+for nam in range(1901,2001): \r\n+    for thang in range(1,13):\r\n+        if XetNam(nam):\r\n+            for ngay in ngayn:\r\n+                if XetNgayKyDieu(int(ngay),thang,nam):\r\n+                    print(f'{ngay}/{thang}/{nam}')\r\n+        else:\r\n+            for ngay in ngay:\r\n+                if XetNgayKyDieu(int(ngay),thang,nam):\r\n+                    print(f'{ngay}/{thang}/{nam}')\r\n+            \r\n"
+                },
+                {
+                    "date": 1679800663018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n     else: return False\r\n ngay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n ngayn = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n print('Nhung ngay ky dieu trong the ky 20 la:')\r\n-for nam in range(1901,2001): \r\n+for nam in range(1901,2001):\r\n+    nam=str(nam) \r\n     for thang in range(1,13):\r\n         if XetNam(nam):\r\n             for ngay in ngayn:\r\n                 if XetNgayKyDieu(int(ngay),thang,nam):\r\n"
+                },
+                {
+                    "date": 1679800699684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,11 @@\n-from Bai100 import XetNam\r\n-\r\n+def XetNam(nam):\r\n+    if int(nam[-1]) == 0 and int(nam[-2]) == 0:\r\n+        if int(nam) % 400 == 0:\r\n+            return True\r\n+    else:\r\n+        if int(nam) % 4 == 0:\r\n+            return True\r\n def XetNgayKyDieu(ngay,thang,nam):\r\n     if ngay*thang==nam%100: return True\r\n     else: return False\r\n ngay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n"
+                },
+                {
+                    "date": 1679800722730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,11 +15,11 @@\n     nam=str(nam) \r\n     for thang in range(1,13):\r\n         if XetNam(nam):\r\n             for ngay in ngayn:\r\n-                if XetNgayKyDieu(int(ngay),thang,nam):\r\n+                if XetNgayKyDieu(int(ngay),thang,int(nam)):\r\n                     print(f'{ngay}/{thang}/{nam}')\r\n         else:\r\n             for ngay in ngay:\r\n-                if XetNgayKyDieu(int(ngay),thang,nam):\r\n+                if XetNgayKyDieu(int(ngay),thang,int(nam)):\r\n                     print(f'{ngay}/{thang}/{nam}')\r\n             \r\n"
+                },
+                {
+                    "date": 1679800765131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,12 +14,12 @@\n for nam in range(1901,2001):\r\n     nam=str(nam) \r\n     for thang in range(1,13):\r\n         if XetNam(nam):\r\n-            for ngay in ngayn:\r\n-                if XetNgayKyDieu(int(ngay),thang,int(nam)):\r\n-                    print(f'{ngay}/{thang}/{nam}')\r\n+            for day in ngayn:\r\n+                if XetNgayKyDieu(int(day),thang,int(nam)):\r\n+                    print(f'{day}/{thang}/{nam}')\r\n         else:\r\n-            for ngay in ngay:\r\n-                if XetNgayKyDieu(int(ngay),thang,int(nam)):\r\n-                    print(f'{ngay}/{thang}/{nam}')\r\n+            for day in ngay:\r\n+                if XetNgayKyDieu(int(day),thang,int(nam)):\r\n+                    print(f'{day}/{thang}/{nam}')\r\n             \r\n"
+                },
+                {
+                    "date": 1679801197659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,18 @@\n-def XetNam(nam):\r\n-    if int(nam[-1]) == 0 and int(nam[-2]) == 0:\r\n-        if int(nam) % 400 == 0:\r\n-            return True\r\n-    else:\r\n-        if int(nam) % 4 == 0:\r\n-            return True\r\n-def XetNgayKyDieu(ngay,thang,nam):\r\n-    if ngay*thang==nam%100: return True\r\n-    else: return False\r\n-ngay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n-ngayn = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\r\n-print('Nhung ngay ky dieu trong the ky 20 la:')\r\n-for nam in range(1901,2001):\r\n-    nam=str(nam) \r\n-    for thang in range(1,13):\r\n-        if XetNam(nam):\r\n-            for day in ngayn:\r\n-                if XetNgayKyDieu(int(day),thang,int(nam)):\r\n+def XetNgayKyDieu():\r\n+    for nam in range(1901, 2001):\r\n+        for thang in range(1, 13):\r\n+            ngay = 31\r\n+            if thang == 4 or thang == 6 or thang == 9 or thang == 11:\r\n+                ngay = 30\r\n+            elif thang == 2:\r\n+                if nam % 4 == 0 and (nam % 100 != 0 or nam % 400 == 0):\r\n+                    ngay = 29\r\n+                else:\r\n+                    ngay = 28\r\n+            for day in range(1, ngay + 1):\r\n+                if day * thang == nam % 100:\r\n                     print(f'{day}/{thang}/{nam}')\r\n-        else:\r\n-            for day in ngay:\r\n-                if XetNgayKyDieu(int(day),thang,int(nam)):\r\n-                    print(f'{day}/{thang}/{nam}')\r\n+print('nhung ngay ky dieu trong the ky 20 la:')\r\n+XetNgayKyDieu()\r\n+\r\n             \r\n"
+                },
+                {
+                    "date": 1679801272652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n                     ngay = 28\r\n             for day in range(1, ngay + 1):\r\n                 if day * thang == nam % 100:\r\n                     print(f'{day}/{thang}/{nam}')\r\n+\r\n+\r\n print('nhung ngay ky dieu trong the ky 20 la:')\r\n-XetNgayKyDieu()\r\n-\r\n-            \r\n+XetNgayKyDieu()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679804714326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,6 @@\n             for day in range(1, ngay + 1):\r\n                 if day * thang == nam % 100:\r\n                     print(f'{day}/{thang}/{nam}')\r\n \r\n-\r\n print('nhung ngay ky dieu trong the ky 20 la:')\r\n XetNgayKyDieu()\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1679630533872,
+            "name": "Commit-0",
+            "content": "def XetNgayKyDieu(ngay,thang,nam):\r\n    if ngay*thang==nam%100: return True\r\n    else: return False\r\nngay=int(input('ngay: '))\r\nthang=int(input('thang: '))\r\nnam=int(input('nam: '))\r\nif XetNgayKyDieu(ngay,thang,nam): print(f'ngay {ngay} thang {thang} nam {nam} la ngay ky dieu')\r\nelse: print(f'ngay {ngay} thang {thang} nam {nam} khong la ngay ky dieu')"
+        }
+    ]
+}

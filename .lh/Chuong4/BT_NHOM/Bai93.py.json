@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai93.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1679803149889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1679803149889,
+            "name": "Commit-0",
+            "content": "from Bai92 import kiemtrasonguyento\r\n\r\ndef songuyentotieptheo(n):\r\n    \"\"\"Tìm số nguyên tố đầu tiên lớn hơn một số nguyên n cho trước.\"\"\"\r\n    if n < 2:\r\n        return 2\r\n    snt = n + 1\r\n    while True:\r\n        if kiemtrasonguyento(snt):\r\n            return snt\r\n        snt += 1\r\n\r\n# Chương trình chính\r\nn = int(input(\"Nhập một số nguyên: \"))\r\nt = songuyentotieptheo(n)\r\nprint(f\"Số nguyên tố đầu tiên lớn hơn {n} là {t}.\")\r\n"
+        }
+    ]
+}

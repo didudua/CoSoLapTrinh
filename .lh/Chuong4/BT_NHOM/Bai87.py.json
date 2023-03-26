@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai87.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1679807787236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679807837602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n \r\n \r\n # ví dụ sử dụng:\r\n if __name__ == '__main__':\r\n-    s = 'Xin chào, thế giới!'\r\n-    width = 30\r\n+    s = input('s=')\r\n+    width = int(input('nhap chieu rong '))\r\n     centered = center_string(s, width)\r\n     print(centered)\r\n    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679807888054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,8 @@\n # n,kt=nhap()\r\n # inkq(n,kt)\r\n \r\n def center_string(s, width):\r\n-    \"\"\"\r\n-    Cho một chuỗi s và một chiều rộng, trả về một chuỗi mới bao gồm chuỗi ban đầu và số lượng khoảng trắng phù hợp để chuỗi ban đầu xuất hiện ở chính giữa chiều rộng được cung cấp khi nó được in ra màn hình.\r\n-    \"\"\"\r\n     if width <= len(s):\r\n         # nếu chuỗi đã rộng hơn hoặc bằng với chiều rộng của terminal, trả về nó nguyên vẹn\r\n         return s\r\n     else:\r\n"
+                },
+                {
+                    "date": 1679807947433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,9 @@\n         # tạo chuỗi được căn giữa với khoảng trắng phù hợp\r\n         return ' ' * padding + s\r\n \r\n \r\n-# ví dụ sử dụng:\r\n-if __name__ == '__main__':\r\n-    s = input('s=')\r\n-    width = int(input('nhap chieu rong '))\r\n-    centered = center_string(s, width)\r\n-    print(centered)\r\n+s = input('s=')\r\n+width = int(input('nhap chieu rong '))\r\n+centered = center_string(s, width)\r\n+print(centered)\r\n    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679808117299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,20 +6,17 @@\n #     print('l',(kt//2)*' ',n,(kt//2)*' ','l')\r\n # n,kt=nhap()\r\n # inkq(n,kt)\r\n \r\n-def center_string(s, width):\r\n-    if width <= len(s):\r\n+def CanGiua(n, chieurong):\r\n+    if chieurong <= len(n):\r\n         # nếu chuỗi đã rộng hơn hoặc bằng với chiều rộng của terminal, trả về nó nguyên vẹn\r\n-        return s\r\n+        return n\r\n     else:\r\n         # tính số lượng khoảng trắng cần thiết để canh giữa chuỗi\r\n-        padding = (width - len(s)) // 2\r\n+        khoantrong = (chieurong - len(n)) // 2\r\n         # tạo chuỗi được căn giữa với khoảng trắng phù hợp\r\n-        return ' ' * padding + s\r\n+        return ' ' * khoantrong + n\r\n \r\n-\r\n\\ No newline at end of file\n-s = input('s=')\r\n-width = int(input('nhap chieu rong '))\r\n-centered = center_string(s, width)\r\n-print(centered)\r\n-   \n+n = input('n=')\r\n+chieurong = int(input('nhap chieu rong '))\r\n+print(CanGiua(n, chieurong))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679808510380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,14 @@\n-# def nhap():\r\n-#     n=input()\r\n-#     kt=int(input('nhap so khoang trong:'))\r\n-#     return n,kt\r\n-# def inkq(n,kt):\r\n-#     print('l',(kt//2)*' ',n,(kt//2)*' ','l')\r\n-# n,kt=nhap()\r\n-# inkq(n,kt)\r\n-\r\n-def CanGiua(n, chieurong):\r\n+def nhap():\r\n+    n=input()\r\n+    chieurong=int(input('nhap chieu rong: '))\r\n+    return n,chieurong\r\n+def inkq(n, chieurong):\r\n     if chieurong <= len(n):\r\n-        # nếu chuỗi đã rộng hơn hoặc bằng với chiều rộng của terminal, trả về nó nguyên vẹn\r\n-        return n\r\n+        kq=n\r\n+        return kq\r\n     else:\r\n-        # tính số lượng khoảng trắng cần thiết để canh giữa chuỗi\r\n\\ No newline at end of file\n         khoantrong = (chieurong - len(n)) // 2\r\n-        # tạo chuỗi được căn giữa với khoảng trắng phù hợp\r\n-        return ' ' * khoantrong + n\r\n-\r\n-n = input('n=')\r\n-chieurong = int(input('nhap chieu rong '))\r\n-print(CanGiua(n, chieurong))\n+        kq= ' '*khoantrong + n +' '*khoantrong\r\n+        return kq\r\n+n,chieurong=nhap()\r\n+print(inkq(n, chieurong))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1679807787236,
+            "name": "Commit-0",
+            "content": "# def nhap():\r\n#     n=input()\r\n#     kt=int(input('nhap so khoang trong:'))\r\n#     return n,kt\r\n# def inkq(n,kt):\r\n#     print('l',(kt//2)*' ',n,(kt//2)*' ','l')\r\n# n,kt=nhap()\r\n# inkq(n,kt)\r\n\r\ndef center_string(s, width):\r\n    \"\"\"\r\n    Cho một chuỗi s và một chiều rộng, trả về một chuỗi mới bao gồm chuỗi ban đầu và số lượng khoảng trắng phù hợp để chuỗi ban đầu xuất hiện ở chính giữa chiều rộng được cung cấp khi nó được in ra màn hình.\r\n    \"\"\"\r\n    if width <= len(s):\r\n        # nếu chuỗi đã rộng hơn hoặc bằng với chiều rộng của terminal, trả về nó nguyên vẹn\r\n        return s\r\n    else:\r\n        # tính số lượng khoảng trắng cần thiết để canh giữa chuỗi\r\n        padding = (width - len(s)) // 2\r\n        # tạo chuỗi được căn giữa với khoảng trắng phù hợp\r\n        return ' ' * padding + s\r\n\r\n\r\n# ví dụ sử dụng:\r\nif __name__ == '__main__':\r\n    s = 'Xin chào, thế giới!'\r\n    width = 30\r\n    centered = center_string(s, width)\r\n    print(centered)\r\n   "
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai101.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1679801284482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1679801284482,
+            "name": "Commit-0",
+            "content": "# nhập vào 2 số nguyên. in ra kết quả phân số tối giản của 2 số đó\r\ndef UCLN(a, b):\r\n    if b == 0:\r\n        return a\r\n    else:\r\n        return UCLN(b, a % b)\r\n\r\n\r\na = int(input('Nhap tu so:'))\r\nb = int(input('Nhap mau so:'))\r\nprint(f'phan so toi gian {a}/{b} = {int(a/UCLN(a,b))}/{int(b/UCLN(a,b))}')\r\n"
+        }
+    ]
+}

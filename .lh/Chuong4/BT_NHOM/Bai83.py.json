@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai83.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1679801862633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1679801862633,
+            "name": "Commit-0",
+            "content": "def nhap():\r\n    a=int(input('So mat hang ma khach hang mua:'))\r\n    return(a)\r\ndef tinhtien(a):\r\n    if a==1:\r\n        t=10.95\r\n    if a>1:\r\n        t=10.95+(a-1)*2.95\r\n        return(t)\r\ndef inkq(t):\r\n    print('So tien phai tra',t)\r\na=nhap()\r\nt=tinhtien(a)\r\ninkq(t)"
+        }
+    ]
+}

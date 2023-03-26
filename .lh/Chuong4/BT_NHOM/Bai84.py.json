@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai84.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1679805735614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679805758452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,8 @@\n         t=c\r\n     return t    \r\n def inkq(t):\r\n     print('So trung vi',t)\r\n-x,y,z=nhap()\r\n-h=trungbinh(x,y,z)\r\n-inkq(h)\n\\ No newline at end of file\n+while True:\r\n+    x,y,z=nhap()\r\n+    h=trungbinh(x,y,z)\r\n+    inkq(h)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679805828701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,21 @@\n def nhap():\r\n-    a=int(input('a='))\r\n-    b=int(input('b='))\r\n-    c=int(input('c='))\r\n-    return a,b,c\r\n-def trungbinh(a,b,c):\r\n-    if (a<b and b<c)or(c<b and b<a):\r\n-        t=b\r\n-    if (b<a and a<c)or(c<a and a<b):\r\n-        t=a\r\n-    if (a<c and c<b)or(b<c and c<a):\r\n-        t=c\r\n-    return t    \r\n+    a = int(input('a='))\r\n+    b = int(input('b='))\r\n+    c = int(input('c='))\r\n+    return a, b, c\r\n+\r\n+def trungbinh(a, b, c):\r\n\\ No newline at end of file\n+    if (a < b and b < c) or (c < b and b < a):\r\n+        t = b\r\n+    if (b < a and a < c) or (c < a and a < b):\r\n+        t = a\r\n+    if (a < c and c < b) or (b < c and c < a):\r\n+        t = c\r\n+    return t\r\n+\r\n def inkq(t):\r\n-    print('So trung vi',t)\r\n-while True:\r\n-    x,y,z=nhap()\r\n-    h=trungbinh(x,y,z)\r\n-    inkq(h)\n+    print('So trung vi', t)\r\n+\r\n+x, y, z = nhap()\r\n+h = trungbinh(x, y, z)\r\n+inkq(h)\r\n"
+                },
+                {
+                    "date": 1679805859288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,18 +4,18 @@\n     c = int(input('c='))\r\n     return a, b, c\r\n \r\n def trungbinh(a, b, c):\r\n-    if (a < b and b < c) or (c < b and b < a):\r\n+    if (a<b and b<c) or (c<b and b<a):\r\n         t = b\r\n-    if (b < a and a < c) or (c < a and a < b):\r\n+    if (b<a and a<c) or (c<a and a<b):\r\n         t = a\r\n-    if (a < c and c < b) or (b < c and c < a):\r\n+    if (a<c and c<b) or (b<c and c<a):\r\n         t = c\r\n     return t\r\n \r\n def inkq(t):\r\n     print('So trung vi', t)\r\n \r\n\\ No newline at end of file\n x, y, z = nhap()\r\n h = trungbinh(x, y, z)\r\n-inkq(h)\n+inkq(h)\r\n"
+                }
+            ],
+            "date": 1679805735614,
+            "name": "Commit-0",
+            "content": "def nhap():\r\n    a=int(input('a='))\r\n    b=int(input('b='))\r\n    c=int(input('c='))\r\n    return a,b,c\r\ndef trungbinh(a,b,c):\r\n    if (a<b and b<c)or(c<b and b<a):\r\n        t=b\r\n    if (b<a and a<c)or(c<a and a<b):\r\n        t=a\r\n    if (a<c and c<b)or(b<c and c<a):\r\n        t=c\r\n    return t    \r\ndef inkq(t):\r\n    print('So trung vi',t)\r\nx,y,z=nhap()\r\nh=trungbinh(x,y,z)\r\ninkq(h)"
+        }
+    ]
+}
