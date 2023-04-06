@@ -1,17 +1,20 @@
 def isInteger(s):
-    s=s.strip()
-    
-    if (s[0]== "+" or s[0]== "-") and s[1:].isdigit():
-        return True
-    if s.isdigit():
-        return True
-    return False
+    s = s.strip()
+    if len(s) == 0:
+        return False
+    if s[0] in ['+', '-']:
+        s = s[1:]
+    for i in s:
+        if not i.isdigit():
+            return False
+    return True
 
-def main():
-    s= input("Nhập một chuỗi: ")
+def thuc_hien():
+    s = input("Nhập một chuỗi: ")
     if isInteger(s):
-        print('chuỗi vừa nhập là một số nguyên')
+        print('Chuỗi vừa nhập là một số nguyên')
     else:
-        print("chuỗi vừa nhập không phải là một số nguyên")  
+        print("Chuỗi vừa nhập không phải là một số nguyên")
+
 if __name__=="__main__":
-    main()
+    thuc_hien()

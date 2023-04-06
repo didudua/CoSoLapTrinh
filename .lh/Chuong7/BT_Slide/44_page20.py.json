@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Chuong7/BT_Slide/44_page20.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1680789441893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680789482801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n u=0\r\n for i in str.lower():\r\n     if i==ch:\r\n         u+=1\r\n-print('Number of character n is :',u,sep='')\n\\ No newline at end of file\n+print('Number of character n is:',u)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1680789441893,
+            "name": "Commit-0",
+            "content": "str=input('str=')\r\nch=input('ch=')\r\nu=0\r\nfor i in str.lower():\r\n    if i==ch:\r\n        u+=1\r\nprint('Number of character n is :',u,sep='')"
+        }
+    ]
+}

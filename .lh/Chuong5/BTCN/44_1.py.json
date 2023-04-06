@@ -1,0 +1,86 @@
+{
+    "sourceFile": "Chuong5/BTCN/44_1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1680747875214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680747887830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n def Input():\r\n+    L=[]\r\n     n=int(input('n='))\r\n     for i in range(1,n+1):\r\n         L+=int(input())\r\n     x=int(input('x='))\r\n"
+                },
+                {
+                    "date": 1680747916890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n def Input():\r\n     L=[]\r\n     n=int(input('n='))\r\n     for i in range(1,n+1):\r\n-        L+=int(input())\r\n+        L+=input()\r\n     x=int(input('x='))\r\n     return L,x\r\n def FirstAndLast(L):\r\n     print(f'[({L[0]},{L[-1]})')\r\n"
+                },
+                {
+                    "date": 1680747990813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n def Input():\r\n     L=[]\r\n     n=int(input('n='))\r\n     for i in range(1,n+1):\r\n-        L+=input()\r\n+        L=input()+L\r\n     x=int(input('x='))\r\n     return L,x\r\n def FirstAndLast(L):\r\n     print(f'[({L[0]},{L[-1]})')\r\n"
+                },
+                {
+                    "date": 1680748075850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n def Input():\r\n     L=[]\r\n     n=int(input('n='))\r\n     for i in range(1,n+1):\r\n-        L=input()+L\r\n+        L+=input()\r\n+    L.reverse()\r\n     x=int(input('x='))\r\n     return L,x\r\n def FirstAndLast(L):\r\n     print(f'[({L[0]},{L[-1]})')\r\n"
+                },
+                {
+                    "date": 1680748110252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,14 @@\n     L=[]\r\n     n=int(input('n='))\r\n     for i in range(1,n+1):\r\n         L+=input()\r\n-    L.reverse()\r\n+    print(L)\r\n     x=int(input('x='))\r\n     return L,x\r\n def FirstAndLast(L):\r\n     print(f'[({L[0]},{L[-1]})')\r\n def Search(L,x):\r\n     if x in L: return True\r\n     else: return False\r\n \r\n-FirstAndLast(Input())\r\n\\ No newline at end of file\n-Search(Input())\n+FirstAndLast(Input())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680748153037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     print(L)\r\n     x=int(input('x='))\r\n     return L,x\r\n def FirstAndLast(L):\r\n-    print(f'[({L[0]},{L[-1]})')\r\n+    print(f'[({L[-4]},{L[-1]})')\r\n def Search(L,x):\r\n     if x in L: return True\r\n     else: return False\r\n \r\n"
+                },
+                {
+                    "date": 1680748184679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     print(L)\r\n     x=int(input('x='))\r\n     return L,x\r\n def FirstAndLast(L):\r\n-    print(f'[({L[-4]},{L[-1]})')\r\n+    print(f'[({L[0]},{L[1]})')\r\n def Search(L,x):\r\n     if x in L: return True\r\n     else: return False\r\n \r\n"
+                },
+                {
+                    "date": 1680748216589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n def Input():\r\n     L=[]\r\n     n=int(input('n='))\r\n     for i in range(1,n+1):\r\n-        L+=input()\r\n+        L+=int(input())\r\n     print(L)\r\n     x=int(input('x='))\r\n     return L,x\r\n def FirstAndLast(L):\r\n"
+                },
+                {
+                    "date": 1680748237443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n def Input():\r\n     L=[]\r\n     n=int(input('n='))\r\n     for i in range(1,n+1):\r\n-        L+=int(input())\r\n+        L+=input()\r\n     print(L)\r\n-    x=int(input('x='))\r\n+    # x=int(input('x='))\r\n     return L,x\r\n def FirstAndLast(L):\r\n     print(f'[({L[0]},{L[1]})')\r\n def Search(L,x):\r\n"
+                },
+                {
+                    "date": 1680748253535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     for i in range(1,n+1):\r\n         L+=input()\r\n     print(L)\r\n     # x=int(input('x='))\r\n-    return L,x\r\n+    return L\r\n def FirstAndLast(L):\r\n     print(f'[({L[0]},{L[1]})')\r\n def Search(L,x):\r\n     if x in L: return True\r\n"
+                },
+                {
+                    "date": 1680748292984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     print(L)\r\n     # x=int(input('x='))\r\n     return L\r\n def FirstAndLast(L):\r\n-    print(f'[({L[0]},{L[1]})')\r\n+    print(f'([{L[0]},{L[-1]}])')\r\n def Search(L,x):\r\n     if x in L: return True\r\n     else: return False\r\n \r\n"
+                },
+                {
+                    "date": 1680748324686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n     n=int(input('n='))\r\n     for i in range(1,n+1):\r\n         L+=input()\r\n     print(L)\r\n-    # x=int(input('x='))\r\n-    return L\r\n+    x=int(input('x='))\r\n+    return L,x\r\n def FirstAndLast(L):\r\n-    print(f'([{L[0]},{L[-1]}])')\r\n+    print(f'[{L[0]},{L[-1]}]')\r\n def Search(L,x):\r\n     if x in L: return True\r\n     else: return False\r\n \r\n"
+                },
+                {
+                    "date": 1680748420863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,14 @@\n     L=[]\r\n     n=int(input('n='))\r\n     for i in range(1,n+1):\r\n         L+=input()\r\n-    print(L)\r\n     x=int(input('x='))\r\n     return L,x\r\n def FirstAndLast(L):\r\n     print(f'[{L[0]},{L[-1]}]')\r\n def Search(L,x):\r\n     if x in L: return True\r\n     else: return False\r\n \r\n-FirstAndLast(Input())\n\\ No newline at end of file\n+L=Input()\r\n+print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680748444268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n def Search(L,x):\r\n     if x in L: return True\r\n     else: return False\r\n \r\n-L=Input()\r\n+L,x=Input()\r\n print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680748473158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,6 @@\n     if x in L: return True\r\n     else: return False\r\n \r\n L,x=Input()\r\n-print(L)\n\\ No newline at end of file\n+FirstAndLast(L)\r\n+Search(L,x)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680748489287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n     else: return False\r\n \r\n L,x=Input()\r\n FirstAndLast(L)\r\n-Search(L,x)\n\\ No newline at end of file\n+print(Search(L,x))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680748546974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n def Input():\r\n     L=[]\r\n     n=int(input('n='))\r\n     for i in range(1,n+1):\r\n-        L+=input()\r\n+        L+=[int(input())]\r\n     x=int(input('x='))\r\n     return L,x\r\n def FirstAndLast(L):\r\n     print(f'[{L[0]},{L[-1]}]')\r\n"
+                }
+            ],
+            "date": 1680747875214,
+            "name": "Commit-0",
+            "content": "def Input():\r\n    n=int(input('n='))\r\n    for i in range(1,n+1):\r\n        L+=int(input())\r\n    x=int(input('x='))\r\n    return L,x\r\ndef FirstAndLast(L):\r\n    print(f'[({L[0]},{L[-1]})')\r\ndef Search(L,x):\r\n    if x in L: return True\r\n    else: return False\r\n\r\nFirstAndLast(Input())\r\nSearch(Input())"
+        }
+    ]
+}

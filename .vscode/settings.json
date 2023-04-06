@@ -1,3 +1,5 @@
 {
-    "local-history.browser.descending": false
+    "local-history.browser.descending": false,
+    "CodeGPT.model": "gpt-3.5-turbo",
+    "CodeGPT.maxTokens": 800
 }

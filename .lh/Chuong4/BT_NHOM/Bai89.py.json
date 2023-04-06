@@ -1,0 +1,62 @@
+{
+    "sourceFile": "Chuong4/BT_NHOM/Bai89.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1679882678148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1679884492496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,45 +1,11 @@\n-\r\n-# def viet_hoa(s):\r\n-#     danh_sach = list(s)\r\n-#     for i in range(len(danh_sach)):\r\n-#         if i == 0 or danh_sach[i-2] in ['!', '.', '?']:\r\n-#             danh_sach[i] = danh_sach[i].upper()\r\n-#         elif   danh_sach[i] == 'i' and danh_sach[i-1] == ' ' and (i == len(danh_sach)-1 or danh_sach[i+1] == ' '):\r\n-#             danh_sach[i] = 'I'\r\n-#     return ''.join(danh_sach)\r\n-\r\n-# s=input(\"nhập chuỗi: \")\r\n-# print(viet_hoa(s))\r\n-def capitalize_string(s):\r\n-    # Chuyển đổi chuỗi thành chữ thường và loại bỏ các khoảng trắng thừa.\r\n-    s = s.lower().strip()\r\n-\r\n-    # Tách các câu thành các từ riêng lẻ.\r\n-    words = s.split()\r\n-\r\n-    # Tạo một danh sách mới để lưu trữ các từ đã được sửa đổi.\r\n-    new_words = []\r\n-\r\n-    for i in range(len(words)):\r\n-        # Xử lý các trường hợp đặc biệt cho ký tự đầu tiên của mỗi từ.\r\n-        if i == 0:\r\n-            new_word = words[i][0].upper() + words[i][1:]\r\n-        elif words[i-1][-1] in ['.', '!', '?']:\r\n-            new_word = words[i][0].upper() + words[i][1:]\r\n-        elif words[i] == 'i' and i < len(words)-1 and words[i-1][-1] == ' ' and words[i+1][0] == ' ':\r\n-            new_word = 'I'\r\n-        else:\r\n-            new_word = words[i]\r\n-\r\n-        new_words.append(new_word)\r\n-\r\n-    # Gộp các từ đã sửa đổi để tạo thành chuỗi mới.\r\n-    new_s = ' '.join(new_words)\r\n-\r\n-    return new_s\r\n-# Nhận chuỗi đầu vào từ người dùng.\r\n-s = input(\"Nhập chuỗi cần viết hoa: \")\r\n-\r\n-# Viết hoa chuỗi và hiển thị kết quả.\r\n-new_s = capitalize_string(s)\r\n-print(new_s)\r\n+def VietHoa(a):\r\n+    xet=['.','?','!']\r\n+    a=a.capitalize() \r\n+    for i in range(len(a)):\r\n+        if a[i] in xet:\r\n+            for j in range(i+1,len(a)):\r\n+                if a[j]!=' ': \r\n+                    a=a[:j]+a[j:].capitalize()\r\n+                    break\r\n+a=input()\r\n+print(VietHoa(a))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679884549614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,6 @@\n                 if a[j]!=' ': \r\n                     a=a[:j]+a[j:].capitalize()\r\n                     break\r\n a=input()\r\n-print(VietHoa(a))\n\\ No newline at end of file\n+kq=VietHoa(a)\r\n+print(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679884619850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n             for j in range(i+1,len(a)):\r\n                 if a[j]!=' ': \r\n                     a=a[:j]+a[j:].capitalize()\r\n                     break\r\n-a=input()\r\n-kq=VietHoa(a)\r\n-print(kq)\n\\ No newline at end of file\n+    return a\r\n+\r\n+print(VietHoa(input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679909568425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n def VietHoa(a):\r\n     xet=['.','?','!']\r\n     a=a.capitalize() \r\n+    a=a.replace('i','I')\r\n     for i in range(len(a)):\r\n         if a[i] in xet:\r\n             for j in range(i+1,len(a)):\r\n                 if a[j]!=' ': \r\n"
+                },
+                {
+                    "date": 1679914440449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n def VietHoa(a):\r\n     xet=['.','?','!']\r\n     a=a.capitalize() \r\n-    a=a.replace('i','I')\r\n     for i in range(len(a)):\r\n         if a[i] in xet:\r\n             for j in range(i+1,len(a)):\r\n                 if a[j]!=' ': \r\n                     a=a[:j]+a[j:].capitalize()\r\n                     break\r\n+        if a[i]=='i' and a[i+1]==' ' and a[i-1]==' ':\r\n+            a=a[:i]+a[i:].capitalize()\r\n     return a\r\n \r\n print(VietHoa(input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679914561219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n             for j in range(i+1,len(a)):\r\n                 if a[j]!=' ': \r\n                     a=a[:j]+a[j:].capitalize()\r\n                     break\r\n-        if a[i]=='i' and a[i+1]==' ' and a[i-1]==' ':\r\n-            a=a[:i]+a[i:].capitalize()\r\n+        # if a[i]=='i' and a[i+1]==' ' and a[i-1]==' ':\r\n+        #     a=a[:i]+a[i:].capitalize()\r\n     return a\r\n \r\n print(VietHoa(input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679914573091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n             for j in range(i+1,len(a)):\r\n                 if a[j]!=' ': \r\n                     a=a[:j]+a[j:].capitalize()\r\n                     break\r\n-        # if a[i]=='i' and a[i+1]==' ' and a[i-1]==' ':\r\n-        #     a=a[:i]+a[i:].capitalize()\r\n+        if a[i]=='i' and a[i+1]==' ' and a[i-1]==' ':\r\n+            a=a[:i]+a[i:].capitalize()\r\n     return a\r\n \r\n print(VietHoa(input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679914642494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,13 @@\n def VietHoa(a):\r\n     xet=['.','?','!']\r\n-    a=a.capitalize() \r\n+    a=a.capitalize()\r\n+    a=a.replace(' i ',' I ') \r\n     for i in range(len(a)):\r\n         if a[i] in xet:\r\n             for j in range(i+1,len(a)):\r\n                 if a[j]!=' ': \r\n                     a=a[:j]+a[j:].capitalize()\r\n                     break\r\n-        if a[i]=='i' and a[i+1]==' ' and a[i-1]==' ':\r\n-            a=a[:i]+a[i:].capitalize()\r\n     return a\r\n \r\n print(VietHoa(input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679914697104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n def VietHoa(a):\r\n     xet=['.','?','!']\r\n     a=a.capitalize()\r\n-    a=a.replace(' i ',' I ') \r\n     for i in range(len(a)):\r\n+     a=a.replace(' i ',' I ') \r\n+    for i in range(len(a)):\r\n         if a[i] in xet:\r\n             for j in range(i+1,len(a)):\r\n                 if a[j]!=' ': \r\n                     a=a[:j]+a[j:].capitalize()\r\n"
+                },
+                {
+                    "date": 1679914746954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n def VietHoa(a):\r\n     xet=['.','?','!']\r\n-    a=a.capitalize()\r\n-    for i in range(len(a)):\r\n-     a=a.replace(' i ',' I ') \r\n-    for i in range(len(a)):\r\n-        if a[i] in xet:\r\n-            for j in range(i+1,len(a)):\r\n-                if a[j]!=' ': \r\n-                    a=a[:j]+a[j:].capitalize()\r\n-                    break\r\n-    return a\r\n+    while True:\r\n+        a=a.capitalize()\r\n \r\n+        a=a.replace(' i ',' I ') \r\n+        for i in range(len(a)):\r\n+            if a[i] in xet:\r\n+                for j in range(i+1,len(a)):\r\n+                    if a[j]!=' ': \r\n+                        a=a[:j]+a[j:].capitalize()\r\n+                        break\r\n+        return a\r\n+\r\n print(VietHoa(input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679914769918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,13 @@\n def VietHoa(a):\r\n     xet=['.','?','!']\r\n-    while True:\r\n-        a=a.capitalize()\r\n+    a=a.capitalize()\r\n+    a=a.replace(' i ',' I ') \r\n+    for i in range(len(a)):\r\n+        if a[i] in xet:\r\n+            for j in range(i+1,len(a)):\r\n+                if a[j]!=' ': \r\n+                    a=a[:j]+a[j:].capitalize()\r\n+                    break\r\n+    return a\r\n \r\n-        a=a.replace(' i ',' I ') \r\n-        for i in range(len(a)):\r\n-            if a[i] in xet:\r\n-                for j in range(i+1,len(a)):\r\n-                    if a[j]!=' ': \r\n-                        a=a[:j]+a[j:].capitalize()\r\n-                        break\r\n-        return a\r\n-\r\n print(VietHoa(input()))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1679882678147,
+            "name": "Commit-0",
+            "content": "\r\n# def viet_hoa(s):\r\n#     danh_sach = list(s)\r\n#     for i in range(len(danh_sach)):\r\n#         if i == 0 or danh_sach[i-2] in ['!', '.', '?']:\r\n#             danh_sach[i] = danh_sach[i].upper()\r\n#         elif   danh_sach[i] == 'i' and danh_sach[i-1] == ' ' and (i == len(danh_sach)-1 or danh_sach[i+1] == ' '):\r\n#             danh_sach[i] = 'I'\r\n#     return ''.join(danh_sach)\r\n\r\n# s=input(\"nhập chuỗi: \")\r\n# print(viet_hoa(s))\r\ndef capitalize_string(s):\r\n    # Chuyển đổi chuỗi thành chữ thường và loại bỏ các khoảng trắng thừa.\r\n    s = s.lower().strip()\r\n\r\n    # Tách các câu thành các từ riêng lẻ.\r\n    words = s.split()\r\n\r\n    # Tạo một danh sách mới để lưu trữ các từ đã được sửa đổi.\r\n    new_words = []\r\n\r\n    for i in range(len(words)):\r\n        # Xử lý các trường hợp đặc biệt cho ký tự đầu tiên của mỗi từ.\r\n        if i == 0:\r\n            new_word = words[i][0].upper() + words[i][1:]\r\n        elif words[i-1][-1] in ['.', '!', '?']:\r\n            new_word = words[i][0].upper() + words[i][1:]\r\n        elif words[i] == 'i' and i < len(words)-1 and words[i-1][-1] == ' ' and words[i+1][0] == ' ':\r\n            new_word = 'I'\r\n        else:\r\n            new_word = words[i]\r\n\r\n        new_words.append(new_word)\r\n\r\n    # Gộp các từ đã sửa đổi để tạo thành chuỗi mới.\r\n    new_s = ' '.join(new_words)\r\n\r\n    return new_s\r\n# Nhận chuỗi đầu vào từ người dùng.\r\ns = input(\"Nhập chuỗi cần viết hoa: \")\r\n\r\n# Viết hoa chuỗi và hiển thị kết quả.\r\nnew_s = capitalize_string(s)\r\nprint(new_s)\r\n"
+        }
+    ]
+}

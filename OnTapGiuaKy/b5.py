@@ -1,4 +1,4 @@
-#APIkey: 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
+#aPIkey: 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
 #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
 # n = int(input("Nhập số n: "))
 # S = sum([1/i for i in range(2,n+1)])
@@ -55,22 +55,13 @@
 #     print(num, "không phải là số nguyên tố")
 a=input()
 xet=['.','?','!']
-A=[]
-a=a.capitalize()
-d=''
-for k in a:
-    A=A+[k]
-for i in A:
-    if i in xet:
-        x=A.index(i)
-        for j in range(x+1,len(A)):
-            if A[j]!=' ': 
-                y=j
-                b=A[j].upper()
+a=a.capitalize() 
+for i in range(len(a)):
+    if a[i] in xet:
+        for j in range(i+1,len(a)):
+            if a[j]!=' ': 
+                a=a[:j]+a[j:].capitalize()
                 break
-    else: continue
-    A.insert(int(y),b)
-    A.pop(int(y)+1)
-for i in A:
-    d=d+i
-print(d)
+
+print(a)
+

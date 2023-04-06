@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1679669969438,
@@ -12,6 +12,10 @@
                 {
                     "date": 1679669986464,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,5 @@\n             break\r\n \r\n \r\n if __name__ == '__main__':\r\n-    main()\r\n-print(main())\r\n+    main()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679938346966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,6 @@\n             print(\"Số lần thử:\", test)\r\n             break\r\n \r\n \r\n-if __name__ == '__main__':\r\n-    main()\n\\ No newline at end of file\n+# if __name__ == '__main__':\r\n+main()\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1679669969438,

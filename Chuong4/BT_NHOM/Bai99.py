@@ -51,12 +51,10 @@ if hevao in he and hera in he:
                 u = False
                 break
         if u:
-            print(
-                f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')
+            print(f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')
         else:
             print('so ban nhap khong thuoc he 2')
     else:
-        print(
-            f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')
+        print(f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')
 else:
     print('khong tim duoc he ma ban da nhap')

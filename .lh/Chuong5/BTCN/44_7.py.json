@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Chuong5/BTCN/44_7.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1680751508945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680751701060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n u=0\r\n n=int(input('n='))\r\n for i in range(1,n+1):\r\n     L+=[int(input())]\r\n+M=L\r\n for i in L:\r\n-    if u!=i:\r\n+    if i in M:\r\n         print(i)\r\n-        u=i\r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680751789518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n L=[]\r\n-u=0\r\n+M=[]\r\n n=int(input('n='))\r\n for i in range(1,n+1):\r\n     L+=[int(input())]\r\n-M=L\r\n for i in L:\r\n-    if i in M:\r\n-        print(i)\r\n+    if i in M: continue\r\n+    else: M+=[i]\r\n+print(M)\r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680751858555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n     L+=[int(input())]\r\n for i in L:\r\n     if i in M: continue\r\n     else: M+=[i]\r\n-print(M)\r\n+print(x for x in range(M))\r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680751870099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n     L+=[int(input())]\r\n for i in L:\r\n     if i in M: continue\r\n     else: M+=[i]\r\n-print(x for x in range(M))\r\n+print(x for x in range(len(M)))\r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680751936957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n     L+=[int(input())]\r\n for i in L:\r\n     if i in M: continue\r\n     else: M+=[i]\r\n-print(x for x in range(len(M)))\r\n-    \n\\ No newline at end of file\n+for i in M:\r\n+    print(i,end=' ')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1680751508945,
+            "name": "Commit-0",
+            "content": "L=[]\r\nu=0\r\nn=int(input('n='))\r\nfor i in range(1,n+1):\r\n    L+=[int(input())]\r\nfor i in L:\r\n    if u!=i:\r\n        print(i)\r\n        u=i\r\n    "
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1679804092731,
@@ -24,6 +24,10 @@
                 {
                     "date": 1679804351095,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-def BatkySangThap(n, hevao,he16):\r\n+def BatkySangThap(n, hevao, he16):\r\n     mu = len(n)-1\r\n     kq = 0\r\n     if hevao == 16:\r\n         for i in n:\r\n@@ -11,9 +11,9 @@\n             kq += int(i)*hevao**mu\r\n             mu -= 1\r\n         return kq\r\n \r\n-def ThapSangBatKy(u, hera,he16):\r\n+def ThapSangBatKy(u, hera, he16):\r\n     kq = ''\r\n     if hera == 2:\r\n         for i in range(7, -1, -1):\r\n             if u >= 2**i:\r\n@@ -37,22 +37,26 @@\n                 return kq\r\n \r\n n = input('nhap so bat ky: ')\r\n he = [2, 8, 10, 16]\r\n-he2 ='01'\r\n+he2 = '01'\r\n he16 = '0123456789ABCDEF'\r\n hevao = int(input('so do thuoc he: '))\r\n hera = int(input('chuyen so do thanh he: '))\r\n if hevao in he and hera in he:\r\n     if hevao == 2:\r\n         for i in n:\r\n             if i in he2 and len(n) <= 8:\r\n-                u= True\r\n-            else: \r\n-                u= False\r\n+                u = True\r\n+            else:\r\n+                u = False\r\n                 break\r\n-        if u: print(f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')\r\n-        else: print('so ban nhap khong thuoc he 2')\r\n+        if u:\r\n+            print(\r\n+                f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')\r\n+        else:\r\n+            print('so ban nhap khong thuoc he 2')\r\n     else:\r\n-        print(f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')\r\n+        print(\r\n+            f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')\r\n else:\r\n     print('khong tim duoc he ma ban da nhap')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1679936950306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,13 +50,11 @@\n             else:\r\n                 u = False\r\n                 break\r\n         if u:\r\n-            print(\r\n-                f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')\r\n+            print(f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')\r\n         else:\r\n             print('so ban nhap khong thuoc he 2')\r\n     else:\r\n-        print(\r\n-            f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')\r\n+        print(f'so duoc chuyen doi thanh: {ThapSangBatKy(BatkySangThap(n, hevao,he16), hera,he16)}')\r\n else:\r\n     print('khong tim duoc he ma ban da nhap')\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1679804092731,

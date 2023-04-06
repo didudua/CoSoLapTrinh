@@ -3,11 +3,27 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1677775684698,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680752589622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n {\r\n-    \"local-history.browser.descending\": false\r\n+    \"local-history.browser.descending\": false,\r\n+    \"CodeGPT.model\": \"gpt-4\"\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680752642950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n {\r\n     \"local-history.browser.descending\": false,\r\n-    \"CodeGPT.model\": \"gpt-4\"\r\n+    \"CodeGPT.model\": \"gpt-3.5-turbo\"\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680774491798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n {\r\n     \"local-history.browser.descending\": false,\r\n-    \"CodeGPT.model\": \"gpt-3.5-turbo\"\r\n+    \"CodeGPT.model\": \"gpt-3.5-turbo\",\r\n+    \"CodeGPT.maxTokens\": 1000\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680774595736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n {\r\n     \"local-history.browser.descending\": false,\r\n-    \"CodeGPT.model\": \"gpt-3.5-turbo\",\r\n-    \"CodeGPT.maxTokens\": 1000\r\n+    \"CodeGPT.model\": \"gpt-4\",\r\n+    \"CodeGPT.maxTokens\": 800\r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1677775684698,

@@ -1,0 +1,46 @@
+{
+    "sourceFile": "Chuong5/BTCN/44_3.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1680749228663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680749258385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,14 @@\n L=[]\r\n u=0\r\n-t,m=0\r\n+t=0\r\n+m=0\r\n n=int(input('n='))\r\n for i in range(1,n+1):\r\n     L+=[int(input())]\r\n for i in L:\r\n     if i>0: u+=1\r\n     if i%2==0: \r\n\\ No newline at end of file\n         t+=i\r\n-        m+=1\n+        m+=1\r\n+print(u)\r\n+print(t/m)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680749358563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,5 @@\n     if i%2==0: \r\n         t+=i\r\n         m+=1\r\n print(u)\r\n-print(t/m)\n\\ No newline at end of file\n+print(10/m)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680749412156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,5 @@\n     if i%2==0: \r\n         t+=i\r\n         m+=1\r\n print(u)\r\n-print(10/m)\n\\ No newline at end of file\n+print(t/m)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680749431816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,9 @@\n for i in L:\r\n     if i>0: u+=1\r\n     if i%2==0: \r\n         t+=i\r\n+        print(t)\r\n         m+=1\r\n+        print(m)\r\n print(u)\r\n print(t/m)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680749459378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,7 @@\n for i in L:\r\n     if i>0: u+=1\r\n     if i%2==0: \r\n         t+=i\r\n-        print(t)\r\n         m+=1\r\n-        print(m)\r\n print(u)\r\n print(t/m)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680749501230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n     if i>0: u+=1\r\n     if i%2==0: \r\n         t+=i\r\n         m+=1\r\n-print(u)\r\n-print(t/m)\n\\ No newline at end of file\n+print(f'SND={u}')\r\n+print(f'TBC={t/m}')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680749577473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,6 @@\n     if i%2==0: \r\n         t+=i\r\n         m+=1\r\n print(f'SND={u}')\r\n-print(f'TBC={t/m}')\n\\ No newline at end of file\n+if m==0:print(f'TBC=0') \r\n+else:print(f'TBC={t/m}')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1680749228663,
+            "name": "Commit-0",
+            "content": "L=[]\r\nu=0\r\nt,m=0\r\nn=int(input('n='))\r\nfor i in range(1,n+1):\r\n    L+=[int(input())]\r\nfor i in L:\r\n    if i>0: u+=1\r\n    if i%2==0: \r\n        t+=i\r\n        m+=1"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "sourceFile": "Chuong5/BTCN/44_4.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1680749747482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680749772966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n for i in range(1,n+1):\r\n     A+=[int(input())]\r\n B=A.reverse()\r\n print(B)\r\n-print(B.sort(reverse=True))\r\n+print(f'{B.sort(reverse=True)}')\r\n"
+                },
+                {
+                    "date": 1680749794469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n for i in range(1,n+1):\r\n     A+=[int(input())]\r\n B=A.reverse()\r\n print(B)\r\n-print(f'{B.sort(reverse=True)}')\r\n+B.sort(reverse=True)\r\n+print(B)\r\n"
+                },
+                {
+                    "date": 1680749844962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,4 @@\n for i in range(1,n+1):\r\n     A+=[int(input())]\r\n B=A.reverse()\r\n print(B)\r\n-B.sort(reverse=True)\r\n-print(B)\r\n"
+                },
+                {
+                    "date": 1680749856453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,5 @@\n n=int(input('n='))\r\n for i in range(1,n+1):\r\n     A+=[int(input())]\r\n B=A.reverse()\r\n-print(B)\r\n+print(A)\r\n"
+                },
+                {
+                    "date": 1680749882772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n A=[]\r\n n=int(input('n='))\r\n for i in range(1,n+1):\r\n     A+=[int(input())]\r\n-B=A.reverse()\r\n-print(A)\r\n+A.reverse()\r\n+B=A\r\n+print(B)\r\n"
+                },
+                {
+                    "date": 1680749923154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,4 +4,5 @@\n     A+=[int(input())]\r\n A.reverse()\r\n B=A\r\n print(B)\r\n+print(B.sort(reverse=True))\r\n"
+                },
+                {
+                    "date": 1680749944255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n     A+=[int(input())]\r\n A.reverse()\r\n B=A\r\n print(B)\r\n-print(B.sort(reverse=True))\r\n+B.sort(reverse=True)\r\n+print(B)\r\n"
+                },
+                {
+                    "date": 1680749971222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n     A+=[int(input())]\r\n A.reverse()\r\n B=A\r\n print(B)\r\n-B.sort(reverse=True)\r\n+B.sort()\r\n print(B)\r\n"
+                }
+            ],
+            "date": 1680749747482,
+            "name": "Commit-0",
+            "content": "A=[]\r\nn=int(input('n='))\r\nfor i in range(1,n+1):\r\n    A+=[int(input())]\r\nB=A.reverse()\r\nprint(B)\r\nprint(B.sort(reverse=True))\r\n"
+        }
+    ]
+}

@@ -2,19 +2,21 @@ import random
 import string
 
 def taobiensoxe():
-    # 50% cơ hội để tạo ra biển số cũ
+    t=['Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M']
+    s=['0','1','2','3','4','5','6','7','8','9']
+   
     if random.random() < 0.5:
-        # Tạo ba chữ cái in hoa ngẫu nhiên
-        chucai = ''.join(random.choices(string.ascii_uppercase, k=3))
-        # Tạo ba số ngẫu nhiên
-        so = ''.join(random.choices(string.digits, k=3))
+        
+        chucai = ''.join(random.choices(t, k=3))
+      
+        so = ''.join(random.choices(s, k=3))
         return f'{chucai}{so}'
         
     else:
-        # Tạo bốn số ngẫu nhiên
-        so = ''.join(random.choices(string.digits, k=4))
-        # Tạo ba chữ cái in hoa ngẫu nhiên
-        chucai = ''.join(random.choices(string.ascii_uppercase, k=3))
+       
+        so = ''.join(random.choices(s, k=4))
+        
+        chucai = ''.join(random.choices(t, k=3))
         return f'{so}{chucai}'
         
 if __name__ == '__main__':

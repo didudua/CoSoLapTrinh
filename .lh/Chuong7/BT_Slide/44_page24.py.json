@@ -1,0 +1,42 @@
+{
+    "sourceFile": "Chuong7/BT_Slide/44_page24.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1680789718435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680789737124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n a=input('a=')\r\n b=input('b=')\r\n-if (a and b).isnumberic():\r\n+if a.isnumberic() and b.isnumberic():\r\n     print(a+b)\r\n else: print('Nhap lai')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680789756108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-a=input('a=')\r\n-b=input('b=')\r\n+a=int(input('a='))\r\n+b=int(input('b='))\r\n if a.isnumberic() and b.isnumberic():\r\n     print(a+b)\r\n else: print('Nhap lai')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680789791391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n a=int(input('a='))\r\n b=int(input('b='))\r\n-if a.isnumberic() and b.isnumberic():\r\n+if a.isnumeric() and b.isnumeric():\r\n     print(a+b)\r\n else: print('Nhap lai')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680789809239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-a=int(input('a='))\r\n-b=int(input('b='))\r\n+a=input('a='))\r\n+b=input('b='))\r\n if a.isnumeric() and b.isnumeric():\r\n     print(a+b)\r\n else: print('Nhap lai')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680789817842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-a=input('a='))\r\n-b=input('b='))\r\n+a=input('a=')\r\n+b=input('b=')\r\n if a.isnumeric() and b.isnumeric():\r\n     print(a+b)\r\n else: print('Nhap lai')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680789856990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n a=input('a=')\r\n b=input('b=')\r\n if a.isnumeric() and b.isnumeric():\r\n-    print(a+b)\r\n+    print(int(a)+int(b))\r\n else: print('Nhap lai')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1680789718435,
+            "name": "Commit-0",
+            "content": "a=input('a=')\r\nb=input('b=')\r\nif (a and b).isnumberic():\r\n    print(a+b)\r\nelse: print('Nhap lai')"
+        }
+    ]
+}

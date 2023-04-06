@@ -1,3 +1,4 @@
+# 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
 names = [1, 2, 3, 2, 4, 5]
 names.append(6)  # thêm 6 vào cuối dãy names
 print(names)

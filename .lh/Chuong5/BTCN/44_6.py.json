@@ -1,0 +1,106 @@
+{
+    "sourceFile": "Chuong5/BTCN/44_6.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1680750412546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680750473954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n A=[]\r\n-B=[]\r\n-n=int(input('n='))\r\n-for i in range(1,n+1):\r\n+for i in range(10):\r\n     A+=[int(input())]\r\n-for i in range(0,n+1,2):\r\n+B=A\r\n+for i in range(0,len(A)+1,2):\r\n     B[i] = A[i+1]\r\n     B[i+1] = A[i]\r\n print(B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680750530861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n A=[]\r\n-for i in range(10):\r\n+for j in range(10):\r\n     A+=[int(input())]\r\n B=A\r\n for i in range(0,len(A)+1,2):\r\n     B[i] = A[i+1]\r\n"
+                },
+                {
+                    "date": 1680750573332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n A=[]\r\n for j in range(10):\r\n     A+=[int(input())]\r\n B=A\r\n-for i in range(0,len(A)+1,2):\r\n+for i in range(0,len(A)-2,2):\r\n     B[i] = A[i+1]\r\n     B[i+1] = A[i]\r\n print(B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680750673244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n B=A\r\n for i in range(0,len(A)-2,2):\r\n     B[i] = A[i+1]\r\n     B[i+1] = A[i]\r\n-print(B)\n\\ No newline at end of file\n+print(B)\r\n+print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680750712648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n A=[]\r\n for j in range(10):\r\n     A+=[int(input())]\r\n B=A\r\n+print(A)\r\n+print(B)\r\n for i in range(0,len(A)-2,2):\r\n     B[i] = A[i+1]\r\n     B[i+1] = A[i]\r\n\\ No newline at end of file\n-print(B)\r\n-print(A)\n+print(B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680750756144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n     A+=[int(input())]\r\n B=A\r\n print(A)\r\n print(B)\r\n-for i in range(0,len(A)-2,2):\r\n+for i in range(0,len(A)-1,2):\r\n     B[i] = A[i+1]\r\n     B[i+1] = A[i]\r\n print(B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680750812799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n B=A\r\n print(A)\r\n print(B)\r\n for i in range(0,len(A)-1,2):\r\n+    B[i+1] = A[i]\r\n     B[i] = A[i+1]\r\n-    B[i+1] = A[i]\r\n print(B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680750851294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,7 @@\n print(A)\r\n print(B)\r\n for i in range(0,len(A)-1,2):\r\n     B[i+1] = A[i]\r\n+for i in range(0,len(B)-1,2):\r\n     B[i] = A[i+1]\r\n print(B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680750894257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n print(A)\r\n print(B)\r\n for i in range(0,len(A)-1,2):\r\n     B[i+1] = A[i]\r\n+    print(B)\r\n for i in range(0,len(B)-1,2):\r\n     B[i] = A[i+1]\r\n\\ No newline at end of file\n-print(B)\n+    print(B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680751032425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n A=[]\r\n for j in range(10):\r\n     A+=[int(input())]\r\n B=A\r\n+C=A\r\n print(A)\r\n print(B)\r\n for i in range(0,len(A)-1,2):\r\n     B[i+1] = A[i]\r\n     print(B)\r\n for i in range(0,len(B)-1,2):\r\n-    B[i] = A[i+1]\r\n+    B[i] = C[i+1]\r\n     print(B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680751080310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,8 @@\n A=[]\r\n for j in range(10):\r\n     A+=[int(input())]\r\n B=A\r\n-C=A\r\n-print(A)\r\n-print(B)\r\n for i in range(0,len(A)-1,2):\r\n     B[i+1] = A[i]\r\n-    print(B)\r\n-for i in range(0,len(B)-1,2):\r\n-    B[i] = C[i+1]\r\n-    print(B)\n\\ No newline at end of file\n+    B[i] = A[i+1]\r\n+\r\n"
+                },
+                {
+                    "date": 1680751106861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n A=[]\r\n-for j in range(10):\r\n+for j in range(4):\r\n     A+=[int(input())]\r\n B=A\r\n for i in range(0,len(A)-1,2):\r\n     B[i+1] = A[i]\r\n     B[i] = A[i+1]\r\n+print(B)\r\n \r\n"
+                },
+                {
+                    "date": 1680751119439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n for j in range(4):\r\n     A+=[int(input())]\r\n B=A\r\n for i in range(0,len(A)-1,2):\r\n-    B[i+1] = A[i]\r\n+    # B[i+1] = A[i]\r\n     B[i] = A[i+1]\r\n print(B)\r\n \r\n"
+                },
+                {
+                    "date": 1680751137131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,7 @@\n B=A\r\n for i in range(0,len(A)-1,2):\r\n     # B[i+1] = A[i]\r\n     B[i] = A[i+1]\r\n+    B[i+1] = A[i]\r\n print(B)\r\n \r\n"
+                },
+                {
+                    "date": 1680751172032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n B=A\r\n for i in range(0,len(A)-1,2):\r\n     # B[i+1] = A[i]\r\n     B[i] = A[i+1]\r\n+for j in range(0,len(B)-1,2):\r\n     B[i+1] = A[i]\r\n print(B)\r\n \r\n"
+                },
+                {
+                    "date": 1680751196665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,10 @@\n A=[]\r\n for j in range(4):\r\n     A+=[int(input())]\r\n B=A\r\n-for i in range(0,len(A)-1,2):\r\n+for i in range(0,len(A)-2,2):\r\n     # B[i+1] = A[i]\r\n     B[i] = A[i+1]\r\n-for j in range(0,len(B)-1,2):\r\n     B[i+1] = A[i]\r\n print(B)\r\n \r\n"
+                },
+                {
+                    "date": 1680751222098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n A=[]\r\n for j in range(4):\r\n     A+=[int(input())]\r\n B=A\r\n-for i in range(0,len(A)-2,2):\r\n-    # B[i+1] = A[i]\r\n+for i in range(0,4,2):\r\n     B[i] = A[i+1]\r\n     B[i+1] = A[i]\r\n print(B)\r\n \r\n"
+                },
+                {
+                    "date": 1680751338144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n A=[]\r\n for j in range(4):\r\n     A+=[int(input())]\r\n B=A\r\n-for i in range(0,4,2):\r\n+for i in range(0,len(A)-2,2):\r\n     B[i] = A[i+1]\r\n     B[i+1] = A[i]\r\n print(B)\r\n \r\n"
+                },
+                {
+                    "date": 1680752296791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n A=[]\r\n for j in range(4):\r\n     A+=[int(input())]\r\n-B=A\r\n+B=[]\r\n for i in range(0,len(A)-2,2):\r\n     B[i] = A[i+1]\r\n     B[i+1] = A[i]\r\n print(B)\r\n"
+                },
+                {
+                    "date": 1680752327712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n A=[]\r\n for j in range(4):\r\n     A+=[int(input())]\r\n-B=[]\r\n+B=A.sort()\r\n for i in range(0,len(A)-2,2):\r\n     B[i] = A[i+1]\r\n     B[i+1] = A[i]\r\n print(B)\r\n"
+                },
+                {
+                    "date": 1680752385323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n A=[]\r\n for j in range(4):\r\n     A+=[int(input())]\r\n-B=A.sort()\r\n+B=A\r\n for i in range(0,len(A)-2,2):\r\n     B[i] = A[i+1]\r\n     B[i+1] = A[i]\r\n print(B)\r\n"
+                },
+                {
+                    "date": 1680752424122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n A=[]\r\n for j in range(4):\r\n     A+=[int(input())]\r\n B=A\r\n-for i in range(0,len(A)-2,2):\r\n-    B[i] = A[i+1]\r\n-    B[i+1] = A[i]\r\n+for i in range(0,len(A)-1,2):\r\n+    B[i],B[i+1] = A[i+1], A[i]\r\n print(B)\r\n \r\n"
+                }
+            ],
+            "date": 1680750412546,
+            "name": "Commit-0",
+            "content": "A=[]\r\nB=[]\r\nn=int(input('n='))\r\nfor i in range(1,n+1):\r\n    A+=[int(input())]\r\nfor i in range(0,n+1,2):\r\n    B[i] = A[i+1]\r\n    B[i+1] = A[i]\r\nprint(B)"
+        }
+    ]
+}

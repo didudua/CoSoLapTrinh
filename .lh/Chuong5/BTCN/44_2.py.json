@@ -1,0 +1,34 @@
+{
+    "sourceFile": "Chuong5/BTCN/44_2.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1680748715696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680748838009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n     for i in range(1,n+1):\r\n         L+=[int(input())]\r\n     return L\r\n def Search(L):\r\n-    max=L.max()\r\n-    min=L.min()\r\n+    max=max(L)\r\n+    min=min(L)\r\n     return max,min\r\n def Output(max,min):\r\n     print(f'{max} {min}')\r\n max,min=Search(Input())\r\n"
+                },
+                {
+                    "date": 1680748867987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n     min=min(L)\r\n     return max,min\r\n def Output(max,min):\r\n     print(f'{max} {min}')\r\n-max,min=Search(Input())\r\n+L=input()\r\n+max,min=Search(L)\r\n Output(max,min)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680748896407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n     min=min(L)\r\n     return max,min\r\n def Output(max,min):\r\n     print(f'{max} {min}')\r\n-L=input()\r\n+L=Input()\r\n max,min=Search(L)\r\n Output(max,min)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680749028460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n     for i in range(1,n+1):\r\n         L+=[int(input())]\r\n     return L\r\n def Search(L):\r\n-    max=max(L)\r\n-    min=min(L)\r\n-    return max,min\r\n+    m=max(L)\r\n+    n=min(L)\r\n+    return m,n\r\n def Output(max,min):\r\n     print(f'{max} {min}')\r\n\\ No newline at end of file\n L=Input()\r\n-max,min=Search(L)\r\n-Output(max,min)\n+m,n=Search(L)\r\n+Output(m,n)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1680748715696,
+            "name": "Commit-0",
+            "content": "def Input():\r\n    L=[]\r\n    n=int(input('n='))\r\n    for i in range(1,n+1):\r\n        L+=[int(input())]\r\n    return L\r\ndef Search(L):\r\n    max=L.max()\r\n    min=L.min()\r\n    return max,min\r\ndef Output(max,min):\r\n    print(f'{max} {min}')\r\nmax,min=Search(Input())\r\nOutput(max,min)"
+        }
+    ]
+}
