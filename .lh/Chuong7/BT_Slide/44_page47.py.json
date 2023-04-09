@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Chuong7/BT_Slide/44_page47.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1680972883634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680972938637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,10 @@\n-st1=input()\r\n-st2=input()\r\n-st3=input()\r\n+st1=input('st1=')\r\n+st2=input('st2=')\r\n\\ No newline at end of file\n+st3=input('st3=')\r\n print('Vi tri xuat hien st2: ',st1.find(st2))\r\n-print('Xau ket qua: ',st1.replace(st2,st3))\n+print('Xau ket qua: ',st1.replace(st2,st3))\r\n+# st1=Toi hoc python, python la NNLT manh\r\n+# st2=python\r\n+# st3=Python\r\n+# Vi tri xuat hien st2: 8\r\n+# Xau ket qua: Toi hoc Python, Python la NNLT manh\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1680972883634,
+            "name": "Commit-0",
+            "content": "st1=input()\r\nst2=input()\r\nst3=input()\r\nprint('Vi tri xuat hien st2: ',st1.find(st2))\r\nprint('Xau ket qua: ',st1.replace(st2,st3))"
+        }
+    ]
+}

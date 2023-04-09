@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Chuong7/BT_Slide/44_page30.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1680790557871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680790726720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,13 @@\n-mk=input('mat khau:')\r\n-if len(mk)<8: print('Khong hop le')\r\n-else:\r\n-    if (x.isupper() for x in mk) and  (x.islower() for x in mk) and (x.isdigit() for x in mk):\r\n+while True:\r\n+    mk = input('Nhap mat khau: ')\r\n\\ No newline at end of file\n+    if len(mk) < 8:\r\n+        print('Khong hop le')\r\n+    elif not any(x.isupper() for x in mk):\r\n+        print('Khong hop le')\r\n+    elif not any(x.islower() for x in mk):\r\n+        print('Khong hop le')\r\n+    elif not any(x.isdigit() for x in mk):\r\n+        print('Khong hop le')\r\n+    else:\r\n         print('Hop le')\r\n-    else: print('Khong hop le')\n+        break\r\n"
+                }
+            ],
+            "date": 1680790557871,
+            "name": "Commit-0",
+            "content": "mk=input('mat khau:')\r\nif len(mk)<8: print('Khong hop le')\r\nelse:\r\n    if (x.isupper() for x in mk) and  (x.islower() for x in mk) and (x.isdigit() for x in mk):\r\n        print('Hop le')\r\n    else: print('Khong hop le')"
+        }
+    ]
+}

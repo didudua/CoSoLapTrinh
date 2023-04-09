@@ -1,0 +1,82 @@
+{
+    "sourceFile": "Chuong7/BT_Slide/44_page36.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1680791104337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680791115339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n Trăm----năm-biết-có---duyên---gì--hay--không.\r\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n-L.join(L.split('-'))\n\\ No newline at end of file\n+L.join(L.split('-'))\r\n+print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680791138155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n Trăm----năm-biết-có---duyên---gì--hay--không.\r\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n-L.join(L.split('-'))\r\n-print(L)\n\\ No newline at end of file\n+print(L.split('-'))\r\n+L.join()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680791180806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,7 @@\n Trăm----năm-biết-có---duyên---gì--hay--không.\r\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n-print(L.split('-'))\r\n-L.join()\n\\ No newline at end of file\n+L.split('-')\r\n+' '.join(L)\r\n+print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680791198249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n L.split('-')\r\n-' '.join(L)\r\n+'-'.join(L)\r\n print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680791224942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,5 @@\n Trăm----năm-biết-có---duyên---gì--hay--không.\r\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n-L.split('-')\r\n-'-'.join(L)\r\n-print(L)\n\\ No newline at end of file\n+L.split('---')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680791237495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n Trăm----năm-biết-có---duyên---gì--hay--không.\r\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n-L.split('---')\n\\ No newline at end of file\n+print(L.split('---'))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680791297699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n Trăm----năm-biết-có---duyên---gì--hay--không.\r\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n-print(L.split('---'))\n\\ No newline at end of file\n+print(L.split('----'))\r\n+print(' '.join(L))\r\n"
+                },
+                {
+                    "date": 1680791363376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n print(L.split('----'))\r\n-print(' '.join(L))\r\n+print('='.join(L))\r\n"
+                },
+                {
+                    "date": 1680791375109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n print(L.split('----'))\r\n-print('='.join(L))\r\n+print(' '.join(L))\r\n"
+                },
+                {
+                    "date": 1680791400387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,5 @@\n Trăm----năm-biết-có---duyên---gì--hay--không.\r\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n-print(L.split('----'))\r\n-print(' '.join(L))\r\n+print(' '.join(L.split('----')))\r\n"
+                },
+                {
+                    "date": 1680791621772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,14 @@\n Trăm----năm-biết-có---duyên---gì--hay--không.\r\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n-print(' '.join(L.split('----')))\r\n+while True:\r\n+    for i in L: \r\n+        if '-' not in L:\r\n+            print(L)\r\n+            break\r\n+    L=' '.join(L.split('----'))\r\n+    L=' '.join(L.split('---'))\r\n+    L=' '.join(L.split('--'))\r\n+    L=' '.join(L.split('-'))\r\n+    \r\n"
+                },
+                {
+                    "date": 1680791641880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,11 @@\n Trăm----năm-biết-có---duyên---gì--hay--không.\r\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n-while True:\r\n-    for i in L: \r\n-        if '-' not in L:\r\n-            print(L)\r\n-            break\r\n-    L=' '.join(L.split('----'))\r\n-    L=' '.join(L.split('---'))\r\n-    L=' '.join(L.split('--'))\r\n-    L=' '.join(L.split('-'))\r\n+\r\n+L=' '.join(L.split('----'))\r\n+L=' '.join(L.split('---'))\r\n+L=' '.join(L.split('--'))\r\n+L=' '.join(L.split('-'))\r\n+print(L)\r\n     \r\n"
+                },
+                {
+                    "date": 1680791720791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n \r\n-L=' '.join(L.split('----'))\r\n+L=''.join(L.split('----'))\r\n L=' '.join(L.split('---'))\r\n L=' '.join(L.split('--'))\r\n L=' '.join(L.split('-'))\r\n print(L)\r\n"
+                },
+                {
+                    "date": 1680791758311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n L=''.join(L.split('----'))\r\n L=' '.join(L.split('---'))\r\n L=' '.join(L.split('--'))\r\n L=' '.join(L.split('-'))\r\n-print(L)\r\n+print(L[1:])\r\n     \r\n"
+                },
+                {
+                    "date": 1680791771539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n L=''.join(L.split('----'))\r\n L=' '.join(L.split('---'))\r\n L=' '.join(L.split('--'))\r\n L=' '.join(L.split('-'))\r\n-print(L[1:])\r\n+print(L[2:])\r\n     \r\n"
+                },
+                {
+                    "date": 1680791818004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,5 @@\n L=''.join(L.split('----'))\r\n L=' '.join(L.split('---'))\r\n L=' '.join(L.split('--'))\r\n L=' '.join(L.split('-'))\r\n-print(L[2:])\r\n-    \r\n+print(L[2:])\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1680791104337,
+            "name": "Commit-0",
+            "content": "L='''\r\n--Người---đâu-gặp---gỡ-làm-chi---\r\nTrăm----năm-biết-có---duyên---gì--hay--không.\r\nNgổn-ngang---trăm-mối---bên---lòng----\r\n----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n'''\r\nL.join(L.split('-'))"
+        }
+    ]
+}
