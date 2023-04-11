@@ -1,15 +1,20 @@
+def nhap():
+    list=[]
+    while len(list)<=9:
+        n= int(input())
+        list=list+[n]
+    x=int(input('x='))
+    for i in range(len(list)):
+        if list[i]==5: 
+            list[i]=x
+    return list,x
+def thay(list,x):
+    if x in list:
+        list=[n for n in list if n!=x]
+    return list
 print('Nhap 10 so nguyen:')
-num=[]
-while len(num)<=9:
-    n= int(input())
-    num=num+[n]
-x=int(input('So nguyen X: '))
-for i in range(len(num)):
-    if num[i]==5: 
-        num[i]=x
-print(num)
-if x in num:
-    num=[n for n in num if n!=x]
-    # num = [(for)chay n trong day num if n khac x thi in n]
-    print(num)
-    
+list,x=nhap()
+print('Cau a:')
+print(list)
+print('cau b:')
+print(thay(list,x))

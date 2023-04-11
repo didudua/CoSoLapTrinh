@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 22,
+            "activePatchIndex": 28,
             "patches": [
                 {
                     "date": 1678005825037,
@@ -96,6 +96,30 @@
                 {
                     "date": 1678008027211,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n         num[i]=x\r\n print(num)\r\n if x in num:\r\n     num=[n for n in num if n!=x]\r\n+    # num = [(for)chay n trong day num if n khac x thi in n]\r\n     print(num)\r\n     \r\n"
+                },
+                {
+                    "date": 1681184320761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n print('Nhap 10 so nguyen:')\r\n-num=[]\r\n-while len(num)<=9:\r\n+list=[]\r\n+while len(list)<=9:\r\n     n= int(input())\r\n-    num=num+[n]\r\n+    list=list+[n]\r\n x=int(input('So nguyen X: '))\r\n-for i in range(len(num)):\r\n-    if num[i]==5: \r\n-        num[i]=x\r\n-print(num)\r\n-if x in num:\r\n-    num=[n for n in num if n!=x]\r\n-    # num = [(for)chay n trong day num if n khac x thi in n]\r\n-    print(num)\r\n+for i in range(len(list)):\r\n+    if list[i]==5: \r\n+        list[i]=x\r\n+print(list)\r\n+if x in list:\r\n+    list=[n for n in list if n!=x]\r\n+    # list = [(for)chay n trong day list if n khac x thi in n]\r\n+    print(list)\r\n     \r\n"
+                },
+                {
+                    "date": 1681184339198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,6 @@\n         list[i]=x\r\n print(list)\r\n if x in list:\r\n     list=[n for n in list if n!=x]\r\n-    # list = [(for)chay n trong day list if n khac x thi in n]\r\n     print(list)\r\n     \r\n"
+                },
+                {
+                    "date": 1681184608919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,20 @@\n+def nhap():\r\n+    list=[]\r\n+    while len(list)<=9:\r\n+        n= int(input())\r\n+        list=list+[n]\r\n+    x=int(input('So nguyen X: '))\r\n+    for i in range(len(list)):\r\n+        if list[i]==5: \r\n+            list[i]=x\r\n+    return list,x\r\n+def thay(list,x):\r\n+    if x in list:\r\n+        list=[n for n in list if n!=x]\r\n+    return list\r\n print('Nhap 10 so nguyen:')\r\n-list=[]\r\n-while len(list)<=9:\r\n-    n= int(input())\r\n-    list=list+[n]\r\n-x=int(input('So nguyen X: '))\r\n-for i in range(len(list)):\r\n-    if list[i]==5: \r\n-        list[i]=x\r\n+list,x=nhap()\r\n+print('Cau a')\r\n print(list)\r\n-if x in list:\r\n-    list=[n for n in list if n!=x]\r\n-    print(list)\r\n-    \r\n+print('cau b')\r\n+print(thay(nhap()))\r\n"
+                },
+                {
+                    "date": 1681184650186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,5 @@\n list,x=nhap()\r\n print('Cau a')\r\n print(list)\r\n print('cau b')\r\n-print(thay(nhap()))\r\n+print(thay(list,x))\r\n"
+                },
+                {
+                    "date": 1681184778558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n def thay(list,x):\r\n     if x in list:\r\n         list=[n for n in list if n!=x]\r\n     return list\r\n-print('Nhap 10 so nguyen:')\r\n+print('x=')\r\n list,x=nhap()\r\n-print('Cau a')\r\n+print('Cau a:')\r\n print(list)\r\n-print('cau b')\r\n+print('cau b:')\r\n print(thay(list,x))\r\n"
+                },
+                {
+                    "date": 1681184796664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,18 +2,18 @@\n     list=[]\r\n     while len(list)<=9:\r\n         n= int(input())\r\n         list=list+[n]\r\n-    x=int(input('So nguyen X: '))\r\n+    x=int(input('x='))\r\n     for i in range(len(list)):\r\n         if list[i]==5: \r\n             list[i]=x\r\n     return list,x\r\n def thay(list,x):\r\n     if x in list:\r\n         list=[n for n in list if n!=x]\r\n     return list\r\n-print('x=')\r\n+print('Nhap 10 so nguyen:')\r\n list,x=nhap()\r\n print('Cau a:')\r\n print(list)\r\n print('cau b:')\r\n"
                 }
             ],
             "date": 1678005825036,

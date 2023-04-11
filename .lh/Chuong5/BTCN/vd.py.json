@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 41,
+            "activePatchIndex": 45,
             "patches": [
                 {
                     "date": 1678161788538,
@@ -172,6 +172,22 @@
                 {
                     "date": 1680583640625,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n matrix = [\"An\",[4,5,6]]\r\n print(matrix)\r\n # s='123,456,789'\r\n # print(*(x[0] for x in s.split(',')))\r\n-print(matrix[-2:-2])\r\n+print(matrix[-2:])\r\n+matrix[-1] =[123]\r\n+print(matrix)\r\n"
+                },
+                {
+                    "date": 1681183013988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,16 @@\n-matrix = [\"An\",[4,5,6]]\r\n-print(matrix)\r\n-# s='123,456,789'\r\n-# print(*(x[0] for x in s.split(',')))\r\n-print(matrix[-2:])\r\n-matrix[-1] =[123]\r\n-print(matrix)\r\n+# matrix = [\"An\",[4,5,6]]\r\n+# print(matrix)\r\n+# # s='123,456,789'\r\n+# # print(*(x[0] for x in s.split(',')))\r\n+# print(matrix[-2:])\r\n+# matrix[-1] =[123]\r\n+# print(matrix)\r\n+\r\n+myPets = ['Zophie', 'Pooka', 'Fat-tail']\r\n+print('Nhập tên:')\r\n+name = input()\r\n+if name not in myPets:\r\n+    myPets+=name\r\n+    print(name,'Đã được bổ xung')\r\n+else:\r\n+ print(name + ' is my pet.')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681183031518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,7 @@\n name = input()\r\n if name not in myPets:\r\n     myPets+=name\r\n     print(name,'Đã được bổ xung')\r\n+    print(myPets)\r\n else:\r\n  print(name + ' is my pet.')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681183053835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n myPets = ['Zophie', 'Pooka', 'Fat-tail']\r\n print('Nhập tên:')\r\n name = input()\r\n if name not in myPets:\r\n-    myPets+=name\r\n+    myPets+=[name]\r\n     print(name,'Đã được bổ xung')\r\n     print(myPets)\r\n else:\r\n  print(name + ' is my pet.')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681183097811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n # print(matrix[-2:])\r\n # matrix[-1] =[123]\r\n # print(matrix)\r\n \r\n-myPets = ['Zophie', 'Pooka', 'Fat-tail']\r\n+myPets = ['Lan', 'Long', 'Ngoc']\r\n print('Nhập tên:')\r\n name = input()\r\n if name not in myPets:\r\n     myPets+=[name]\r\n"
                 }
             ],
             "date": 1678161788538,

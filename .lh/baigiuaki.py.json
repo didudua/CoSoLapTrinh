@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 21,
+            "activePatchIndex": 22,
             "patches": [
                 {
                     "date": 1679194729817,
@@ -92,6 +92,10 @@
                 {
                     "date": 1679199165420,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,14 +30,14 @@\n #   u = n % 100\r\n #   s = (u % 10) + (u // 10)\r\n #   print(s)\r\n # cau5\r\n-n=int(input())\r\n-u=0\r\n-if n>=0 and n<=10**6:\r\n- for i in range(2,n+1,2):\r\n-    u+=i\r\n- print(u)\r\n+# n=int(input())\r\n+# u=0\r\n+# if n>=0 and n<=10**6:\r\n+#  for i in range(2,n+1,2):\r\n+#     u+=i\r\n+#  print(u)\r\n # cau3\r\n # a...b=n\r\n # neu ko co : NO\r\n # a=int(input())\r\n"
+                },
+                {
+                    "date": 1681037702358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+# 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\r\n # cau1\r\n # a=int(input())\r\n # b=int(input())\r\n # u=0\r\n"
                 }
             ],
             "date": 1679194729817,
