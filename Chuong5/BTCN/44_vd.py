@@ -6,12 +6,12 @@
 # matrix[-1] =[123]
 # print(matrix)
 
-myPets = ['Lan', 'Long', 'Ngoc']
-print('Nhập tên:')
-name = input()
-if name not in myPets:
-    myPets+=[name]
-    print(name,'Đã được bổ xung')
-    print(myPets)
-else:
- print(name + ' is my pet.')
+# myPets = ['Lan', 'Long', 'Ngoc']
+# print('Nhập tên:')
+# name = input()
+# if name not in myPets:
+#     myPets+=[name]
+#     print(name,'Đã được bổ xung')
+#     print(myPets)
+# else:
+#  print(name + ' is my pet.')
