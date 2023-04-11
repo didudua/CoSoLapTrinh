@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Chuong5/BTCN/44_vd.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1681188256150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681188543165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,6 @@\n names.append(6)\r\n print(names)\r\n names.insert(0,7)\r\n print(names)\r\n-names.insert(-1,8)\r\n+names.insert(7,8)\r\n print(names)\r\n"
+                },
+                {
+                    "date": 1681189027805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,11 +14,10 @@\n #     print(name,'Đã được bổ xung')\r\n #     print(myPets)\r\n # else:\r\n #  print(name + ' is my pet.')\r\n-names = [1, 2, 3, 4, 5, 6]\r\n-names.append(6)\r\n-print(names)\r\n-names.insert(0,7)\r\n-print(names)\r\n-names.insert(7,8)\r\n-print(names)\r\n+names = ['An','Nam','Binh','Ngoc']\r\n+x1=names.pop(0)\r\n+x2=names.pop(-1)\r\n+print(x1)\r\n+print(x2)\r\n+print(names)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681195201292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,4 @@\n #     print(name,'Đã được bổ xung')\r\n #     print(myPets)\r\n # else:\r\n #  print(name + ' is my pet.')\r\n-names = ['An','Nam','Binh','Ngoc']\r\n-x1=names.pop(0)\r\n-x2=names.pop(-1)\r\n-print(x1)\r\n-print(x2)\r\n-print(names)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1681188256150,
+            "name": "Commit-0",
+            "content": "# matrix = [\"An\",[4,5,6]]\r\n# print(matrix)\r\n# # s='123,456,789'\r\n# # print(*(x[0] for x in s.split(',')))\r\n# print(matrix[-2:])\r\n# matrix[-1] =[123]\r\n# print(matrix)\r\n\r\n# myPets = ['Lan', 'Long', 'Ngoc']\r\n# print('Nhập tên:')\r\n# name = input()\r\n# if name not in myPets:\r\n#     myPets+=[name]\r\n#     print(name,'Đã được bổ xung')\r\n#     print(myPets)\r\n# else:\r\n#  print(name + ' is my pet.')\r\nnames = [1, 2, 3, 4, 5, 6]\r\nnames.append(6)\r\nprint(names)\r\nnames.insert(0,7)\r\nprint(names)\r\nnames.insert(-1,8)\r\nprint(names)\r\n"
+        }
+    ]
+}

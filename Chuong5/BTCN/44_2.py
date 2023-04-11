@@ -5,11 +5,14 @@ def Input():
         L+=[int(input())]
     return L
 def Search(L):
-    m=max(L)
-    n=min(L)
-    return m,n
+    max=L[0]
+    min=L[0]
+    for i in L:
+        if i>max: max=i
+        if i<min: min=i
+    return max,min
 def Output(max,min):
     print(f'{max} {min}')
 L=Input()
-m,n=Search(L)
-Output(m,n)
+max,min=Search(L)
+Output(max,min)
