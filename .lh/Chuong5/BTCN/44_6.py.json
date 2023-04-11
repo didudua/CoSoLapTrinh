@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 22,
+            "activePatchIndex": 24,
             "patches": [
                 {
                     "date": 1680750412546,
@@ -96,6 +96,14 @@
                 {
                     "date": 1680752424122,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n A=[]\r\n for j in range(4):\r\n     A+=[int(input())]\r\n B=A\r\n-for i in range(0,len(A)-2,2):\r\n-    B[i] = A[i+1]\r\n-    B[i+1] = A[i]\r\n+for i in range(0,len(A)-1,2):\r\n+    B[i],B[i+1] = A[i+1], A[i]\r\n print(B)\r\n \r\n"
+                },
+                {
+                    "date": 1681195242812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n A=[]\r\n-for j in range(4):\r\n+for j in range(10):\r\n     A+=[int(input())]\r\n B=A\r\n for i in range(0,len(A)-1,2):\r\n     B[i],B[i+1] = A[i+1], A[i]\r\n"
+                },
+                {
+                    "date": 1681195257380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n A=[]\r\n for j in range(10):\r\n     A+=[int(input())]\r\n B=A\r\n-for i in range(0,len(A)-1,2):\r\n+for i in range(0,len(A),2):\r\n     B[i],B[i+1] = A[i+1], A[i]\r\n print(B)\r\n \r\n"
                 }
             ],
             "date": 1680750412546,
