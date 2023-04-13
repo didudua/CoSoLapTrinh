@@ -1,0 +1,122 @@
+{
+    "sourceFile": "OnTapCuoiKy/44_B1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1681197527522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681197615736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n L='122343678467'\r\n def xet(L):\r\n     A=''\r\n     for i in range(0,len(L),2):\r\n-        if L[i]%2==0 and L[i+1]%2!=0:\r\n+        if int(L[i])%2==0 and int(L[i+1])%2!=0:\r\n             A+=L[i]+L[i+1]\r\n     return A\r\n print(xet(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681197965370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,5 @@\n     for i in range(0,len(L),2):\r\n         if int(L[i])%2==0 and int(L[i+1])%2!=0:\r\n             A+=L[i]+L[i+1]\r\n     return A\r\n-print(xet(L))\n\\ No newline at end of file\n+print(xet(' '.join(L)))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681197989198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,5 @@\n     for i in range(0,len(L),2):\r\n         if int(L[i])%2==0 and int(L[i+1])%2!=0:\r\n             A+=L[i]+L[i+1]\r\n     return A\r\n-print(xet(' '.join(L)))\n\\ No newline at end of file\n+print(xet(' '.join(xet(L))))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681198017712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,5 @@\n     for i in range(0,len(L),2):\r\n         if int(L[i])%2==0 and int(L[i+1])%2!=0:\r\n             A+=L[i]+L[i+1]\r\n     return A\r\n-print(xet(' '.join(xet(L))))\n\\ No newline at end of file\n+print(' '.join(xet(L)))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681199036875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,17 @@\n # output: chuoi chan le dai nhat: 2 3 4 3 6 7 8\r\n        # do dai chuoi: 7\r\n L='122343678467'\r\n def xet(L):\r\n-    A=''\r\n-    for i in range(0,len(L),2):\r\n-        if int(L[i])%2==0 and int(L[i+1])%2!=0:\r\n-            A+=L[i]+L[i+1]\r\n-    return A\r\n-print(' '.join(xet(L)))\n\\ No newline at end of file\n+    n = 1\r\n+    for i in range(len(L)-1):\r\n+        u = 1\r\n+        for j in range(i+1, len(L)):\r\n+            if (L[j] % 2 == 0 and L[j-1] % 2 != 0) or (L[j] % 2 != 0 and L[j-1] % 2 == 0):\r\n+                u += 1\r\n+            else:\r\n+                break\r\n+        if u > n:\r\n+            n = u\r\n+    return n\r\n+\r\n+print(xet(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681199110307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     n = 1\r\n     for i in range(len(L)-1):\r\n         u = 1\r\n         for j in range(i+1, len(L)):\r\n-            if (L[j] % 2 == 0 and L[j-1] % 2 != 0) or (L[j] % 2 != 0 and L[j-1] % 2 == 0):\r\n+            if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n             else:\r\n                 break\r\n         if u > n:\r\n"
+                },
+                {
+                    "date": 1681199389930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,18 +4,21 @@\n # input: 1 2 2 3 4 3 6 7 8 4 6 7\r\n # output: chuoi chan le dai nhat: 2 3 4 3 6 7 8\r\n        # do dai chuoi: 7\r\n L='122343678467'\r\n+A=''\r\n def xet(L):\r\n     n = 1\r\n     for i in range(len(L)-1):\r\n         u = 1\r\n         for j in range(i+1, len(L)):\r\n             if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n+                A+=L[j]\r\n             else:\r\n                 break\r\n         if u > n:\r\n             n = u\r\n+    print(A)\r\n     return n\r\n \r\n print(xet(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681199402582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n # input: 1 2 2 3 4 3 6 7 8 4 6 7\r\n # output: chuoi chan le dai nhat: 2 3 4 3 6 7 8\r\n        # do dai chuoi: 7\r\n L='122343678467'\r\n-A=''\r\n def xet(L):\r\n+    A=''\r\n     n = 1\r\n     for i in range(len(L)-1):\r\n         u = 1\r\n         for j in range(i+1, len(L)):\r\n"
+                },
+                {
+                    "date": 1681199445940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n             else:\r\n                 break\r\n         if u > n:\r\n             n = u\r\n-    print(A)\r\n+            print(A)\r\n     return n\r\n \r\n print(xet(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681199470352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,7 @@\n             else:\r\n                 break\r\n         if u > n:\r\n             n = u\r\n-            print(A)\r\n     return n\r\n \r\n print(xet(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681199762975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,12 @@\n             if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n                 A+=L[j]\r\n             else:\r\n+                A.clear()\r\n                 break\r\n         if u > n:\r\n+            print(A)\r\n             n = u\r\n     return n\r\n \r\n print(xet(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681199783013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n             if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n                 A+=L[j]\r\n             else:\r\n-                A.clear()\r\n                 break\r\n         if u > n:\r\n             print(A)\r\n             n = u\r\n"
+                },
+                {
+                    "date": 1681199842711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         u = 1\r\n         for j in range(i+1, len(L)):\r\n             if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n-                A+=L[j]\r\n+                A+=L[j] +L[j-1]\r\n             else:\r\n                 break\r\n         if u > n:\r\n             print(A)\r\n"
+                },
+                {
+                    "date": 1681199871029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,18 +3,18 @@\n # rồi tìm ra độ dài của chuỗi dài nhất\r\n # input: 1 2 2 3 4 3 6 7 8 4 6 7\r\n # output: chuoi chan le dai nhat: 2 3 4 3 6 7 8\r\n        # do dai chuoi: 7\r\n-L='122343678467'\r\n+L='12343678467'\r\n def xet(L):\r\n     A=''\r\n     n = 1\r\n     for i in range(len(L)-1):\r\n         u = 1\r\n         for j in range(i+1, len(L)):\r\n             if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n-                A+=L[j] +L[j-1]\r\n+                A+=L[j]\r\n             else:\r\n                 break\r\n         if u > n:\r\n             print(A)\r\n"
+                },
+                {
+                    "date": 1681199893678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         u = 1\r\n         for j in range(i+1, len(L)):\r\n             if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n-                A+=L[j]\r\n+                A+=L[j-1]\r\n             else:\r\n                 break\r\n         if u > n:\r\n             print(A)\r\n"
+                },
+                {
+                    "date": 1681199920043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         u = 1\r\n         for j in range(i+1, len(L)):\r\n             if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n-                A+=L[j-1]\r\n+                A+=L[j]\r\n             else:\r\n                 break\r\n         if u > n:\r\n             print(A)\r\n"
+                },
+                {
+                    "date": 1681199929413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         u = 1\r\n         for j in range(i+1, len(L)):\r\n             if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n-                A+=L[j]\r\n+                A+=L[j]+L[j-1]\r\n             else:\r\n                 break\r\n         if u > n:\r\n             print(A)\r\n"
+                },
+                {
+                    "date": 1681199981714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,20 +5,17 @@\n # output: chuoi chan le dai nhat: 2 3 4 3 6 7 8\r\n        # do dai chuoi: 7\r\n L='12343678467'\r\n def xet(L):\r\n-    A=''\r\n     n = 1\r\n     for i in range(len(L)-1):\r\n         u = 1\r\n         for j in range(i+1, len(L)):\r\n             if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n-                A+=L[j]+L[j-1]\r\n             else:\r\n                 break\r\n         if u > n:\r\n-            print(A)\r\n             n = u\r\n     return n\r\n \r\n print(xet(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681200077652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n def xet(L):\r\n     n = 1\r\n     for i in range(len(L)-1):\r\n         u = 1\r\n-        for j in range(i+1, len(L)):\r\n-            if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n+        for j in range(i, len(L)):\r\n+            if (int(L[j]) % 2 == 0 and int(L[j+1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j+1]) % 2 == 0):\r\n                 u += 1\r\n             else:\r\n                 break\r\n         if u > n:\r\n"
+                },
+                {
+                    "date": 1681200124402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n def xet(L):\r\n     n = 1\r\n     for i in range(len(L)-1):\r\n         u = 1\r\n-        for j in range(i, len(L)):\r\n+        for j in range(i, len(L)+1):\r\n             if (int(L[j]) % 2 == 0 and int(L[j+1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j+1]) % 2 == 0):\r\n                 u += 1\r\n             else:\r\n                 break\r\n"
+                },
+                {
+                    "date": 1681200144445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n def xet(L):\r\n     n = 1\r\n     for i in range(len(L)-1):\r\n         u = 1\r\n-        for j in range(i, len(L)+1):\r\n-            if (int(L[j]) % 2 == 0 and int(L[j+1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j+1]) % 2 == 0):\r\n+        for j in range(i+1, len(L)):\r\n+            if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n                 u += 1\r\n             else:\r\n                 break\r\n         if u > n:\r\n"
+                },
+                {
+                    "date": 1681200234082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,8 @@\n             else:\r\n                 break\r\n         if u > n:\r\n             n = u\r\n+            print(n)\r\n     return n\r\n \r\n print(xet(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681200258248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n # rồi tìm ra độ dài của chuỗi dài nhất\r\n # input: 1 2 2 3 4 3 6 7 8 4 6 7\r\n # output: chuoi chan le dai nhat: 2 3 4 3 6 7 8\r\n        # do dai chuoi: 7\r\n-L='12343678467'\r\n+L='122343678467'\r\n def xet(L):\r\n     n = 1\r\n     for i in range(len(L)-1):\r\n         u = 1\r\n"
+                },
+                {
+                    "date": 1681200510522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,7 @@\n             else:\r\n                 break\r\n         if u > n:\r\n             n = u\r\n-            print(n)\r\n     return n\r\n \r\n print(xet(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681201910313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,18 +4,32 @@\n # input: 1 2 2 3 4 3 6 7 8 4 6 7\r\n # output: chuoi chan le dai nhat: 2 3 4 3 6 7 8\r\n        # do dai chuoi: 7\r\n L='122343678467'\r\n+# def xet(L):\r\n+#     n = 1\r\n+#     for i in range(len(L)-1):\r\n+#         u = 1\r\n+#         for j in range(i+1, len(L)):\r\n+#             if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n+#                 u += 1\r\n+#             else:\r\n+#                 break\r\n+#         if u > n:\r\n+#             n = u\r\n+#     return n\r\n def xet(L):\r\n-    n = 1\r\n-    for i in range(len(L)-1):\r\n-        u = 1\r\n-        for j in range(i+1, len(L)):\r\n-            if (int(L[j]) % 2 == 0 and int(L[j-1]) % 2 != 0) or (int(L[j]) % 2 != 0 and int(L[j-1]) % 2 == 0):\r\n-                u += 1\r\n-            else:\r\n-                break\r\n-        if u > n:\r\n-            n = u\r\n-    return n\r\n+    n = len(L)\r\n+    u = 1\r\n+    a = 1\r\n+    \r\n+    for i in range(1, n):\r\n+        if (int(L[i]) % 2 == 0 and int(L[i-1]) % 2 != 0) or (int(L[i]) % 2 != 0 and int(L[i-1]) % 2 == 0):\r\n+            a += 1\r\n+            u = max(u, a)\r\n+        else:\r\n+            a = 1\r\n+            \r\n+    return u\r\n \r\n+\r\n print(xet(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681202158649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,19 +17,16 @@\n #         if u > n:\r\n #             n = u\r\n #     return n\r\n def xet(L):\r\n-    n = len(L)\r\n     u = 1\r\n     a = 1\r\n     \r\n-    for i in range(1, n):\r\n+    for i in range(1, len(L)):\r\n         if (int(L[i]) % 2 == 0 and int(L[i-1]) % 2 != 0) or (int(L[i]) % 2 != 0 and int(L[i-1]) % 2 == 0):\r\n             a += 1\r\n             u = max(u, a)\r\n         else:\r\n             a = 1\r\n-            \r\n     return u\r\n \r\n-\r\n print(xet(L))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1681197527522,
+            "name": "Commit-0",
+            "content": "# cho một dãy số, xét tất cả trường hợp chuỗi các số\r\n# sao cho chuỗi đó số chẵn và số lẻ xen kẽ nhau\r\n# rồi tìm ra độ dài của chuỗi dài nhất\r\n# input: 1 2 2 3 4 3 6 7 8 4 6 7\r\n# output: chuoi chan le dai nhat: 2 3 4 3 6 7 8\r\n       # do dai chuoi: 7\r\nL='122343678467'\r\ndef xet(L):\r\n    A=''\r\n    for i in range(0,len(L),2):\r\n        if L[i]%2==0 and L[i+1]%2!=0:\r\n            A+=L[i]+L[i+1]\r\n    return A\r\nprint(xet(L))"
+        }
+    ]
+}

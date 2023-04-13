@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1680751508945,
@@ -28,6 +28,22 @@
                 {
                     "date": 1680751936957,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n     L+=[int(input())]\r\n for i in L:\r\n     if i in M: continue\r\n     else: M+=[i]\r\n-print(x for x in range(len(M)))\r\n-    \n\\ No newline at end of file\n+for i in M:\r\n+    print(i,end=' ')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681363805075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,8 @@\n     L+=[int(input())]\r\n for i in L:\r\n     if i in M: continue\r\n     else: M+=[i]\r\n-for i in M:\r\n-    print(i,end=' ')\n\\ No newline at end of file\n+# for i in M:\r\n+#     print(i,end=' ')\r\n+M.split(',')\r\n+print(M)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681363821073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n     if i in M: continue\r\n     else: M+=[i]\r\n # for i in M:\r\n #     print(i,end=' ')\r\n-M.split(',')\r\n+M=M.split(',')\r\n print(M)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681363981106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,5 @@\n     if i in M: continue\r\n     else: M+=[i]\r\n # for i in M:\r\n #     print(i,end=' ')\r\n-M=M.split(',')\r\n-print(M)\n\\ No newline at end of file\n+print(*M)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681364021958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n     if i in M: continue\r\n     else: M+=[i]\r\n # for i in M:\r\n #     print(i,end=' ')\r\n-print(*M)\n\\ No newline at end of file\n+print(*M) # chuyển list M thành chuỗi\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1680751508945,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 33,
             "patches": [
                 {
                     "date": 1678336105461,
@@ -36,6 +36,110 @@
                 {
                     "date": 1678718738365,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-L = [1, 2, 3, 4, 5, 6, 7,'@']\r\n+L = [1, 2, 3, 4, 5, 6, 7]\r\n \r\n def nhap():\r\n     x = input('nhap x: ')\r\n     k = int(input('vi tri k: '))\r\n@@ -22,9 +22,8 @@\n         return None\r\n \r\n #cau 3\r\n def delete(L, x):\r\n-# for i in L:\r\n     if x in L:\r\n         L.remove(x)\r\n     return L\r\n \r\n"
+                },
+                {
+                    "date": 1681365093806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n     return x, k, y\r\n \r\n def add(L, x, k):\r\n     if k > len(L):\r\n-        L.append(x) # them x vao vi tri cuoi cua day\r\n+        L=L+[x] # them x vao vi tri cuoi cua day\r\n     else:\r\n-        L.insert(k, x) # them x vao vi tri k cua day\r\n+        L=L[:k+1]+[x]+L[k+1:] # them x vao vi tri k cua day\r\n     return L\r\n \r\n #cau 2\r\n def search(L, x):\r\n"
+                },
+                {
+                    "date": 1681365160120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n def add(L, x, k):\r\n     if k > len(L):\r\n         L=L+[x] # them x vao vi tri cuoi cua day\r\n     else:\r\n-        L=L[:k+1]+[x]+L[k+1:] # them x vao vi tri k cua day\r\n+        L=L[:k+1]+[int(x)]+L[k+1:] # them x vao vi tri k cua day\r\n     return L\r\n \r\n #cau 2\r\n def search(L, x):\r\n"
+                },
+                {
+                    "date": 1681365216406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n def add(L, x, k):\r\n     if k > len(L):\r\n         L=L+[x] # them x vao vi tri cuoi cua day\r\n     else:\r\n-        L=L[:k+1]+[int(x)]+L[k+1:] # them x vao vi tri k cua day\r\n+        L=L[:k]+[int(x)]+L[k+1:] # them x vao vi tri k cua day\r\n     return L\r\n \r\n #cau 2\r\n def search(L, x):\r\n"
+                },
+                {
+                    "date": 1681365247271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n def add(L, x, k):\r\n     if k > len(L):\r\n         L=L+[x] # them x vao vi tri cuoi cua day\r\n     else:\r\n-        L=L[:k]+[int(x)]+L[k+1:] # them x vao vi tri k cua day\r\n+        L=L[:k]+[int(x)]+L[k:] # them x vao vi tri k cua day\r\n     return L\r\n \r\n #cau 2\r\n def search(L, x):\r\n"
+                },
+                {
+                    "date": 1681365288236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,10 @@\n def add(L, x, k):\r\n     if k > len(L):\r\n         L=L+[x] # them x vao vi tri cuoi cua day\r\n     else:\r\n+        A=L.insert(k, x)\r\n+        print(A)\r\n         L=L[:k]+[int(x)]+L[k:] # them x vao vi tri k cua day\r\n     return L\r\n \r\n #cau 2\r\n"
+                },
+                {
+                    "date": 1681365314761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,10 @@\n def add(L, x, k):\r\n     if k > len(L):\r\n         L=L+[x] # them x vao vi tri cuoi cua day\r\n     else:\r\n-        A=L.insert(k, x)\r\n+        A=L.copy()\r\n+        A.insert(k, x)\r\n         print(A)\r\n         L=L[:k]+[int(x)]+L[k:] # them x vao vi tri k cua day\r\n     return L\r\n \r\n"
+                },
+                {
+                    "date": 1681365476798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,23 +7,23 @@\n     return x, k, y\r\n \r\n def add(L, x, k):\r\n     if k > len(L):\r\n-        L=L+[x] # them x vao vi tri cuoi cua day\r\n+        L=L+[int(x)] # them x vao vi tri cuoi cua day\r\n     else:\r\n-        A=L.copy()\r\n-        A.insert(k, x)\r\n-        print(A)\r\n         L=L[:k]+[int(x)]+L[k:] # them x vao vi tri k cua day\r\n     return L\r\n \r\n #cau 2\r\n def search(L, x):\r\n     if x in L:\r\n         u = L.index(x)\r\n-        return u\r\n-    else:\r\n-        return None\r\n+        print(u)\r\n+    for i in range(len(L)):\r\n+        if L[i] == x:\r\n+            return i\r\n+        else:\r\n+            return None\r\n \r\n #cau 3\r\n def delete(L, x):\r\n     if x in L:\r\n"
+                },
+                {
+                    "date": 1681365536908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,11 +14,8 @@\n     return L\r\n \r\n #cau 2\r\n def search(L, x):\r\n-    if x in L:\r\n-        u = L.index(x)\r\n-        print(u)\r\n     for i in range(len(L)):\r\n         if L[i] == x:\r\n             return i\r\n         else:\r\n"
+                },
+                {
+                    "date": 1681365593063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n #cau 2\r\n def search(L, x):\r\n     for i in range(len(L)):\r\n-        if L[i] == x:\r\n+        if int(L[i]) == int(x):\r\n             return i\r\n         else:\r\n             return None\r\n \r\n"
+                },
+                {
+                    "date": 1681365668881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n def search(L, x):\r\n     for i in range(len(L)):\r\n         if int(L[i]) == int(x):\r\n             return i\r\n-        else:\r\n-            return None\r\n+    else:\r\n+        return None\r\n \r\n #cau 3\r\n def delete(L, x):\r\n     if x in L:\r\n"
+                },
+                {
+                    "date": 1681365763758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n #cau 2\r\n def search(L, x):\r\n     for i in range(len(L)):\r\n-        if int(L[i]) == int(x):\r\n+        if str(L[i]) == x:\r\n             return i\r\n     else:\r\n         return None\r\n \r\n"
+                },
+                {
+                    "date": 1681365807089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n     return x, k, y\r\n \r\n def add(L, x, k):\r\n     if k > len(L):\r\n-        L=L+[int(x)] # them x vao vi tri cuoi cua day\r\n+        L=L+[x] # them x vao vi tri cuoi cua day\r\n     else:\r\n-        L=L[:k]+[int(x)]+L[k:] # them x vao vi tri k cua day\r\n+        L=L[:k]+[x]+L[k:] # them x vao vi tri k cua day\r\n     return L\r\n \r\n #cau 2\r\n def search(L, x):\r\n"
+                },
+                {
+                    "date": 1681366099122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,15 @@\n         return None\r\n \r\n #cau 3\r\n def delete(L, x):\r\n-    if x in L:\r\n-        L.remove(x)\r\n-    return L\r\n+    # if x in L:\r\n+    #     L.remove(x)\r\n+    # return L\r\n+    for i in range(len(L)):\r\n+        if L[i] == x:\r\n+            L=L[:i]+L[i+1:]\r\n+        return L\r\n \r\n #cau4\r\n def count(L) :\r\n     return len(L)\r\n"
+                },
+                {
+                    "date": 1681366166188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     # return L\r\n     for i in range(len(L)):\r\n         if L[i] == x:\r\n             L=L[:i]+L[i+1:]\r\n-        return L\r\n+            return L\r\n \r\n #cau4\r\n def count(L) :\r\n     return len(L)\r\n"
+                },
+                {
+                    "date": 1681366194136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     # if x in L:\r\n     #     L.remove(x)\r\n     # return L\r\n     for i in range(len(L)):\r\n-        if L[i] == x:\r\n+        if str(L[i]) == x:\r\n             L=L[:i]+L[i+1:]\r\n             return L\r\n \r\n #cau4\r\n"
+                },
+                {
+                    "date": 1681366298690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,12 @@\n             return L\r\n \r\n #cau4\r\n def count(L) :\r\n-    return len(L)\r\n+    # return len(L)\r\n+    for i in L:\r\n+        U+=1\r\n+    return u\r\n \r\n #cau5\r\n def update(L, x, y):\r\n     if x in L:\r\n"
+                },
+                {
+                    "date": 1681366311889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,9 @@\n \r\n #cau4\r\n def count(L) :\r\n     # return len(L)\r\n+    u=0\r\n     for i in L:\r\n         U+=1\r\n     return u\r\n \r\n"
+                },
+                {
+                    "date": 1681366421587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n def count(L) :\r\n     # return len(L)\r\n     u=0\r\n     for i in L:\r\n-        U+=1\r\n+        u+=1\r\n     return u\r\n \r\n #cau5\r\n def update(L, x, y):\r\n"
+                },
+                {
+                    "date": 1681366874112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,10 +41,11 @@\n \r\n #cau5\r\n def update(L, x, y):\r\n     if x in L:\r\n-        L.insert(L.index(x), y)\r\n-        L.remove(x)\r\n+        # L.insert(L.index(x), y)\r\n+        # L.remove(x)\r\n+        L=delete(add(L,y,search(L,x)),x)\r\n     return L\r\n \r\n x, k, y = nhap()\r\n print('cau1')\r\n"
+                },
+                {
+                    "date": 1681367015094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,19 +47,14 @@\n         L=delete(add(L,y,search(L,x)),x)\r\n     return L\r\n \r\n x, k, y = nhap()\r\n-print('cau1')\r\n-L = add(L, x, k)\r\n-print(L)\r\n-print('cau2')\r\n-u = search(L, x)\r\n-print(u)\r\n-print('cau3')\r\n-L = delete(L, x)\r\n-print(L)\r\n-print('cau4')\r\n-c = count(L)\r\n-print(c)\r\n-print('cau5')\r\n-L = update(L, x, y)\r\n-print(L)\n\\ No newline at end of file\n+print('Cau1:')\r\n+print(add(L, x, k))\r\n+print('Cau2:')\r\n+print(search(L, x))\r\n+print('Cau3:')\r\n+print(delete(L, x))\r\n+print('Cau4:')\r\n+print(count(L))\r\n+print('Cau5:')\r\n+print(update(L, x, y))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681367086343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,14 +47,29 @@\n         L=delete(add(L,y,search(L,x)),x)\r\n     return L\r\n \r\n x, k, y = nhap()\r\n-print('Cau1:')\r\n-print(add(L, x, k))\r\n-print('Cau2:')\r\n-print(search(L, x))\r\n-print('Cau3:')\r\n-print(delete(L, x))\r\n-print('Cau4:')\r\n-print(count(L))\r\n-print('Cau5:')\r\n-print(update(L, x, y))\n\\ No newline at end of file\n+print('cau1')\r\n+L = add(L, x, k)\r\n+print(L)\r\n+print('cau2')\r\n+u = search(L, x)\r\n+print(u)\r\n+print('cau3')\r\n+L = delete(L, x)\r\n+print(L)\r\n+print('cau4')\r\n+c = count(L)\r\n+print(c)\r\n+print('cau5')\r\n+L = update(L, x, y)\r\n+print(L)\r\n+# print('Cau1:')\r\n+# print(add(L, x, k))\r\n+# print('Cau2:')\r\n+# print(search(L, x))\r\n+# print('Cau3:')\r\n+# print(delete(L, x))\r\n+# print('Cau4:')\r\n+# print(count(L))\r\n+# print('Cau5:')\r\n+# print(update(L, x, y))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681367164797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,12 +40,13 @@\n     return u\r\n \r\n #cau5\r\n def update(L, x, y):\r\n-    if x in L:\r\n-        # L.insert(L.index(x), y)\r\n-        # L.remove(x)\r\n-        L=delete(add(L,y,search(L,x)),x)\r\n+    for i in L:\r\n+        if str(x) == str(i) :\r\n+            # L.insert(L.index(x), y)\r\n+            # L.remove(x)\r\n+            L=delete(add(L,y,search(L,x)),x)\r\n     return L\r\n \r\n x, k, y = nhap()\r\n print('cau1')\r\n"
+                },
+                {
+                    "date": 1681367227502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,14 +63,14 @@\n print(c)\r\n print('cau5')\r\n L = update(L, x, y)\r\n print(L)\r\n-# print('Cau1:')\r\n-# print(add(L, x, k))\r\n-# print('Cau2:')\r\n-# print(search(L, x))\r\n-# print('Cau3:')\r\n-# print(delete(L, x))\r\n-# print('Cau4:')\r\n-# print(count(L))\r\n-# print('Cau5:')\r\n-# print(update(L, x, y))\n\\ No newline at end of file\n+print('Cau1:')\r\n+print(add(L, x, k))\r\n+print('Cau2:')\r\n+print(search(L, x))\r\n+print('Cau3:')\r\n+print(delete(L, x))\r\n+print('Cau4:')\r\n+print(count(L))\r\n+print('Cau5:')\r\n+print(update(L, x, y))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681367252680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,19 @@\n             L=delete(add(L,y,search(L,x)),x)\r\n     return L\r\n \r\n x, k, y = nhap()\r\n+print('Cau1:')\r\n+print(add(L, x, k))\r\n+print('Cau2:')\r\n+print(search(L, x))\r\n+print('Cau3:')\r\n+print(delete(L, x))\r\n+print('Cau4:')\r\n+print(count(L))\r\n+print('Cau5:')\r\n+print(update(L, x, y))\r\n+\r\n print('cau1')\r\n L = add(L, x, k)\r\n print(L)\r\n print('cau2')\r\n@@ -63,14 +74,4 @@\n print(c)\r\n print('cau5')\r\n L = update(L, x, y)\r\n print(L)\r\n-print('Cau1:')\r\n-print(add(L, x, k))\r\n-print('Cau2:')\r\n-print(search(L, x))\r\n-print('Cau3:')\r\n-print(delete(L, x))\r\n-print('Cau4:')\r\n-print(count(L))\r\n-print('Cau5:')\r\n-print(update(L, x, y))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681367300308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,30 +48,19 @@\n             L=delete(add(L,y,search(L,x)),x)\r\n     return L\r\n \r\n x, k, y = nhap()\r\n-print('Cau1:')\r\n-print(add(L, x, k))\r\n-print('Cau2:')\r\n-print(search(L, x))\r\n-print('Cau3:')\r\n-print(delete(L, x))\r\n-print('Cau4:')\r\n-print(count(L))\r\n-print('Cau5:')\r\n-print(update(L, x, y))\r\n-\r\n-print('cau1')\r\n+print('cau 1')\r\n L = add(L, x, k)\r\n print(L)\r\n-print('cau2')\r\n+print('cau 2')\r\n u = search(L, x)\r\n print(u)\r\n-print('cau3')\r\n+print('cau 3')\r\n L = delete(L, x)\r\n print(L)\r\n-print('cau4')\r\n+print('cau 4')\r\n c = count(L)\r\n print(c)\r\n-print('cau5')\r\n+print('cau 5')\r\n L = update(L, x, y)\r\n print(L)\r\n"
+                },
+                {
+                    "date": 1681367305616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,5 +62,5 @@\n c = count(L)\r\n print(c)\r\n print('cau 5')\r\n L = update(L, x, y)\r\n-print(L)\r\n+print(L)\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1678336105461,

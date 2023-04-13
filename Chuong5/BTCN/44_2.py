@@ -13,6 +13,5 @@ def Search(L):
     return max,min
 def Output(max,min):
     print(f'{max} {min}')
-L=Input()
-max,min=Search(L)
+max,min=Search(Input())
 Output(max,min)

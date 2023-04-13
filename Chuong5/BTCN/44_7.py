@@ -6,5 +6,6 @@ for i in range(1,n+1):
 for i in L:
     if i in M: continue
     else: M+=[i]
-for i in M:
-    print(i,end=' ')
+# for i in M:
+#     print(i,end=' ')
+print(*M) # chuyển list M thành chuỗi

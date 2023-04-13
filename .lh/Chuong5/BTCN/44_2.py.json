@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 8,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1680748715696,
@@ -40,6 +40,14 @@
                 {
                     "date": 1681195098330,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n     max=L[0]\r\n     min=L[0]\r\n     for i in L:\r\n         if i>max: max=i\r\n-    for i in L:\r\n         if i<min: min=i\r\n     return max,min\r\n def Output(max,min):\r\n     print(f'{max} {min}')\r\n"
+                },
+                {
+                    "date": 1681219473647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,6 @@\n         if i<min: min=i\r\n     return max,min\r\n def Output(max,min):\r\n     print(f'{max} {min}')\r\n-L=Input()\r\n-max,min=Search(L)\r\n-Output(max,min)\n\\ No newline at end of file\n+\r\n+Output(Search(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681219527430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n         if i<min: min=i\r\n     return max,min\r\n def Output(max,min):\r\n     print(f'{max} {min}')\r\n-\r\n-Output(Search(Input()))\n\\ No newline at end of file\n+max,min=Search(Input())\r\n+Output(max,min)\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1680748715696,
