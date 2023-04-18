@@ -1,0 +1,46 @@
+{
+    "sourceFile": "Chuong7/BT_Slide/44_page6.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1681793378936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681793421478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-print( r' \"Den Vau\" is a rap singer ' ' \\n He \\' s 32 years old \\n I want to become a rapper')\n\\ No newline at end of file\n+print( r'\"Den Vau\" is a rap singer' '\\n He\\'s 32 years old \\nI want to become a rapper')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681793432444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-print( r'\"Den Vau\" is a rap singer' '\\n He\\'s 32 years old \\nI want to become a rapper')\n\\ No newline at end of file\n+print( r'\"Den Vau\" is a rap singer''\\n He\\'s 32 years old \\nI want to become a rapper')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681793441532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-print( r'\"Den Vau\" is a rap singer''\\n He\\'s 32 years old \\nI want to become a rapper')\n\\ No newline at end of file\n+print( r'\"Den Vau\" is a rap singer\\n He\\'s 32 years old \\nI want to become a rapper')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681793457896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-print( r'\"Den Vau\" is a rap singer\\n He\\'s 32 years old \\nI want to become a rapper')\n\\ No newline at end of file\n+print( r'\"Den Vau\" is a rap singer''\\n He\\'s 32 years old \\nI want to become a rapper')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681793487714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-print( r'\"Den Vau\" is a rap singer''\\n He\\'s 32 years old \\nI want to become a rapper')\n\\ No newline at end of file\n+print( r'\"Den Vau\" is a rap singer''\\n He\\'s 32 years old \\n I want to become a rapper')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681793623567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-print( r'\"Den Vau\" is a rap singer''\\n He\\'s 32 years old \\n I want to become a rapper')\n\\ No newline at end of file\n+print( '\"Den Vau\" is a rap singer\\n He\\'s 32 years old \\n I want to become a rapper')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681793640740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-print( '\"Den Vau\" is a rap singer\\n He\\'s 32 years old \\n I want to become a rapper')\n\\ No newline at end of file\n+print('\"Den Vau\" is a rap singer\\nHe\\'s 32 years old \\nI want to become a rapper')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1681793378936,
+            "name": "Commit-0",
+            "content": "print( r' \"Den Vau\" is a rap singer ' ' \\n He \\' s 32 years old \\n I want to become a rapper')"
+        }
+    ]
+}
