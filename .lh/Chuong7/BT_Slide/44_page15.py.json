@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Chuong7/BT_Slide/44_page15.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1681794380750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681794419404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n st1=input()\r\n while True:\r\n     st2=input()\r\n     if st2 not in st1: break\r\n-    else: print('Nhap lai: ')\r\n+    else: print()\r\n"
+                },
+                {
+                    "date": 1681794450851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n st1=input()\r\n while True:\r\n     st2=input()\r\n     if st2 not in st1: break\r\n-    else: print()\r\n"
+                }
+            ],
+            "date": 1681794380750,
+            "name": "Commit-0",
+            "content": "st1=input()\r\nwhile True:\r\n    st2=input()\r\n    if st2 not in st1: break\r\n    else: print('Nhap lai: ')\r\n"
+        }
+    ]
+}
