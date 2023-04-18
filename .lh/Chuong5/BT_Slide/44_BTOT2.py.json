@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Chuong5/BT_Slide/44_BTOT2.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1681488271671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681488313844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n         L+=[int(input())]\r\n     return L,x\r\n def search(L,x):\r\n     if x in L:\r\n-        # return L.index(x)\r\n-        for i in range(len(L)):\r\n-            if L[i]==x:\r\n-                return i\r\n-        else: return None\r\n+        return L.index(x)\r\n+        # for i in range(len(L)):\r\n+        #     if L[i]==x:\r\n+        #         return i\r\n+    else: return None\r\n L,x=Input()\r\n print(search(L,x))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681488366493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n         L+=[int(input())]\r\n     return L,x\r\n def search(L,x):\r\n     if x in L:\r\n-        return L.index(x)\r\n-        # for i in range(len(L)):\r\n-        #     if L[i]==x:\r\n-        #         return i\r\n-    else: return None\r\n+        # return L.index(x)\r\n+        for i in range(len(L)):\r\n\\ No newline at end of file\n+            if L[i]==x:\r\n+                return i\r\n+        else: return None\r\n L,x=Input()\r\n-print(search(L,x))\n+print(f'vi tri cua{x} la{search(L,x)}')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681488386732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n def Input():\r\n-    x=int(input('phan tu can them:'))\r\n+    x=int(input('phan tu can tim:'))\r\n     L=[]\r\n     n=int(input('do dai list:'))\r\n     for i in range(1,n+1):\r\n         L+=[int(input())]\r\n@@ -12,5 +12,5 @@\n             if L[i]==x:\r\n                 return i\r\n         else: return None\r\n L,x=Input()\r\n-print(f'vi tri cua{x} la{search(L,x)}')\n\\ No newline at end of file\n+print(f'vi tri cua{x} la {search(L,x)}')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681488407129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n             if L[i]==x:\r\n                 return i\r\n         else: return None\r\n L,x=Input()\r\n-print(f'vi tri cua{x} la {search(L,x)}')\n\\ No newline at end of file\n+print(f'vi tri cua {x} la {search(L,x)}')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681788272811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n def Input():\r\n-    x=int(input('phan tu can tim:'))\r\n+    x=int(input())\r\n     L=[]\r\n-    n=int(input('do dai list:'))\r\n+    n=int(input())\r\n     for i in range(1,n+1):\r\n         L+=[int(input())]\r\n     return L,x\r\n def search(L,x):\r\n@@ -12,5 +12,5 @@\n             if L[i]==x:\r\n                 return i\r\n         else: return None\r\n L,x=Input()\r\n-print(f'vi tri cua {x} la {search(L,x)}')\n\\ No newline at end of file\n+print(search(L,x))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1681488271671,
+            "name": "Commit-0",
+            "content": "def Input():\r\n    x=int(input('phan tu can them:'))\r\n    L=[]\r\n    n=int(input('do dai list:'))\r\n    for i in range(1,n+1):\r\n        L+=[int(input())]\r\n    return L,x\r\ndef search(L,x):\r\n    if x in L:\r\n        # return L.index(x)\r\n        for i in range(len(L)):\r\n            if L[i]==x:\r\n                return i\r\n        else: return None\r\nL,x=Input()\r\nprint(search(L,x))"
+        }
+    ]
+}

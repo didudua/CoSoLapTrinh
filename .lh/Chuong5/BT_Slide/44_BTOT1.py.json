@@ -1,0 +1,22 @@
+{
+    "sourceFile": "Chuong5/BT_Slide/44_BTOT1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1681488023099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681788221695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n def Input():\r\n-    x=int(input('phan tu can them:'))\r\n-    k=int(input('vi tri them:'))\r\n+    x=int(input())\r\n+    k=int(input())\r\n     L=[]\r\n-    n=int(input('do dai list:'))\r\n+    n=int(input())\r\n     for i in range(1,n+1):\r\n         L+=[int(input())]\r\n     return L,x,k\r\n def add(L,x,k):\r\n"
+                }
+            ],
+            "date": 1681488023099,
+            "name": "Commit-0",
+            "content": "def Input():\r\n    x=int(input('phan tu can them:'))\r\n    k=int(input('vi tri them:'))\r\n    L=[]\r\n    n=int(input('do dai list:'))\r\n    for i in range(1,n+1):\r\n        L+=[int(input())]\r\n    return L,x,k\r\ndef add(L,x,k):\r\n    if k>len(L):\r\n        L=L+[x]\r\n    else:\r\n        L=L[:k]+[x]+L[k:]\r\n    return L\r\nL,x,k=Input()\r\nprint(add(L,x,k))\r\n"
+        }
+    ]
+}

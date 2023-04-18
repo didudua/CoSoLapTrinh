@@ -1,0 +1,46 @@
+{
+    "sourceFile": "Chuong5/BT_NHOM/Bai120.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1681713769049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681713786283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,5 @@\n     for i in range(len(L)):\r\n         if L[i]<L[i-1]:\r\n             return False\r\n     else: return True\r\n-Input()\r\n print(KiemTraSapXep(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681713872267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     return L\r\n def KiemTraSapXep(L):\r\n     for i in range(len(L)):\r\n         if L[i]<L[i-1]:\r\n-            return False\r\n+            print('False')\r\n     else: return True\r\n print(KiemTraSapXep(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681713939279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     return L\r\n def KiemTraSapXep(L):\r\n     for i in range(len(L)):\r\n         if L[i]<L[i-1]:\r\n-            print('False')\r\n+            print(f'{L[i]} , {L[i-1]} false')\r\n     else: return True\r\n print(KiemTraSapXep(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681714024334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     for i in range(1,n+1):\r\n         L+=[int(input())]\r\n     return L\r\n def KiemTraSapXep(L):\r\n-    for i in range(len(L)):\r\n+    for i in range(1,len(L)):\r\n         if L[i]<L[i-1]:\r\n             print(f'{L[i]} , {L[i-1]} false')\r\n     else: return True\r\n print(KiemTraSapXep(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681714043907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     return L\r\n def KiemTraSapXep(L):\r\n     for i in range(1,len(L)):\r\n         if L[i]<L[i-1]:\r\n-            print(f'{L[i]} , {L[i-1]} false')\r\n+            return False\r\n     else: return True\r\n print(KiemTraSapXep(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681714205114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,14 @@\n     for i in range(1,n+1):\r\n         L+=[int(input())]\r\n     return L\r\n def KiemTraSapXep(L):\r\n-    for i in range(1,len(L)):\r\n-        if L[i]<L[i-1]:\r\n-            return False\r\n-    else: return True\r\n+    if len(L)==0: \r\n+        print('Day so rong')\r\n+    elif len(L)==1:\r\n+        print('Do dai day so >=2')\r\n+    else:\r\n+        for i in range(1,len(L)):\r\n+            if L[i]<L[i-1]:\r\n+                return False\r\n+        else: return True\r\n print(KiemTraSapXep(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681714245478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n         L+=[int(input())]\r\n     return L\r\n def KiemTraSapXep(L):\r\n     if len(L)==0: \r\n-        print('Day so rong')\r\n+        return 'Day so rong'\r\n     elif len(L)==1:\r\n-        print('Do dai day so >=2')\r\n+        return 'Do dai day so >=2'\r\n     else:\r\n         for i in range(1,len(L)):\r\n             if L[i]<L[i-1]:\r\n                 return False\r\n"
+                }
+            ],
+            "date": 1681713769049,
+            "name": "Commit-0",
+            "content": "def Input():\r\n    L=[]\r\n    n=int(input('do dai day so:'))\r\n    for i in range(1,n+1):\r\n        L+=[int(input())]\r\n    return L\r\ndef KiemTraSapXep(L):\r\n    for i in range(len(L)):\r\n        if L[i]<L[i-1]:\r\n            return False\r\n    else: return True\r\nInput()\r\nprint(KiemTraSapXep(Input()))"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "sourceFile": "Chuong5/BT_NHOM/Bai118.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1681710461443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681710488008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \r\n L=[]\r\n-Bai=['2','3','4','5','6','7','8','9','T','J','Q','K','A']\r\n+Bai=['A','2','3','4','5','6','7','8','9','T','J','Q','K']\r\n Chat=['h','d','c','s'] # cơ rô chuồn bích\r\n while len(L)<=52:\r\n     for j in range(4):\r\n         for i in range(13):\r\n"
+                },
+                {
+                    "date": 1681710602019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n     for j in range(4):\r\n         for i in range(13):\r\n             L=L+[Bai[i]+Chat[j]]\r\n             \r\n-print(L)\r\n+print(len(L))\r\n \r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681710632684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n \r\n L=[]\r\n Bai=['A','2','3','4','5','6','7','8','9','T','J','Q','K']\r\n Chat=['h','d','c','s'] # cơ rô chuồn bích\r\n-while len(L)<=52:\r\n-    for j in range(4):\r\n-        for i in range(13):\r\n-            L=L+[Bai[i]+Chat[j]]\r\n+# while len(L)<=52:\r\n+for j in range(4):\r\n+    for i in range(13):\r\n+        L=L+[Bai[i]+Chat[j]]\r\n             \r\n print(len(L))\r\n \r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681710645908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n \r\n L=[]\r\n Bai=['A','2','3','4','5','6','7','8','9','T','J','Q','K']\r\n Chat=['h','d','c','s'] # cơ rô chuồn bích\r\n-# while len(L)<=52:\r\n for j in range(4):\r\n     for i in range(13):\r\n         L=L+[Bai[i]+Chat[j]]\r\n             \r\n-print(len(L))\r\n+print(L)\r\n \r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681710990568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n-\r\n-L=[]\r\n+# def createDeck():\r\n+BoBai=[]\r\n Bai=['A','2','3','4','5','6','7','8','9','T','J','Q','K']\r\n Chat=['h','d','c','s'] # cơ rô chuồn bích\r\n for j in range(4):\r\n     for i in range(13):\r\n-        L=L+[Bai[i]+Chat[j]]\r\n-            \r\n-print(L)\r\n\\ No newline at end of file\n-\r\n-    \n+        BoBai=BoBai+[Bai[i]+Chat[j]]\r\n+    # return BoBai\r\n+              \r\n+# def shuffle(BoBai):\r\n+from random import shuffle\r\n+shuffle(BoBai)\r\n+print(BoBai)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681711214991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,13 @@\n for j in range(4):\r\n     for i in range(13):\r\n         BoBai=BoBai+[Bai[i]+Chat[j]]\r\n     # return BoBai\r\n-              \r\n+print(BoBai)              \r\n # def shuffle(BoBai):\r\n-from random import shuffle\r\n+from random import shuffle,randint\r\n shuffle(BoBai)\r\n+print(BoBai)\r\n+for i in range(len(BoBai)):\r\n+    j = randint(0, len(BoBai) - 1)\r\n+    BoBai[i], BoBai[j] = BoBai[j], BoBai[i]\r\n print(BoBai)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681711228176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n for j in range(4):\r\n     for i in range(13):\r\n         BoBai=BoBai+[Bai[i]+Chat[j]]\r\n     # return BoBai\r\n-print(BoBai)              \r\n+print(BoBai)   \r\n+print('+')           \r\n # def shuffle(BoBai):\r\n from random import shuffle,randint\r\n shuffle(BoBai)\r\n print(BoBai)\r\n"
+                },
+                {
+                    "date": 1681711420259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n-# def createDeck():\r\n-BoBai=[]\r\n-Bai=['A','2','3','4','5','6','7','8','9','T','J','Q','K']\r\n-Chat=['h','d','c','s'] # cơ rô chuồn bích\r\n-for j in range(4):\r\n-    for i in range(13):\r\n-        BoBai=BoBai+[Bai[i]+Chat[j]]\r\n-    # return BoBai\r\n-print(BoBai)   \r\n-print('+')           \r\n-# def shuffle(BoBai):\r\n-from random import shuffle,randint\r\n-shuffle(BoBai)\r\n-print(BoBai)\r\n-for i in range(len(BoBai)):\r\n-    j = randint(0, len(BoBai) - 1)\r\n-    BoBai[i], BoBai[j] = BoBai[j], BoBai[i]\r\n-print(BoBai)\n\\ No newline at end of file\n+def createDeck():\r\n+    BoBai=[]\r\n+    Bai=['A','2','3','4','5','6','7','8','9','T','J','Q','K']\r\n+    Chat=['h','d','c','s'] # cơ rô chuồn bích\r\n+    for j in range(4):\r\n+        for i in range(13):\r\n+            BoBai=BoBai+[Bai[i]+Chat[j]]\r\n+    return BoBai       \r\n+   \r\n+def shuffle(BoBai):\r\n+    from random import shuffle,randint\r\n+    # shuffle(BoBai) xáo trộn các phần tử trong BoBai\r\n+    for i in range(len(BoBai)):\r\n+        j = randint(0, len(BoBai) - 1)\r\n+        BoBai[i], BoBai[j] = BoBai[j], BoBai[i]\r\n+    return BoBai\r\n+\r\n+print(createDeck(),'\\n',shuffle(createDeck()))\r\n"
+                },
+                {
+                    "date": 1681711434818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n         j = randint(0, len(BoBai) - 1)\r\n         BoBai[i], BoBai[j] = BoBai[j], BoBai[i]\r\n     return BoBai\r\n \r\n-print(createDeck(),'\\n',shuffle(createDeck()))\r\n+print(createDeck(),'\\t',shuffle(createDeck()))\r\n"
+                },
+                {
+                    "date": 1681711484338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,7 @@\n         j = randint(0, len(BoBai) - 1)\r\n         BoBai[i], BoBai[j] = BoBai[j], BoBai[i]\r\n     return BoBai\r\n \r\n-print(createDeck(),'\\t',shuffle(createDeck()))\r\n+print(createDeck())\r\n+\r\n+print('bo bai duoc xao','\\n',shuffle(createDeck()))\r\n"
+                },
+                {
+                    "date": 1681712291737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,7 @@\n     for i in range(len(BoBai)):\r\n         j = randint(0, len(BoBai) - 1)\r\n         BoBai[i], BoBai[j] = BoBai[j], BoBai[i]\r\n     return BoBai\r\n-\r\n-print(createDeck())\r\n-\r\n-print('bo bai duoc xao','\\n',shuffle(createDeck()))\r\n+if __name__ == \"__main__\":\r\n+    print(createDeck())\r\n+    print('bo bai duoc xao','\\n',shuffle(createDeck()))\r\n"
+                },
+                {
+                    "date": 1681712318878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,6 @@\n         j = randint(0, len(BoBai) - 1)\r\n         BoBai[i], BoBai[j] = BoBai[j], BoBai[i]\r\n     return BoBai\r\n if __name__ == \"__main__\":\r\n-    print(createDeck())\r\n-    print('bo bai duoc xao','\\n',shuffle(createDeck()))\r\n+    print('Bo Bai:','\\n',createDeck())\r\n+    print('Bo Bai duoc xao:','\\n',shuffle(createDeck()))\r\n"
+                }
+            ],
+            "date": 1681710461443,
+            "name": "Commit-0",
+            "content": "\r\nL=[]\r\nBai=['2','3','4','5','6','7','8','9','T','J','Q','K','A']\r\nChat=['h','d','c','s'] # cơ rô chuồn bích\r\nwhile len(L)<=52:\r\n    for j in range(4):\r\n        for i in range(13):\r\n            L=L+[Bai[i]+Chat[j]]\r\n            \r\nprint(L)\r\n\r\n    "
+        }
+    ]
+}

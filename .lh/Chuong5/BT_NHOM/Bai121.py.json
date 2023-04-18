@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Chuong5/BT_NHOM/Bai121.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1681715342101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681715388506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n         if min<= i < max:\r\n             u+=1\r\n     return u\r\n L,min,max=Input()\r\n-print(f'So phan tu lon hon {min} va be hon {max} trong danh sach la: {countRange(L,min,max)}')\r\n+print(f'So phan tu >={min},<{max} trong danh sach la: {countRange(L,min,max)}')\r\n"
+                },
+                {
+                    "date": 1681715437150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n def Input():\r\n     L=[]\r\n-    min=int(input('Tu: '))\r\n-    max=int(input('Den: '))\r\n+    min=int(input('min: '))\r\n+    max=int(input('max: '))\r\n     n=int(input('do dai day so:'))\r\n     for i in range(1,n+1):\r\n         L+=[int(input())]\r\n     return L,min,max\r\n"
+                }
+            ],
+            "date": 1681715342101,
+            "name": "Commit-0",
+            "content": "def Input():\r\n    L=[]\r\n    min=int(input('Tu: '))\r\n    max=int(input('Den: '))\r\n    n=int(input('do dai day so:'))\r\n    for i in range(1,n+1):\r\n        L+=[int(input())]\r\n    return L,min,max\r\ndef countRange(L,min,max):\r\n    u=0\r\n    for i in L:\r\n        if min<= i < max:\r\n            u+=1\r\n    return u\r\nL,min,max=Input()\r\nprint(f'So phan tu lon hon {min} va be hon {max} trong danh sach la: {countRange(L,min,max)}')\r\n"
+        }
+    ]
+}

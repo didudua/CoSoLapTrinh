@@ -1,0 +1,86 @@
+{
+    "sourceFile": "Chuong5/BT_NHOM/Bai119.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1681712157631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681712193057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,9 @@\n         tay4+=BoBai[i+3]\r\n     for j in range(20):\r\n         BoBai.remove(j)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n-BoBai=shuffle(createDeck())\r\n-Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n+BoBai,tay1,tay2,tay3,tay4=ChiaBai(shuffle(createDeck()))\r\n print('bo bai','\\n',BoBai)\r\n print('Tay1','\\n',tay1)\r\n print('Tay2','\\n',tay2)\r\n print('Tay3','\\n',tay3)\r\n"
+                },
+                {
+                    "date": 1681712216170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,11 @@\n         tay4+=BoBai[i+3]\r\n     for j in range(20):\r\n         BoBai.remove(j)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n-BoBai,tay1,tay2,tay3,tay4=ChiaBai(shuffle(createDeck()))\r\n-print('bo bai','\\n',BoBai)\r\n+BoBai=shuffle(createDeck())\r\n+Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n+print('bo bai','\\n',Bobai)\r\n print('Tay1','\\n',tay1)\r\n print('Tay2','\\n',tay2)\r\n print('Tay3','\\n',tay3)\r\n print('Tay4','\\n',tay4)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681712277120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,12 @@\n         tay4+=BoBai[i+3]\r\n     for j in range(20):\r\n         BoBai.remove(j)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n-BoBai=shuffle(createDeck())\r\n-Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n-print('bo bai','\\n',Bobai)\r\n-print('Tay1','\\n',tay1)\r\n-print('Tay2','\\n',tay2)\r\n-print('Tay3','\\n',tay3)\r\n-print('Tay4','\\n',tay4)\n\\ No newline at end of file\n+if __name__ == \"__main__\":\r\n+    BoBai=shuffle(createDeck())\r\n+    Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n+    print('bo bai','\\n',Bobai)\r\n+    print('Tay1','\\n',tay1)\r\n+    print('Tay2','\\n',tay2)\r\n+    print('Tay3','\\n',tay3)\r\n+    print('Tay4','\\n',tay4)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681712392786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n         tay4+=BoBai[i+3]\r\n     for j in range(20):\r\n         BoBai.remove(j)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n+BoBai=shuffle(createDeck())\r\n if __name__ == \"__main__\":\r\n-    BoBai=shuffle(createDeck())\r\n     Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n     print('bo bai','\\n',Bobai)\r\n     print('Tay1','\\n',tay1)\r\n     print('Tay2','\\n',tay2)\r\n"
+                },
+                {
+                    "date": 1681712410676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,10 @@\n     for j in range(20):\r\n         BoBai.remove(j)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n BoBai=shuffle(createDeck())\r\n-if __name__ == \"__main__\":\r\n-    Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n-    print('bo bai','\\n',Bobai)\r\n-    print('Tay1','\\n',tay1)\r\n-    print('Tay2','\\n',tay2)\r\n-    print('Tay3','\\n',tay3)\r\n-    print('Tay4','\\n',tay4)\n\\ No newline at end of file\n+Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n+print('bo bai','\\n',Bobai)\r\n+print('Tay1','\\n',tay1)\r\n+print('Tay2','\\n',tay2)\r\n+print('Tay3','\\n',tay3)\r\n+print('Tay4','\\n',tay4)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681712447159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,11 @@\n     for j in range(20):\r\n         BoBai.remove(j)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n BoBai=shuffle(createDeck())\r\n-Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n-print('bo bai','\\n',Bobai)\r\n-print('Tay1','\\n',tay1)\r\n-print('Tay2','\\n',tay2)\r\n-print('Tay3','\\n',tay3)\r\n-print('Tay4','\\n',tay4)\n\\ No newline at end of file\n+print(BoBai)\r\n+# Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n+# print('bo bai','\\n',Bobai)\r\n+# print('Tay1','\\n',tay1)\r\n+# print('Tay2','\\n',tay2)\r\n+# print('Tay3','\\n',tay3)\r\n+# print('Tay4','\\n',tay4)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681712489595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         BoBai.remove(j)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n BoBai=shuffle(createDeck())\r\n print(BoBai)\r\n-# Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n+Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n # print('bo bai','\\n',Bobai)\r\n # print('Tay1','\\n',tay1)\r\n # print('Tay2','\\n',tay2)\r\n # print('Tay3','\\n',tay3)\r\n"
+                },
+                {
+                    "date": 1681712511842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         tay2+=BoBai[i+1]\r\n         tay3+=BoBai[i+2]\r\n         tay4+=BoBai[i+3]\r\n     for j in range(20):\r\n-        BoBai.remove(j)\r\n+        BoBai.remove(BoBai[j])\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n BoBai=shuffle(createDeck())\r\n print(BoBai)\r\n Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n"
+                },
+                {
+                    "date": 1681712521301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     return BoBai,tay1,tay2,tay3,tay4\r\n BoBai=shuffle(createDeck())\r\n print(BoBai)\r\n Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n-# print('bo bai','\\n',Bobai)\r\n-# print('Tay1','\\n',tay1)\r\n-# print('Tay2','\\n',tay2)\r\n-# print('Tay3','\\n',tay3)\r\n-# print('Tay4','\\n',tay4)\n\\ No newline at end of file\n+print('bo bai','\\n',Bobai)\r\n+print('Tay1','\\n',tay1)\r\n+print('Tay2','\\n',tay2)\r\n+print('Tay3','\\n',tay3)\r\n+print('Tay4','\\n',tay4)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681712565504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     tay2=[]\r\n     tay3=[]\r\n     tay4=[]\r\n     for i in range(0,20,4):\r\n-        tay1+=BoBai[i]\r\n+        tay1+=[BoBai[i]]\r\n         tay2+=BoBai[i+1]\r\n         tay3+=BoBai[i+2]\r\n         tay4+=BoBai[i+3]\r\n     for j in range(20):\r\n"
+                },
+                {
+                    "date": 1681712646455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n     tay3=[]\r\n     tay4=[]\r\n     for i in range(0,20,4):\r\n         tay1+=[BoBai[i]]\r\n-        tay2+=BoBai[i+1]\r\n-        tay3+=BoBai[i+2]\r\n-        tay4+=BoBai[i+3]\r\n+        tay2+=[BoBai[i+1]]\r\n+        tay3+=[BoBai[i+2]]\r\n+        tay4+=[BoBai[i+3]]\r\n     for j in range(20):\r\n         BoBai.remove(BoBai[j])\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n BoBai=shuffle(createDeck())\r\n"
+                },
+                {
+                    "date": 1681712726947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         tay2+=[BoBai[i+1]]\r\n         tay3+=[BoBai[i+2]]\r\n         tay4+=[BoBai[i+3]]\r\n     for j in range(20):\r\n-        BoBai.remove(BoBai[j])\r\n+        BoBai.remove([BoBai[j]])\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n BoBai=shuffle(createDeck())\r\n print(BoBai)\r\n Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n"
+                },
+                {
+                    "date": 1681712738495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         tay2+=[BoBai[i+1]]\r\n         tay3+=[BoBai[i+2]]\r\n         tay4+=[BoBai[i+3]]\r\n     for j in range(20):\r\n-        BoBai.remove([BoBai[j]])\r\n+        BoBai.remove(BoBai[j])\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n BoBai=shuffle(createDeck())\r\n print(BoBai)\r\n Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n"
+                },
+                {
+                    "date": 1681713028824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,20 @@\n         tay1+=[BoBai[i]]\r\n         tay2+=[BoBai[i+1]]\r\n         tay3+=[BoBai[i+2]]\r\n         tay4+=[BoBai[i+3]]\r\n-    for j in range(20):\r\n-        BoBai.remove(BoBai[j])\r\n+    for x in tay1:\r\n+        if x in BoBai:\r\n+            BoBai.remove(x)\r\n+    for x in tay2:\r\n+        if x in BoBai:\r\n+            BoBai.remove(x)\r\n+    for x in tay3:\r\n+        if x in BoBai:\r\n+            BoBai.remove(x)\r\n+    for x in tay4:\r\n+        if x in BoBai:\r\n+            BoBai.remove(x)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n BoBai=shuffle(createDeck())\r\n print(BoBai)\r\n Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n"
+                },
+                {
+                    "date": 1681713095012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,12 +21,10 @@\n     for x in tay4:\r\n         if x in BoBai:\r\n             BoBai.remove(x)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n-BoBai=shuffle(createDeck())\r\n-print(BoBai)\r\n-Bobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\n-print('bo bai','\\n',Bobai)\r\n+BoBai,tay1,tay2,tay3,tay4=ChiaBai(shuffle(createDeck()))\r\n+print('bo bai','\\n',BoBai)\r\n print('Tay1','\\n',tay1)\r\n print('Tay2','\\n',tay2)\r\n print('Tay3','\\n',tay3)\r\n print('Tay4','\\n',tay4)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681713116812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         if x in BoBai:\r\n             BoBai.remove(x)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n BoBai,tay1,tay2,tay3,tay4=ChiaBai(shuffle(createDeck()))\r\n-print('bo bai','\\n',BoBai)\r\n print('Tay1','\\n',tay1)\r\n print('Tay2','\\n',tay2)\r\n print('Tay3','\\n',tay3)\r\n-print('Tay4','\\n',tay4)\n\\ No newline at end of file\n+print('Tay4','\\n',tay4)\r\n+print('Bo Bai:','\\n',BoBai)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681713330537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n from Bai118 import createDeck,shuffle\r\n-def ChiaBai(BoBai):\r\n+def deal(BoBai):\r\n     tay1=[]\r\n     tay2=[]\r\n     tay3=[]\r\n     tay4=[]\r\n@@ -21,9 +21,9 @@\n     for x in tay4:\r\n         if x in BoBai:\r\n             BoBai.remove(x)\r\n     return BoBai,tay1,tay2,tay3,tay4\r\n-BoBai,tay1,tay2,tay3,tay4=ChiaBai(shuffle(createDeck()))\r\n+BoBai,tay1,tay2,tay3,tay4=deal(shuffle(createDeck()))\r\n print('Tay1','\\n',tay1)\r\n print('Tay2','\\n',tay2)\r\n print('Tay3','\\n',tay3)\r\n print('Tay4','\\n',tay4)\r\n"
+                }
+            ],
+            "date": 1681712157631,
+            "name": "Commit-0",
+            "content": "from Bai118 import createDeck,shuffle\r\ndef ChiaBai(BoBai):\r\n    tay1=[]\r\n    tay2=[]\r\n    tay3=[]\r\n    tay4=[]\r\n    for i in range(0,20,4):\r\n        tay1+=BoBai[i]\r\n        tay2+=BoBai[i+1]\r\n        tay3+=BoBai[i+2]\r\n        tay4+=BoBai[i+3]\r\n    for j in range(20):\r\n        BoBai.remove(j)\r\n    return BoBai,tay1,tay2,tay3,tay4\r\nBoBai=shuffle(createDeck())\r\nBobai,tay1,tay2,tay3,tay4=ChiaBai(BoBai)\r\nprint('bo bai','\\n',BoBai)\r\nprint('Tay1','\\n',tay1)\r\nprint('Tay2','\\n',tay2)\r\nprint('Tay3','\\n',tay3)\r\nprint('Tay4','\\n',tay4)"
+        }
+    ]
+}
