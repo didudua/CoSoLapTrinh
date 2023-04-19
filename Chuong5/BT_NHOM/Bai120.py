@@ -12,6 +12,13 @@ def KiemTraSapXep(L):
     else:
         for i in range(1,len(L)):
             if L[i]<L[i-1]:
-                return False
-        else: return True
+                tang= False
+                break
+        else: tang= True
+        for i in range(1,len(L)):
+            if L[i]>L[i-1]:
+                giam= False
+                break
+        else: giam= True
+    return tang or giam
 print(KiemTraSapXep(Input()))

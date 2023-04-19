@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1681713769049,
@@ -36,6 +36,14 @@
                 {
                     "date": 1681714245478,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n         L+=[int(input())]\r\n     return L\r\n def KiemTraSapXep(L):\r\n     if len(L)==0: \r\n-        print('Day so rong')\r\n+        return 'Day so rong'\r\n     elif len(L)==1:\r\n-        print('Do dai day so >=2')\r\n+        return 'Do dai day so >=2'\r\n     else:\r\n         for i in range(1,len(L)):\r\n             if L[i]<L[i-1]:\r\n                 return False\r\n"
+                },
+                {
+                    "date": 1681799611710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,12 @@\n         return 'Do dai day so >=2'\r\n     else:\r\n         for i in range(1,len(L)):\r\n             if L[i]<L[i-1]:\r\n-                return False\r\n-        else: return True\r\n+                tang= False\r\n+        else: tang= True\r\n+        for i in range(1,len(L)):\r\n+            if L[i]>L[i-1]:\r\n+                giam= False\r\n+        else: giam= True\r\n+    return tang or giam\r\n print(KiemTraSapXep(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681799697847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,13 @@\n     else:\r\n         for i in range(1,len(L)):\r\n             if L[i]<L[i-1]:\r\n                 tang= False\r\n+                break\r\n         else: tang= True\r\n         for i in range(1,len(L)):\r\n             if L[i]>L[i-1]:\r\n                 giam= False\r\n+                break\r\n         else: giam= True\r\n     return tang or giam\r\n print(KiemTraSapXep(Input()))\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1681713769049,
