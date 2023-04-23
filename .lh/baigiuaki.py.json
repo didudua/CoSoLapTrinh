@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 23,
+            "activePatchIndex": 24,
             "patches": [
                 {
                     "date": 1679194729817,
@@ -100,6 +100,10 @@
                 {
                     "date": 1682171099221,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,17 @@\n # if a*b==n: print(\"*\")\r\n # elif a+b==n: print(\"+\")\r\n # elif a-b==n: print(\"-\")\r\n # elif b!=0 and a/b==n: print(\"/\")\r\n-# else: print(\"NO\")\n\\ No newline at end of file\n+# else: print(\"NO\")\r\n+# Khởi tạo một danh sách chứa các chữ hoa\r\n+uppercase_list = [\"HELLO\", \"WORLD\", \"PYTHON\"]\r\n+\r\n+# Khởi tạo một danh sách rỗng để chứa các chữ thường\r\n+lowercase_list = []\r\n+\r\n+# Duyệt qua từng chuỗi trong danh sách chữ hoa, chuyển đổi sang chữ thường và thêm vào danh sách chữ thường\r\n+for word in uppercase_list:\r\n+    lowercase_list.append(word.lower())\r\n+\r\n+# In ra danh sách chữ thường\r\n+print(lowercase_list)\r\n"
+                },
+                {
+                    "date": 1682228825200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,17 +47,5 @@\n # if a*b==n: print(\"*\")\r\n # elif a+b==n: print(\"+\")\r\n # elif a-b==n: print(\"-\")\r\n # elif b!=0 and a/b==n: print(\"/\")\r\n-# else: print(\"NO\")\r\n-# Khởi tạo một danh sách chứa các chữ hoa\r\n-uppercase_list = [\"HELLO\", \"WORLD\", \"PYTHON\"]\r\n-\r\n-# Khởi tạo một danh sách rỗng để chứa các chữ thường\r\n-lowercase_list = []\r\n-\r\n-# Duyệt qua từng chuỗi trong danh sách chữ hoa, chuyển đổi sang chữ thường và thêm vào danh sách chữ thường\r\n-for word in uppercase_list:\r\n-    lowercase_list.append(word.lower())\r\n-\r\n-# In ra danh sách chữ thường\r\n-print(lowercase_list)\r\n+# else: print(\"NO\")\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1679194729817,
