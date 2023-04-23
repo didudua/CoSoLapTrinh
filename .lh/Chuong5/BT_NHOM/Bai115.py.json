@@ -1,0 +1,106 @@
+{
+    "sourceFile": "Chuong5/BT_NHOM/Bai115.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1682169327542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682169349016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n def Input():\r\n     L=input()\r\n     return list(L)\r\n def PigLatin(L):\r\n+    print(L)\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n     elif L[0:2].lower==['t','h']: \r\n"
+                },
+                {
+                    "date": 1682169379079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     print(L)\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n-    elif L[0:2].lower==['t','h']: \r\n+    elif L[:2].lower==['t','h']: \r\n         L=L[1:]+L[0]+['ay']\r\n     else:\r\n         L=L[1:]+L[0]+['ay']\r\n     return L\r\n"
+                },
+                {
+                    "date": 1682169410544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     print(L)\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n-    elif L[:2].lower==['t','h']: \r\n+    elif L[0].lower=='t' and L[1].lower=='h': \r\n         L=L[1:]+L[0]+['ay']\r\n     else:\r\n         L=L[1:]+L[0]+['ay']\r\n     return L\r\n"
+                },
+                {
+                    "date": 1682169455943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n-        L=L[1:]+L[0]+['ay']\r\n+        L=L[2:]+L[0]+['ay']\r\n     else:\r\n         L=L[1:]+L[0]+['ay']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169575232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n     return list(L)\r\n def PigLatin(L):\r\n     print(L)\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n-    if L[0].lower() in NgA:\r\n-        L=L+['way']\r\n+    if L[0].lower() not in NgA:\r\n+        L=L[1:]+L[0]+['ay']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n         L=L[2:]+L[0]+['ay']\r\n     else:\r\n-        L=L[1:]+L[0]+['ay']\r\n+        L=L+['way']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169629928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() not in NgA:\r\n         L=L[1:]+L[0]+['ay']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n-        L=L[2:]+L[0]+['ay']\r\n+        L=L+['ay']\r\n     else:\r\n         L=L+['way']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169648850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n     return list(L)\r\n def PigLatin(L):\r\n     print(L)\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n-    if L[0].lower() not in NgA:\r\n-        L=L[1:]+L[0]+['ay']\r\n+    if L[0].lower() in NgA:\r\n+        L=L+['way']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n         L=L+['ay']\r\n     else:\r\n-        L=L+['way']\r\n+        L=L[1:]+L[0]+['ay']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169659755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n         L=L+['way']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n         L=L+['ay']\r\n     else:\r\n-        L=L[1:]+L[0]+['ay']\r\n+        L=L+['ay']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169691593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n-        L=L+['ay']\r\n+        L=L[2:]+['ay']\r\n     else:\r\n         L=L+['ay']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169711712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n         L=L+['way']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n         L=L[2:]+['ay']\r\n     else:\r\n-        L=L+['ay']\r\n+        L=L[2:]+['ay']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169746982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n         L=L+['way']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n         L=L[2:]+['ay']\r\n     else:\r\n-        L=L[2:]+['ay']\r\n+        L=L[2:]+L[:2]+['ay']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169793580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n-        L=L[2:]+['ay']\r\n+        L=L[2:]+L[:2]+['ay']\r\n     else:\r\n-        L=L[2:]+L[:2]+['ay']\r\n+        L=L[1:]+L[0]+['ay']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169817665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n         L=L+['way']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n         L=L[2:]+L[:2]+['ay']\r\n     else:\r\n-        L=L[1:]+L[0]+['ay']\r\n+        L=L[2:]+L[0]+['ay']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169829611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n         L=L+['way']\r\n     elif L[0].lower=='t' and L[1].lower=='h': \r\n         L=L[2:]+L[:2]+['ay']\r\n     else:\r\n-        L=L[2:]+L[0]+['ay']\r\n+        L=L[1:]+L[:1]+['ay']\r\n     return L\r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682169929025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,13 @@\n     L=input()\r\n     return list(L)\r\n def PigLatin(L):\r\n     print(L)\r\n+    S=['t','h']\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n-    elif L[0].lower=='t' and L[1].lower=='h': \r\n+    elif L[:2].lower==S:\r\n         L=L[2:]+L[:2]+['ay']\r\n     else:\r\n         L=L[1:]+L[:1]+['ay']\r\n     return L\r\n"
+                },
+                {
+                    "date": 1682169956626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     S=['t','h']\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n-    elif L[:2].lower==S:\r\n+    elif L[:2].lower()==S:\r\n         L=L[2:]+L[:2]+['ay']\r\n     else:\r\n         L=L[1:]+L[:1]+['ay']\r\n     return L\r\n"
+                },
+                {
+                    "date": 1682169986539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     S=['t','h']\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n-    elif L[:2].lower()==S:\r\n+    elif L[0].lower()=='t' and L[1].lower()=='h':\r\n         L=L[2:]+L[:2]+['ay']\r\n     else:\r\n         L=L[1:]+L[:1]+['ay']\r\n     return L\r\n"
+                },
+                {
+                    "date": 1682169996218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n     L=input()\r\n     return list(L)\r\n def PigLatin(L):\r\n     print(L)\r\n-    S=['t','h']\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n     elif L[0].lower()=='t' and L[1].lower()=='h':\r\n"
+                },
+                {
+                    "date": 1682170039465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n def Input():\r\n     L=input()\r\n     return list(L)\r\n def PigLatin(L):\r\n-    print(L)\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     if L[0].lower() in NgA:\r\n         L=L+['way']\r\n     elif L[0].lower()=='t' and L[1].lower()=='h':\r\n         L=L[2:]+L[:2]+['ay']\r\n     else:\r\n         L=L[1:]+L[:1]+['ay']\r\n     return L\r\n-print(PigLatin(Input()))\n\\ No newline at end of file\n+L=PigLatin(Input())\r\n+''.join(L)\r\n+print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682170047779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n     else:\r\n         L=L[1:]+L[:1]+['ay']\r\n     return L\r\n L=PigLatin(Input())\r\n-''.join(L)\r\n+L=''.join(L)\r\n print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682170070017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,7 @@\n     elif L[0].lower()=='t' and L[1].lower()=='h':\r\n         L=L[2:]+L[:2]+['ay']\r\n     else:\r\n         L=L[1:]+L[:1]+['ay']\r\n-    return L\r\n+    return ''.join(L)\r\n L=PigLatin(Input())\r\n-L=''.join(L)\r\n print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682170085342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n         L=L[2:]+L[:2]+['ay']\r\n     else:\r\n         L=L[1:]+L[:1]+['ay']\r\n     return ''.join(L)\r\n-L=PigLatin(Input())\r\n-print(L)\n\\ No newline at end of file\n+\r\n+print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1682169327542,
+            "name": "Commit-0",
+            "content": "def Input():\r\n    L=input()\r\n    return list(L)\r\ndef PigLatin(L):\r\n    NgA=['a', 'e', 'o', 'i', 'u']\r\n    if L[0].lower() in NgA:\r\n        L=L+['way']\r\n    elif L[0:2].lower==['t','h']: \r\n        L=L[1:]+L[0]+['ay']\r\n    else:\r\n        L=L[1:]+L[0]+['ay']\r\n    return L\r\nprint(PigLatin(Input()))"
+        }
+    ]
+}

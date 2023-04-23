@@ -1,0 +1,54 @@
+{
+    "sourceFile": "Chuong5/BT_NHOM/Bai116.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1682170668722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682170711636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     dau=['?','!','.']\r\n     # S=[]\r\n     if L[-1] in dau:\r\n-        x=L.pop(L[-1])\r\n+        x=L.pop(L[len(L)-1])\r\n     if L[0].lower() in NgA:\r\n         S=L+['way']+x\r\n     elif L[0].lower()=='t' and L[1].lower()=='h':\r\n         S=L[2:]+L[:2]+['ay']+x\r\n"
+                },
+                {
+                    "date": 1682170752774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     dau=['?','!','.']\r\n     # S=[]\r\n     if L[-1] in dau:\r\n-        x=L.pop(L[len(L)-1])\r\n+        x=L.pop(-1)\r\n     if L[0].lower() in NgA:\r\n         S=L+['way']+x\r\n     elif L[0].lower()=='t' and L[1].lower()=='h':\r\n         S=L[2:]+L[:2]+['ay']+x\r\n"
+                },
+                {
+                    "date": 1682170777332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n     # S=[]\r\n     if L[-1] in dau:\r\n         x=L.pop(-1)\r\n     if L[0].lower() in NgA:\r\n-        S=L+['way']+x\r\n+        S=L+['way']+[x]\r\n     elif L[0].lower()=='t' and L[1].lower()=='h':\r\n-        S=L[2:]+L[:2]+['ay']+x\r\n+        S=L[2:]+L[:2]+['ay']+[x]\r\n     else:\r\n-        S=L[1:]+L[:1]+['ay']+x\r\n+        S=L[1:]+L[:1]+['ay']+[x]\r\n     if L[0].isupper():\r\n         S.lower()\r\n         S[0]=S[0].upper()\r\n     return ''.join(S)\r\n"
+                },
+                {
+                    "date": 1682170805006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n def PigLatin(L):\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     dau=['?','!','.']\r\n     # S=[]\r\n+    x=[]\r\n     if L[-1] in dau:\r\n         x=L.pop(-1)\r\n     if L[0].lower() in NgA:\r\n         S=L+['way']+[x]\r\n"
+                },
+                {
+                    "date": 1682170904552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         S=L[2:]+L[:2]+['ay']+[x]\r\n     else:\r\n         S=L[1:]+L[:1]+['ay']+[x]\r\n     if L[0].isupper():\r\n-        S.lower()\r\n+        S=S.lower()\r\n         S[0]=S[0].upper()\r\n     return ''.join(S)\r\n \r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682170932090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n     return list(L)\r\n def PigLatin(L):\r\n     NgA=['a', 'e', 'o', 'i', 'u']\r\n     dau=['?','!','.']\r\n-    # S=[]\r\n     x=[]\r\n     if L[-1] in dau:\r\n         x=L.pop(-1)\r\n     if L[0].lower() in NgA:\r\n@@ -14,9 +13,9 @@\n         S=L[2:]+L[:2]+['ay']+[x]\r\n     else:\r\n         S=L[1:]+L[:1]+['ay']+[x]\r\n     if L[0].isupper():\r\n-        S=S.lower()\r\n+        # S.lower()\r\n         S[0]=S[0].upper()\r\n     return ''.join(S)\r\n \r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682171175226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n         S=L[2:]+L[:2]+['ay']+[x]\r\n     else:\r\n         S=L[1:]+L[:1]+['ay']+[x]\r\n     if L[0].isupper():\r\n-        # S.lower()\r\n-        S[0]=S[0].upper()\r\n+        kq=[]\r\n+        for i in S:\r\n+            kq.append(i.lower())\r\n+        kq[0]=kq[0].upper()\r\n     return ''.join(S)\r\n \r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682171355254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,10 @@\n         S=L[2:]+L[:2]+['ay']+[x]\r\n     else:\r\n         S=L[1:]+L[:1]+['ay']+[x]\r\n     if L[0].isupper():\r\n-        kq=[]\r\n-        for i in S:\r\n-            kq.append(i.lower())\r\n-        kq[0]=kq[0].upper()\r\n+        for i in (len(L)):\r\n+            S[i]=S[i].lower()\r\n+        S[0]=S[0].upper()\r\n     return ''.join(S)\r\n \r\n print(PigLatin(Input()))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682171373541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         S=L[2:]+L[:2]+['ay']+[x]\r\n     else:\r\n         S=L[1:]+L[:1]+['ay']+[x]\r\n     if L[0].isupper():\r\n-        for i in (len(L)):\r\n+        for i in range(len(L)):\r\n             S[i]=S[i].lower()\r\n         S[0]=S[0].upper()\r\n     return ''.join(S)\r\n \r\n"
+                }
+            ],
+            "date": 1682170668722,
+            "name": "Commit-0",
+            "content": "def Input():\r\n    L=input()\r\n    return list(L)\r\ndef PigLatin(L):\r\n    NgA=['a', 'e', 'o', 'i', 'u']\r\n    dau=['?','!','.']\r\n    # S=[]\r\n    if L[-1] in dau:\r\n        x=L.pop(L[-1])\r\n    if L[0].lower() in NgA:\r\n        S=L+['way']+x\r\n    elif L[0].lower()=='t' and L[1].lower()=='h':\r\n        S=L[2:]+L[:2]+['ay']+x\r\n    else:\r\n        S=L[1:]+L[:1]+['ay']+x\r\n    if L[0].isupper():\r\n        S.lower()\r\n        S[0]=S[0].upper()\r\n    return ''.join(S)\r\n\r\nprint(PigLatin(Input()))"
+        }
+    ]
+}

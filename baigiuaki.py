@@ -49,3 +49,15 @@
 # elif a-b==n: print("-")
 # elif b!=0 and a/b==n: print("/")
 # else: print("NO")
+# Khởi tạo một danh sách chứa các chữ hoa
+uppercase_list = ["HELLO", "WORLD", "PYTHON"]
+
+# Khởi tạo một danh sách rỗng để chứa các chữ thường
+lowercase_list = []
+
+# Duyệt qua từng chuỗi trong danh sách chữ hoa, chuyển đổi sang chữ thường và thêm vào danh sách chữ thường
+for word in uppercase_list:
+    lowercase_list.append(word.lower())
+
+# In ra danh sách chữ thường
+print(lowercase_list)

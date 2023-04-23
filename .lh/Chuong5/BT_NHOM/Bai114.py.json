@@ -1,0 +1,78 @@
+{
+    "sourceFile": "Chuong5/BT_NHOM/Bai114.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1682167859514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682167884676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import random\r\n def dom():\r\n-    S=''\r\n+    S=[]\r\n     for i in range(6):\r\n         S.append(random.randint(0,49))\r\n     return S\r\n print(dom())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682167961712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n     S=[]\r\n     for i in range(6):\r\n         S.append(random.randint(0,49))\r\n     return S\r\n-print(dom())\n\\ No newline at end of file\n+print(dom().sort)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682167970453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n     S=[]\r\n     for i in range(6):\r\n         S.append(random.randint(0,49))\r\n     return S\r\n-print(dom().sort)\n\\ No newline at end of file\n+print(dom().sort())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682167989269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n     S=[]\r\n     for i in range(6):\r\n         S.append(random.randint(0,49))\r\n     return S\r\n-print(dom().sort())\n\\ No newline at end of file\n+S=dom()\r\n+print(S.sort())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168014899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n     S=[]\r\n     for i in range(6):\r\n         S.append(random.randint(0,49))\r\n     return S\r\n-S=dom()\r\n-print(S.sort())\n\\ No newline at end of file\n+S=dom().sort()\r\n+print(S)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168038050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,7 @@\n     S=[]\r\n     for i in range(6):\r\n         S.append(random.randint(0,49))\r\n     return S\r\n-S=dom().sort()\r\n+S=dom()\r\n+S.sort()\r\n print(S)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168064861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n def dom():\r\n     S=[]\r\n     for i in range(6):\r\n         S.append(random.randint(0,49))\r\n-    return S\r\n+        \r\n+    return S.sort()\r\n S=dom()\r\n-S.sort()\r\n print(S)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168080583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n def dom():\r\n     S=[]\r\n     for i in range(6):\r\n         S.append(random.randint(0,49))\r\n-        \r\n-    return S.sort()\r\n-S=dom()\r\n-print(S)\n\\ No newline at end of file\n+    S.sort()   \r\n+    return S\r\n+\r\n+print(dom())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168178972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import random\r\n def dom():\r\n     S=[]\r\n-    for i in range(6):\r\n-        S.append(random.randint(0,49))\r\n+    S.append(random.randint(0,49,size=6))\r\n     S.sort()   \r\n     return S\r\n \r\n print(dom())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168222230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import random\r\n def dom():\r\n     S=[]\r\n-    S.append(random.randint(0,49,size=6))\r\n+    S.append(random.randint(49,size=6))\r\n     S.sort()   \r\n     return S\r\n \r\n print(dom())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168426110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import random\r\n def dom():\r\n     S=[]\r\n-    S.append(random.randint(49,size=6))\r\n+    for i in range(6):\r\n+        S.append(random.randint(0,49))\r\n     S.sort()   \r\n     return S\r\n \r\n print(dom())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168510780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n-import random\r\n+\r\n def dom():\r\n     S=[]\r\n-    for i in range(6):\r\n-        S.append(random.randint(0,49))\r\n+    import random\r\n+    S = random.sample(range(1, 50), 6)\r\n     S.sort()   \r\n     return S\r\n \r\n print(dom())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168546442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n def dom():\r\n     S=[]\r\n     import random\r\n-    S = random.sample(range(1, 50), 6)\r\n+    S = random.sample(range(1, 50), 6) # random từ 1 đến 49  và lấy 6 số\r\n     S.sort()   \r\n     return S\r\n \r\n print(dom())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168565110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n-def dom():\r\n+def TaoVeSo():\r\n     S=[]\r\n     import random\r\n     S = random.sample(range(1, 50), 6) # random từ 1 đến 49  và lấy 6 số\r\n     S.sort()   \r\n     return S\r\n \r\n\\ No newline at end of file\n-print(dom())\n+print(TaoVeSo())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682168580075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\r\n def TaoVeSo():\r\n     S=[]\r\n     import random\r\n     S = random.sample(range(1, 50), 6) # random từ 1 đến 49  và lấy 6 số\r\n"
+                }
+            ],
+            "date": 1682167859514,
+            "name": "Commit-0",
+            "content": "import random\r\ndef dom():\r\n    S=''\r\n    for i in range(6):\r\n        S.append(random.randint(0,49))\r\n    return S\r\nprint(dom())"
+        }
+    ]
+}
