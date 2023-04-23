@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1682172928582,
@@ -84,6 +84,22 @@
                 {
                     "date": 1682174059884,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     TBX = TongX/len(X)\r\n     TBY = TongY/len(Y)\r\n     m = sum(XY)-(TongX * TongY / len(X)) / sum(XX) - (TongX ** 2 / len(X))\r\n     b = TBY-m*TBX\r\n-    print(f'y = {round(m,2)}x + {round(b,2)} ')\r\n+    print(f'y = {round(m,1)}x + {round(b,1)} ')\r\n \r\n X = []\r\n Y = []\r\n XY = []\r\n"
+                },
+                {
+                    "date": 1682236921755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     TongX = sum(X)\r\n     TongY = sum(Y)\r\n     TBX = TongX/len(X)\r\n     TBY = TongY/len(Y)\r\n-    m = sum(XY)-(TongX * TongY / len(X)) / sum(XX) - (TongX ** 2 / len(X))\r\n+    m = (sum(XY)-(TongX * TongY / len(X))) / (sum(XX) - (TongX ** 2 / len(X)))\r\n     b = TBY-m*TBX\r\n     print(f'y = {round(m,1)}x + {round(b,1)} ')\r\n \r\n X = []\r\n"
+                },
+                {
+                    "date": 1682236964055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     TBX = TongX/len(X)\r\n     TBY = TongY/len(Y)\r\n     m = (sum(XY)-(TongX * TongY / len(X))) / (sum(XX) - (TongX ** 2 / len(X)))\r\n     b = TBY-m*TBX\r\n-    print(f'y = {round(m,1)}x + {round(b,1)} ')\r\n+    print(f'y = {m}x + {b} ')\r\n \r\n X = []\r\n Y = []\r\n XY = []\r\n"
+                },
+                {
+                    "date": 1682237001038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     TBX = TongX/len(X)\r\n     TBY = TongY/len(Y)\r\n     m = (sum(XY)-(TongX * TongY / len(X))) / (sum(XX) - (TongX ** 2 / len(X)))\r\n     b = TBY-m*TBX\r\n-    print(f'y = {m}x + {b} ')\r\n+    print(f'y = {round(m,2)}x + ({round(b,2)}) ')\r\n \r\n X = []\r\n Y = []\r\n XY = []\r\n"
+                },
+                {
+                    "date": 1682237022520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     TBX = TongX/len(X)\r\n     TBY = TongY/len(Y)\r\n     m = (sum(XY)-(TongX * TongY / len(X))) / (sum(XX) - (TongX ** 2 / len(X)))\r\n     b = TBY-m*TBX\r\n-    print(f'y = {round(m,2)}x + ({round(b,2)}) ')\r\n+    print(f'y = {round(m,2)}x + {round(b,2)} ')\r\n \r\n X = []\r\n Y = []\r\n XY = []\r\n"
                 }
             ],
             "date": 1682172928582,

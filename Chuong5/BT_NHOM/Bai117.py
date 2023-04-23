@@ -14,9 +14,9 @@ def Tinh(X, Y, XY, XX):
     TongY = sum(Y)
     TBX = TongX/len(X)
     TBY = TongY/len(Y)
-    m = sum(XY)-(TongX * TongY / len(X)) / sum(XX) - (TongX ** 2 / len(X))
+    m = (sum(XY)-(TongX * TongY / len(X))) / (sum(XX) - (TongX ** 2 / len(X)))
     b = TBY-m*TBX
-    print(f'y = {round(m,1)}x + {round(b,1)} ')
+    print(f'y = {round(m,2)}x + {round(b,2)} ')
 
 X = []
 Y = []
