@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Chuong7/BT_Slide/44_page51.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1682239488960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682239527571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n def run(L):\r\n     return L.lower(),L.upper()\r\n L=input()\r\n h,H=run(L)\r\n-print(h,'\\n',H)\n\\ No newline at end of file\n+print(h,'\\n',H,esp='')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682239545147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n def run(L):\r\n     return L.lower(),L.upper()\r\n L=input()\r\n h,H=run(L)\r\n-print(h,'\\n',H,esp='')\n\\ No newline at end of file\n+print(h)\r\n+print(H)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682239889039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,21 @@\n def run(L):\r\n     return L.lower(),L.upper()\r\n+print('Bai 7.4:')\r\n L=input()\r\n h,H=run(L)\r\n print(h)\r\n\\ No newline at end of file\n-print(H)\n+print(H)\r\n+def dem(L):\r\n+    so=0\r\n+    chu=0\r\n+    for i in L:\r\n+        if i.isnumeric():\r\n+            so+=1\r\n+        elif i.isalpha():\r\n+            chu+=1\r\n+    return so,chu\r\n+print('Bai 7.5:')\r\n+so,chu=dem(input())\r\n+print('Chu cai:',chu)\r\n+print('Chu so:',so)\r\n+\r\n"
+                },
+                {
+                    "date": 1682239918176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,4 +17,5 @@\n print('Bai 7.5:')\r\n so,chu=dem(input())\r\n print('Chu cai:',chu)\r\n print('Chu so:',so)\r\n+\r\n"
+                },
+                {
+                    "date": 1682239971463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,4 @@\n print('Bai 7.5:')\r\n so,chu=dem(input())\r\n print('Chu cai:',chu)\r\n print('Chu so:',so)\r\n-\r\n"
+                }
+            ],
+            "date": 1682239488960,
+            "name": "Commit-0",
+            "content": "def run(L):\r\n    return L.lower(),L.upper()\r\nL=input()\r\nh,H=run(L)\r\nprint(h,'\\n',H)"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "sourceFile": "Chuong7/BTCN/44_5.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1682330944113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682330958697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n n=input()\r\n x=int(input())\r\n-N=n.split(' ')\r\n+N=n.split()\r\n print(N)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330976740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n n=input()\r\n x=int(input())\r\n N=n.split()\r\n-print(N)\n\\ No newline at end of file\n+print(N[2])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682331061950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n n=input()\r\n x=int(input())\r\n N=n.split()\r\n-print(N[2])\n\\ No newline at end of file\n+for i in range(len(N)):\r\n+    if int(N[i])==x:\r\n+        print(i)\r\n+else: print(0)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682331513988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,7 @@\n x=int(input())\r\n N=n.split()\r\n for i in range(len(N)):\r\n     if int(N[i])==x:\r\n-        print(i)\r\n-else: print(0)\n\\ No newline at end of file\n+        print(i+1)\r\n+else:\r\n+    print(0)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682331557187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,8 @@\n x=int(input())\r\n N=n.split()\r\n for i in range(len(N)):\r\n     if int(N[i])==x:\r\n+        u=True\r\n         print(i+1)\r\n-else:\r\n+if u:\r\n     print(0)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682331574803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n for i in range(len(N)):\r\n     if int(N[i])==x:\r\n         u=True\r\n         print(i+1)\r\n-if u:\r\n+if not u:\r\n     print(0)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682331596809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n n=input()\r\n x=int(input())\r\n N=n.split()\r\n+u=False\r\n for i in range(len(N)):\r\n     if int(N[i])==x:\r\n         u=True\r\n         print(i+1)\r\n"
+                }
+            ],
+            "date": 1682330944113,
+            "name": "Commit-0",
+            "content": "n=input()\r\nx=int(input())\r\nN=n.split(' ')\r\nprint(N)"
+        }
+    ]
+}

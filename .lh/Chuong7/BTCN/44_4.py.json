@@ -1,0 +1,30 @@
+{
+    "sourceFile": "Chuong7/BTCN/44_4.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1682330584894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682330652638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,7 @@\n l=input()\r\n+kq=[]\r\n L=l.split(',')\r\n\\ No newline at end of file\n-print(L)\n+for i in L:\r\n+    if i not in kq:\r\n+        kq.append(i)\r\n+print(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330719763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n L=l.split(',')\r\n for i in L:\r\n     if i not in kq:\r\n         kq.append(i)\r\n-print(kq)\n\\ No newline at end of file\n+kq.sort()\r\n+print(''.join(kq))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330734001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n for i in L:\r\n     if i not in kq:\r\n         kq.append(i)\r\n kq.sort()\r\n-print(''.join(kq))\n\\ No newline at end of file\n+print(','.join(kq))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1682330584894,
+            "name": "Commit-0",
+            "content": "l=input()\r\nL=l.split(',')\r\nprint(L)"
+        }
+    ]
+}

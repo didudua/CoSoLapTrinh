@@ -1,0 +1,46 @@
+{
+    "sourceFile": "Chuong7/BTCN/44_6.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1682331683741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682331821409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,7 @@\n x=input()\r\n-print(int(x,2))\n\\ No newline at end of file\n+X=','.split(x)\r\n+kq=[]\r\n+for i in X:\r\n+    if int(i,2)%3==0:\r\n+        kq+=[i]\r\n+print(','.join(kq))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682331861267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n x=input()\r\n X=','.split(x)\r\n kq=[]\r\n for i in X:\r\n-    if int(i,2)%3==0:\r\n-        kq+=[i]\r\n-print(','.join(kq))\n\\ No newline at end of file\n+    # if int(i,2)% 3==0:\r\n+    #     kq+=[i]\r\n+    print(int(i,2))\r\n+# print(','.join(kq))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682331874243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n kq=[]\r\n for i in X:\r\n     # if int(i,2)% 3==0:\r\n     #     kq+=[i]\r\n-    print(int(i,2))\r\n+    print(i)\r\n # print(','.join(kq))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682331895622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n x=input()\r\n X=','.split(x)\r\n kq=[]\r\n-for i in X:\r\n+print(X)\r\n+# for i in X:\r\n     # if int(i,2)% 3==0:\r\n     #     kq+=[i]\r\n-    print(i)\r\n # print(','.join(kq))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682331917873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n x=input()\r\n-X=','.split(x)\r\n+X=x.split(',')\r\n kq=[]\r\n print(X)\r\n # for i in X:\r\n     # if int(i,2)% 3==0:\r\n"
+                },
+                {
+                    "date": 1682331925801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n x=input()\r\n X=x.split(',')\r\n kq=[]\r\n print(X)\r\n-# for i in X:\r\n-    # if int(i,2)% 3==0:\r\n-    #     kq+=[i]\r\n-# print(','.join(kq))\n\\ No newline at end of file\n+for i in X:\r\n+    if int(i,2)% 3==0:\r\n+        kq+=[i]\r\n+print(','.join(kq))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682331944210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n x=input()\r\n X=x.split(',')\r\n kq=[]\r\n-print(X)\r\n for i in X:\r\n     if int(i,2)% 3==0:\r\n         kq+=[i]\r\n print(','.join(kq))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1682331683741,
+            "name": "Commit-0",
+            "content": "x=input()\r\nprint(int(x,2))"
+        }
+    ]
+}

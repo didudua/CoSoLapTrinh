@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Chuong7/BTCN/44_7.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1682332204723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682332323951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,7 @@\n-# Nhập chuỗi ký tự từ người dùng\r\n-input_str = input(\"Nhập họ tên và email: \")\r\n-\r\n-# Tách chuỗi thành các từ riêng biệt\r\n-words = input_str.split()\r\n-\r\n-# Duyệt qua các từ để tìm kiếm email\r\n-for word in words:\r\n-    # Kiểm tra xem từ đó có chứa ký tự @ không\r\n-    if \"@\" in word:\r\n-        email = word\r\n-        print(\"Email của bạn là:\", email)\r\n+l=input()\r\n+L=l.split()\r\n+for i in L:\r\n+    if '@' in i:\r\n+        email=i\r\n+        print(email)\r\n         break\r\n-else:\r\n-    print(\"Không tìm thấy email trong chuỗi ký tự.\")\r\n-\r\n"
+                },
+                {
+                    "date": 1682332373533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n l=input()\r\n L=l.split()\r\n+email=''\r\n for i in L:\r\n     if '@' in i:\r\n         email=i\r\n         print(email)\r\n"
+                },
+                {
+                    "date": 1682332389061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n email=''\r\n for i in L:\r\n     if '@' in i:\r\n         email=i\r\n-        print(email)\r\n         break\r\n+print(email)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682332512083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n l=input()\r\n L=l.split()\r\n email=''\r\n-for i in L:\r\n-    if '@' in i:\r\n-        email=i\r\n-        break\r\n+print(L)\r\n+# for i in L:\r\n+#     if '@' in i:\r\n+#         email=i\r\n+#         break\r\n print(email)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682332540969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n l=input()\r\n L=l.split()\r\n email=''\r\n-print(L)\r\n-# for i in L:\r\n-#     if '@' in i:\r\n-#         email=i\r\n-#         break\r\n+for i in L:\r\n+    if '@' in i:\r\n+        email=i\r\n+        break\r\n print(email)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1682332204723,
+            "name": "Commit-0",
+            "content": "# Nhập chuỗi ký tự từ người dùng\r\ninput_str = input(\"Nhập họ tên và email: \")\r\n\r\n# Tách chuỗi thành các từ riêng biệt\r\nwords = input_str.split()\r\n\r\n# Duyệt qua các từ để tìm kiếm email\r\nfor word in words:\r\n    # Kiểm tra xem từ đó có chứa ký tự @ không\r\n    if \"@\" in word:\r\n        email = word\r\n        print(\"Email của bạn là:\", email)\r\n        break\r\nelse:\r\n    print(\"Không tìm thấy email trong chuỗi ký tự.\")\r\n\r\n"
+        }
+    ]
+}

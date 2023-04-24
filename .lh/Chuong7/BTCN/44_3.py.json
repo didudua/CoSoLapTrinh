@@ -1,0 +1,86 @@
+{
+    "sourceFile": "Chuong7/BTCN/44_3.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1682329357497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682329441030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,16 +7,15 @@\n         for i in mk:\r\n             if i.isdigit(): break\r\n         else: \r\n             break\r\n+        for j in mk:\r\n+            if j.isupper(): break\r\n+        else: \r\n+            break\r\n         for k in mk:\r\n-            if k in kitu: break\r\n+            if k in kitu:\r\n+                kt=True\r\n+                break\r\n         else: \r\n             break\r\n-        if re.search(\"[A-Z]\",mk):\r\n\\ No newline at end of file\n-            mk=True\r\n-            break\r\n-        else: break\r\n-print(kt)\r\n-                \r\n-            \r\n-        \n+print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682329558198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,18 +4,28 @@\n kt=False\r\n while len(mk)>=6 and len(mk)<=17:\r\n     if re.search(\"[a-z]\",mk):\r\n         for i in mk:\r\n-            if i.isdigit(): break\r\n+            if i.isdigit():\r\n+                kt=True\r\n+                break\r\n         else: \r\n+            kt=False\r\n             break\r\n         for j in mk:\r\n-            if j.isupper(): break\r\n-        else: \r\n+            if j.isupper(): \r\n+                kt=True\r\n+                break\r\n+        else:\r\n+            kt=False \r\n             break\r\n         for k in mk:\r\n             if k in kitu:\r\n                 kt=True\r\n                 break\r\n         else: \r\n+            kt=False\r\n             break\r\n+    else:\r\n+        kt=False\r\n+        break\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682329650913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,27 +5,21 @@\n while len(mk)>=6 and len(mk)<=17:\r\n     if re.search(\"[a-z]\",mk):\r\n         for i in mk:\r\n             if i.isdigit():\r\n-                kt=True\r\n                 break\r\n         else: \r\n-            kt=False\r\n             break\r\n         for j in mk:\r\n             if j.isupper(): \r\n-                kt=True\r\n                 break\r\n         else:\r\n-            kt=False \r\n             break\r\n         for k in mk:\r\n             if k in kitu:\r\n                 kt=True\r\n                 break\r\n         else: \r\n-            kt=False\r\n             break\r\n     else:\r\n-        kt=False\r\n         break\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682329688973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,5 @@\n import re\r\n kitu='@#$'\r\n mk=input()\r\n kt=False\r\n-while len(mk)>=6 and len(mk)<=17:\r\n-    if re.search(\"[a-z]\",mk):\r\n-        for i in mk:\r\n-            if i.isdigit():\r\n-                break\r\n-        else: \r\n-            break\r\n-        for j in mk:\r\n-            if j.isupper(): \r\n-                break\r\n-        else:\r\n-            break\r\n-        for k in mk:\r\n-            if k in kitu:\r\n-                kt=True\r\n-                break\r\n-        else: \r\n-            break\r\n-    else:\r\n-        break\r\n-print(kt)\n\\ No newline at end of file\n+print(re.search(\"[a-z]\",mk))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682329736869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import re\r\n kitu='@#$'\r\n mk=input()\r\n kt=False\r\n-print(re.search(\"[a-z]\",mk))\n\\ No newline at end of file\n+print(any(re.search(\"[a-z]\",mk)))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330016421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-import re\r\n kitu='@#$'\r\n mk=input()\r\n kt=False\r\n-print(any(re.search(\"[a-z]\",mk)))\n\\ No newline at end of file\n+while 6<=len(mk)<=17:\r\n+    if any(i for i in mk if i.isdigit()): kt=True\r\n+print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330083257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n kitu='@#$'\r\n mk=input()\r\n kt=False\r\n while 6<=len(mk)<=17:\r\n-    if any(i for i in mk if i.isdigit()): kt=True\r\n+    if any(i for i in mk if i in kitu): kt=True\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330147653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n kitu='@#$'\r\n mk=input()\r\n kt=False\r\n while 6<=len(mk)<=17:\r\n-    if any(i for i in mk if i in kitu): kt=True\r\n+    for i in mk:\r\n+        if i in kitu:\r\n+            kt=True\r\n+            break\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330163701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n kitu='@#$'\r\n mk=input()\r\n kt=False\r\n-while 6<=len(mk)<=17:\r\n-    for i in mk:\r\n+for i in mk:\r\n         if i in kitu:\r\n             kt=True\r\n-            break\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330208209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n kitu='@#$'\r\n mk=input()\r\n kt=False\r\n-for i in mk:\r\n-        if i in kitu:\r\n-            kt=True\r\n+# for i in mk:\r\n+#         if i in kitu:\r\n+#             kt=True\r\n+if any(i for i in mk if i in kitu): kt=True\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330256465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,7 @@\n kt=False\r\n # for i in mk:\r\n #         if i in kitu:\r\n #             kt=True\r\n-if any(i for i in mk if i in kitu): kt=True\r\n+if any(i for i in mk if i in kitu): \r\n+    if any(i for i in mk if i.isupper()): kt=True\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330307193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,8 @@\n # for i in mk:\r\n #         if i in kitu:\r\n #             kt=True\r\n if any(i for i in mk if i in kitu): \r\n-    if any(i for i in mk if i.isupper()): kt=True\r\n+    if any(i for i in mk if i.isupper()):\r\n+        if any(i for i in mk if i.isalpha()):\r\n+            kt=True\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330357154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n kt=False\r\n # for i in mk:\r\n #         if i in kitu:\r\n #             kt=True\r\n-if any(i for i in mk if i in kitu): \r\n-    if any(i for i in mk if i.isupper()):\r\n-        if any(i for i in mk if i.isalpha()):\r\n-            kt=True\r\n+while 6<=len(mk)<=17:\r\n+    if any(i for i in mk if i in kitu): \r\n+        if any(i for i in mk if i.isupper()):\r\n+            if any(i for i in mk if i.isalpha()):\r\n+                kt=True\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330373383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n kt=False\r\n # for i in mk:\r\n #         if i in kitu:\r\n #             kt=True\r\n-while 6<=len(mk)<=17:\r\n+while 6<=len(mk) and len(mk)<=17:\r\n     if any(i for i in mk if i in kitu): \r\n         if any(i for i in mk if i.isupper()):\r\n             if any(i for i in mk if i.isalpha()):\r\n                 kt=True\r\n"
+                },
+                {
+                    "date": 1682330388451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,6 @@\n     if any(i for i in mk if i in kitu): \r\n         if any(i for i in mk if i.isupper()):\r\n             if any(i for i in mk if i.isalpha()):\r\n                 kt=True\r\n+                break\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330410269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,7 @@\n         if any(i for i in mk if i.isupper()):\r\n             if any(i for i in mk if i.isalpha()):\r\n                 kt=True\r\n                 break\r\n+    else:\r\n+        break\r\n print(kt)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682330439024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,7 @@\n kitu='@#$'\r\n mk=input()\r\n kt=False\r\n-# for i in mk:\r\n-#         if i in kitu:\r\n-#             kt=True\r\n while 6<=len(mk) and len(mk)<=17:\r\n     if any(i for i in mk if i in kitu): \r\n         if any(i for i in mk if i.isupper()):\r\n             if any(i for i in mk if i.isalpha()):\r\n"
+                }
+            ],
+            "date": 1682329357497,
+            "name": "Commit-0",
+            "content": "import re\r\nkitu='@#$'\r\nmk=input()\r\nkt=False\r\nwhile len(mk)>=6 and len(mk)<=17:\r\n    if re.search(\"[a-z]\",mk):\r\n        for i in mk:\r\n            if i.isdigit(): break\r\n        else: \r\n            break\r\n        for k in mk:\r\n            if k in kitu: break\r\n        else: \r\n            break\r\n        if re.search(\"[A-Z]\",mk):\r\n            mk=True\r\n            break\r\n        else: break\r\nprint(kt)\r\n                \r\n            \r\n        "
+        }
+    ]
+}

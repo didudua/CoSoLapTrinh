@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Chuong7/BTCN/44_1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1682240418807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682240433287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     elif i.isdigit():\r\n         so+=1\r\n     else:\r\n         khac+=1\r\n-print('''In hoa: {hoa}\r\n+print(f'''In hoa: {hoa}\r\n          In thuong: {thuong}\r\n          Chu so: {so}\r\n          Khac: {khac}\r\n       ''')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682240453369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n         so+=1\r\n     else:\r\n         khac+=1\r\n print(f'''In hoa: {hoa}\r\n-         In thuong: {thuong}\r\n-         Chu so: {so}\r\n-         Khac: {khac}\r\n+In thuong: {thuong}\r\n+Chu so: {so}\r\n+Khac: {khac}\r\n       ''')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1682240418807,
+            "name": "Commit-0",
+            "content": "L=input()\r\nhoa=0\r\nthuong=0\r\nso=0\r\nkhac=0\r\nfor i in L:\r\n    if i.isupper():\r\n        hoa+=1\r\n    elif i.islower():\r\n        thuong+=1\r\n    elif i.isdigit():\r\n        so+=1\r\n    else:\r\n        khac+=1\r\nprint('''In hoa: {hoa}\r\n         In thuong: {thuong}\r\n         Chu so: {so}\r\n         Khac: {khac}\r\n      ''')"
+        }
+    ]
+}
