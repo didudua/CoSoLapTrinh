@@ -1,0 +1,13 @@
+m1=input('mon 1:')
+sl1=int(input('so luong:'))
+m2=input('mon 2:')
+sl2=int(input('so luong:'))
+m3=input('mon 3:')
+sl3=int(input('so luong:'))
+m4=input('mon 4:')
+sl4=int(input('so luong:'))
+
+print(m1.ljust(20,'.'),sl1)
+print(m2.ljust(20,'.'),sl2)
+print(m3.ljust(20,'.'),sl3)
+print(m4.ljust(20,'.'),sl4)

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Chuong7/BT_Slide/44_page40.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1682345877602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1682346006801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,8 @@\n sl3=int(input('so luong:'))\r\n m4=input('mon 4:')\r\n sl4=int(input('so luong:'))\r\n \r\n-print(m1.ljust(20,'.'),end='')\n\\ No newline at end of file\n+print(m1.ljust(20,'.'),sl1,end='')\r\n+print(m2.ljust(20,'.'),sl2,end='')\r\n+print(m3.ljust(20,'.'),sl3,end='')\r\n+print(m4.ljust(20,'.'),sl4,end='')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1682346048326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n sl3=int(input('so luong:'))\r\n m4=input('mon 4:')\r\n sl4=int(input('so luong:'))\r\n \r\n-print(m1.ljust(20,'.'),sl1,end='')\r\n-print(m2.ljust(20,'.'),sl2,end='')\r\n-print(m3.ljust(20,'.'),sl3,end='')\r\n-print(m4.ljust(20,'.'),sl4,end='')\n\\ No newline at end of file\n+print(m1.ljust(20,'.'),sl1)\r\n+print(m2.ljust(20,'.'),sl2)\r\n+print(m3.ljust(20,'.'),sl3)\r\n+print(m4.ljust(20,'.'),sl4)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1682345877602,
+            "name": "Commit-0",
+            "content": "m1=input('mon 1:')\r\nsl1=int(input('so luong:'))\r\nm2=input('mon 2:')\r\nsl2=int(input('so luong:'))\r\nm3=input('mon 3:')\r\nsl3=int(input('so luong:'))\r\nm4=input('mon 4:')\r\nsl4=int(input('so luong:'))\r\n\r\nprint(m1.ljust(20,'.'),end='')"
+        }
+    ]
+}

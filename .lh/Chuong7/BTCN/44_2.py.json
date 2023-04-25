@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 36,
+            "activePatchIndex": 39,
             "patches": [
                 {
                     "date": 1682325822596,
@@ -152,6 +152,18 @@
                 {
                     "date": 1682328612681,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n-dau=[',' , '.' , ';' , ':']\r\n+dau=',.;:'\r\n L=input().strip(' ')\r\n L=L.capitalize()\r\n+for j in range(2,len(L)):\r\n+    L= ''.join(L.split(j*' '))\r\n+L=list(L)\r\n i=0\r\n-for i in range(2,len(L)):\r\n-    L= ''.join(L.split(i*' '))\r\n-L=list(L)\r\n while i<len(L):\r\n     if L[i] in dau:\r\n         if L[i-1]==' ':\r\n             L.pop(i-1)\r\n"
+                },
+                {
+                    "date": 1682412619558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n dau=',.;:'\r\n L=input().strip(' ')\r\n L=L.capitalize()\r\n-for j in range(2,len(L)):\r\n-    L= ''.join(L.split(j*' '))\r\n L=list(L)\r\n i=0\r\n while i<len(L):\r\n     if L[i] in dau:\r\n-        if L[i-1]==' ':\r\n-            L.pop(i-1)\r\n+        for j in range(i-1,-1,-1)\r\n+            if L[j]==' ':\r\n+                L.pop(j)\r\n+            else: break\r\n     i+=1\r\n print(''.join(L))\r\n"
+                },
+                {
+                    "date": 1682412626005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n L=list(L)\r\n i=0\r\n while i<len(L):\r\n     if L[i] in dau:\r\n-        for j in range(i-1,-1,-1)\r\n+        for j in range(i-1,-1,-1):\r\n             if L[j]==' ':\r\n                 L.pop(j)\r\n             else: break\r\n     i+=1\r\n"
+                },
+                {
+                    "date": 1682412697546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n         for j in range(i-1,-1,-1):\r\n             if L[j]==' ':\r\n                 L.pop(j)\r\n             else: break\r\n-    i+=1\r\n+    else:\r\n+        i+=1\r\n print(''.join(L))\r\n"
                 }
             ],
             "date": 1682325822596,
