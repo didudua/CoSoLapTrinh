@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 39,
+            "activePatchIndex": 40,
             "patches": [
                 {
                     "date": 1682325822596,
@@ -164,6 +164,10 @@
                 {
                     "date": 1682412697546,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n         for j in range(i-1,-1,-1):\r\n             if L[j]==' ':\r\n                 L.pop(j)\r\n             else: break\r\n-    i+=1\r\n+    else:\r\n+        i+=1\r\n print(''.join(L))\r\n"
+                },
+                {
+                    "date": 1683198059360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n L=list(L)\r\n i=0\r\n while i<len(L):\r\n     if L[i] in dau:\r\n-        for j in range(i-1,-1,-1):\r\n+        for j in range(i-1,0,-1):\r\n             if L[j]==' ':\r\n                 L.pop(j)\r\n             else: break\r\n     else:\r\n"
                 }
             ],
             "date": 1682325822596,

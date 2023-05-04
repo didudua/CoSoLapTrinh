@@ -5,8 +5,12 @@ Ngổn-ngang---trăm-mối---bên---lòng----
 ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.
 '''
 
-L=''.join(L.split('----'))
-L=' '.join(L.split('---'))
-L=' '.join(L.split('--'))
-L=' '.join(L.split('-'))
-print(L[2:])
+def XuLyDong(L) :
+    L=L.split("-")
+    while '' in L : L.remove("")
+    return " ".join(L)
+def xuly(L):
+    L=L.split("\n")
+    for i in L:
+        print(XuLyDong(i))
+xuly(L)

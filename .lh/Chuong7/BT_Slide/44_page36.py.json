@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 18,
+            "activePatchIndex": 20,
             "patches": [
                 {
                     "date": 1680791104337,
@@ -80,6 +80,14 @@
                 {
                     "date": 1681187293732,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n \r\n-L=' '.join(L.split('----'))\r\n+L=''.join(L.split('----'))\r\n L=' '.join(L.split('---'))\r\n L=' '.join(L.split('--'))\r\n L=' '.join(L.split('-'))\r\n print(L[2:])\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683203298851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,13 @@\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n \r\n-L=''.join(L.split('----'))\r\n-L=' '.join(L.split('---'))\r\n-L=' '.join(L.split('--'))\r\n-L=' '.join(L.split('-'))\r\n-print(L[2:])\n\\ No newline at end of file\n+def XuLyDong(xau) :\r\n+    L=xau.split(\"-\")\r\n+    while '' in L : L.remove(\"\")\r\n+    return \" \".join(L)\r\n+def xuly(L):\r\n+    L=L.split(\"\\n\")\r\n+    for i in L:\r\n+        print(XuLyDong(i))\r\n+xuly(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683203323690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n Ngổn-ngang---trăm-mối---bên---lòng----\r\n ----Nên-câu---tuyệt--diệu-ngụ-trong-tính-tình.\r\n '''\r\n \r\n-def XuLyDong(xau) :\r\n-    L=xau.split(\"-\")\r\n+def XuLyDong(L) :\r\n+    L=L.split(\"-\")\r\n     while '' in L : L.remove(\"\")\r\n     return \" \".join(L)\r\n def xuly(L):\r\n     L=L.split(\"\\n\")\r\n"
                 }
             ],
             "date": 1680791104337,
