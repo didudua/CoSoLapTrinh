@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 24,
+            "activePatchIndex": 25,
             "patches": [
                 {
                     "date": 1680750412546,
@@ -104,6 +104,10 @@
                 {
                     "date": 1681195257380,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n A=[]\r\n for j in range(10):\r\n     A+=[int(input())]\r\n B=A\r\n-for i in range(0,len(A)-1,2):\r\n+for i in range(0,len(A),2):\r\n     B[i],B[i+1] = A[i+1], A[i]\r\n print(B)\r\n \r\n"
+                },
+                {
+                    "date": 1683810647910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,19 @@\n-A=[]\r\n-for j in range(10):\r\n-    A+=[int(input())]\r\n-B=A\r\n-for i in range(0,len(A),2):\r\n-    B[i],B[i+1] = A[i+1], A[i]\r\n-print(B)\r\n+# A=[]\r\n+# for j in range(10):\r\n+#     A+=[int(input())]\r\n+# B=A\r\n+# for i in range(0,len(A),2):\r\n+#     B[i],B[i+1] = A[i+1], A[i]\r\n+# print(B)\r\n \r\n+L=[]\r\n+import copy\r\n+for i in range(0,10):\r\n+    n=int(input())\r\n+    L=L+[n]\r\n+B=copy.copy(L)\r\n+for i in range(0,10,2):\r\n+    B[i]=L[i+1]\r\n+    B[i+1]=L[i]\r\n+for i in B:\r\n+    print(i,end=\" \")\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1680750412546,
