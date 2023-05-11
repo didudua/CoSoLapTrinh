@@ -6,7 +6,7 @@ def Input():
     x=int(input('x='))
     return L,x
 def FirstAndLast(L):
-    print(f'[{L[0]},{L[-1]}]')
+    print(f'[{L[0]}, {L[-1]}]')
 def Search(L,x):
     if x in L: return True
     else: return False
