@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 40,
+            "activePatchIndex": 54,
             "patches": [
                 {
                     "date": 1682325822596,
@@ -168,6 +168,62 @@
                 {
                     "date": 1683198059360,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n L=list(L)\r\n i=0\r\n while i<len(L):\r\n     if L[i] in dau:\r\n-        for j in range(i-1,-1,-1):\r\n+        for j in range(i-1,0,-1):\r\n             if L[j]==' ':\r\n                 L.pop(j)\r\n             else: break\r\n     else:\r\n"
+                },
+                {
+                    "date": 1683807265647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,4 +11,15 @@\n             else: break\r\n     else:\r\n         i+=1\r\n print(''.join(L))\r\n+\r\n+# cau=input()\r\n+# cau=cau.strip() \r\n+# tu=cau.lower().split() \r\n+# chucaidau=tu[0] \r\n+# inhoa=chucaidau.title() \r\n+# tu.remove(chucaidau) \r\n+# tu.insert(0,inhoa) \r\n+# vanbanmoi=' '.join(tu) \r\n+# input_str=vanbanmoi.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n+# print(input_str)\r\n"
+                },
+                {
+                    "date": 1683807288064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,25 @@\n-dau=',.;:'\r\n-L=input().strip(' ')\r\n-L=L.capitalize()\r\n-L=list(L)\r\n-i=0\r\n-while i<len(L):\r\n-    if L[i] in dau:\r\n-        for j in range(i-1,0,-1):\r\n-            if L[j]==' ':\r\n-                L.pop(j)\r\n-            else: break\r\n-    else:\r\n-        i+=1\r\n-print(''.join(L))\r\n+# dau=',.;:'\r\n+# L=input().strip(' ')\r\n+# L=L.capitalize()\r\n+# L=list(L)\r\n+# i=0\r\n+# while i<len(L):\r\n+#     if L[i] in dau:\r\n+#         for j in range(i-1,0,-1):\r\n+#             if L[j]==' ':\r\n+#                 L.pop(j)\r\n+#             else: break\r\n+#     else:\r\n+#         i+=1\r\n+# print(''.join(L))\r\n \r\n-# cau=input()\r\n-# cau=cau.strip() \r\n-# tu=cau.lower().split() \r\n-# chucaidau=tu[0] \r\n-# inhoa=chucaidau.title() \r\n-# tu.remove(chucaidau) \r\n-# tu.insert(0,inhoa) \r\n-# vanbanmoi=' '.join(tu) \r\n-# input_str=vanbanmoi.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n-# print(input_str)\r\n+cau=input()\r\n+cau=cau.strip() \r\n+tu=cau.lower().split() \r\n+chucaidau=tu[0] \r\n+inhoa=chucaidau.title() \r\n+tu.remove(chucaidau) \r\n+tu.insert(0,inhoa) \r\n+vanbanmoi=' '.join(tu) \r\n+input_str=vanbanmoi.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n+print(input_str)\r\n"
+                },
+                {
+                    "date": 1683807758147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n \r\n cau=input()\r\n cau=cau.strip() \r\n tu=cau.lower().split() \r\n+print(tu)\r\n chucaidau=tu[0] \r\n inhoa=chucaidau.title() \r\n tu.remove(chucaidau) \r\n tu.insert(0,inhoa) \r\n"
+                },
+                {
+                    "date": 1683807957920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n # print(''.join(L))\r\n \r\n cau=input()\r\n cau=cau.strip() \r\n-tu=cau.lower().split() \r\n-print(tu)\r\n+cau=cau.capitalized()\r\n+tu=cau.split() \r\n chucaidau=tu[0] \r\n inhoa=chucaidau.title() \r\n tu.remove(chucaidau) \r\n tu.insert(0,inhoa) \r\n"
+                },
+                {
+                    "date": 1683808145960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,15 +12,30 @@\n #     else:\r\n #         i+=1\r\n # print(''.join(L))\r\n \r\n-cau=input()\r\n-cau=cau.strip() \r\n-cau=cau.capitalized()\r\n-tu=cau.split() \r\n-chucaidau=tu[0] \r\n-inhoa=chucaidau.title() \r\n-tu.remove(chucaidau) \r\n-tu.insert(0,inhoa) \r\n-vanbanmoi=' '.join(tu) \r\n-input_str=vanbanmoi.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n-print(input_str)\r\n+# cau=input()\r\n+# cau=cau.strip() \r\n+# tu=cau.lower().split() \r\n+# chucaidau=tu[0] \r\n+# inhoa=chucaidau.title() \r\n+# tu.remove(chucaidau) \r\n+# tu.insert(0,inhoa) \r\n+# vanbanmoi=' '.join(tu) \r\n+# input_str=vanbanmoi.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n+# print(input_str)\r\n+\r\n+dau=',.;:'\r\n+L=input().strip(' ')\r\n+L=L.capitalize()\r\n+L=L.split()\r\n+print(L)\r\n+i=0\r\n+while i<len(L):\r\n+    if L[i] in dau:\r\n+        for j in range(i-1,0,-1):\r\n+            if L[j]==' ':\r\n+                L.pop(j)\r\n+            else: break\r\n+    else:\r\n+        i+=1\r\n+print(''.join(L))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808245115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,15 +27,7 @@\n dau=',.;:'\r\n L=input().strip(' ')\r\n L=L.capitalize()\r\n L=L.split()\r\n-print(L)\r\n-i=0\r\n-while i<len(L):\r\n-    if L[i] in dau:\r\n-        for j in range(i-1,0,-1):\r\n-            if L[j]==' ':\r\n-                L.pop(j)\r\n-            else: break\r\n-    else:\r\n-        i+=1\r\n-print(''.join(L))\n\\ No newline at end of file\n+L=''.join(L)\r\n+kq=L.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n+print(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808318154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,6 +28,5 @@\n L=input().strip(' ')\r\n L=L.capitalize()\r\n L=L.split()\r\n L=''.join(L)\r\n-kq=L.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n-print(kq)\n\\ No newline at end of file\n+print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808328061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,6 +27,6 @@\n dau=',.;:'\r\n L=input().strip(' ')\r\n L=L.capitalize()\r\n L=L.split()\r\n-L=''.join(L)\r\n+L=' '.join(L)\r\n print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808481376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,5 +28,6 @@\n L=input().strip(' ')\r\n L=L.capitalize()\r\n L=L.split()\r\n L=' '.join(L)\r\n+kq=L.replace(' , ',', ').replace(' . ','. ').replace(' ; ','; ').replace(' : ',': ')\r\n print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808494102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,22 +12,22 @@\n #     else:\r\n #         i+=1\r\n # print(''.join(L))\r\n \r\n-# cau=input()\r\n-# cau=cau.strip() \r\n-# tu=cau.lower().split() \r\n-# chucaidau=tu[0] \r\n-# inhoa=chucaidau.title() \r\n-# tu.remove(chucaidau) \r\n-# tu.insert(0,inhoa) \r\n-# vanbanmoi=' '.join(tu) \r\n-# input_str=vanbanmoi.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n-# print(input_str)\r\n+cau=input()\r\n+cau=cau.strip() \r\n+tu=cau.lower().split() \r\n+chucaidau=tu[0] \r\n+inhoa=chucaidau.title() \r\n+tu.remove(chucaidau) \r\n+tu.insert(0,inhoa) \r\n+vanbanmoi=' '.join(tu) \r\n\\ No newline at end of file\n+input_str=vanbanmoi.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n+print(input_str)\r\n \r\n-dau=',.;:'\r\n-L=input().strip(' ')\r\n-L=L.capitalize()\r\n-L=L.split()\r\n-L=' '.join(L)\r\n-kq=L.replace(' , ',', ').replace(' . ','. ').replace(' ; ','; ').replace(' : ',': ')\r\n-print(L)\n+# dau=',.;:'\r\n+# L=input().strip(' ')\r\n+# L=L.capitalize()\r\n+# L=L.split()\r\n+# L=' '.join(L)\r\n+# kq=L.replace(' , ',', ').replace(' . ','. ').replace(' ; ','; ').replace(' : ',': ')\r\n+# print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808532073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,22 +12,22 @@\n #     else:\r\n #         i+=1\r\n # print(''.join(L))\r\n \r\n-cau=input()\r\n-cau=cau.strip() \r\n-tu=cau.lower().split() \r\n-chucaidau=tu[0] \r\n-inhoa=chucaidau.title() \r\n-tu.remove(chucaidau) \r\n-tu.insert(0,inhoa) \r\n-vanbanmoi=' '.join(tu) \r\n-input_str=vanbanmoi.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n-print(input_str)\r\n+# cau=input()\r\n+# cau=cau.strip() \r\n+# tu=cau.lower().split() \r\n+# chucaidau=tu[0] \r\n+# inhoa=chucaidau.title() \r\n+# tu.remove(chucaidau) \r\n+# tu.insert(0,inhoa) \r\n+# vanbanmoi=' '.join(tu) \r\n\\ No newline at end of file\n+# input_str=vanbanmoi.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n+# print(input_str)\r\n \r\n-# dau=',.;:'\r\n-# L=input().strip(' ')\r\n-# L=L.capitalize()\r\n-# L=L.split()\r\n-# L=' '.join(L)\r\n-# kq=L.replace(' , ',', ').replace(' . ','. ').replace(' ; ','; ').replace(' : ',': ')\r\n-# print(L)\n+dau=',.;:'\r\n+L=input().strip(' ')\r\n+L=L.capitalize()\r\n+L=L.split()\r\n+L=' '.join(L)\r\n+kq=L.replace(' , ',', ').replace(' . ','. ').replace(' ; ','; ').replace(' : ',': ')\r\n+print(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808696711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,11 @@\n # vanbanmoi=' '.join(tu) \r\n # input_str=vanbanmoi.replace(\" , \",\", \").replace(\" ; \",\"; \").replace(\" . \",\". \")\r\n # print(input_str)\r\n \r\n-dau=',.;:'\r\n L=input().strip(' ')\r\n L=L.capitalize()\r\n L=L.split()\r\n+print(L)\r\n L=' '.join(L)\r\n kq=L.replace(' , ',', ').replace(' . ','. ').replace(' ; ','; ').replace(' : ',': ')\r\n print(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808726231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,7 @@\n \r\n L=input().strip(' ')\r\n L=L.capitalize()\r\n L=L.split()\r\n-print(L)\r\n L=' '.join(L)\r\n kq=L.replace(' , ',', ').replace(' . ','. ').replace(' ; ','; ').replace(' : ',': ')\r\n print(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808737090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,4 @@\n-# dau=',.;:'\r\n-# L=input().strip(' ')\r\n-# L=L.capitalize()\r\n-# L=list(L)\r\n-# i=0\r\n-# while i<len(L):\r\n-#     if L[i] in dau:\r\n-#         for j in range(i-1,0,-1):\r\n-#             if L[j]==' ':\r\n-#                 L.pop(j)\r\n-#             else: break\r\n-#     else:\r\n-#         i+=1\r\n-# print(''.join(L))\r\n \r\n # cau=input()\r\n # cau=cau.strip() \r\n # tu=cau.lower().split() \r\n"
                 }
             ],
             "date": 1682325822596,

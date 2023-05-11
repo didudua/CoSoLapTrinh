@@ -1,14 +1,18 @@
-dau=',.;:'
+
+# cau=input()
+# cau=cau.strip() 
+# tu=cau.lower().split() 
+# chucaidau=tu[0] 
+# inhoa=chucaidau.title() 
+# tu.remove(chucaidau) 
+# tu.insert(0,inhoa) 
+# vanbanmoi=' '.join(tu) 
+# input_str=vanbanmoi.replace(" , ",", ").replace(" ; ","; ").replace(" . ",". ")
+# print(input_str)
+
 L=input().strip(' ')
 L=L.capitalize()
-L=list(L)
-i=0
-while i<len(L):
-    if L[i] in dau:
-        for j in range(i-1,0,-1):
-            if L[j]==' ':
-                L.pop(j)
-            else: break
-    else:
-        i+=1
-print(''.join(L))
+L=L.split()
+L=' '.join(L)
+kq=L.replace(' , ',', ').replace(' . ','. ').replace(' ; ','; ').replace(' : ',': ')
+print(kq)

@@ -2,12 +2,28 @@
 # cslt6.44 151204
 # cslt6.15 060604 khoa
 # cslt6.19 200304 long
-n=int(input('n='))
-u=[]
-j=0
-for x in range(2,9999999):
-    for i in range(2,x):
-        if x%i==0: break
-    else: u+=[str(x)]
-    if len(u)==n: break
-print(', '.join(u))
+# cslt6.31 280904 0796732045quann 
+# n=int(input('n='))
+# u=[]
+# j=0
+# for x in range(2,9999999):
+#     for i in range(2,x):
+#         if x%i==0: break
+#     else: u+=[str(x)]
+#     if len(u)==n: break
+# print(', '.join(u))
+
+n=(input())
+n=n.capitalize()
+n=n.strip()
+n=list(n)
+i=0
+while i<len(n):
+    if n[i]=="," or n[i]==";" or n[i]==":"or n[i]==".":
+        if n[i-1]==" ":
+            del(n[i-1])
+        else:
+            break
+    else:
+        i=i+1
+print("".join(n))
