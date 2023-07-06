@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 24,
+            "activePatchIndex": 38,
             "patches": [
                 {
                     "date": 1679194729817,
@@ -104,6 +104,62 @@
                 {
                     "date": 1682228825200,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,17 +47,5 @@\n # if a*b==n: print(\"*\")\r\n # elif a+b==n: print(\"+\")\r\n # elif a-b==n: print(\"-\")\r\n # elif b!=0 and a/b==n: print(\"/\")\r\n-# else: print(\"NO\")\r\n-# Khởi tạo một danh sách chứa các chữ hoa\r\n-uppercase_list = [\"HELLO\", \"WORLD\", \"PYTHON\"]\r\n-\r\n-# Khởi tạo một danh sách rỗng để chứa các chữ thường\r\n-lowercase_list = []\r\n-\r\n-# Duyệt qua từng chuỗi trong danh sách chữ hoa, chuyển đổi sang chữ thường và thêm vào danh sách chữ thường\r\n-for word in uppercase_list:\r\n-    lowercase_list.append(word.lower())\r\n-\r\n-# In ra danh sách chữ thường\r\n-print(lowercase_list)\r\n+# else: print(\"NO\")\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685110522801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,22 @@\n # if a*b==n: print(\"*\")\r\n # elif a+b==n: print(\"+\")\r\n # elif a-b==n: print(\"-\")\r\n # elif b!=0 and a/b==n: print(\"/\")\r\n-# else: print(\"NO\")\n\\ No newline at end of file\n+# else: print(\"NO\")\r\n+n=str(input())\r\n+a=n.split()\r\n+L=[]\r\n+for j in range(0,len(a)):\r\n+    L=L+[a[j]]\r\n+    if len(L)>=2:\r\n+        L.insert(len(L)-1,\"and\")\r\n+    if len(L)>=3:\r\n+        i=0\r\n+        while i<len(L):\r\n+            if L[i]==\"and\" and i!=len(L)-2:\r\n+                L[i]=\",\"\r\n+            else:\r\n+                i=i+1\r\n+    for i in range(0,len(L)):\r\n+        print(L[i],end=\" \")\r\n+    print()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685110729742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,21 +48,7 @@\n # elif a+b==n: print(\"+\")\r\n # elif a-b==n: print(\"-\")\r\n # elif b!=0 and a/b==n: print(\"/\")\r\n # else: print(\"NO\")\r\n-n=str(input())\r\n-a=n.split()\r\n-L=[]\r\n-for j in range(0,len(a)):\r\n-    L=L+[a[j]]\r\n-    if len(L)>=2:\r\n-        L.insert(len(L)-1,\"and\")\r\n-    if len(L)>=3:\r\n-        i=0\r\n-        while i<len(L):\r\n-            if L[i]==\"and\" and i!=len(L)-2:\r\n-                L[i]=\",\"\r\n-            else:\r\n-                i=i+1\r\n-    for i in range(0,len(L)):\r\n-        print(L[i],end=\" \")\r\n-    print()\n\\ No newline at end of file\n+n=input()\r\n+N=n.split()\r\n+print(N)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685110887869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,5 +50,6 @@\n # elif b!=0 and a/b==n: print(\"/\")\r\n # else: print(\"NO\")\r\n n=input()\r\n N=n.split()\r\n-print(N)\n\\ No newline at end of file\n+if len(N)==1: print(N)\r\n+elif len(N)==2: print(' and '.join(N))\r\n"
+                },
+                {
+                    "date": 1685110907639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,6 +50,6 @@\n # elif b!=0 and a/b==n: print(\"/\")\r\n # else: print(\"NO\")\r\n n=input()\r\n N=n.split()\r\n-if len(N)==1: print(N)\r\n+if len(N)==1: print(*N)\r\n elif len(N)==2: print(' and '.join(N))\r\n"
+                },
+                {
+                    "date": 1685110977508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,35 @@\n # elif a+b==n: print(\"+\")\r\n # elif a-b==n: print(\"-\")\r\n # elif b!=0 and a/b==n: print(\"/\")\r\n # else: print(\"NO\")\r\n-n=input()\r\n-N=n.split()\r\n-if len(N)==1: print(*N)\r\n-elif len(N)==2: print(' and '.join(N))\r\n+# n=input()\r\n+# N=n.split()\r\n+# if len(N)==1: print(*N)\r\n+# elif len(N)==2: print(' and '.join(N))\r\n+def listformat(items):\r\n+    length = len(items)\r\n+\r\n+    if length == 0:\r\n+        return 'Empty'\r\n+    elif length == 1:\r\n+        return str(items[0])\r\n+    \r\n+    results = ''\r\n+    for i in range(0, length - 2):\r\n+        results += str(items[i]) + \", \"\r\n+\r\n+    results = results + str(items[length - 2]) + ' and '\r\n+    results += str(items[length - 1]) \r\n+\r\n+    return results\r\n+\r\n+def main():\r\n+    items = []\r\n+    line = input('Enter an item (Enter to cancel): ')\r\n+    while line != '':\r\n+        items.append(line)\r\n+        line = input('Enter an item (Enter to cancel): ')\r\n+    \r\n+    print('The items you entered are: {}'. format(listformat(items)))\r\n+\r\n+main()\r\n"
+                },
+                {
+                    "date": 1685111154993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,35 +48,10 @@\n # elif a+b==n: print(\"+\")\r\n # elif a-b==n: print(\"-\")\r\n # elif b!=0 and a/b==n: print(\"/\")\r\n # else: print(\"NO\")\r\n-# n=input()\r\n-# N=n.split()\r\n-# if len(N)==1: print(*N)\r\n-# elif len(N)==2: print(' and '.join(N))\r\n-def listformat(items):\r\n-    length = len(items)\r\n-\r\n-    if length == 0:\r\n-        return 'Empty'\r\n-    elif length == 1:\r\n-        return str(items[0])\r\n-    \r\n-    results = ''\r\n-    for i in range(0, length - 2):\r\n-        results += str(items[i]) + \", \"\r\n-\r\n-    results = results + str(items[length - 2]) + ' and '\r\n-    results += str(items[length - 1]) \r\n-\r\n-    return results\r\n-\r\n-def main():\r\n-    items = []\r\n-    line = input('Enter an item (Enter to cancel): ')\r\n-    while line != '':\r\n-        items.append(line)\r\n-        line = input('Enter an item (Enter to cancel): ')\r\n-    \r\n-    print('The items you entered are: {}'. format(listformat(items)))\r\n-\r\n-main()\r\n+n=input()\r\n+N=n.split()\r\n+def test(N):\r\n+    if len(N)==1: print(*N)\r\n+    elif len(N)==2: print(' and '.join(N))\r\n+    else: print(', '.join(N[:-2]))\r\n"
+                },
+                {
+                    "date": 1685111180842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,4 +54,5 @@\n def test(N):\r\n     if len(N)==1: print(*N)\r\n     elif len(N)==2: print(' and '.join(N))\r\n     else: print(', '.join(N[:-2]))\r\n+test(N)\r\n"
+                },
+                {
+                    "date": 1685111191866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,6 +53,6 @@\n N=n.split()\r\n def test(N):\r\n     if len(N)==1: print(*N)\r\n     elif len(N)==2: print(' and '.join(N))\r\n-    else: print(', '.join(N[:-2]))\r\n+    else: print(', '.join(N[:-1]))\r\n test(N)\r\n"
+                },
+                {
+                    "date": 1685111280387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,6 +53,6 @@\n N=n.split()\r\n def test(N):\r\n     if len(N)==1: print(*N)\r\n     elif len(N)==2: print(' and '.join(N))\r\n-    else: print(', '.join(N[:-1]))\r\n+    else: print(', '.join(N[:-1])+' and '.join(N[-1]))\r\n test(N)\r\n"
+                },
+                {
+                    "date": 1685111309483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,6 +53,6 @@\n N=n.split()\r\n def test(N):\r\n     if len(N)==1: print(*N)\r\n     elif len(N)==2: print(' and '.join(N))\r\n-    else: print(', '.join(N[:-1])+' and '.join(N[-1]))\r\n+    else: print(', '.join(N[:-1])+' and '+N[-1])\r\n test(N)\r\n"
+                },
+                {
+                    "date": 1685111673866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,11 +48,15 @@\n # elif a+b==n: print(\"+\")\r\n # elif a-b==n: print(\"-\")\r\n # elif b!=0 and a/b==n: print(\"/\")\r\n # else: print(\"NO\")\r\n-n=input()\r\n-N=n.split()\r\n+def nhap():\r\n+    N=[]\r\n+    while True:\r\n+        n=input('nhap gi do (enter de dung lai): ')\r\n+        N+=n\r\n+        if n == '': return N\r\n def test(N):\r\n     if len(N)==1: print(*N)\r\n     elif len(N)==2: print(' and '.join(N))\r\n     else: print(', '.join(N[:-1])+' and '+N[-1])\r\n-test(N)\r\n+test(nhap())\r\n"
+                },
+                {
+                    "date": 1685111784256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n def nhap():\r\n     N=[]\r\n     while True:\r\n         n=input('nhap gi do (enter de dung lai): ')\r\n-        N+=n\r\n+        N+=[n]\r\n         if n == '': return N\r\n def test(N):\r\n     if len(N)==1: print(*N)\r\n     elif len(N)==2: print(' and '.join(N))\r\n"
+                },
+                {
+                    "date": 1685111815046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,10 +52,10 @@\n def nhap():\r\n     N=[]\r\n     while True:\r\n         n=input('nhap gi do (enter de dung lai): ')\r\n+        if n == '': return N\r\n         N+=[n]\r\n-        if n == '': return N\r\n def test(N):\r\n     if len(N)==1: print(*N)\r\n     elif len(N)==2: print(' and '.join(N))\r\n     else: print(', '.join(N[:-1])+' and '+N[-1])\r\n"
+                },
+                {
+                    "date": 1685112118289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,8 +55,9 @@\n         n=input('nhap gi do (enter de dung lai): ')\r\n         if n == '': return N\r\n         N+=[n]\r\n def test(N):\r\n-    if len(N)==1: print(*N)\r\n+    if N==[]: print('ban chua nhap gi')\r\n+    elif len(N)==1: print(*N)\r\n     elif len(N)==2: print(' and '.join(N))\r\n     else: print(', '.join(N[:-1])+' and '+N[-1])\r\n-test(nhap())\r\n+test(nhap())\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1679194729817,

@@ -1,0 +1,42 @@
+{
+    "sourceFile": "OnTapCuoiKy/sang4.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1688180244221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688180557567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,6 @@\n-kt=['!','\"',\"'\"]\r\n-print(kt[1])\n\\ No newline at end of file\n+kt1='!()-[];:\"\\,<>./?@#$%^&*_~'\r\n+kt2=[\"'\",'{','}']\r\n+a=input()\r\n+for i in a:\r\n+    if i not in kt1 or i not in kt2:\r\n+        print(i)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688180586319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,5 @@\n kt2=[\"'\",'{','}']\r\n a=input()\r\n for i in a:\r\n     if i not in kt1 or i not in kt2:\r\n-        print(i)\n\\ No newline at end of file\n+        print(i,end='')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688180617055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n kt1='!()-[];:\"\\,<>./?@#$%^&*_~'\r\n kt2=[\"'\",'{','}']\r\n a=input()\r\n for i in a:\r\n+    print(i)\r\n     if i not in kt1 or i not in kt2:\r\n         print(i,end='')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688180630354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n kt2=[\"'\",'{','}']\r\n a=input()\r\n for i in a:\r\n     print(i)\r\n-    if i not in kt1 or i not in kt2:\r\n-        print(i,end='')\n\\ No newline at end of file\n+    # if i not in kt1 or i not in kt2:\r\n+    #     print(i,end='')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688180647148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n kt1='!()-[];:\"\\,<>./?@#$%^&*_~'\r\n kt2=[\"'\",'{','}']\r\n a=input()\r\n for i in a:\r\n-    print(i)\r\n-    # if i not in kt1 or i not in kt2:\r\n-    #     print(i,end='')\n\\ No newline at end of file\n+    if i not in kt1 and i not in kt2:\r\n+        print(i,end='')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688183582227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,16 @@\n kt2=[\"'\",'{','}']\r\n a=input()\r\n for i in a:\r\n     if i not in kt1 and i not in kt2:\r\n-        print(i,end='')\n\\ No newline at end of file\n+        print(i,end='')\r\n+\r\n+# dau='!'+'()'+'-'+'[]'+'{}'+';:'+\"'\"+'\"'+'\\,<>./?@#$%^&*_~'\r\n+# chuoi=input()\r\n+# L=[]\r\n+# for i in chuoi:\r\n+#     L.append(i)\r\n+# for i in range(len(L)-1,-1,-1):\r\n+#     if L[i] in dau:\r\n+#         del(L[i])\r\n+# chuoimoi=''.join(L)\r\n+# print(chuoimoi)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1688180244221,
+            "name": "Commit-0",
+            "content": "kt=['!','\"',\"'\"]\r\nprint(kt[1])"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "sourceFile": "OnTapCuoiKy/sang1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1688177646209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688177662406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n #nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n-A=[x for x in input().split]\r\n+A=[x for x in input.split()]\r\n print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688177685254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n+A=[x for x in [input()].split()]\r\n+print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688177797001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n+A=[input.split()]\r\n+print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688177850991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n+A=[[1,2,3,1,4],[1,2,3,4],[1,1,1,1,1]]\r\n+for i in A:\r\n+    print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688177868246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n+A=[[1,2,3,1,4],[1,2,3,4],[1,1,1,1,1]]\r\n+for i in A:\r\n+    print(i)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688178040981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,9 @@\n #nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n A=[[1,2,3,1,4],[1,2,3,4],[1,1,1,1,1]]\r\n-for i in A:\r\n-    print(i)\n-#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n-A=[[1,2,3,1,4],[1,2,3,4],[1,1,1,1,1]]\r\n-for i in A:\r\n-    print(A)\n-#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n-A=[input.split()]\r\n-print(A)\n-#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n-A=[x for x in [input()].split()]\r\n-print(A)\n-#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n-A=[x for x in input.split()]\r\n-print(A)\n\\ No newline at end of file\n+B=A[1][0]\r\n+C=[]\r\n+for i in range A:\r\n+    for j in range i:\r\n+        if j not in B:\r\n+            C+=j\r\n+print(C)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688178071344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n #nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n A=[[1,2,3,1,4],[1,2,3,4],[1,1,1,1,1]]\r\n B=A[1][0]\r\n C=[]\r\n-for i in range A:\r\n-    for j in range i:\r\n+for i in A:\r\n+    for j in i:\r\n         if j not in B:\r\n             C+=j\r\n print(C)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688178104411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n+A=[[1,2,3,1,4],[1,2,3,4],[1,1,1,1,1]]\r\n+B=[A[1][0]]\r\n+C=[]\r\n+for i in A:\r\n+    for j in i:\r\n+        if j not in B:\r\n+            C+=j\r\n+print(C)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688178112379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,6 @@\n C=[]\r\n for i in A:\r\n     for j in i:\r\n         if j not in B:\r\n-            C+=j\r\n-print(C)\n-#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n-A=[[1,2,3,1,4],[1,2,3,4],[1,1,1,1,1]]\r\n-B=A[1][0]\r\n-C=[]\r\n-for i in A:\r\n-    for j in i:\r\n-        if j not in B:\r\n-            C+=j\r\n+            C+=[j]\r\n print(C)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688180803112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n #nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n A=[[1,2,3,1,4],[1,2,3,4],[1,1,1,1,1]]\r\n-B=[A[1][0]]\r\n C=[]\r\n for i in A:\r\n     for j in i:\r\n-        if j not in B:\r\n+        if j !=A[1][0]:\r\n             C+=[j]\r\n print(C)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688181503204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,3 @@\n #nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n-A=[[1,2,3,1,4],[1,2,3,4],[1,1,1,1,1]]\r\n-C=[]\r\n-for i in A:\r\n-    for j in i:\r\n-        if j !=A[1][0]:\r\n-            C+=[j]\r\n-print(C)\n\\ No newline at end of file\n+A=input().split()\r\n+print(A)\r\n"
+                },
+                {
+                    "date": 1688182129425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,15 @@\n #nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\n-A=input().split()\r\n-print(A)\r\n+L=[]\r\n+Lnho=[]\r\n+while True:\r\n+    day=input()\r\n+    if day=='':\r\n+        break\r\n+    Lnho=day.split(' ')\r\n+    L.append(Lnho)\r\n+for i in range(len(L)):\r\n+    X=L[i][0]\r\n+    for j in range(len(L[i])):\r\n+        while X in L[i]:\r\n+            L[i].remove(X)\r\n+    print(len(L[i]))\r\n"
+                }
+            ],
+            "date": 1688177646209,
+            "name": "Commit-0",
+            "content": "#nhap n day so caacso nguyen, thuc hien loai bo cac ptu co gia trị bang x, x la phan tu dau tien\r\nA=[x for x in input().split]\r\nprint(A)"
+        }
+    ]
+}

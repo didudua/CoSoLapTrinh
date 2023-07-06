@@ -1,0 +1,58 @@
+{
+    "sourceFile": "OnTapCuoiKy/sang2.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1688178648769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688178668414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n def kiemtra(a,b,c):\r\n     return (int(a)+int(b)+int(c))/3\r\n a=input()\r\n-if 0<=a<=10:\r\n+if 0 <= a <=10:\r\n     b=input()\r\n     if 0<=b<=10:\r\n         c=input()\r\n         if 0<=c<=10:\r\n"
+                },
+                {
+                    "date": 1688178689024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+def kiemtra(a,b,c):\r\n+    return (int(a)+int(b)+int(c))/3\r\n+a=int(input())\r\n+if 0 <= a <=10:\r\n+    b=int(input())\r\n+    if 0<=b<=10:\r\n+        c=int(input())\r\n+        if 0<=c<=10:\r\n+            kiemtra(a,b,c)\r\n+        else: print('khong hop le')\r\n+    else: print('Khong hop le !')\r\n+else: print('Khong hop le !')\r\n+        \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688178702206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,22 +5,9 @@\n     b=int(input())\r\n     if 0<=b<=10:\r\n         c=int(input())\r\n         if 0<=c<=10:\r\n-            kiemtra(a,b,c)\r\n+            print(kiemtra(a,b,c))\r\n         else: print('khong hop le')\r\n     else: print('Khong hop le !')\r\n else: print('Khong hop le !')\r\n-        \n-def kiemtra(a,b,c):\r\n-    return (int(a)+int(b)+int(c))/3\r\n-a=input()\r\n-if 0 <= a <=10:\r\n-    b=input()\r\n-    if 0<=b<=10:\r\n-        c=input()\r\n-        if 0<=c<=10:\r\n-            kiemtra(a,b,c)\r\n-        else: print('khong hop le')\r\n-    else: print('Khong hop le !')\r\n-else: print('Khong hop le !')\r\n         \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688178913973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,20 @@\n def kiemtra(a,b,c):\r\n     return (int(a)+int(b)+int(c))/3\r\n-a=int(input())\r\n-if 0 <= a <=10:\r\n-    b=int(input())\r\n-    if 0<=b<=10:\r\n-        c=int(input())\r\n-        if 0<=c<=10:\r\n-            print(kiemtra(a,b,c))\r\n-        else: print('khong hop le')\r\n-    else: print('Khong hop le !')\r\n-else: print('Khong hop le !')\r\n+def nhap():\r\n+    while True:\r\n+        a=int(input())\r\n+        if 0<=a <=10:\r\n+            while True:\r\n+                b=int(input())\r\n+                if 0<=b <=10:\r\n+                    while True:\r\n+                        c=int(input())\r\n+                        if 0<=c <=10:\r\n+                            print(kiemtra(a,b,c))\r\n+                            break\r\n+                        else: print('khong hop le')\r\n+                else:\r\n+                    print('khong hop le!')\r\n+        else:\r\n+            print('khong hop le !')\r\n         \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688178926591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,6 @@\n                 else:\r\n                     print('khong hop le!')\r\n         else:\r\n             print('khong hop le !')\r\n+nhap()\r\n         \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688179097335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,11 @@\n                 if 0<=b <=10:\r\n                     while True:\r\n                         c=int(input())\r\n                         if 0<=c <=10:\r\n-                            print(kiemtra(a,b,c))\r\n-                            break\r\n+                            return a,b,c\r\n                         else: print('khong hop le')\r\n                 else:\r\n                     print('khong hop le!')\r\n         else:\r\n             print('khong hop le !')\r\n-nhap()\r\n         \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688179105815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n                 else:\r\n                     print('khong hop le!')\r\n         else:\r\n             print('khong hop le !')\r\n-        \n\\ No newline at end of file\n+nhap()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688179125519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,6 @@\n                 else:\r\n                     print('khong hop le!')\r\n         else:\r\n             print('khong hop le !')\r\n-nhap()\n\\ No newline at end of file\n+a,b,c=nhap()\r\n+print(kiemtra(a,b,c))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688179168773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+def kiemtra(a,b,c):\r\n+    return (a+b+c)/3\r\n+def nhap():\r\n+    while True:\r\n+        a=float(input())\r\n+        if 0<=a <=10:\r\n+            while True:\r\n+                b=float(input())\r\n+                if 0<=b <=10:\r\n+                    while True:\r\n+                        c=float(input())\r\n+                        if 0<=c <=10:\r\n+                            return a,b,c\r\n+                        else: print('khong hop le')\r\n+                else:\r\n+                    print('khong hop le!')\r\n+        else:\r\n+            print('khong hop le !')\r\n+a,b,c=nhap()\r\n+print(kiemtra(a,b,c))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688183585814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,25 +16,19 @@\n                     print('khong hop le!')\r\n         else:\r\n             print('khong hop le !')\r\n a,b,c=nhap()\r\n-print(kiemtra(a,b,c))\n-def kiemtra(a,b,c):\r\n-    return (int(a)+int(b)+int(c))/3\r\n-def nhap():\r\n-    while True:\r\n-        a=int(input())\r\n-        if 0<=a <=10:\r\n-            while True:\r\n-                b=int(input())\r\n-                if 0<=b <=10:\r\n-                    while True:\r\n-                        c=int(input())\r\n-                        if 0<=c <=10:\r\n-                            return a,b,c\r\n-                        else: print('khong hop le')\r\n-                else:\r\n-                    print('khong hop le!')\r\n-        else:\r\n-            print('khong hop le !')\r\n-a,b,c=nhap()\r\n-print(kiemtra(a,b,c))\n\\ No newline at end of file\n+print(kiemtra(a,b,c))\r\n+\r\n+# def nhap():\r\n+#     while True:\r\n+#         diem=float(input())\r\n+#         if diem>=0 and diem<=10:\r\n+#             break\r\n+#         else:\r\n+#             print('Khong hop le!')\r\n+#     return diem\r\n+# diem1=nhap()\r\n+# diem2=nhap()\r\n+# diem3=nhap()\r\n+# avg=(diem1+diem2+diem3)/3\r\n+# print(avg)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1688178648769,
+            "name": "Commit-0",
+            "content": "def kiemtra(a,b,c):\r\n    return (int(a)+int(b)+int(c))/3\r\na=input()\r\nif 0<=a<=10:\r\n    b=input()\r\n    if 0<=b<=10:\r\n        c=input()\r\n        if 0<=c<=10:\r\n            kiemtra(a,b,c)\r\n        else: print('khong hop le')\r\n    else: print('Khong hop le !')\r\nelse: print('Khong hop le !')\r\n        "
+        }
+    ]
+}

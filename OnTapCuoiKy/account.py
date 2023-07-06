@@ -1,8 +1,10 @@
-# cslt6.41 130104 tuan nguoi gia
+# cslt6.41 130104 tuan nguoi gia 514140
 # cslt6.44 151204
 # cslt6.15 060604 khoa
 # cslt6.19 200304 long
 # cslt6.31 280904 0796732045quann 
+# cslt3.30 thuylinh301203 020104 
+# cslt7.47 Tuan0501@ hoặc 050104 514239
 # n=int(input('n='))
 # u=[]
 # j=0

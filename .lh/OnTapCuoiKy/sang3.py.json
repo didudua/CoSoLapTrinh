@@ -1,0 +1,30 @@
+{
+    "sourceFile": "OnTapCuoiKy/sang3.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1688180044261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688180113693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n             for i in range(n):\r\n                 L.append(int(input()))\r\n         return L\r\n L=nhap()\r\n-print(max(L))\r\n-print(min(L))\r\n+if L!=[]:\r\n+    print(max(L))\r\n+    print(min(L))\r\n         \r\n         \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688180140616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         if n<=0: print('nhaplai')\r\n         else:\r\n             for i in range(n):\r\n                 L.append(int(input()))\r\n-        return L\r\n+            return L\r\n L=nhap()\r\n if L!=[]:\r\n     print(max(L))\r\n     print(min(L))\r\n"
+                },
+                {
+                    "date": 1688183583858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,16 @@\n if L!=[]:\r\n     print(max(L))\r\n     print(min(L))\r\n         \r\n-        \n\\ No newline at end of file\n+# while True:\r\n+#     n=int(input())\r\n+#     if n>0:\r\n+#         break\r\n+#     else: \r\n+#         print('Khong hop le, nhap lai!')\r\n+# L=[]\r\n+# for i in range(n):\r\n+#     so=int(input())\r\n+#     L.append(so)\r\n+# print(min(L))\r\n+# print(max(L))  \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1688180044261,
+            "name": "Commit-0",
+            "content": "def nhap():\r\n    L=[]\r\n    while True:\r\n        n=int(input())\r\n        if n<=0: print('nhaplai')\r\n        else:\r\n            for i in range(n):\r\n                L.append(int(input()))\r\n        return L\r\nL=nhap()\r\nprint(max(L))\r\nprint(min(L))\r\n        \r\n        "
+        }
+    ]
+}

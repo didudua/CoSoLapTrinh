@@ -1,0 +1,118 @@
+{
+    "sourceFile": "OnTapCuoiKy/B2.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1685061730098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685061751111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n y='de'\r\n z='mnt'\r\n a=''\r\n kq=[]\r\n-while True:\r\n-    for i in x:\r\n-        for j in y:\r\n-            for k in z:\r\n-                a=i+j+k\r\n-                kq.append(a)\r\n+for i in x:\r\n+    for j in y:\r\n+        for k in z:\r\n+            a=i+j+k\r\n+            kq.append(a)\r\n+\r\n print(kq)\r\n             \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685061829171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n         for k in z:\r\n             a=i+j+k\r\n             kq.append(a)\r\n \r\n-print(kq)\r\n+print(f'''{kq}\r\n+do dai chuoi{len(kq)}''')\r\n             \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685061837765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n             a=i+j+k\r\n             kq.append(a)\r\n \r\n print(f'''{kq}\r\n-do dai chuoi{len(kq)}''')\r\n+do dai chuoi {len(kq)}''')\r\n             \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685062262938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,25 @@\n-x='abc'\r\n-y='de'\r\n-z='mnt'\r\n-a=''\r\n-kq=[]\r\n-for i in x:\r\n-    for j in y:\r\n-        for k in z:\r\n-            a=i+j+k\r\n-            kq.append(a)\r\n+# x='abc'\r\n+# y='de'\r\n+# z='mnt'\r\n+# a=''\r\n\\ No newline at end of file\n+# kq=[]\r\n+# for i in x:\r\n+#     for j in y:\r\n+#         for k in z:\r\n+#             a=i+j+k\r\n+#             kq.append(a)\r\n \r\n-print(f'''{kq}\r\n-do dai chuoi {len(kq)}''')\r\n-            \n+# print(f'''{kq}\r\n+# do dai chuoi {len(kq)}''')\r\n+x=[x for i in range(100000)]\r\n+X1=[]\r\n+X2=[]\r\n+X3=[]\r\n+for x1 in x:\r\n+    for x2 in x:\r\n+        for x3 in x:\r\n+            if x1+x2+x3==15:\r\n+                X1+=[x1]\r\n+                X2+=[x2]\r\n+                X3+=[x3] \r\n+print(X1,'/n',X2,'/n',X3)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685062272276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n #             kq.append(a)\r\n \r\n # print(f'''{kq}\r\n # do dai chuoi {len(kq)}''')\r\n-x=[x for i in range(100000)]\r\n+x=[i for i in range(100000)]\r\n X1=[]\r\n X2=[]\r\n X3=[]\r\n for x1 in x:\r\n"
+                },
+                {
+                    "date": 1685062313517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n #             kq.append(a)\r\n \r\n # print(f'''{kq}\r\n # do dai chuoi {len(kq)}''')\r\n-x=[i for i in range(100000)]\r\n+x=[i for i in range(10)]\r\n X1=[]\r\n X2=[]\r\n X3=[]\r\n for x1 in x:\r\n"
+                },
+                {
+                    "date": 1685062350450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,5 @@\n             if x1+x2+x3==15:\r\n                 X1+=[x1]\r\n                 X2+=[x2]\r\n                 X3+=[x3] \r\n-print(X1,'/n',X2,'/n',X3)\n\\ No newline at end of file\n+print(X1)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685062393745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,7 @@\n             if x1+x2+x3==15:\r\n                 X1+=[x1]\r\n                 X2+=[x2]\r\n                 X3+=[x3] \r\n-print(X1)\n\\ No newline at end of file\n+print(f'''{X1}\r\n+{X2}\r\n+{X3}''')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685062466369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,6 @@\n                 X2+=[x2]\r\n                 X3+=[x3] \r\n print(f'''{X1}\r\n {X2}\r\n-{X3}''')\n\\ No newline at end of file\n+{X3}\r\n+co {len(X1)+len(X2)+len(x3)} cach chon''')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685062476881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,5 @@\n                 X3+=[x3] \r\n print(f'''{X1}\r\n {X2}\r\n {X3}\r\n-co {len(X1)+len(X2)+len(x3)} cach chon''')\n\\ No newline at end of file\n+co {len(X1)+len(X2)+len(X3)} cach chon''')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685062826935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,19 +10,22 @@\n #             kq.append(a)\r\n \r\n # print(f'''{kq}\r\n # do dai chuoi {len(kq)}''')\r\n-x=[i for i in range(10)]\r\n-X1=[]\r\n-X2=[]\r\n-X3=[]\r\n-for x1 in x:\r\n-    for x2 in x:\r\n-        for x3 in x:\r\n-            if x1+x2+x3==15:\r\n-                X1+=[x1]\r\n-                X2+=[x2]\r\n-                X3+=[x3] \r\n-print(f'''{X1}\r\n-{X2}\r\n-{X3}\r\n-co {len(X1)+len(X2)+len(X3)} cach chon''')\n\\ No newline at end of file\n+# x=[i for i in range(10)]\r\n+# X1=[]\r\n+# X2=[]\r\n+# X3=[]\r\n+# for x1 in x:\r\n+#     for x2 in x:\r\n+#         for x3 in x:\r\n+#             if x1+x2+x3==15:\r\n+#                 X1+=[x1]\r\n+#                 X2+=[x2]\r\n+#                 X3+=[x3] \r\n+# print(f'''{X1}\r\n+# {X2}\r\n+# {X3}\r\n+# co {len(X1)+len(X2)+len(X3)} cach chon''')\r\n+# ax+by=c\r\n+# dx+ey=f\r\n+a,b,d,e=int(input().split())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685062999186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,5 +27,6 @@\n # {X3}\r\n # co {len(X1)+len(X2)+len(X3)} cach chon''')\r\n # ax+by=c\r\n # dx+ey=f\r\n-a,b,d,e=int(input().split())\n\\ No newline at end of file\n+a,b,d,e=int(input().split())\r\n+print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685063018158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,6 +27,6 @@\n # {X3}\r\n # co {len(X1)+len(X2)+len(X3)} cach chon''')\r\n # ax+by=c\r\n # dx+ey=f\r\n-a,b,d,e=int(input().split())\r\n+a,b,d,e=input().split()\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685063399879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,8 @@\n # print(f'''{X1}\r\n # {X2}\r\n # {X3}\r\n # co {len(X1)+len(X2)+len(X3)} cach chon''')\r\n-# ax+by=c\r\n-# dx+ey=f\r\n-a,b,d,e=input().split()\r\n+# ax+by=c x=(c-by)/a\r\n+# dx+ey=f y=(f-dx)/e\r\n+a,b,d,e=[int(i) for i in input().split()]\r\n print(a)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685063419228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,5 +28,5 @@\n # co {len(X1)+len(X2)+len(X3)} cach chon''')\r\n # ax+by=c x=(c-by)/a\r\n # dx+ey=f y=(f-dx)/e\r\n a,b,d,e=[int(i) for i in input().split()]\r\n-print(a)\n\\ No newline at end of file\n+print(b)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685063429425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,5 +28,5 @@\n # co {len(X1)+len(X2)+len(X3)} cach chon''')\r\n # ax+by=c x=(c-by)/a\r\n # dx+ey=f y=(f-dx)/e\r\n a,b,d,e=[int(i) for i in input().split()]\r\n-print(b)\n\\ No newline at end of file\n+print(e)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685064106457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,6 +27,11 @@\n # {X3}\r\n # co {len(X1)+len(X2)+len(X3)} cach chon''')\r\n # ax+by=c x=(c-by)/a\r\n # dx+ey=f y=(f-dx)/e\r\n-a,b,d,e=[int(i) for i in input().split()]\r\n-print(e)\n\\ No newline at end of file\n+a,b,c,d,e,f=[int(i) for i in input().split()]\r\n+if a/d != b/e: \r\n+    x=((c-b*f)/e)/(a+b*d/e)\r\n+    y=(f-d*x)/e\r\n+    print(f'{x} {y}')\r\n+elif a/d == b/e != c/f : print('VONGHIEM')\r\n+elif a/d == b/e == c/f : print('VOSONGHIEM')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685064213706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,7 @@\n a,b,c,d,e,f=[int(i) for i in input().split()]\r\n if a/d != b/e: \r\n     x=((c-b*f)/e)/(a+b*d/e)\r\n     y=(f-d*x)/e\r\n-    print(f'{x} {y}')\r\n+    print(f'{round(x,2)} {round(y,2)}')\r\n elif a/d == b/e != c/f : print('VONGHIEM')\r\n elif a/d == b/e == c/f : print('VOSONGHIEM')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685064435086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n # ax+by=c x=(c-by)/a\r\n # dx+ey=f y=(f-dx)/e\r\n a,b,c,d,e,f=[int(i) for i in input().split()]\r\n if a/d != b/e: \r\n-    x=((c-b*f)/e)/(a+b*d/e)\r\n+    x=(c/b-f/e)/(a/b-d/e)\r\n     y=(f-d*x)/e\r\n     print(f'{round(x,2)} {round(y,2)}')\r\n elif a/d == b/e != c/f : print('VONGHIEM')\r\n elif a/d == b/e == c/f : print('VOSONGHIEM')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685064462655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,7 @@\n a,b,c,d,e,f=[int(i) for i in input().split()]\r\n if a/d != b/e: \r\n     x=(c/b-f/e)/(a/b-d/e)\r\n     y=(f-d*x)/e\r\n-    print(f'{round(x,2)} {round(y,2)}')\r\n+    print(f'{x} {y}')\r\n elif a/d == b/e != c/f : print('VONGHIEM')\r\n elif a/d == b/e == c/f : print('VOSONGHIEM')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685064482673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n # {X3}\r\n # co {len(X1)+len(X2)+len(X3)} cach chon''')\r\n # ax+by=c x=(c-by)/a\r\n # dx+ey=f y=(f-dx)/e\r\n-a,b,c,d,e,f=[int(i) for i in input().split()]\r\n+a,b,c,d,e,f=[float(i) for i in input().split()]\r\n if a/d != b/e: \r\n     x=(c/b-f/e)/(a/b-d/e)\r\n     y=(f-d*x)/e\r\n     print(f'{x} {y}')\r\n"
+                },
+                {
+                    "date": 1685064559838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,7 @@\n a,b,c,d,e,f=[float(i) for i in input().split()]\r\n if a/d != b/e: \r\n     x=(c/b-f/e)/(a/b-d/e)\r\n     y=(f-d*x)/e\r\n-    print(f'{x} {y}')\r\n+    print(f'{round(x,2)} {round(y,2)}')\r\n elif a/d == b/e != c/f : print('VONGHIEM')\r\n elif a/d == b/e == c/f : print('VOSONGHIEM')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685064641593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,7 @@\n a,b,c,d,e,f=[float(i) for i in input().split()]\r\n if a/d != b/e: \r\n     x=(c/b-f/e)/(a/b-d/e)\r\n     y=(f-d*x)/e\r\n-    print(f'{round(x,2)} {round(y,2)}')\r\n+    print(f'{format(x,2)} {format(y,2)}')\r\n elif a/d == b/e != c/f : print('VONGHIEM')\r\n elif a/d == b/e == c/f : print('VOSONGHIEM')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685064751279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,7 @@\n a,b,c,d,e,f=[float(i) for i in input().split()]\r\n if a/d != b/e: \r\n     x=(c/b-f/e)/(a/b-d/e)\r\n     y=(f-d*x)/e\r\n-    print(f'{format(x,2)} {format(y,2)}')\r\n+    print(f'{\"{:.2f}\".format(x)} {round(y,2)}')\r\n elif a/d == b/e != c/f : print('VONGHIEM')\r\n elif a/d == b/e == c/f : print('VOSONGHIEM')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685064771861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,7 +31,7 @@\n a,b,c,d,e,f=[float(i) for i in input().split()]\r\n if a/d != b/e: \r\n     x=(c/b-f/e)/(a/b-d/e)\r\n     y=(f-d*x)/e\r\n-    print(f'{\"{:.2f}\".format(x)} {round(y,2)}')\r\n+    print(f'{\"{:.2f}\".format(x)} {\"{:.2f}\".format(y)}')\r\n elif a/d == b/e != c/f : print('VONGHIEM')\r\n elif a/d == b/e == c/f : print('VOSONGHIEM')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1685061730098,
+            "name": "Commit-0",
+            "content": "x='abc'\r\ny='de'\r\nz='mnt'\r\na=''\r\nkq=[]\r\nwhile True:\r\n    for i in x:\r\n        for j in y:\r\n            for k in z:\r\n                a=i+j+k\r\n                kq.append(a)\r\nprint(kq)\r\n            "
+        }
+    ]
+}

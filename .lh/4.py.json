@@ -1,0 +1,50 @@
+{
+    "sourceFile": "4.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1688201329268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688201672170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-A=[]\r\n while True:\r\n-    a=input()\r\n-    if a=='': break\r\n-    else:\r\n-        A.append(a)\r\n-print(A)\n\\ No newline at end of file\n+    chuoi = input()\r\n+    if chuoi == \"\":\r\n+        break\r\n+    chuoi = chuoi.replace('Python', 'Java')\r\n+    chuoi = chuoi.replace('Java', 'Python')\r\n+    print(chuoi)\r\n"
+                },
+                {
+                    "date": 1688203076940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,14 @@\n-while True:\r\n-    chuoi = input()\r\n-    if chuoi == \"\":\r\n-        break\r\n-    chuoi = chuoi.replace('Python', 'Java')\r\n-    chuoi = chuoi.replace('Java', 'Python')\r\n-    print(chuoi)\r\n+def nhap():\r\n+    A=[]\r\n+    while True:\r\n+        a=input()\r\n+        if a=='': break\r\n+        else:\r\n+            A.append(a)\r\n+    return A\r\n+A=nhap()\r\n+B=[]\r\n+for i in range(len(A)):\r\n+    A[i]=A[i].replace('Python','Java')\r\n+    A[i]=A[i].replace('Java','Python')\r\n+print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688203334132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,11 @@\n     return A\r\n A=nhap()\r\n B=[]\r\n for i in range(len(A)):\r\n-    A[i]=A[i].replace('Python','Java')\r\n-    A[i]=A[i].replace('Java','Python')\r\n+    A[i]=A[i].replace('Python','J',len(A[i]))\r\n+    A[i]=A[i].replace('Java','P',len(A[i]))\r\n+    for i in A[i]:\r\n+        if i=='P':A[i]=A[i].replace('P','Python',len(A[i]))\r\n+        if i=='J':A[i]=A[i].replace('J','Java',len(A[i]))\r\n+            \r\n print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688203364634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n B=[]\r\n for i in range(len(A)):\r\n     A[i]=A[i].replace('Python','J',len(A[i]))\r\n     A[i]=A[i].replace('Java','P',len(A[i]))\r\n-    for i in A[i]:\r\n-        if i=='P':A[i]=A[i].replace('P','Python',len(A[i]))\r\n-        if i=='J':A[i]=A[i].replace('J','Java',len(A[i]))\r\n+    for j in A[i]:\r\n+        if j=='P':A[i]=A[i].replace('P','Python',len(A[i]))\r\n+        if j=='J':A[i]=A[i].replace('J','Java',len(A[i]))\r\n             \r\n print(A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688203382222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n     for j in A[i]:\r\n         if j=='P':A[i]=A[i].replace('P','Python',len(A[i]))\r\n         if j=='J':A[i]=A[i].replace('J','Java',len(A[i]))\r\n             \r\n-print(A)\n\\ No newline at end of file\n+print(*A)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688203414442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n         else:\r\n             A.append(a)\r\n     return A\r\n A=nhap()\r\n-B=[]\r\n for i in range(len(A)):\r\n     A[i]=A[i].replace('Python','J',len(A[i]))\r\n     A[i]=A[i].replace('Java','P',len(A[i]))\r\n     for j in A[i]:\r\n"
+                },
+                {
+                    "date": 1688203485462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,6 @@\n     for j in A[i]:\r\n         if j=='P':A[i]=A[i].replace('P','Python',len(A[i]))\r\n         if j=='J':A[i]=A[i].replace('J','Java',len(A[i]))\r\n             \r\n-print(*A)\n\\ No newline at end of file\n+for k in A:\r\n+    print(k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688203636892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+def nhap():\r\n+    A=[]\r\n+    while True:\r\n+        a=input()\r\n+        if a=='': break\r\n+        else:\r\n+            A.append(a)\r\n+    return A\r\n+A=nhap()\r\n+for i in range(len(A)):\r\n+    A[i]=A[i].replace('Python','J',len(A[i]))\r\n+    A[i]=A[i].replace('Java','P',len(A[i]))\r\n+    for j in A[i]:\r\n+        if j=='P':A[i]=A[i].replace('P','Python',len(A[i]))\r\n+        if j=='J':A[i]=A[i].replace('J','Java',len(A[i]))\r\n+            \r\n+for k in A:\r\n+    print(k)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1688201329268,
+            "name": "Commit-0",
+            "content": "A=[]\r\nwhile True:\r\n    a=input()\r\n    if a=='': break\r\n    else:\r\n        A.append(a)\r\nprint(A)"
+        }
+    ]
+}

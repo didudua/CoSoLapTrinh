@@ -1,0 +1,22 @@
+{
+    "sourceFile": "OnTapCuoiKy/s2.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1688184687524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688184708410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n for i in range(n):\r\n     L.append(int(input()))\r\n for i in L:\r\n     if i==n:\r\n-        kq+=i\r\n+        kq+=[i]\r\n if len(kq)==1: print(True)\r\n else: print(False)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1688184687524,
+            "name": "Commit-0",
+            "content": "#Nhập số nguyên n, và dãy n số, in  True nếu số đó xuất hiện 1 lần duy nhất. Còn lại false\r\nn=int(input())\r\nL=[]\r\nkq=[]\r\nfor i in range(n):\r\n    L.append(int(input()))\r\nfor i in L:\r\n    if i==n:\r\n        kq+=i\r\nif len(kq)==1: print(True)\r\nelse: print(False)"
+        }
+    ]
+}

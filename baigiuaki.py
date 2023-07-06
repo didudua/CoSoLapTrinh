@@ -49,3 +49,15 @@
 # elif a-b==n: print("-")
 # elif b!=0 and a/b==n: print("/")
 # else: print("NO")
+def nhap():
+    N=[]
+    while True:
+        n=input('nhap gi do (enter de dung lai): ')
+        if n == '': return N
+        N+=[n]
+def test(N):
+    if N==[]: print('ban chua nhap gi')
+    elif len(N)==1: print(*N)
+    elif len(N)==2: print(' and '.join(N))
+    else: print(', '.join(N[:-1])+' and '+N[-1])
+test(nhap())

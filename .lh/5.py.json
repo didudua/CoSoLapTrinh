@@ -1,0 +1,42 @@
+{
+    "sourceFile": "5.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1688202032217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688202044124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n n=input().split()\r\n N=[int(x) for x in n]\r\n-for i in range(N):\r\n+for i in range(len(N)):\r\n     print(N[i]+N[i-1],end='')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688202165345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+# n=input().split()\r\n+# N=[int(x) for x in n]\r\n+# for i in range(len(N)):\r\n+#     print(N[i]+N[i-1],end='')\r\n+numbers = input(\"Nhập vào dãy số nguyên, cách nhau bởi dấu cách: \").split()\r\n+cumulative_sum = 0\r\n+result = []\r\n+ for num in numbers:\r\n+    cumulative_sum += int(num)\r\n+    result.append(str(cumulative_sum))\r\n+ output = ' '.join(result)\r\n+print(output)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688202183413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,9 @@\n #     print(N[i]+N[i-1],end='')\r\n numbers = input(\"Nhập vào dãy số nguyên, cách nhau bởi dấu cách: \").split()\r\n cumulative_sum = 0\r\n result = []\r\n- for num in numbers:\r\n+for num in numbers:\r\n     cumulative_sum += int(num)\r\n     result.append(str(cumulative_sum))\r\n- output = ' '.join(result)\r\n-print(output)\n-n=input().split()\r\n-N=[int(x) for x in n]\r\n-for i in range(len(N)):\r\n\\ No newline at end of file\n-    print(N[i]+N[i-1],end='')\n+output = ' '.join(result)\r\n+print(output)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688202285957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n # n=input().split()\r\n # N=[int(x) for x in n]\r\n # for i in range(len(N)):\r\n #     print(N[i]+N[i-1],end='')\r\n-numbers = input(\"Nhập vào dãy số nguyên, cách nhau bởi dấu cách: \").split()\r\n-cumulative_sum = 0\r\n-result = []\r\n-for num in numbers:\r\n-    cumulative_sum += int(num)\r\n-    result.append(str(cumulative_sum))\r\n-output = ' '.join(result)\r\n-print(output)\n\\ No newline at end of file\n+n = input().split()\r\n+kt = 0\r\n+N = []\r\n+for i in n:\r\n+    kt += int(i)\r\n+    N.append(str(kt))\r\n+kq = ' '.join(N)\r\n+print(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688202316814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n # N=[int(x) for x in n]\r\n # for i in range(len(N)):\r\n #     print(N[i]+N[i-1],end='')\r\n n = input().split()\r\n-kt = 0\r\n+tong = 0\r\n N = []\r\n for i in n:\r\n-    kt += int(i)\r\n-    N.append(str(kt))\r\n+    tong += int(i)\r\n+    N.append(str(tong))\r\n kq = ' '.join(N)\r\n print(kq)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688262555147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,4 @@\n-# n=input().split()\r\n-# N=[int(x) for x in n]\r\n-# for i in range(len(N)):\r\n-#     print(N[i]+N[i-1],end='')\r\n n = input().split()\r\n tong = 0\r\n N = []\r\n for i in n:\r\n"
+                }
+            ],
+            "date": 1688202032217,
+            "name": "Commit-0",
+            "content": "n=input().split()\r\nN=[int(x) for x in n]\r\nfor i in range(N):\r\n    print(N[i]+N[i-1],end='')"
+        }
+    ]
+}

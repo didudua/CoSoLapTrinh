@@ -1,0 +1,22 @@
+{
+    "sourceFile": "OnTapCuoiKy/s4.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1688185543876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688185585466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,8 @@\n     elif j=='i': i+=1\r\n     elif j=='o': o+=1\r\n     elif j=='u': u+=1\r\n print(f'''{a}\r\n-      {e}\r\n-      {o}\r\n-      {u}''')\n\\ No newline at end of file\n+{e}\r\n+{i}\r\n+{o}\r\n+{u}''')\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1688185543876,
+            "name": "Commit-0",
+            "content": "# dem so nguyen am a e i o u\r\nx=input()\r\na=0\r\ne=0\r\ni=0\r\no=0\r\nu=0\r\nfor j in x:\r\n    if j=='a': a+=1\r\n    elif j=='e': e+=1\r\n    elif j=='i': i+=1\r\n    elif j=='o': o+=1\r\n    elif j=='u': u+=1\r\nprint(f'''{a}\r\n      {e}\r\n      {o}\r\n      {u}''')"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "OnTapCuoiKy/B7.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1688091484959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688091513596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n b=input()\r\n c=input()\r\n def daonguoc(a):\r\n     for i in range(len(a)-1,-1,-1):\r\n-        print(i)\r\n+        print(a[i],end='')\r\n daonguoc(a)\r\n daonguoc(b)\r\n daonguoc(c)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688091616021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n a=input()\r\n b=input()\r\n c=input()\r\n def daonguoc(a):\r\n+    kq=''\r\n     for i in range(len(a)-1,-1,-1):\r\n-        print(a[i],end='')\r\n-daonguoc(a)\r\n-daonguoc(b)\r\n\\ No newline at end of file\n-daonguoc(c)\n+        kq=kq+a[i]\r\n+print(daonguoc(a))\r\n+print(daonguoc(b))\r\n+print(daonguoc(c))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688091638683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n def daonguoc(a):\r\n     kq=''\r\n     for i in range(len(a)-1,-1,-1):\r\n         kq=kq+a[i]\r\n+    return kq\r\n print(daonguoc(a))\r\n print(daonguoc(b))\r\n print(daonguoc(c))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1688091484959,
+            "name": "Commit-0",
+            "content": "#3 chuoi, dao nguoc 3 chuoi va in ra man hinh\r\n#in: python list exercises\r\na=input()\r\nb=input()\r\nc=input()\r\ndef daonguoc(a):\r\n    for i in range(len(a)-1,-1,-1):\r\n        print(i)\r\ndaonguoc(a)\r\ndaonguoc(b)\r\ndaonguoc(c)"
+        }
+    ]
+}

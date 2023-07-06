@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 38,
+            "activePatchIndex": 42,
             "patches": [
                 {
                     "date": 1681786324688,
@@ -160,6 +160,22 @@
                 {
                     "date": 1683807583405,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,28 @@\n # cslt6.44 151204\r\n # cslt6.15 060604 khoa\r\n # cslt6.19 200304 long\r\n # cslt6.31 280904 0796732045quann \r\n-n=int(input('n='))\r\n-u=[]\r\n-j=0\r\n-for x in range(2,9999999):\r\n-    for i in range(2,x):\r\n-        if x%i==0: break\r\n-    else: u+=[str(x)]\r\n-    if len(u)==n: break\r\n-print(', '.join(u))\n\\ No newline at end of file\n+# n=int(input('n='))\r\n+# u=[]\r\n+# j=0\r\n+# for x in range(2,9999999):\r\n+#     for i in range(2,x):\r\n+#         if x%i==0: break\r\n+#     else: u+=[str(x)]\r\n+#     if len(u)==n: break\r\n+# print(', '.join(u))\r\n+\r\n+n=(input())\r\n+n=n.capitalize()\r\n+n=n.strip()\r\n+n=list(n)\r\n+i=0\r\n+while i<len(n):\r\n+    if n[i]==\",\" or n[i]==\";\" or n[i]==\":\"or n[i]==\".\":\r\n+        if n[i-1]==\" \":\r\n+            del(n[i-1])\r\n+        else:\r\n+            break\r\n+    else:\r\n+        i=i+1\r\n+print(\"\".join(n))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685410031606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n # cslt6.44 151204\r\n # cslt6.15 060604 khoa\r\n # cslt6.19 200304 long\r\n # cslt6.31 280904 0796732045quann \r\n+# cslt3.30 thuylinh301203 020104 \r\n # n=int(input('n='))\r\n # u=[]\r\n # j=0\r\n # for x in range(2,9999999):\r\n"
+                },
+                {
+                    "date": 1688117121101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n # cslt6.15 060604 khoa\r\n # cslt6.19 200304 long\r\n # cslt6.31 280904 0796732045quann \r\n # cslt3.30 thuylinh301203 020104 \r\n+# cslt7.47 Tuan0501@ hoặc 050104\r\n # n=int(input('n='))\r\n # u=[]\r\n # j=0\r\n # for x in range(2,9999999):\r\n"
+                },
+                {
+                    "date": 1688200280569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n # cslt6.15 060604 khoa\r\n # cslt6.19 200304 long\r\n # cslt6.31 280904 0796732045quann \r\n # cslt3.30 thuylinh301203 020104 \r\n-# cslt7.47 Tuan0501@ hoặc 050104\r\n+# cslt7.47 Tuan0501@ hoặc 050104 514239\r\n # n=int(input('n='))\r\n # u=[]\r\n # j=0\r\n # for x in range(2,9999999):\r\n"
+                },
+                {
+                    "date": 1688200304715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-# cslt6.41 130104 tuan nguoi gia\r\n+# cslt6.41 130104 tuan nguoi gia 514140\r\n # cslt6.44 151204\r\n # cslt6.15 060604 khoa\r\n # cslt6.19 200304 long\r\n # cslt6.31 280904 0796732045quann \r\n"
                 }
             ],
             "date": 1681786324688,

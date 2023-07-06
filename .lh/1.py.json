@@ -1,0 +1,18 @@
+{
+    "sourceFile": "1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1688202400576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1688202400576,
+            "name": "Commit-0",
+            "content": "a=float(input())\r\nb=float(input())\r\nc=float(input())\r\ntb=(a+b+c)/3\r\nprint(round(tb,2))\r\nif tb>=9: print('Xuat sac')\r\nelif 8<=tb<9: print('Gioi')\r\nelif 6.5<=tb<8: print('Kha')\r\nelif 5<=tb<6.5: print('Trung binh')\r\nelif tb<5: print('Yeu')"
+        }
+    ]
+}

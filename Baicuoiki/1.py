@@ -1,0 +1,10 @@
+a=float(input())
+b=float(input())
+c=float(input())
+tb=(a+b+c)/3
+print(round(tb,2))
+if tb>=9: print('Xuat sac')
+elif 8<=tb<9: print('Gioi')
+elif 6.5<=tb<8: print('Kha')
+elif 5<=tb<6.5: print('Trung binh')
+elif tb<5: print('Yeu')

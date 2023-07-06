@@ -1,0 +1,18 @@
+{
+    "sourceFile": "2.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1688202743200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1688202743200,
+            "name": "Commit-0",
+            "content": "def demsnt(n):\r\n    if n < 2:\r\n        return False\r\n    for i in range(2, int(n**0.5) + 1):\r\n        if n % i == 0:\r\n            return False\r\n    return True\r\nn = int(input())\r\nkq = 0\r\nfor i in range(2, n + 1):\r\n    if demsnt(i):\r\n        kq += 1\r\nprint(kq)"
+        }
+    ]
+}

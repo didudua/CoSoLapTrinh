@@ -1,0 +1,22 @@
+{
+    "sourceFile": "OnTapCuoiKy/sang5.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1688181865685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688181926477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n while True:\r\n-    n=int(input())\r\n+    n=input()\r\n     if n=='': break\r\n-    elif 0<=n<=2: print('Tre nho')\r\n-    elif 3<=n<=12: print('Tre em')\r\n-    elif 13<=n<=19: print('Tuoi teen')\r\n-    elif 20<=n<=59: print('Truong thah')\r\n-    elif n>=60: print('Nguoi gia')\r\n+    elif 0<=int(n)<=2: print('Tre nho')\r\n+    elif 3<=int(n)<=12: print('Tre em')\r\n+    elif 13<=int(n)<=19: print('Tuoi teen')\r\n+    elif 20<=int(n)<=59: print('Truong thah')\r\n+    elif int(n)>=60: print('Nguoi gia')\r\n"
+                }
+            ],
+            "date": 1688181865685,
+            "name": "Commit-0",
+            "content": "while True:\r\n    n=int(input())\r\n    if n=='': break\r\n    elif 0<=n<=2: print('Tre nho')\r\n    elif 3<=n<=12: print('Tre em')\r\n    elif 13<=n<=19: print('Tuoi teen')\r\n    elif 20<=n<=59: print('Truong thah')\r\n    elif n>=60: print('Nguoi gia')\r\n"
+        }
+    ]
+}

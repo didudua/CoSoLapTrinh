@@ -1,0 +1,106 @@
+{
+    "sourceFile": "OnTapCuoiKy/B3.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1685065187045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1685065209056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-n,k=[int(i) for i in input().split]\n\\ No newline at end of file\n+n,k=[int(i) for i in input().split]\r\n+print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685065233153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-n,k=[int(i) for i in input().split]\r\n+n,k=[int(i) for i in input().split]()\r\n print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685065249555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-n,k=[int(i) for i in input().split]()\r\n+n,k=[int(i) for i in input().split()]\r\n print(n,k)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685066391568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,15 @@\n n,k=[int(i) for i in input().split()]\r\n-print(n,k)\n\\ No newline at end of file\n+A=[]\r\n+B=[]\r\n+for i in range(1,n+1):\r\n+    A+=[i]\r\n+j=0\r\n+h=len(A)\r\n+while j<len(A):\r\n+    if A[h]-A[j]==k:\r\n+        B[j]=A[h]\r\n+        h-=1\r\n+    j+=1\r\n+print(B)\r\n+    \r\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685066430697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,12 @@\n B=[]\r\n for i in range(1,n+1):\r\n     A+=[i]\r\n j=0\r\n-h=len(A)\r\n while j<len(A):\r\n-    if A[h]-A[j]==k:\r\n-        B[j]=A[h]\r\n-        h-=1\r\n+    if A[n]-A[j]==k:\r\n+        B[j]=A[n]\r\n+        n-=1\r\n     j+=1\r\n print(B)\r\n     \r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685066468280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n for i in range(1,n+1):\r\n     A+=[i]\r\n j=0\r\n while j<len(A):\r\n-    if A[n]-A[j]==k:\r\n-        B[j]=A[n]\r\n+    if A[n-1]-A[j]==k:\r\n+        B[j]=A[n-1]\r\n         n-=1\r\n     j+=1\r\n print(B)\r\n     \r\n"
+                },
+                {
+                    "date": 1685066490201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     A+=[i]\r\n j=0\r\n while j<len(A):\r\n     if A[n-1]-A[j]==k:\r\n-        B[j]=A[n-1]\r\n+        B=B+A[n-1]\r\n         n-=1\r\n     j+=1\r\n print(B)\r\n     \r\n"
+                },
+                {
+                    "date": 1685066661134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,7 @@\n A=[]\r\n B=[]\r\n for i in range(1,n+1):\r\n     A+=[i]\r\n-j=0\r\n-while j<len(A):\r\n-    if A[n-1]-A[j]==k:\r\n-        B=B+A[n-1]\r\n-        n-=1\r\n-    j+=1\r\n-print(B)\r\n+print(A)\r\n     \r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685066683121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n A=[]\r\n B=[]\r\n for i in range(1,n+1):\r\n     A+=[i]\r\n-print(A)\r\n+print(*A)\r\n     \r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685066746006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n n,k=[int(i) for i in input().split()]\r\n A=[]\r\n-B=[]\r\n+B=A.copy()\r\n for i in range(1,n+1):\r\n     A+=[i]\r\n-print(*A)\r\n+print(*B)\r\n     \r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685066769129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n n,k=[int(i) for i in input().split()]\r\n A=[]\r\n-B=A.copy()\r\n for i in range(1,n+1):\r\n     A+=[i]\r\n+B=A.copy()\r\n print(*B)\r\n     \r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685067011722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,9 @@\n A=[]\r\n for i in range(1,n+1):\r\n     A+=[i]\r\n B=A.copy()\r\n-print(*B)\r\n-    \r\n-    \n\\ No newline at end of file\n+for i in range(len(A),-1,-1):\r\n+    for j in range(len(A)):\r\n+        if A[i]-A[j]==k:\r\n+            B[j]=A[j]\r\n+print(*B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685067035593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n A=[]\r\n for i in range(1,n+1):\r\n     A+=[i]\r\n B=A.copy()\r\n-for i in range(len(A),-1,-1):\r\n+for i in range(len(A)-1,-1,-1):\r\n     for j in range(len(A)):\r\n         if A[i]-A[j]==k:\r\n             B[j]=A[j]\r\n print(*B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685067198312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n B=A.copy()\r\n for i in range(len(A)-1,-1,-1):\r\n     for j in range(len(A)):\r\n         if A[i]-A[j]==k:\r\n-            B[j]=A[j]\r\n+            B[j]=A[i]\r\n print(*B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685067266983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n     A+=[i]\r\n B=A.copy()\r\n for i in range(len(A)-1,-1,-1):\r\n     for j in range(len(A)):\r\n-        if A[i]-A[j]==k:\r\n+        if A[i]-A[j]==k or A[j]-A[i]==k:\r\n             B[j]=A[i]\r\n print(*B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685067475677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,7 @@\n for i in range(len(A)-1,-1,-1):\r\n     for j in range(len(A)):\r\n         if A[i]-A[j]==k or A[j]-A[i]==k:\r\n             B[j]=A[i]\r\n-print(*B)\n\\ No newline at end of file\n+for i in A:\r\n+    if i not in B: print(-1)\r\n+else: print(*B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685067512505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,8 @@\n     for j in range(len(A)):\r\n         if A[i]-A[j]==k or A[j]-A[i]==k:\r\n             B[j]=A[i]\r\n for i in A:\r\n-    if i not in B: print(-1)\r\n+    if i not in B: \r\n+        print(-1) \r\n+        break\r\n else: print(*B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685067624186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,7 @@\n for i in range(len(A)-1,-1,-1):\r\n     for j in range(len(A)):\r\n         if A[i]-A[j]==k or A[j]-A[i]==k:\r\n             B[j]=A[i]\r\n-for i in A:\r\n-    if i not in B: \r\n-        print(-1) \r\n-        break\r\n+        else: u=True\r\n+if u: print(-1)\r\n else: print(*B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685067769888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n A=[]\r\n for i in range(1,n+1):\r\n     A+=[i]\r\n B=A.copy()\r\n+u=False\r\n for i in range(len(A)-1,-1,-1):\r\n     for j in range(len(A)):\r\n         if A[i]-A[j]==k or A[j]-A[i]==k:\r\n             B[j]=A[i]\r\n"
+                },
+                {
+                    "date": 1685067794011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n for i in range(len(A)-1,-1,-1):\r\n     for j in range(len(A)):\r\n         if A[i]-A[j]==k or A[j]-A[i]==k:\r\n             B[j]=A[i]\r\n-        else: u=True\r\n+else: u=True\r\n if u: print(-1)\r\n else: print(*B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685068120972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,8 @@\n+import random\r\n n,k=[int(i) for i in input().split()]\r\n A=[]\r\n for i in range(1,n+1):\r\n     A+=[i]\r\n B=A.copy()\r\n-u=False\r\n-for i in range(len(A)-1,-1,-1):\r\n-    for j in range(len(A)):\r\n-        if A[i]-A[j]==k or A[j]-A[i]==k:\r\n-            B[j]=A[i]\r\n-else: u=True\r\n-if u: print(-1)\r\n\\ No newline at end of file\n-else: print(*B)\n+random.shuffle(B)\r\n+print(*B)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1685068413095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,15 @@\n A=[]\r\n for i in range(1,n+1):\r\n     A+=[i]\r\n B=A.copy()\r\n-random.shuffle(B)\r\n+if k==0: print(*B)\r\n+else:\r\n+    while True:\r\n+        u=1\r\n+        random.shuffle(B)\r\n+        for i in range(len(A)):\r\n+            if A[i]-B[i]==k or B[i]-A[i]==k:\r\n+                u+=1\r\n+        if u== len(B): break\r\n+            \r\n print(*B)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1685065187045,
+            "name": "Commit-0",
+            "content": "n,k=[int(i) for i in input().split]"
+        }
+    ]
+}

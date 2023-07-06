@@ -1,0 +1,22 @@
+{
+    "sourceFile": "OnTapCuoiKy/s1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1688184379721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688184416260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,7 @@\n n=input()\r\n c=0\r\n for i in range(len(n)):\r\n     c+=int(n[i])**3\r\n-print(c)\r\n+if c == int(n):\r\n+    print(True)\r\n+else: print(False)\r\n"
+                }
+            ],
+            "date": 1688184379721,
+            "name": "Commit-0",
+            "content": "#kt so arstrong\r\nn=input()\r\nc=0\r\nfor i in range(len(n)):\r\n    c+=int(n[i])**3\r\nprint(c)\r\n"
+        }
+    ]
+}

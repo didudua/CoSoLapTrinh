@@ -1,0 +1,30 @@
+{
+    "sourceFile": "3.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1688201117689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688201157123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n L=input().split()\r\n+L=[int(x) for x in L]\r\n kq=[]\r\n for i in L:\r\n     if i not in kq:\r\n         kq+=i\r\n"
+                },
+                {
+                    "date": 1688201168132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n L=[int(x) for x in L]\r\n kq=[]\r\n for i in L:\r\n     if i not in kq:\r\n-        kq+=i\r\n+        kq+=[i]\r\n print(len(kq))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688204007289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n L=input().split()\r\n-L=[int(x) for x in L]\r\n kq=[]\r\n for i in L:\r\n     if i not in kq:\r\n-        kq+=[i]\r\n+        kq+=i\r\n print(len(kq))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1688201117689,
+            "name": "Commit-0",
+            "content": "L=input().split()\r\nkq=[]\r\nfor i in L:\r\n    if i not in kq:\r\n        kq+=i\r\nprint(len(kq))"
+        }
+    ]
+}

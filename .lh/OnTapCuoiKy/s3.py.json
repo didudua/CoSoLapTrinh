@@ -1,0 +1,34 @@
+{
+    "sourceFile": "OnTapCuoiKy/s3.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1688184980475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688185216756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,12 @@\n #Nhập số n, rồi nhập 1 dãy số. Kiểm tra vị trí xuất hiện của số n trong dãy đó. Ví dụ : \r\n #2\r\n #1 2 3 4 5 2\r\n #in ra: [1,5]\r\n-# n=int(input())\r\n-# L=[]\r\n-# c=[]\r\n-# for i in range(n):\r\n-#     L.append(int(input()))\r\n-# for i in L:\r\n-#     if i==n:\r\n-#         c+=L.index(n)\r\n-\r\n-def tim_vi_tri(n, day_so):\r\n-    vi_tri = []\r\n-    \r\n-    for i in range(len(day_so)):\r\n-        if day_so[i] == n:\r\n-            vi_tri.append(i+1)\r\n-    \r\n-    return vi_tri\r\n-\r\n-day_so = input(\"Nhập dãy số, cách nhau bởi dấu cách: \").split()\r\n-day_so = [int(x) for x in day_so]\r\n-\r\n-n = int(input(\"Nhập số n: \"))\r\n-\r\n-ket_qua = tim_vi_tri(n, day_so)\r\n-print(\"Vị trí xuất hiện của số\", n, \"trong dãy số là:\", ket_qua)\r\n+# day_so = [int(x) for x in day_so]\r\n+n=int(input())\r\n+L=input().split()\r\n+c=[]\r\n+for i in range(len(L)):\r\n+    if L[i]==n:\r\n+        c+=[i]\r\n+print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688185238371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+#Nhập số n, rồi nhập 1 dãy số. Kiểm tra vị trí xuất hiện của số n trong dãy đó. Ví dụ : \r\n+#2\r\n+#1 2 3 4 5 2\r\n+#in ra: [1,5]\r\n+# day_so = [int(x) for x in day_so]\r\n+n=int(input())\r\n+L=int(input()).split()\r\n+c=[]\r\n+for i in range(len(L)):\r\n+    if L[i]==n:\r\n+        c+=[i]\r\n+print(L)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688185268748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,21 +3,10 @@\n #1 2 3 4 5 2\r\n #in ra: [1,5]\r\n # day_so = [int(x) for x in day_so]\r\n n=int(input())\r\n-L=int(input()).split()\r\n-c=[]\r\n-for i in range(len(L)):\r\n-    if L[i]==n:\r\n-        c+=[i]\r\n-print(L)\n-#Nhập số n, rồi nhập 1 dãy số. Kiểm tra vị trí xuất hiện của số n trong dãy đó. Ví dụ : \r\n-#2\r\n-#1 2 3 4 5 2\r\n-#in ra: [1,5]\r\n-# day_so = [int(x) for x in day_so]\r\n-n=int(input())\r\n L=input().split()\r\n+L=[int(x) for x in L]\r\n c=[]\r\n for i in range(len(L)):\r\n     if L[i]==n:\r\n         c+=[i]\r\n"
+                },
+                {
+                    "date": 1688185279240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,5 @@\n c=[]\r\n for i in range(len(L)):\r\n     if L[i]==n:\r\n         c+=[i]\r\n-print(L)\n\\ No newline at end of file\n+print(c)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1688184980475,
+            "name": "Commit-0",
+            "content": "#Nhập số n, rồi nhập 1 dãy số. Kiểm tra vị trí xuất hiện của số n trong dãy đó. Ví dụ : \r\n#2\r\n#1 2 3 4 5 2\r\n#in ra: [1,5]\r\n# n=int(input())\r\n# L=[]\r\n# c=[]\r\n# for i in range(n):\r\n#     L.append(int(input()))\r\n# for i in L:\r\n#     if i==n:\r\n#         c+=L.index(n)\r\n\r\ndef tim_vi_tri(n, day_so):\r\n    vi_tri = []\r\n    \r\n    for i in range(len(day_so)):\r\n        if day_so[i] == n:\r\n            vi_tri.append(i+1)\r\n    \r\n    return vi_tri\r\n\r\nday_so = input(\"Nhập dãy số, cách nhau bởi dấu cách: \").split()\r\nday_so = [int(x) for x in day_so]\r\n\r\nn = int(input(\"Nhập số n: \"))\r\n\r\nket_qua = tim_vi_tri(n, day_so)\r\nprint(\"Vị trí xuất hiện của số\", n, \"trong dãy số là:\", ket_qua)\r\n"
+        }
+    ]
+}

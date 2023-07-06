@@ -1,0 +1,26 @@
+{
+    "sourceFile": "OnTapCuoiKy/B10.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1688118219513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688118242835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,5 @@\n A = input(\"Nhập xâu ký tự A: \")\r\n B = input(\"Nhập xâu ký tự B: \")\r\n \r\n C = longest_common_substring(A, B)\r\n-print(\"Xâu ký tự C có độ dài lớn nhất và là con của cả A và B là:\", C)\r\n+print(\"Xâu ký tự C có độ dài lớn nhất và là con của cả A và B là:\", len(C))\r\n"
+                },
+                {
+                    "date": 1688118361556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             i -= 1\r\n \r\n     return C\r\n \r\n-A = input(\"Nhập xâu ký tự A: \")\r\n-B = input(\"Nhập xâu ký tự B: \")\r\n+A = input()\r\n+B = input()\r\n \r\n C = longest_common_substring(A, B)\r\n-print(\"Xâu ký tự C có độ dài lớn nhất và là con của cả A và B là:\", len(C))\r\n+print(len(C))\r\n"
+                }
+            ],
+            "date": 1688118219513,
+            "name": "Commit-0",
+            "content": "def longest_common_substring(A, B):\r\n    m = len(A)\r\n    n = len(B)\r\n    DP = [[0] * (n + 1) for _ in range(m + 1)]\r\n    for i in range(1, m + 1):\r\n        for j in range(1, n + 1):\r\n            if A[i - 1] == B[j - 1]:\r\n                DP[i][j] = DP[i - 1][j - 1] + 1\r\n            else:\r\n                DP[i][j] = max(DP[i][j - 1], DP[i - 1][j])\r\n    C = \"\"\r\n    i = m\r\n    j = n\r\n    while i > 0 and j > 0:\r\n        if A[i - 1] == B[j - 1]:\r\n            C = A[i - 1] + C\r\n            i -= 1\r\n            j -= 1\r\n        elif DP[i][j - 1] > DP[i - 1][j]:\r\n            j -= 1\r\n        else:\r\n            i -= 1\r\n\r\n    return C\r\n\r\nA = input(\"Nhập xâu ký tự A: \")\r\nB = input(\"Nhập xâu ký tự B: \")\r\n\r\nC = longest_common_substring(A, B)\r\nprint(\"Xâu ký tự C có độ dài lớn nhất và là con của cả A và B là:\", C)\r\n"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "OnTapCuoiKy/B4.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1688090283469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1688090347043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,9 @@\n #Out: In danh sach moi\r\n #Red Green Black / Blue -> Blue Red Blue Green Blue Black\r\n a=input()\r\n b=input()\r\n+B=[]\r\n A=a.split()\r\n\\ No newline at end of file\n-print(A)\n+for i in A:\r\n+    B=B+b+i\r\n+print(' '.join(B))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1688090367452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n b=input()\r\n B=[]\r\n A=a.split()\r\n for i in A:\r\n-    B=B+b+i\r\n+    B=B+[b]+[i]\r\n print(' '.join(B))\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1688090283469,
+            "name": "Commit-0",
+            "content": "#Mot danh sach va mot tu, chen phan tu vao truoc moi phan tu trong danh sach\r\n#In: dong 1 day tu cach nhau 1 khoang trang, dong 2 1 tu\r\n#Out: In danh sach moi\r\n#Red Green Black / Blue -> Blue Red Blue Green Blue Black\r\na=input()\r\nb=input()\r\nA=a.split()\r\nprint(A)"
+        }
+    ]
+}

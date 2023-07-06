@@ -1,0 +1,18 @@
+{
+    "sourceFile": "OnTapCuoiKy/B6.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1688091253376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1688091253376,
+            "name": "Commit-0",
+            "content": "#Tao danh sach moi gom cac phan tu chung\r\n#In: 2 dong, cach nhau 1 ly tu trang\r\n#Out: danh sach moi gom cac phan tu chung\r\n#Red Green White Orange / Green Black White Pink -> Green White\r\na=input()\r\nb=input()\r\nA=a.split()\r\nB=b.split()\r\nC=[]\r\nfor i in A:\r\n    if i in B:\r\n        C+=i\r\nprint(' '.join(C))"
+        }
+    ]
+}
